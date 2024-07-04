@@ -340,6 +340,46 @@
       <to>Sort researcher </to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Leitura dos XML</from>
+      <to>Read XML guidance "mestrado-concluída"</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Leitura dos XML</from>
+      <to>Read XML guidance "doutorado-concluída"</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Leitura dos XML</from>
+      <to>Read XML guidance "outras-concluída"</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Leitura dos XML</from>
+      <to>Read XML guidance "mestrado-andamento"</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Leitura dos XML</from>
+      <to>Read XML guidance "doutorado-andamento"</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Leitura dos XML</from>
+      <to>Read XML guidance "Iniciação Científica-Andamento"</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Leitura dos XML</from>
+      <to>Read XML guidance "Pos-Doutorado-Andamento" 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Leitura dos XML</from>
+      <to>Read XML guidance "Pos-Doutorado-Andamento" 2 2</to>
+      <enabled>N</enabled>
+    </hop>
   </order>
   <transform>
     <name>Add constants </name>
@@ -675,14 +715,11 @@
     <only_when_have_rows>N</only_when_have_rows>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
     <partitioning_monthly>Y</partitioning_monthly>
-    <return_field/>
     <return_keys>N</return_keys>
     <schema>"public"</schema>
     <specify_fields>Y</specify_fields>
     <table>guidance</table>
-    <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
     <truncate>N</truncate>
@@ -691,6 +728,43 @@
     <GUI>
       <xloc>2528</xloc>
       <yloc>304</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Leitura dos XML</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <file>
+      <file_required>N</file_required>
+      <filemask>.*xml</filemask>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <filefield>N</filefield>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <rownum>N</rownum>
+    <attributes/>
+    <GUI>
+      <xloc>160</xloc>
+      <yloc>432</yloc>
     </GUI>
   </transform>
   <transform>
@@ -891,7 +965,7 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>368</xloc>
+      <xloc>448</xloc>
       <yloc>592</yloc>
     </GUI>
   </transform>
@@ -1039,7 +1113,7 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>368</xloc>
+      <xloc>448</xloc>
       <yloc>704</yloc>
     </GUI>
   </transform>
@@ -1187,7 +1261,7 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>320</xloc>
+      <xloc>432</xloc>
       <yloc>800</yloc>
     </GUI>
   </transform>
@@ -1335,7 +1409,7 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>368</xloc>
+      <xloc>448</xloc>
       <yloc>480</yloc>
     </GUI>
   </transform>
@@ -1483,7 +1557,7 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>416</xloc>
+      <xloc>496</xloc>
       <yloc>160</yloc>
     </GUI>
   </transform>
@@ -1631,7 +1705,7 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>368</xloc>
+      <xloc>448</xloc>
       <yloc>368</yloc>
     </GUI>
   </transform>
@@ -1779,7 +1853,7 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>384</xloc>
+      <xloc>464</xloc>
       <yloc>16</yloc>
     </GUI>
   </transform>
@@ -1927,7 +2001,7 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>416</xloc>
+      <xloc>496</xloc>
       <yloc>272</yloc>
     </GUI>
   </transform>

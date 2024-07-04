@@ -26,8 +26,8 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>64</xloc>
-      <yloc>128</yloc>
+      <xloc>0</xloc>
+      <yloc>176</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -312,8 +312,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>720</xloc>
-      <yloc>336</yloc>
+      <xloc>688</xloc>
+      <yloc>320</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -364,7 +364,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>496</xloc>
+      <xloc>464</xloc>
       <yloc>320</yloc>
       <attributes_hac/>
     </action>
@@ -390,8 +390,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>192</xloc>
-      <yloc>320</yloc>
+      <xloc>208</xloc>
+      <yloc>336</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -416,8 +416,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>368</xloc>
-      <yloc>208</yloc>
+      <xloc>352</xloc>
+      <yloc>224</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -442,8 +442,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>640</xloc>
-      <yloc>208</yloc>
+      <xloc>592</xloc>
+      <yloc>224</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -650,7 +650,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>608</xloc>
+      <xloc>592</xloc>
       <yloc>608</yloc>
       <attributes_hac/>
     </action>
@@ -776,7 +776,7 @@ update event_organization set is_new = false;</sql>
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
-      <xloc>128</xloc>
+      <xloc>80</xloc>
       <yloc>256</yloc>
       <attributes_hac/>
     </action>
@@ -1083,15 +1083,15 @@ update event_organization set is_new = false;</sql>
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>SQL</from>
-      <to>ReadXML.hpl 1</to>
+      <from>ImportSoftware.hpl</from>
+      <to>ReadXML.hpl 15</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportSoftware.hpl</from>
-      <to>ReadXML.hpl 15</to>
+      <from>SQL</from>
+      <to>ReadXML.hpl 1</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

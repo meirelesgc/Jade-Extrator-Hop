@@ -26,7 +26,7 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>416</xloc>
+      <xloc>400</xloc>
       <yloc>112</yloc>
       <attributes_hac/>
     </action>
@@ -132,7 +132,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>560</xloc>
+      <xloc>544</xloc>
       <yloc>112</yloc>
       <attributes_hac/>
     </action>
@@ -159,7 +159,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>1024</xloc>
-      <yloc>272</yloc>
+      <yloc>320</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -184,8 +184,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>816</xloc>
-      <yloc>272</yloc>
+      <xloc>848</xloc>
+      <yloc>320</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -210,8 +210,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>608</xloc>
-      <yloc>272</yloc>
+      <xloc>704</xloc>
+      <yloc>320</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -236,8 +236,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>400</xloc>
-      <yloc>272</yloc>
+      <xloc>544</xloc>
+      <yloc>320</yloc>
       <attributes_hac/>
     </action>
   </actions>

@@ -186,6 +186,11 @@
       <to>Dummy (already registered)</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Leitura dos XML</from>
+      <to>Read XML Book </to>
+      <enabled>N</enabled>
+    </hop>
   </order>
   <transform>
     <name>Add constants type</name>
@@ -211,7 +216,7 @@
     <attributes/>
     <GUI>
       <xloc>944</xloc>
-      <yloc>672</yloc>
+      <yloc>704</yloc>
     </GUI>
   </transform>
   <transform>
@@ -239,7 +244,7 @@
     <attributes/>
     <GUI>
       <xloc>1344</xloc>
-      <yloc>288</yloc>
+      <yloc>544</yloc>
     </GUI>
   </transform>
   <transform>
@@ -267,7 +272,7 @@
     <attributes/>
     <GUI>
       <xloc>1344</xloc>
-      <yloc>672</yloc>
+      <yloc>704</yloc>
     </GUI>
   </transform>
   <transform>
@@ -321,7 +326,7 @@
     <attributes/>
     <GUI>
       <xloc>1536</xloc>
-      <yloc>304</yloc>
+      <yloc>544</yloc>
     </GUI>
   </transform>
   <transform>
@@ -403,8 +408,45 @@
 </valuetypes>
     <attributes/>
     <GUI>
-      <xloc>1456</xloc>
-      <yloc>192</yloc>
+      <xloc>1440</xloc>
+      <yloc>448</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Leitura dos XML</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <file>
+      <file_required>N</file_required>
+      <filemask>.*xml</filemask>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <filefield>N</filefield>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <rownum>N</rownum>
+    <attributes/>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>480</yloc>
     </GUI>
   </transform>
   <transform>
@@ -429,8 +471,8 @@
     <transform2>Sort country</transform2>
     <attributes/>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>672</yloc>
+      <xloc>592</xloc>
+      <yloc>704</yloc>
     </GUI>
   </transform>
   <transform>
@@ -484,7 +526,7 @@
     <attributes/>
     <GUI>
       <xloc>2048</xloc>
-      <yloc>192</yloc>
+      <yloc>400</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1229,7 +1271,7 @@
     <attributes/>
     <GUI>
       <xloc>1808</xloc>
-      <yloc>304</yloc>
+      <yloc>544</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1312,7 +1354,7 @@
     <attributes/>
     <GUI>
       <xloc>752</xloc>
-      <yloc>672</yloc>
+      <yloc>704</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1343,7 +1385,7 @@
     <attributes/>
     <GUI>
       <xloc>2224</xloc>
-      <yloc>64</yloc>
+      <yloc>272</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1488,7 +1530,7 @@
     <attributes/>
     <GUI>
       <xloc>1136</xloc>
-      <yloc>672</yloc>
+      <yloc>704</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1521,7 +1563,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>576</xloc>
+      <xloc>592</xloc>
       <yloc>576</yloc>
     </GUI>
   </transform>
@@ -1556,7 +1598,7 @@
     <attributes/>
     <GUI>
       <xloc>2048</xloc>
-      <yloc>64</yloc>
+      <yloc>272</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1589,8 +1631,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>832</yloc>
+      <xloc>592</xloc>
+      <yloc>848</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1707,8 +1749,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>2032</xloc>
-      <yloc>288</yloc>
+      <xloc>2048</xloc>
+      <yloc>544</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1881,14 +1923,11 @@
     <only_when_have_rows>N</only_when_have_rows>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
     <partitioning_monthly>Y</partitioning_monthly>
-    <return_field/>
     <return_keys>N</return_keys>
     <schema>"public"</schema>
     <specify_fields>Y</specify_fields>
     <table>bibliographic_production</table>
-    <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
     <truncate>N</truncate>
@@ -1896,7 +1935,7 @@
     <attributes/>
     <GUI>
       <xloc>2304</xloc>
-      <yloc>192</yloc>
+      <yloc>400</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1938,7 +1977,7 @@ FROM "public".researcher
     <attributes/>
     <GUI>
       <xloc>2368</xloc>
-      <yloc>64</yloc>
+      <yloc>272</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1991,8 +2030,8 @@ FROM "public".country
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>832</yloc>
+      <xloc>752</xloc>
+      <yloc>848</yloc>
     </GUI>
   </transform>
   <transform>
@@ -2015,7 +2054,7 @@ FROM "public".country
     <attributes/>
     <GUI>
       <xloc>1664</xloc>
-      <yloc>416</yloc>
+      <yloc>656</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

@@ -991,13 +991,11 @@ FROM "public".researcher
     <commit>1</commit>
     <connection>main_database</connection>
     <error_ignored>N</error_ignored>
-    <ignore_flag_field/>
     <lookup>
       <key>
         <condition>=</condition>
         <field>id</field>
         <name>researcher _id</name>
-        <name2/>
       </key>
       <schema>"public"</schema>
       <table>researcher</table>
@@ -1010,8 +1008,8 @@ FROM "public".researcher
     <use_batch>N</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1520</xloc>
-      <yloc>416</yloc>
+      <xloc>1504</xloc>
+      <yloc>368</yloc>
     </GUI>
   </transform>
   <transform>

@@ -88,7 +88,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML ARTICLE </to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Convert Relevancia Cientifica to bool</from>
@@ -118,7 +118,7 @@
     <hop>
       <from>Merge join Researcher_name</from>
       <to>Insert table Bibliographic_production</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Sort country</from>
@@ -178,7 +178,7 @@
     <hop>
       <from>Leitura dos XML</from>
       <to>Read XML ARTICLE </to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
   </order>
   <transform>
@@ -552,8 +552,8 @@
     <rownum>N</rownum>
     <attributes/>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>672</yloc>
+      <xloc>464</xloc>
+      <yloc>736</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1284,8 +1284,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>96</yloc>
+      <xloc>240</xloc>
+      <yloc>112</yloc>
     </GUI>
   </transform>
   <transform>
