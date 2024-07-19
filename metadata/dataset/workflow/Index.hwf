@@ -183,8 +183,34 @@
       <set_logfile>Y</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>144</xloc>
+      <xloc>192</xloc>
       <yloc>224</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ImportUFMG.hwf</name>
+      <description/>
+      <type>WORKFLOW</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportUFMG.hwf</filename>
+      <logext/>
+      <logfile/>
+      <loglevel>Nothing</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>288</xloc>
+      <yloc>144</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -226,8 +252,22 @@
     </hop>
     <hop>
       <from>ImportProductionData.hwf</from>
+      <to>ImportUFMG.hwf</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportUFMG.hwf</from>
       <to>AdjustingRelationships.hwf</to>
       <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportProductionData.hwf</from>
+      <to>AdjustingRelationships.hwf</to>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
