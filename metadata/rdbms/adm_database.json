@@ -1,7 +1,7 @@
 {
   "rdbms": {
     "POSTGRESQL": {
-      "databaseName": "conectee__adm_oficial",
+      "databaseName": "conectee_adm",
       "pluginId": "POSTGRESQL",
       "accessType": 0,
       "hostname": "localhost",

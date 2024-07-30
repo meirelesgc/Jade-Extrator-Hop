@@ -57,6 +57,11 @@
     </hop>
     <hop>
       <from>Select values 3</from>
+      <to>Filter rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
       <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
@@ -137,6 +142,33 @@
     <GUI>
       <xloc>144</xloc>
       <yloc>32</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>id</name>
+        <rename>researcher_id</rename>
+      </field>
+      <field>
+        <name>dep_id</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>96</yloc>
     </GUI>
   </transform>
   <transform>
@@ -281,27 +313,24 @@ LEFT JOIN researcher r ON r.researcher_id = udr.researcher_id
     <only_when_have_rows>N</only_when_have_rows>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
     <partitioning_monthly>Y</partitioning_monthly>
-    <return_field/>
     <return_keys>N</return_keys>
     <schema>"public"</schema>
     <specify_fields>Y</specify_fields>
     <table>departament_researcher</table>
-    <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
     <truncate>N</truncate>
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>80</yloc>
+      <xloc>816</xloc>
+      <yloc>112</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Select values 3</name>
-    <type>SelectValues</type>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -310,20 +339,19 @@ LEFT JOIN researcher r ON r.researcher_id = udr.researcher_id
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fields>
-      <field>
-        <name>id</name>
-        <rename>researcher_id</rename>
-      </field>
-      <field>
-        <name>dep_id</name>
-        <rename/>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
+    <compare>
+      <condition>
+        <conditions>
+</conditions>
+        <function>IS NOT NULL</function>
+        <leftvalue>researcher_id</leftvalue>
+        <negated>N</negated>
+        <operator>-</operator>
+      </condition>
+    </compare>
     <attributes/>
     <GUI>
-      <xloc>528</xloc>
+      <xloc>672</xloc>
       <yloc>96</yloc>
     </GUI>
   </transform>
