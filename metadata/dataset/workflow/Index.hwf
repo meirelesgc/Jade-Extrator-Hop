@@ -197,8 +197,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportUFMG.hwf</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -210,7 +208,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>288</xloc>
-      <yloc>144</yloc>
+      <yloc>128</yloc>
       <attributes_hac/>
     </action>
   </actions>

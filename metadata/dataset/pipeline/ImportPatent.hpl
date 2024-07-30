@@ -134,7 +134,7 @@
     </partitioning>
     <attributes/>
     <GUI>
-      <xloc>1184</xloc>
+      <xloc>1168</xloc>
       <yloc>128</yloc>
     </GUI>
   </transform>
@@ -163,7 +163,7 @@
     <send_true_to>Select values 2</send_true_to>
     <attributes/>
     <GUI>
-      <xloc>1184</xloc>
+      <xloc>1168</xloc>
       <yloc>288</yloc>
     </GUI>
   </transform>
@@ -250,7 +250,7 @@
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1520</xloc>
+      <xloc>1504</xloc>
       <yloc>288</yloc>
     </GUI>
   </transform>
@@ -315,7 +315,7 @@
     <transform2>Sort rows 2</transform2>
     <attributes/>
     <GUI>
-      <xloc>1056</xloc>
+      <xloc>1040</xloc>
       <yloc>288</yloc>
     </GUI>
   </transform>
@@ -857,7 +857,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1312</xloc>
+      <xloc>1296</xloc>
       <yloc>288</yloc>
     </GUI>
   </transform>
@@ -884,8 +884,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>640</yloc>
+      <xloc>1040</xloc>
+      <yloc>592</yloc>
     </GUI>
   </transform>
   <transform>
@@ -994,8 +994,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>432</yloc>
+      <xloc>1040</xloc>
+      <yloc>384</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1036,7 +1036,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>880</xloc>
+      <xloc>864</xloc>
       <yloc>288</yloc>
     </GUI>
   </transform>
@@ -1139,8 +1139,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>528</yloc>
+      <xloc>1040</xloc>
+      <yloc>480</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1172,8 +1172,8 @@ FROM "public".patent
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>736</yloc>
+      <xloc>1040</xloc>
+      <yloc>688</yloc>
     </GUI>
   </transform>
   <transform>

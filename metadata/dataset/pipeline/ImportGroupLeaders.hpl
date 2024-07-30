@@ -126,7 +126,7 @@
     <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
-    <sql>SELECT id, first_leader, second_leader FROM research_group_dgp WHERE second_leader IS NULL OR first_leader IS NULL</sql>
+    <sql>SELECT id, first_leader, second_leader FROM research_group_dgp</sql>
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
@@ -156,8 +156,8 @@
     <transform2>Ordenando por nome</transform2>
     <attributes/>
     <GUI>
-      <xloc>656</xloc>
-      <yloc>352</yloc>
+      <xloc>640</xloc>
+      <yloc>336</yloc>
     </GUI>
   </transform>
   <transform>
@@ -332,8 +332,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>784</xloc>
-      <yloc>64</yloc>
+      <xloc>752</xloc>
+      <yloc>16</yloc>
     </GUI>
   </transform>
   <transform>
@@ -360,8 +360,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>768</xloc>
-      <yloc>384</yloc>
+      <xloc>784</xloc>
+      <yloc>416</yloc>
     </GUI>
   </transform>
   <transform>
@@ -429,8 +429,8 @@
     <use_batch>N</use_batch>
     <attributes/>
     <GUI>
-      <xloc>944</xloc>
-      <yloc>96</yloc>
+      <xloc>864</xloc>
+      <yloc>16</yloc>
     </GUI>
   </transform>
   <transform>
@@ -464,8 +464,8 @@
     <use_batch>N</use_batch>
     <attributes/>
     <GUI>
-      <xloc>960</xloc>
-      <yloc>384</yloc>
+      <xloc>944</xloc>
+      <yloc>416</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

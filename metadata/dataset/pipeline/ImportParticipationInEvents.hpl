@@ -98,7 +98,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML  Participção em congresso </to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Read XML  Participção em congresso </from>
@@ -108,7 +108,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML  Participção Seminario </to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Read XML  Participção Seminario </from>
@@ -128,7 +128,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML  Participção Simposio</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>String operations Simposio</from>
@@ -143,7 +143,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML  Participção Oficina </to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>String operations Oficina</from>
@@ -158,7 +158,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML  Participção Encontro </to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>String operations Encontro</from>
@@ -178,7 +178,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML  Outras Participção </to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Leitura dos XML</from>

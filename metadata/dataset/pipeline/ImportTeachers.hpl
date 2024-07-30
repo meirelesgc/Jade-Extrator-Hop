@@ -50,73 +50,11 @@
             clas, cargo, classe, ref, titulacao, entradaNaUFMG,
             progressao, semester
         FROM
-            ufmg_teacher</sql>
+            ufmg.researcher</sql>
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
       <xloc>16</xloc>
-      <yloc>0</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Renomeando campos</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>matric</name>
-      </field>
-      <field>
-        <name>inscufmg</name>
-      </field>
-      <field>
-        <name>nome</name>
-      </field>
-      <field>
-        <name>genero</name>
-      </field>
-      <field>
-        <name>situacao</name>
-      </field>
-      <field>
-        <name>rt</name>
-      </field>
-      <field>
-        <name>clas</name>
-      </field>
-      <field>
-        <name>cargo</name>
-      </field>
-      <field>
-        <name>classe</name>
-      </field>
-      <field>
-        <name>ref</name>
-      </field>
-      <field>
-        <name>titulacao</name>
-      </field>
-      <field>
-        <name>entradanaufmg</name>
-      </field>
-      <field>
-        <name>progressao</name>
-      </field>
-      <field>
-        <name>semester</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>208</xloc>
       <yloc>0</yloc>
     </GUI>
   </transform>
@@ -207,11 +145,78 @@
         <rename>semester</rename>
         <update>Y</update>
       </value>
+      <value>
+        <name>matric</name>
+        <rename>matric</rename>
+        <update>Y</update>
+      </value>
     </lookup>
     <update_bypassed>N</update_bypassed>
     <attributes/>
     <GUI>
       <xloc>400</xloc>
+      <yloc>0</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Renomeando campos</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>matric</name>
+      </field>
+      <field>
+        <name>inscufmg</name>
+      </field>
+      <field>
+        <name>nome</name>
+      </field>
+      <field>
+        <name>genero</name>
+      </field>
+      <field>
+        <name>situacao</name>
+      </field>
+      <field>
+        <name>rt</name>
+      </field>
+      <field>
+        <name>clas</name>
+      </field>
+      <field>
+        <name>cargo</name>
+      </field>
+      <field>
+        <name>classe</name>
+      </field>
+      <field>
+        <name>ref</name>
+      </field>
+      <field>
+        <name>titulacao</name>
+      </field>
+      <field>
+        <name>entradanaufmg</name>
+      </field>
+      <field>
+        <name>progressao</name>
+      </field>
+      <field>
+        <name>semester</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>208</xloc>
       <yloc>0</yloc>
     </GUI>
   </transform>

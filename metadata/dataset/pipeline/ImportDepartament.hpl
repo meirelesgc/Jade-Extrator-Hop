@@ -47,57 +47,13 @@
     <limit>0</limit>
     <sql>SELECT 
             dep_id, org_cod, dep_nom, dep_des, dep_email, dep_site, dep_sigla, 
-            dep_tel
+            dep_tel, img_data
         FROM 
-            ufmg_departament;</sql>
+            ufmg.departament;</sql>
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
       <xloc>0</xloc>
-      <yloc>16</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Renomeando campos</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>dep_id</name>
-      </field>
-      <field>
-        <name>org_cod</name>
-      </field>
-      <field>
-        <name>dep_nom</name>
-      </field>
-      <field>
-        <name>dep_des</name>
-      </field>
-      <field>
-        <name>dep_email</name>
-      </field>
-      <field>
-        <name>dep_site</name>
-      </field>
-      <field>
-        <name>dep_sigla</name>
-      </field>
-      <field>
-        <name>dep_tel</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>240</xloc>
       <yloc>16</yloc>
     </GUI>
   </transform>
@@ -158,11 +114,68 @@
         <rename>dep_tel</rename>
         <update>Y</update>
       </value>
+      <value>
+        <name>img_data</name>
+        <rename>img_data</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>dep_id</name>
+        <rename>dep_id</rename>
+        <update>Y</update>
+      </value>
     </lookup>
     <update_bypassed>N</update_bypassed>
     <attributes/>
     <GUI>
       <xloc>416</xloc>
+      <yloc>16</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Renomeando campos</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>dep_id</name>
+      </field>
+      <field>
+        <name>org_cod</name>
+      </field>
+      <field>
+        <name>dep_nom</name>
+      </field>
+      <field>
+        <name>dep_des</name>
+      </field>
+      <field>
+        <name>dep_email</name>
+      </field>
+      <field>
+        <name>dep_site</name>
+      </field>
+      <field>
+        <name>dep_sigla</name>
+      </field>
+      <field>
+        <name>dep_tel</name>
+      </field>
+      <field>
+        <name>img_data</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>192</xloc>
       <yloc>16</yloc>
     </GUI>
   </transform>
