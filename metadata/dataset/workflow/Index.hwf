@@ -42,15 +42,15 @@
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportBasicData.hwf</filename>
       <logext>log</logext>
-      <logfile>${PROJECT_HOME}/metadata/dataset/log/ImportBasicData</logfile>
+      <logfile>${PROJECT_HOME}/metadata/dataset/log/Index</logfile>
       <loglevel>Debug</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
       <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
+      <set_append_logfile>Y</set_append_logfile>
+      <set_logfile>Y</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>384</xloc>
@@ -68,15 +68,15 @@
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportExpertiseData.hwf</filename>
       <logext>log</logext>
-      <logfile>${PROJECT_HOME}/metadata/dataset/log/ImportExpertiseData</logfile>
+      <logfile>${PROJECT_HOME}/metadata/dataset/log/Index</logfile>
       <loglevel>Debug</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
       <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
+      <set_append_logfile>Y</set_append_logfile>
+      <set_logfile>Y</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>576</xloc>
@@ -94,15 +94,15 @@
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportResearcherData.hwf</filename>
       <logext>log</logext>
-      <logfile>${PROJECT_HOME}/metadata/dataset/log/ImportResearcherData</logfile>
+      <logfile>${PROJECT_HOME}/metadata/dataset/log/Index</logfile>
       <loglevel>Debug</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
       <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
+      <set_append_logfile>Y</set_append_logfile>
+      <set_logfile>Y</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>576</xloc>
@@ -120,15 +120,15 @@
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportProductionData.hwf</filename>
       <logext>log</logext>
-      <logfile>${PROJECT_HOME}/metadata/dataset/log/ImportProductionData</logfile>
+      <logfile>${PROJECT_HOME}/metadata/dataset/log/Index</logfile>
       <loglevel>Debug</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
       <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
+      <set_append_logfile>Y</set_append_logfile>
+      <set_logfile>Y</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>368</xloc>
@@ -172,15 +172,15 @@
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/workflow/AdjustingRelationships.hwf</filename>
       <logext>log</logext>
-      <logfile>${PROJECT_HOME}/metadata/dataset/log/ImportAdjustingRelationship</logfile>
+      <logfile>${PROJECT_HOME}/metadata/dataset/log/Index</logfile>
       <loglevel>Debug</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
       <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
+      <set_append_logfile>Y</set_append_logfile>
+      <set_logfile>Y</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>176</xloc>
@@ -197,14 +197,16 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportUFMG.hwf</filename>
-      <loglevel>Nothing</loglevel>
+      <logext>log</logext>
+      <logfile>${PROJECT_HOME}/metadata/dataset/log/Index</logfile>
+      <loglevel>Debug</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
       <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
+      <set_append_logfile>Y</set_append_logfile>
+      <set_logfile>Y</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>272</xloc>

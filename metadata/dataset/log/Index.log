@@ -1,0 +1,62 @@
+2024/08/30 19:08:19 - ImportBasicData - Start of workflow execution
+2024/08/30 19:08:19 - ImportBasicData - Starting action [ReadXML.hpl ]
+2024/08/30 19:08:19 - ReadXML.hpl  - Using run configuration [local]
+2024/08/30 19:08:19 - ReadXML - Executing this pipeline using the Local Pipeline Engine with run configuration 'local'
+2024/08/30 19:08:19 - ReadXML - Execution started for pipeline [ReadXML]
+2024/08/30 19:08:19 - Leitura dos XML.0 - ERROR: No files found!.
+2024/08/30 19:08:19 - ReadXML - Pipeline duration : 0.127 seconds [  0.127" ]
+2024/08/30 19:08:19 - ReadXML - Execution finished on a local pipeline engine with run configuration 'local'
+2024/08/30 19:08:19 - ImportBasicData - Starting action [ImportCity.hpl]
+2024/08/30 19:08:19 - ImportBasicData - Starting action [ImportInstitution.hpl]
+2024/08/30 19:08:19 - ImportBasicData - Starting action [ImportGraduateProgram.hpl]
+2024/08/30 19:08:19 - ImportGraduateProgram.hpl - Using run configuration [local]
+2024/08/30 19:08:19 - ImportGraduateProgram - Executing this pipeline using the Local Pipeline Engine with run configuration 'local'
+2024/08/30 19:08:19 - ImportGraduateProgram - Execution started for pipeline [ImportGraduateProgram]
+2024/08/30 19:08:22 - Programa de Pos - SIMCC.0 - ERROR: An error occurred, processing will be stopped: 
+2024/08/30 19:08:22 - Programa de Pos - SIMCC.0 - Error occurred while trying to connect to the database
+2024/08/30 19:08:22 - Programa de Pos - SIMCC.0 - 
+2024/08/30 19:08:22 - Programa de Pos - SIMCC.0 - Error connecting to database: (using class org.postgresql.Driver)
+2024/08/30 19:08:22 - Programa de Pos - SIMCC.0 - The connection attempt failed.
+2024/08/30 19:08:22 - Programa de Pos - ADM.0 - ERROR: An error occurred, processing will be stopped: 
+2024/08/30 19:08:22 - Programa de Pos - ADM.0 - Error occurred while trying to connect to the database
+2024/08/30 19:08:22 - Programa de Pos - ADM.0 - 
+2024/08/30 19:08:22 - Programa de Pos - ADM.0 - Error connecting to database: (using class org.postgresql.Driver)
+2024/08/30 19:08:22 - Programa de Pos - ADM.0 - The connection attempt failed.
+2024/08/30 19:08:22 - Insert / update.0 - ERROR: An error occurred during initialization, processing will be stopped: 
+2024/08/30 19:08:22 - Insert / update.0 - Error occurred while trying to connect to the database
+2024/08/30 19:08:22 - Insert / update.0 - 
+2024/08/30 19:08:22 - Insert / update.0 - Error connecting to database: (using class org.postgresql.Driver)
+2024/08/30 19:08:22 - Insert / update.0 - The connection attempt failed.
+2024/08/30 19:08:22 - Insert / update.0 - ERROR: Error initializing transform [Insert / update]
+2024/08/30 19:08:22 - Programa de Pos - SIMCC.0 - ERROR: Error initializing transform [Programa de Pos - SIMCC]
+2024/08/30 19:08:22 - Programa de Pos - ADM.0 - ERROR: Error initializing transform [Programa de Pos - ADM]
+2024/08/30 19:08:22 - ImportGraduateProgram - ERROR: Transform [Programa de Pos - ADM.0] failed to initialize!
+2024/08/30 19:08:22 - ImportGraduateProgram - ERROR: Transform [Programa de Pos - SIMCC.0] failed to initialize!
+2024/08/30 19:08:22 - ImportGraduateProgram - ERROR: Transform [Insert / update.0] failed to initialize!
+2024/08/30 19:08:22 - Programa de Pos - ADM.0 - Finished reading query, closing connection.
+2024/08/30 19:08:22 - Programa de Pos - SIMCC.0 - Finished reading query, closing connection.
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - ERROR: Unable to prepare for execution of the pipeline
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - ERROR: org.apache.hop.core.exception.HopException: 
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - We failed to initialize at least one transform.  Execution can not begin!
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 	at org.apache.hop.pipeline.Pipeline.prepareExecution(Pipeline.java:1087)
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 	at org.apache.hop.pipeline.engines.local.LocalPipelineEngine.prepareExecution(LocalPipelineEngine.java:236)
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 	at org.apache.hop.pipeline.Pipeline.execute(Pipeline.java:527)
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 	at org.apache.hop.workflow.actions.pipeline.ActionPipeline.execute(ActionPipeline.java:539)
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 	at org.apache.hop.workflow.Workflow.executeFromStart(Workflow.java:730)
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 	at org.apache.hop.workflow.Workflow.executeFromStart(Workflow.java:873)
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 	at org.apache.hop.workflow.Workflow.executeFromStart(Workflow.java:873)
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 	at org.apache.hop.workflow.Workflow.executeFromStart(Workflow.java:873)
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 	at org.apache.hop.workflow.Workflow.executeFromStart(Workflow.java:873)
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 	at org.apache.hop.workflow.Workflow.executeFromStart(Workflow.java:444)
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 	at org.apache.hop.workflow.Workflow.startExecution(Workflow.java:304)
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 	at org.apache.hop.workflow.engines.local.LocalWorkflowEngine.startExecution(LocalWorkflowEngine.java:248)
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 	at org.apache.hop.workflow.actions.workflow.ActionWorkflowRunner.run(ActionWorkflowRunner.java:55)
+2024/08/30 19:08:22 - ImportGraduateProgram.hpl - 	at java.base/java.lang.Thread.run(Thread.java:834)
+2024/08/30 19:08:22 - ImportBasicData - Finished action [ImportGraduateProgram.hpl] (result=[false])
+2024/08/30 19:08:22 - ImportBasicData - Finished action [ImportInstitution.hpl] (result=[false])
+2024/08/30 19:08:22 - ImportBasicData - Finished action [ImportCity.hpl] (result=[false])
+2024/08/30 19:08:22 - ImportBasicData - Finished action [ReadXML.hpl ] (result=[false])
+2024/08/30 19:08:22 - ImportBasicData - Workflow execution finished
+2024/08/30 19:08:22 - ImportBasicData - Workflow duration : 3.642 seconds [  3.641" ]
