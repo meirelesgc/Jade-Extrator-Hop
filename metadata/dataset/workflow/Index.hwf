@@ -38,7 +38,7 @@
       <attributes/>
       <add_date>N</add_date>
       <add_time>N</add_time>
-      <create_parent_folder>Y</create_parent_folder>
+      <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportBasicData.hwf</filename>
       <logext>log</logext>
