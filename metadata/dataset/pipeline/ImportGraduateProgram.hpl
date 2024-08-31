@@ -27,37 +27,7 @@
     </hop>
     <hop>
       <from>Limpando 2</from>
-      <to>Sort Code - ADM</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort Code - SIMCC</from>
-      <to>Join Code</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort Code - ADM</from>
-      <to>Join Code</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Programa de Pos - SIMCC</from>
-      <to>Limpando</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Limpando</from>
-      <to>Sort Code - SIMCC</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Limpando 3</from>
       <to>Insert / update</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Join Code</from>
-      <to>Limpando 3</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -79,6 +49,7 @@
         <condition>=</condition>
         <field>graduate_program_id</field>
         <name>graduate_program_id</name>
+        <name2/>
       </key>
       <schema>"public"</schema>
       <table>graduate_program</table>
@@ -128,11 +99,6 @@
         <update>Y</update>
       </value>
       <value>
-        <name>instituicao</name>
-        <rename>instituicao</rename>
-        <update>Y</update>
-      </value>
-      <value>
         <name>url_image</name>
         <rename>url_image</rename>
         <update>Y</update>
@@ -143,8 +109,8 @@
         <update>Y</update>
       </value>
       <value>
-        <name>sigla</name>
-        <rename>sigla</rename>
+        <name>acronym</name>
+        <rename>acronym</rename>
         <update>Y</update>
       </value>
       <value>
@@ -162,62 +128,17 @@
         <rename>graduate_program_id</rename>
         <update>Y</update>
       </value>
+      <value>
+        <name>site</name>
+        <rename>site</rename>
+        <update>Y</update>
+      </value>
     </lookup>
     <update_bypassed>N</update_bypassed>
     <attributes/>
     <GUI>
-      <xloc>896</xloc>
-      <yloc>112</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Join Code</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>LEFT OUTER</join_type>
-    <keys_1>
-      <key>graduate_program_id</key>
-    </keys_1>
-    <keys_2>
-      <key>uuid_simcc</key>
-    </keys_2>
-    <transform1>Sort Code - ADM</transform1>
-    <transform2>Sort Code - SIMCC</transform2>
-    <attributes/>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>112</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Limpando</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>graduate_program_id</name>
-        <rename>uuid_simcc</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>352</xloc>
-      <yloc>0</yloc>
+      <xloc>544</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -234,51 +155,67 @@
     <fields>
       <field>
         <name>graduate_program_id</name>
+        <rename/>
       </field>
       <field>
         <name>code</name>
+        <rename/>
       </field>
       <field>
         <name>name</name>
+        <rename/>
       </field>
       <field>
         <name>area</name>
+        <rename/>
       </field>
       <field>
         <name>modality</name>
+        <rename/>
       </field>
       <field>
         <name>type</name>
+        <rename/>
       </field>
       <field>
         <name>rating</name>
+        <rename/>
       </field>
       <field>
         <name>institution_id</name>
+        <rename/>
       </field>
       <field>
         <name>state</name>
+        <rename/>
       </field>
       <field>
         <name>city</name>
-      </field>
-      <field>
-        <name>instituicao</name>
-      </field>
-      <field>
-        <name>url_image</name>
+        <rename/>
       </field>
       <field>
         <name>region</name>
+        <rename/>
       </field>
       <field>
-        <name>sigla</name>
+        <name>url_image</name>
+        <rename/>
+      </field>
+      <field>
+        <name>acronym</name>
+        <rename/>
       </field>
       <field>
         <name>description</name>
+        <rename/>
       </field>
       <field>
         <name>visible</name>
+        <rename/>
+      </field>
+      <field>
+        <name>site</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -286,74 +223,6 @@
     <GUI>
       <xloc>352</xloc>
       <yloc>224</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Limpando 3</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>code</name>
-      </field>
-      <field>
-        <name>name</name>
-      </field>
-      <field>
-        <name>area</name>
-      </field>
-      <field>
-        <name>modality</name>
-      </field>
-      <field>
-        <name>type</name>
-      </field>
-      <field>
-        <name>rating</name>
-      </field>
-      <field>
-        <name>institution_id</name>
-      </field>
-      <field>
-        <name>state</name>
-      </field>
-      <field>
-        <name>city</name>
-      </field>
-      <field>
-        <name>instituicao</name>
-      </field>
-      <field>
-        <name>url_image</name>
-      </field>
-      <field>
-        <name>region</name>
-      </field>
-      <field>
-        <name>sigla</name>
-      </field>
-      <field>
-        <name>description</name>
-      </field>
-      <field>
-        <name>visible</name>
-      </field>
-      <field>
-        <name>graduate_program_id</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>688</xloc>
-      <yloc>112</yloc>
     </GUI>
   </transform>
   <transform>
@@ -371,123 +240,32 @@
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT
-  graduate_program_id
-, code
-, name
-, area
-, modality
-, type
-, rating
-, institution_id
-, state
-, city
-, instituicao
-, url_image
-, region
-, acronym
-, description
-, visible
-FROM "public".graduate_program
+    graduate_program_id,
+    code,
+    name,
+    area,
+    modality,
+    type,
+    rating,
+    institution_id,
+    state,
+    city,
+    region,
+    url_image,
+    visible,
+    created_at,
+    updated_at,
+    description,
+    site,
+    acronym
+FROM
+    graduate_program;
 </sql>
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
       <xloc>160</xloc>
       <yloc>224</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Programa de Pos - SIMCC</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>main_database</connection>
-    <execute_each_row>N</execute_each_row>
-    <limit>0</limit>
-    <sql>SELECT
-	graduate_program_id,
-	code
-FROM
-	graduate_program</sql>
-    <variables_active>N</variables_active>
-    <attributes/>
-    <GUI>
-      <xloc>160</xloc>
-      <yloc>0</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Sort Code - ADM</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>graduate_program_id</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>224</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Sort Code - SIMCC</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>uuid_simcc</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>0</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
