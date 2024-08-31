@@ -50,7 +50,7 @@
       <params_from_previous>N</params_from_previous>
       <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
-      <set_logfile>Y</set_logfile>
+      <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>384</xloc>
@@ -76,7 +76,7 @@
       <params_from_previous>N</params_from_previous>
       <run_configuration>local</run_configuration>
       <set_append_logfile>Y</set_append_logfile>
-      <set_logfile>Y</set_logfile>
+      <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>576</xloc>
@@ -102,7 +102,7 @@
       <params_from_previous>N</params_from_previous>
       <run_configuration>local</run_configuration>
       <set_append_logfile>Y</set_append_logfile>
-      <set_logfile>Y</set_logfile>
+      <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>576</xloc>
@@ -128,7 +128,7 @@
       <params_from_previous>N</params_from_previous>
       <run_configuration>local</run_configuration>
       <set_append_logfile>Y</set_append_logfile>
-      <set_logfile>Y</set_logfile>
+      <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>368</xloc>
@@ -180,7 +180,7 @@
       <params_from_previous>N</params_from_previous>
       <run_configuration>local</run_configuration>
       <set_append_logfile>Y</set_append_logfile>
-      <set_logfile>Y</set_logfile>
+      <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>176</xloc>
@@ -206,7 +206,7 @@
       <params_from_previous>N</params_from_previous>
       <run_configuration>local</run_configuration>
       <set_append_logfile>Y</set_append_logfile>
-      <set_logfile>Y</set_logfile>
+      <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>272</xloc>
