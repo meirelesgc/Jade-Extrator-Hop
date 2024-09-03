@@ -58,7 +58,7 @@
     <hop>
       <from>Select values 3</from>
       <to>Table output</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
   </order>
   <transform>

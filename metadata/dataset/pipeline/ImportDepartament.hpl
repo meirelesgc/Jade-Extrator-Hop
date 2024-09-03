@@ -75,7 +75,6 @@
         <condition>=</condition>
         <field>dep_id</field>
         <name>dep_id</name>
-        <name2/>
       </key>
       <schema>"public"</schema>
       <table>ufmg_departament</table>
