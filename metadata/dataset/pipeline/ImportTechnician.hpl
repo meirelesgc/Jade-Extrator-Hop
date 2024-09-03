@@ -54,11 +54,6 @@
       <schema>"public"</schema>
       <table>ufmg_technician</table>
       <value>
-        <name>ins_ufmg</name>
-        <rename>ins_ufmg</rename>
-        <update>Y</update>
-      </value>
-      <value>
         <name>nome</name>
         <rename>nome</rename>
         <update>Y</update>
@@ -126,11 +121,6 @@
       <value>
         <name>semester</name>
         <rename>semester</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>matric</name>
-        <rename>matric</rename>
         <update>Y</update>
       </value>
       <value>
