@@ -47,8 +47,9 @@
     <lookup>
       <key>
         <condition>=</condition>
-        <field>matric</field>
-        <name>matric</name>
+        <field>nome</field>
+        <name>nome</name>
+        <name2/>
       </key>
       <schema>"public"</schema>
       <table>ufmg_technician</table>
