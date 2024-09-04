@@ -21,18 +21,8 @@
   </notepads>
   <order>
     <hop>
-      <from>Table input</from>
-      <to>Select values</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Select values</from>
       <to>Sort rows 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows 2</from>
-      <to>Merge join</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -46,7 +36,22 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>Select values 3</from>
+      <to>Insert / update</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>CSV file input</from>
+      <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>Sort rows</from>
+      <to>Merge join</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows 2</from>
       <to>Merge join</to>
       <enabled>Y</enabled>
     </hop>
@@ -55,12 +60,249 @@
       <to>Select values 3</to>
       <enabled>Y</enabled>
     </hop>
-    <hop>
-      <from>Select values 3</from>
-      <to>Insert / update</to>
-      <enabled>Y</enabled>
-    </hop>
   </order>
+  <transform>
+    <name>CSV file input</name>
+    <type>CSVInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <filename>${PROJECT_HOME}/metadata/dataset/csv/foment.csv</filename>
+    <filename_field/>
+    <rownum_field/>
+    <include_filename>N</include_filename>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <schemaDefinition/>
+    <lazy_conversion>Y</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <encoding/>
+    <fields>
+      <field>
+        <name>#</name>
+        <type>Number</type>
+        <format>#.#</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># Id Lattes</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># Nome Beneficiário</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>56</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># CPF Beneficiário</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>14</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># Nome País</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># Nome Região</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>12</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># Nome UF</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>19</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># Nome Cidade</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>22</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># Nome Grande Área</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>27</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># Nome Área</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>48</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># Nome Sub-área</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>63</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># Cod Modalidade</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># Nome Modalidade</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>46</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># Título Chamada</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>105</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># Cod Categoria Nível</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># Nome Programa Fomento</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>62</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name># Nome Instituto</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>77</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>QUANTAUXILIO</name>
+        <type>Number</type>
+        <format>#.#</format>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>15</length>
+        <precision>1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>QUANTBOLSA</name>
+        <type>Number</type>
+        <format>#.#</format>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>15</length>
+        <precision>1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>224</yloc>
+    </GUI>
+  </transform>
   <transform>
     <name>Insert / update</name>
     <type>InsertUpdate</type>
@@ -77,16 +319,11 @@
     <lookup>
       <key>
         <condition>=</condition>
-        <field>id</field>
-        <name>id</name>
+        <field>researcher_id</field>
+        <name>researcher_id</name>
       </key>
       <schema>"public"</schema>
       <table>subsidy</table>
-      <value>
-        <name>id</name>
-        <rename>id</rename>
-        <update>Y</update>
-      </value>
       <value>
         <name>researcher_id</name>
         <rename>researcher_id</rename>
@@ -141,6 +378,32 @@
     </GUI>
   </transform>
   <transform>
+    <name>Merge join</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <keys_1>
+      <key>lattes_id</key>
+    </keys_1>
+    <keys_2>
+      <key>lattes_id</key>
+    </keys_2>
+    <transform1>Sort rows 2</transform1>
+    <transform2>Sort rows</transform2>
+    <attributes/>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>160</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>Select values</name>
     <type>SelectValues</type>
     <description/>
@@ -153,11 +416,90 @@
     </partitioning>
     <fields>
       <field>
-        <name>id</name>
-        <rename/>
+        <name># Id Lattes</name>
+        <rename>lattes_id</rename>
       </field>
       <field>
+        <name># Cod Modalidade</name>
+        <rename>modality_code</rename>
+      </field>
+      <field>
+        <name># Nome Modalidade</name>
+        <rename>modality_name</rename>
+      </field>
+      <field>
+        <name># Título Chamada</name>
+        <rename>call_title</rename>
+      </field>
+      <field>
+        <name># Cod Categoria Nível</name>
+        <rename>category_level_code</rename>
+      </field>
+      <field>
+        <name># Nome Programa Fomento</name>
+        <rename>funding_program_name</rename>
+      </field>
+      <field>
+        <name># Nome Instituto</name>
+        <rename>institute_name</rename>
+      </field>
+      <field>
+        <name>QUANTAUXILIO</name>
+        <rename>aid_quantity</rename>
+      </field>
+      <field>
+        <name>QUANTBOLSA</name>
+        <rename>scholarship_quantity</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>256</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
         <name>lattes_id</name>
+      </field>
+      <field>
+        <name>id</name>
+        <rename>researcher_id</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>64</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>researcher_id</name>
         <rename/>
       </field>
       <field>
@@ -196,81 +538,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>192</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Table input</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>adm_database</connection>
-    <execute_each_row>N</execute_each_row>
-    <limit>0</limit>
-    <sql>SELECT id, r.lattes_id, modality_code, modality_name, call_title, category_level_code, funding_program_name, institute_name, aid_quantity, scholarship_quantity
-	FROM public.subsidy s INNER JOIN researcher r ON r.researcher_id = s.researcher_id ORDER BY r.lattes_id;</sql>
-    <variables_active>N</variables_active>
-    <attributes/>
-    <GUI>
-      <xloc>272</xloc>
-      <yloc>208</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Table input 2</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>main_database</connection>
-    <execute_each_row>N</execute_each_row>
-    <limit>0</limit>
-    <sql>SELECT id, lattes_id FROM researcher</sql>
-    <variables_active>N</variables_active>
-    <attributes/>
-    <GUI>
-      <xloc>272</xloc>
-      <yloc>64</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Select values 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>lattes_id</name>
-        <rename/>
-      </field>
-      <field>
-        <name>id</name>
-        <rename>researcher_id</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>384</xloc>
-      <yloc>64</yloc>
+      <xloc>720</xloc>
+      <yloc>144</yloc>
     </GUI>
   </transform>
   <transform>
@@ -342,8 +611,8 @@
     </GUI>
   </transform>
   <transform>
-    <name>Merge join</name>
-    <type>MergeJoin</type>
+    <name>Table input 2</name>
+    <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -352,79 +621,19 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>INNER</join_type>
-    <keys_1>
-      <key>lattes_id</key>
-    </keys_1>
-    <keys_2>
-      <key>lattes_id</key>
-    </keys_2>
-    <transform1>Sort rows</transform1>
-    <transform2>Sort rows 2</transform2>
+    <connection>main_database</connection>
+    <execute_each_row>N</execute_each_row>
+    <limit>0</limit>
+    <sql>SELECT r.id, r.lattes_id
+FROM researcher r
+ LEFT JOIN subsidy s ON s.researcher_id = r.id 
+WHERE s.researcher_id IS NULL;
+</sql>
+    <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>640</xloc>
-      <yloc>176</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Select values 3</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>researcher_id</name>
-        <rename/>
-      </field>
-      <field>
-        <name>id</name>
-        <rename/>
-      </field>
-      <field>
-        <name>modality_code</name>
-        <rename/>
-      </field>
-      <field>
-        <name>modality_name</name>
-        <rename/>
-      </field>
-      <field>
-        <name>call_title</name>
-        <rename/>
-      </field>
-      <field>
-        <name>category_level_code</name>
-        <rename/>
-      </field>
-      <field>
-        <name>funding_program_name</name>
-        <rename/>
-      </field>
-      <field>
-        <name>institute_name</name>
-        <rename/>
-      </field>
-      <field>
-        <name>aid_quantity</name>
-        <rename/>
-      </field>
-      <field>
-        <name>scholarship_quantity</name>
-        <rename/>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>720</xloc>
-      <yloc>144</yloc>
+      <xloc>272</xloc>
+      <yloc>64</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

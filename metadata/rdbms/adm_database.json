@@ -4,8 +4,8 @@
       "databaseName": "admin",
       "pluginId": "POSTGRESQL",
       "accessType": 0,
-      "hostname": "my-database",
-      "password": "Encrypted 32616666393433372d623637322d343432302d638aac9de55a9393dcaf1dab738b96f78c",
+      "hostname": "localhost",
+      "password": "Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce",
       "pluginName": "PostgreSQL",
       "port": "5432",
       "attributes": {

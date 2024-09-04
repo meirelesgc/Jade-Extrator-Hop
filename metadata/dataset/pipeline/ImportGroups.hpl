@@ -31,26 +31,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values</from>
-      <to>Table output</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows 2</from>
-      <to>Unique rows 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>CSV file input</from>
-      <to>Select values 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 2</from>
-      <to>Sort rows 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Unique rows</from>
       <to>Merge join</to>
       <enabled>Y</enabled>
@@ -61,7 +41,27 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Unique rows 2</from>
+      <from>Select values</from>
+      <to>Table output</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>CSV file input</from>
+      <to>Select values 2 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 2 2 2</from>
+      <to>Sort rows 2 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows 2 2 2</from>
+      <to>Unique rows 2 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unique rows 2 2 2</from>
       <to>Merge join</to>
       <enabled>Y</enabled>
     </hop>
@@ -81,7 +81,7 @@
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
-    <separator>;</separator>
+    <separator>,</separator>
     <enclosure>"</enclosure>
     <header>Y</header>
     <buffer_size>50000</buffer_size>
@@ -90,16 +90,16 @@
     <add_filename_result>N</add_filename_result>
     <parallel>N</parallel>
     <newline_possible>N</newline_possible>
-    <encoding>UTF-8</encoding>
+    <encoding/>
     <fields>
       <field>
-        <name>ï»¿TITULO_LINHA_PESQUISA</name>
+        <name>TITULO_LINHA_PESQUISA</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>173</length>
+        <length>255</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -110,7 +110,7 @@
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>33</length>
+        <length>85</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -121,7 +121,7 @@
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>532</length>
+        <length>500</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -132,7 +132,7 @@
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>185</length>
+        <length>340</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -150,7 +150,7 @@
       <field>
         <name>DATA_INICIO_DA_COLETA</name>
         <type>Date</type>
-        <format>MM/dd/yyyy</format>
+        <format>yyyy-MM-dd</format>
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
@@ -161,7 +161,7 @@
       <field>
         <name>DATA_FIM_DA_COLETA</name>
         <type>Date</type>
-        <format>MM/dd/yyyy</format>
+        <format>yyyy-MM-dd</format>
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
@@ -171,13 +171,13 @@
       </field>
       <field>
         <name>IDENTIFICADOR_GRUPO</name>
-        <type>String</type>
-        <format/>
+        <type>Integer</type>
+        <format>#</format>
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>8</length>
-        <precision>-1</precision>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
@@ -187,7 +187,7 @@
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>128</length>
+        <length>199</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -209,7 +209,7 @@
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>12</length>
+        <length>13</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -220,7 +220,7 @@
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>17</length>
+        <length>19</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -231,7 +231,7 @@
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>21</length>
+        <length>37</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -253,7 +253,7 @@
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>24</length>
+        <length>42</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -264,7 +264,7 @@
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>72</length>
+        <length>75</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -275,7 +275,7 @@
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>9</length>
+        <length>16</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -286,7 +286,7 @@
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>33</length>
+        <length>85</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -297,7 +297,7 @@
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>70</length>
+        <length>88</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -308,14 +308,14 @@
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>92</length>
+        <length>190</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>528</xloc>
+      <xloc>560</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
@@ -408,6 +408,34 @@
     </GUI>
   </transform>
   <transform>
+    <name>Merge join</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <keys_1>
+      <key>﻿name</key>
+      <key>institution</key>
+    </keys_1>
+    <keys_2>
+      <key>NOME_DO_GRUPO</key>
+      <key>SIGLA_DA_INSTITUICAO</key>
+    </keys_2>
+    <transform1>Unique rows</transform1>
+    <transform2>Unique rows 2 2 2</transform2>
+    <attributes/>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>208</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>Select values</name>
     <type>SelectValues</type>
     <description/>
@@ -421,25 +449,47 @@
     <fields>
       <field>
         <name>﻿name</name>
-        <rename/>
-      </field>
-      <field>
-        <name>second_leader</name>
-        <rename/>
       </field>
       <field>
         <name>institution</name>
-        <rename/>
       </field>
       <field>
         <name>first_leader</name>
-        <rename/>
+      </field>
+      <field>
+        <name>second_leader</name>
       </field>
       <field>
         <name>area</name>
-        <rename/>
+      </field>
+      <field>
+        <name>ANO_DO_CENSO</name>
+      </field>
+      <field>
+        <name>DATA_INICIO_DA_COLETA</name>
+      </field>
+      <field>
+        <name>DATA_FIM_DA_COLETA</name>
+      </field>
+      <field>
+        <name>IDENTIFICADOR_GRUPO</name>
+      </field>
+      <field>
+        <name>ANO_FORMACAO_GRUPO</name>
+      </field>
+      <field>
+        <name>NOME_DA_INSTITUICAO</name>
+      </field>
+      <field>
+        <name>CATEGORIA_ADMINISTRATIVA</name>
+      </field>
+      <field>
+        <name>NOME_DO_GRUPO</name>
       </field>
       <select_unspecified>N</select_unspecified>
+      <remove>
+        <name>NOME_DO_GRUPO</name>
+      </remove>
       <meta>
         <name>﻿name</name>
         <rename>﻿name</rename>
@@ -461,7 +511,7 @@
         <name>institution</name>
         <rename>institution</rename>
         <type>String</type>
-        <length>11</length>
+        <length>-2</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -478,7 +528,7 @@
         <name>first_leader</name>
         <rename>first_leader</rename>
         <type>String</type>
-        <length>45</length>
+        <length>-2</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -495,7 +545,7 @@
         <name>second_leader</name>
         <rename>second_leader</rename>
         <type>String</type>
-        <length>47</length>
+        <length>-2</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -512,7 +562,7 @@
         <name>area</name>
         <rename>area</rename>
         <type>String</type>
-        <length>42</length>
+        <length>-2</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -527,10 +577,10 @@
       </meta>
       <meta>
         <name>ANO_DO_CENSO</name>
-        <rename>ANO_DO_CENSO</rename>
+        <rename>census</rename>
         <type>Integer</type>
-        <length>15</length>
-        <precision>0</precision>
+        <length>-2</length>
+        <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
@@ -544,7 +594,7 @@
       </meta>
       <meta>
         <name>DATA_INICIO_DA_COLETA</name>
-        <rename>DATA_INICIO_DA_COLETA</rename>
+        <rename>start_of_collection</rename>
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -561,7 +611,7 @@
       </meta>
       <meta>
         <name>DATA_FIM_DA_COLETA</name>
-        <rename>DATA_FIM_DA_COLETA</rename>
+        <rename>end_of_collection</rename>
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -578,26 +628,9 @@
       </meta>
       <meta>
         <name>IDENTIFICADOR_GRUPO</name>
-        <rename>IDENTIFICADOR_GRUPO</rename>
+        <rename>group_identifier</rename>
         <type>String</type>
-        <length>8</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>NOME_DO_GRUPO</name>
-        <rename>NOME_DO_GRUPO</rename>
-        <type>String</type>
-        <length>128</length>
+        <length>-2</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -612,26 +645,9 @@
       </meta>
       <meta>
         <name>ANO_FORMACAO_GRUPO</name>
-        <rename>ANO_FORMACAO_GRUPO</rename>
+        <rename>year</rename>
         <type>Integer</type>
-        <length>15</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>NOME_DA_INSTITUICAO</name>
-        <rename>NOME_DA_INSTITUICAO</rename>
-        <type>String</type>
-        <length>72</length>
+        <length>-2</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -645,10 +661,10 @@
         <storage_type/>
       </meta>
       <meta>
-        <name>SIGLA_DA_INSTITUICAO</name>
-        <rename>SIGLA_DA_INSTITUICAO</rename>
+        <name>NOME_DA_INSTITUICAO</name>
+        <rename>institution_name</rename>
         <type>String</type>
-        <length>9</length>
+        <length>-2</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -663,9 +679,9 @@
       </meta>
       <meta>
         <name>CATEGORIA_ADMINISTRATIVA</name>
-        <rename>CATEGORIA_ADMINISTRATIVA</rename>
+        <rename>category</rename>
         <type>String</type>
-        <length>33</length>
+        <length>-2</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -681,12 +697,12 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1120</xloc>
+      <xloc>1088</xloc>
       <yloc>208</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Select values 2</name>
+    <name>Select values 2 2 2</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -699,45 +715,36 @@
     <fields>
       <field>
         <name>ANO_DO_CENSO</name>
-        <rename/>
       </field>
       <field>
         <name>DATA_INICIO_DA_COLETA</name>
-        <rename/>
       </field>
       <field>
         <name>DATA_FIM_DA_COLETA</name>
-        <rename/>
       </field>
       <field>
         <name>IDENTIFICADOR_GRUPO</name>
-        <rename/>
       </field>
       <field>
         <name>NOME_DO_GRUPO</name>
-        <rename/>
       </field>
       <field>
         <name>ANO_FORMACAO_GRUPO</name>
-        <rename/>
       </field>
       <field>
         <name>NOME_DA_INSTITUICAO</name>
-        <rename/>
       </field>
       <field>
         <name>SIGLA_DA_INSTITUICAO</name>
-        <rename/>
       </field>
       <field>
         <name>CATEGORIA_ADMINISTRATIVA</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>656</xloc>
+      <xloc>688</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
@@ -784,7 +791,7 @@
     </GUI>
   </transform>
   <transform>
-    <name>Sort rows 2</name>
+    <name>Sort rows 2 2 2</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -821,7 +828,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>784</xloc>
+      <xloc>816</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
@@ -840,8 +847,8 @@
     <connection>main_database</connection>
     <fields>
       <field>
-        <column_name>second_leader</column_name>
-        <stream_name>second_leader</stream_name>
+        <column_name>name</column_name>
+        <stream_name>﻿name</stream_name>
       </field>
       <field>
         <column_name>institution</column_name>
@@ -852,12 +859,40 @@
         <stream_name>first_leader</stream_name>
       </field>
       <field>
+        <column_name>second_leader</column_name>
+        <stream_name>second_leader</stream_name>
+      </field>
+      <field>
         <column_name>area</column_name>
         <stream_name>area</stream_name>
       </field>
       <field>
-        <column_name>name</column_name>
-        <stream_name>﻿name</stream_name>
+        <column_name>census</column_name>
+        <stream_name>census</stream_name>
+      </field>
+      <field>
+        <column_name>start_of_collection</column_name>
+        <stream_name>start_of_collection</stream_name>
+      </field>
+      <field>
+        <column_name>end_of_collection</column_name>
+        <stream_name>end_of_collection</stream_name>
+      </field>
+      <field>
+        <column_name>group_identifier</column_name>
+        <stream_name>group_identifier</stream_name>
+      </field>
+      <field>
+        <column_name>year</column_name>
+        <stream_name>year</stream_name>
+      </field>
+      <field>
+        <column_name>institution_name</column_name>
+        <stream_name>institution_name</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
       </field>
     </fields>
     <ignore_errors>N</ignore_errors>
@@ -875,7 +910,7 @@
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1264</xloc>
+      <xloc>1232</xloc>
       <yloc>208</yloc>
     </GUI>
   </transform>
@@ -890,9 +925,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <count_field/>
     <count_rows>N</count_rows>
-    <error_description/>
     <fields>
       <field>
         <case_insensitive>Y</case_insensitive>
@@ -911,7 +944,7 @@
     </GUI>
   </transform>
   <transform>
-    <name>Unique rows 2</name>
+    <name>Unique rows 2 2 2</name>
     <type>Unique</type>
     <description/>
     <distribute>Y</distribute>
@@ -927,40 +960,16 @@
         <case_insensitive>N</case_insensitive>
         <name>NOME_DO_GRUPO</name>
       </field>
+      <field>
+        <case_insensitive>N</case_insensitive>
+        <name>SIGLA_DA_INSTITUICAO</name>
+      </field>
     </fields>
     <reject_duplicate_row>N</reject_duplicate_row>
     <attributes/>
     <GUI>
-      <xloc>928</xloc>
+      <xloc>960</xloc>
       <yloc>64</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Merge join</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>LEFT OUTER</join_type>
-    <keys_1>
-      <key>﻿name</key>
-      <key>institution</key>
-    </keys_1>
-    <keys_2>
-      <key>NOME_DO_GRUPO</key>
-      <key>SIGLA_DA_INSTITUICAO</key>
-    </keys_2>
-    <transform1>Unique rows</transform1>
-    <transform2>Unique rows 2</transform2>
-    <attributes/>
-    <GUI>
-      <xloc>928</xloc>
-      <yloc>208</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
