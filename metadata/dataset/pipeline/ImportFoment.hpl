@@ -100,7 +100,7 @@
       </field>
       <field>
         <name># Id Lattes</name>
-        <type>Integer</type>
+        <type>String</type>
         <format>#</format>
         <currency>$</currency>
         <decimal>,</decimal>
@@ -500,39 +500,30 @@
     <fields>
       <field>
         <name>researcher_id</name>
-        <rename/>
       </field>
       <field>
         <name>modality_code</name>
-        <rename/>
       </field>
       <field>
         <name>modality_name</name>
-        <rename/>
       </field>
       <field>
         <name>call_title</name>
-        <rename/>
       </field>
       <field>
         <name>category_level_code</name>
-        <rename/>
       </field>
       <field>
         <name>funding_program_name</name>
-        <rename/>
       </field>
       <field>
         <name>institute_name</name>
-        <rename/>
       </field>
       <field>
         <name>aid_quantity</name>
-        <rename/>
       </field>
       <field>
         <name>scholarship_quantity</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
