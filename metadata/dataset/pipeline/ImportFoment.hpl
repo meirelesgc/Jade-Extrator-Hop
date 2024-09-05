@@ -85,7 +85,7 @@
     <add_filename_result>N</add_filename_result>
     <parallel>N</parallel>
     <newline_possible>N</newline_possible>
-    <encoding/>
+    <encoding>ISO-8859-9</encoding>
     <fields>
       <field>
         <name>#</name>
@@ -101,12 +101,12 @@
       <field>
         <name># Id Lattes</name>
         <type>String</type>
-        <format>#</format>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>0</precision>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
@@ -373,8 +373,8 @@
     <update_bypassed>N</update_bypassed>
     <attributes/>
     <GUI>
-      <xloc>832</xloc>
-      <yloc>160</yloc>
+      <xloc>864</xloc>
+      <yloc>208</yloc>
     </GUI>
   </transform>
   <transform>
