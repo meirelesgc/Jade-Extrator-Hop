@@ -122,48 +122,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Limpando 3</from>
-      <to>Montando last_update</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Montando last_update</from>
-      <to>Limpando Orcid</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>String para Data</from>
-      <to>Renomeando 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Limpando Orcid</from>
-      <to>String para Data</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Renomeando 4</from>
       <to>Table output</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Limpando Orcid 2</from>
-      <to>String para Data 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Montando last_update 2</from>
-      <to>Limpando Orcid 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>String para Data 2</from>
-      <to>Renomeando 5</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Adicionar ou Atualizar</from>
-      <to>Montando last_update 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -216,6 +176,26 @@
       <to>Update</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Adicionar ou Atualizar</from>
+      <to>Limpando Orcid 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Limpando Orcid 2</from>
+      <to>Renomeando 5</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Limpando 3</from>
+      <to>Limpando Orcid</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Limpando Orcid</from>
+      <to>Renomeando 4</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <transform>
     <name>Adicionar ou Atualizar</name>
@@ -239,7 +219,7 @@
       </condition>
     </compare>
     <send_false_to>Limpando 2</send_false_to>
-    <send_true_to>Montando last_update 2</send_true_to>
+    <send_true_to>Limpando Orcid 2</send_true_to>
     <attributes/>
     <GUI>
       <xloc>896</xloc>
@@ -869,7 +849,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1968</xloc>
+      <xloc>1824</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -894,7 +874,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1056</xloc>
+      <xloc>896</xloc>
       <yloc>384</yloc>
     </GUI>
   </transform>
@@ -921,62 +901,6 @@
     <attributes/>
     <GUI>
       <xloc>1600</xloc>
-      <yloc>384</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Montando last_update</name>
-    <type>Calculator</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <calculation>
-      <calc_type>ADD</calc_type>
-      <field_a>DATA-ATUALIZACAO</field_a>
-      <field_b>HORA-ATUALIZACAO</field_b>
-      <field_name>last_update</field_name>
-      <remove>N</remove>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <value_type>String</value_type>
-    </calculation>
-    <failIfNoFile>Y</failIfNoFile>
-    <attributes/>
-    <GUI>
-      <xloc>1840</xloc>
-      <yloc>720</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Montando last_update 2</name>
-    <type>Calculator</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <calculation>
-      <calc_type>ADD</calc_type>
-      <field_a>DATA-ATUALIZACAO</field_a>
-      <field_b>HORA-ATUALIZACAO</field_b>
-      <field_name>last_update</field_name>
-      <remove>N</remove>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <value_type>String</value_type>
-    </calculation>
-    <failIfNoFile>Y</failIfNoFile>
-    <attributes/>
-    <GUI>
-      <xloc>896</xloc>
       <yloc>384</yloc>
     </GUI>
   </transform>
@@ -1215,34 +1139,14 @@
         <rename>lattes_id</rename>
       </field>
       <field>
-        <name>last_update</name>
-      </field>
-      <field>
         <name>orcid_cut</name>
         <rename>orcid</rename>
       </field>
       <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>last_update</name>
-        <rename>last_update</rename>
-        <type>Date</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask>yyyy-MM-dd HH:mm:ss</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>2224</xloc>
+      <xloc>1968</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -1261,9 +1165,6 @@
       <field>
         <name>researcher_id_simcc</name>
         <rename>id</rename>
-      </field>
-      <field>
-        <name>last_update_simcc</name>
       </field>
       <field>
         <name>NOME</name>
@@ -1286,9 +1187,6 @@
         <rename>other_information</rename>
       </field>
       <field>
-        <name>last_update</name>
-      </field>
-      <field>
         <name>orcid_cut</name>
         <rename>orcid</rename>
       </field>
@@ -1296,27 +1194,10 @@
         <name>lattes_id_simcc</name>
       </field>
       <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>last_update</name>
-        <rename>last_update</rename>
-        <type>Date</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask>yyyy-MM-dd HH:mm:ss</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1376</xloc>
+      <xloc>1264</xloc>
       <yloc>384</yloc>
     </GUI>
   </transform>
@@ -1648,80 +1529,6 @@
     </GUI>
   </transform>
   <transform>
-    <name>String para Data</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>last_update</name>
-        <rename>last_update</rename>
-        <type>Date</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask>ddMMyyyyHHmmss</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>2096</xloc>
-      <yloc>720</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>String para Data 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>last_update</name>
-        <rename>last_update</rename>
-        <type>Date</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask>ddMMyyyyHHmmss</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>1216</xloc>
-      <yloc>384</yloc>
-    </GUI>
-  </transform>
-  <transform>
     <name>Strings cut</name>
     <type>StringCut</type>
     <description/>
@@ -1773,10 +1580,6 @@
         <stream_name>institution_id</stream_name>
       </field>
       <field>
-        <column_name>last_update</column_name>
-        <stream_name>last_update</stream_name>
-      </field>
-      <field>
         <column_name>citations</column_name>
         <stream_name>citations</stream_name>
       </field>
@@ -1820,7 +1623,7 @@
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>2368</xloc>
+      <xloc>2160</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -1869,10 +1672,6 @@
       <value>
         <name>other_information</name>
         <rename>other_information</rename>
-      </value>
-      <value>
-        <name>last_update</name>
-        <rename>last_update</rename>
       </value>
       <value>
         <name>orcid</name>
