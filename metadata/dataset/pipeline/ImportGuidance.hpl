@@ -246,46 +246,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get rows files xml</from>
-      <to>Read XML guidance "mestrado-concluída"</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get rows files xml</from>
-      <to>Read XML guidance "doutorado-concluída"</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get rows files xml</from>
-      <to>Read XML guidance "outras-concluída"</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get rows files xml</from>
-      <to>Read XML guidance "mestrado-andamento"</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get rows files xml</from>
-      <to>Read XML guidance "doutorado-andamento"</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get rows files xml</from>
-      <to>Read XML guidance "Iniciação Científica-Andamento"</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get rows files xml</from>
-      <to>Read XML guidance "Pos-Doutorado-Andamento" 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get rows files xml</from>
-      <to>Read XML guidance "Pos-Doutorado-Andamento" 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Filter rows 2</from>
       <to>Dummy (already registered)</to>
       <enabled>Y</enabled>
@@ -379,6 +339,46 @@
       <from>Leitura dos XML</from>
       <to>Read XML guidance "Pos-Doutorado-Andamento" 2 2</to>
       <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Get rows files xml</from>
+      <to>Read XML guidance "mestrado-concluída"</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get rows files xml</from>
+      <to>Read XML guidance "doutorado-concluída"</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get rows files xml</from>
+      <to>Read XML guidance "outras-concluída"</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get rows files xml</from>
+      <to>Read XML guidance "mestrado-andamento"</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get rows files xml</from>
+      <to>Read XML guidance "doutorado-andamento"</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get rows files xml</from>
+      <to>Read XML guidance "Iniciação Científica-Andamento"</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get rows files xml</from>
+      <to>Read XML guidance "Pos-Doutorado-Andamento" 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get rows files xml</from>
+      <to>Read XML guidance "Pos-Doutorado-Andamento" 2 2</to>
+      <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
@@ -664,8 +664,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>176</xloc>
-      <yloc>176</yloc>
+      <xloc>64</xloc>
+      <yloc>304</yloc>
     </GUI>
   </transform>
   <transform>
@@ -763,8 +763,8 @@
     <rownum>N</rownum>
     <attributes/>
     <GUI>
-      <xloc>160</xloc>
-      <yloc>432</yloc>
+      <xloc>32</xloc>
+      <yloc>544</yloc>
     </GUI>
   </transform>
   <transform>

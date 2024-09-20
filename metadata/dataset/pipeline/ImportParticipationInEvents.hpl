@@ -315,8 +315,8 @@
     <rownum>N</rownum>
     <attributes/>
     <GUI>
-      <xloc>32</xloc>
-      <yloc>656</yloc>
+      <xloc>0</xloc>
+      <yloc>672</yloc>
     </GUI>
   </transform>
   <transform>

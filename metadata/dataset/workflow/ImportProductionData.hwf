@@ -78,8 +78,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>208</xloc>
-      <yloc>144</yloc>
+      <xloc>192</xloc>
+      <yloc>160</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -828,7 +828,7 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>496</xloc>
+      <xloc>512</xloc>
       <yloc>736</yloc>
       <attributes_hac/>
     </action>
@@ -1078,8 +1078,6 @@ update event_organization set is_new = false;</sql>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportResearchProjectProduction.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>

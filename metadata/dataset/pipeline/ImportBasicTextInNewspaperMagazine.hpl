@@ -521,7 +521,7 @@
     <attributes/>
     <GUI>
       <xloc>64</xloc>
-      <yloc>576</yloc>
+      <yloc>560</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1089,8 +1089,8 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>432</xloc>
-      <yloc>512</yloc>
+      <xloc>64</xloc>
+      <yloc>336</yloc>
     </GUI>
   </transform>
   <transform>

@@ -557,7 +557,7 @@
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1904</xloc>
+      <xloc>1936</xloc>
       <yloc>320</yloc>
     </GUI>
   </transform>

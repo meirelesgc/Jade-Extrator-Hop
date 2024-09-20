@@ -689,7 +689,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>864</xloc>
+      <xloc>880</xloc>
       <yloc>688</yloc>
     </GUI>
   </transform>
@@ -957,7 +957,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>864</xloc>
+      <xloc>880</xloc>
       <yloc>576</yloc>
     </GUI>
   </transform>

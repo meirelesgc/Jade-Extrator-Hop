@@ -186,7 +186,7 @@
     <hop>
       <from>ImportQualis.hpl</from>
       <to>ImportGroups.hpl</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>

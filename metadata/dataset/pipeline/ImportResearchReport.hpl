@@ -541,8 +541,8 @@
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1952</xloc>
-      <yloc>112</yloc>
+      <xloc>1680</xloc>
+      <yloc>128</yloc>
     </GUI>
   </transform>
   <transform>
@@ -578,7 +578,7 @@
     <rownum>N</rownum>
     <attributes/>
     <GUI>
-      <xloc>576</xloc>
+      <xloc>592</xloc>
       <yloc>240</yloc>
     </GUI>
   </transform>
@@ -701,8 +701,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1760</xloc>
-      <yloc>96</yloc>
+      <xloc>1488</xloc>
+      <yloc>128</yloc>
     </GUI>
   </transform>
   <transform>
