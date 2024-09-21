@@ -77,8 +77,8 @@
     <lookup>
       <key>
         <condition>=</condition>
-        <field>name</field>
-        <name>name</name>
+        <field>incite_graduate_program_id</field>
+        <name>id</name>
       </key>
       <schema>"public"</schema>
       <table>incite_graduate_program</table>
@@ -105,6 +105,11 @@
       <value>
         <name>visible</name>
         <rename>visible</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>incite_graduate_program_id</name>
+        <rename>id</rename>
         <update>Y</update>
       </value>
     </lookup>
@@ -167,6 +172,10 @@
       </field>
       <field>
         <name>visible</name>
+      </field>
+      <field>
+        <name>incite_graduate_program_id</name>
+        <rename>id</rename>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -318,6 +327,7 @@
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT 
+	inc.incite_graduate_program_id,
 	inc.name, 
 	inc.description, 
 	inc.link, 

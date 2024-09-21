@@ -134,8 +134,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1072</xloc>
-      <yloc>16</yloc>
+      <xloc>1024</xloc>
+      <yloc>208</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -160,8 +160,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1024</xloc>
-      <yloc>176</yloc>
+      <xloc>896</xloc>
+      <yloc>128</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -188,6 +188,47 @@
       <parallel>N</parallel>
       <xloc>816</xloc>
       <yloc>240</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>SQL 3</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <connection>main_database</connection>
+      <sendOneStatement>N</sendOneStatement>
+      <sql>DELETE FROM incite_graduate_program</sql>
+      <sqlfromfile>N</sqlfromfile>
+      <useVariableSubstitution>N</useVariableSubstitution>
+      <parallel>N</parallel>
+      <xloc>1136</xloc>
+      <yloc>112</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ImportIncitResearcher.hpl</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportIncitResearcher.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>1216</xloc>
+      <yloc>208</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -237,6 +278,20 @@
     <hop>
       <from>ImportGroupSecondLeaders.hpl</from>
       <to>ImportGroupFirstLeaders.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportFoment.hpl</from>
+      <to>SQL 3</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL 3</from>
+      <to>ImportIncitResearcher.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

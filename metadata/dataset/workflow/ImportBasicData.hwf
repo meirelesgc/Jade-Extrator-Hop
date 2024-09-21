@@ -261,7 +261,7 @@
     <hop>
       <from>ImportPeriodicalMagazine.hpl</from>
       <to>ImportIncit.hpl</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
