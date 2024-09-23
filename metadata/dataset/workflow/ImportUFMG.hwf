@@ -156,6 +156,8 @@
       <attributes/>
       <connection>main_database</connection>
       <sendOneStatement>N</sendOneStatement>
+      <sql>DELETE FROM public.departament_researcher</sql>
+      <sqlfilename/>
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>

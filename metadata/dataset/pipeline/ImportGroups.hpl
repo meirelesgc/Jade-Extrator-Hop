@@ -315,7 +315,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>560</xloc>
+      <xloc>528</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
@@ -744,7 +744,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>688</xloc>
+      <xloc>656</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
@@ -968,7 +968,7 @@
     <reject_duplicate_row>N</reject_duplicate_row>
     <attributes/>
     <GUI>
-      <xloc>960</xloc>
+      <xloc>944</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>

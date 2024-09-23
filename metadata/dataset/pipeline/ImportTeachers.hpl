@@ -122,9 +122,8 @@
     <lookup>
       <key>
         <condition>=</condition>
-        <field>matric</field>
-        <name>matric</name>
-        <name2/>
+        <field>nome</field>
+        <name>nome</name>
       </key>
       <schema>"public"</schema>
       <table>ufmg_teacher</table>
@@ -326,7 +325,7 @@
     <attributes/>
     <GUI>
       <xloc>176</xloc>
-      <yloc>192</yloc>
+      <yloc>144</yloc>
     </GUI>
   </transform>
   <transform>
@@ -359,8 +358,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>304</xloc>
-      <yloc>160</yloc>
+      <xloc>320</xloc>
+      <yloc>144</yloc>
     </GUI>
   </transform>
   <transform>
