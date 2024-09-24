@@ -253,21 +253,21 @@
     <hop>
       <from>ImportProductionData.hwf</from>
       <to>ImportUFMG.hwf</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportUFMG.hwf</from>
       <to>AdjustingRelationships.hwf</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportProductionData.hwf</from>
       <to>AdjustingRelationships.hwf</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>

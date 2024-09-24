@@ -70,13 +70,25 @@
     <connection>adm_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
-    <sql>SELECT 
-            lattes_id, matric, inscUFMG, nome, genero, situacao, rt, 
-            clas, cargo, classe, ref, titulacao, entradaNaUFMG,
-            progressao, semester
-        FROM
-            ufmg.researcher ur
-		LEFT JOIN researcher r ON r.researcher_id = ur.researcher_id </sql>
+    <sql>SELECT
+	lattes_id,
+	matric,
+	inscufmg,
+	nome,
+	genero,
+	situacao,
+	rt,
+	clas,
+	cargo,
+	classe,
+	ref,
+	titulacao,
+	entradanaufmg,
+	progressao,
+	semester
+FROM
+	ufmg.researcher ur
+	INNER JOIN researcher r ON r.researcher_id = ur.researcher_id</sql>
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
@@ -206,8 +218,8 @@
     <update_bypassed>N</update_bypassed>
     <attributes/>
     <GUI>
-      <xloc>608</xloc>
-      <yloc>32</yloc>
+      <xloc>592</xloc>
+      <yloc>80</yloc>
     </GUI>
   </transform>
   <transform>
@@ -221,9 +233,9 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>INNER</join_type>
+    <join_type>LEFT OUTER</join_type>
     <keys_1>
-      <key>lattes_id</key>
+      <key>lattes_id_adm</key>
     </keys_1>
     <keys_2>
       <key>lattes_id</key>
@@ -232,8 +244,8 @@
     <transform2>Sort rows</transform2>
     <attributes/>
     <GUI>
-      <xloc>480</xloc>
-      <yloc>32</yloc>
+      <xloc>464</xloc>
+      <yloc>80</yloc>
     </GUI>
   </transform>
   <transform>
@@ -292,6 +304,7 @@
       </field>
       <field>
         <name>lattes_id</name>
+        <rename>lattes_id_adm</rename>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -382,7 +395,7 @@
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>lattes_id</name>
+        <name>lattes_id_adm</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
