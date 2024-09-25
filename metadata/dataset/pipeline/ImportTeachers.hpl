@@ -36,11 +36,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Merge join</from>
-      <to>Insert / update</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Sort rows</from>
       <to>Merge join</to>
       <enabled>Y</enabled>
@@ -53,6 +48,16 @@
     <hop>
       <from>Renomeando campos 2</from>
       <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Merge join</from>
+      <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values</from>
+      <to>Insert / update</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -134,8 +139,9 @@ FROM
     <lookup>
       <key>
         <condition>=</condition>
-        <field>nome</field>
-        <name>nome</name>
+        <field>lattes_id</field>
+        <name>lattes_id</name>
+        <name2/>
       </key>
       <schema>"public"</schema>
       <table>ufmg_teacher</table>
@@ -214,11 +220,16 @@ FROM
         <rename>researcher_id</rename>
         <update>Y</update>
       </value>
+      <value>
+        <name>lattes_id</name>
+        <rename>lattes_id</rename>
+        <update>Y</update>
+      </value>
     </lookup>
     <update_bypassed>N</update_bypassed>
     <attributes/>
     <GUI>
-      <xloc>592</xloc>
+      <xloc>704</xloc>
       <yloc>80</yloc>
     </GUI>
   </transform>
@@ -339,6 +350,74 @@ FROM
     <GUI>
       <xloc>176</xloc>
       <yloc>144</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>matric</name>
+      </field>
+      <field>
+        <name>inscufmg</name>
+      </field>
+      <field>
+        <name>nome</name>
+      </field>
+      <field>
+        <name>genero</name>
+      </field>
+      <field>
+        <name>situacao</name>
+      </field>
+      <field>
+        <name>rt</name>
+      </field>
+      <field>
+        <name>clas</name>
+      </field>
+      <field>
+        <name>cargo</name>
+      </field>
+      <field>
+        <name>classe</name>
+      </field>
+      <field>
+        <name>ref</name>
+      </field>
+      <field>
+        <name>titulacao</name>
+      </field>
+      <field>
+        <name>entradanaufmg</name>
+      </field>
+      <field>
+        <name>progressao</name>
+      </field>
+      <field>
+        <name>semester</name>
+      </field>
+      <field>
+        <name>researcher_id</name>
+      </field>
+      <field>
+        <name>lattes_id</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>80</yloc>
     </GUI>
   </transform>
   <transform>
