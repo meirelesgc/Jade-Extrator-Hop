@@ -321,9 +321,10 @@
         <condition>=</condition>
         <field>researcher_id</field>
         <name>researcher_id</name>
+        <name2/>
       </key>
       <schema>"public"</schema>
-      <table>subsidy</table>
+      <table>foment</table>
       <value>
         <name>researcher_id</name>
         <rename>researcher_id</rename>
