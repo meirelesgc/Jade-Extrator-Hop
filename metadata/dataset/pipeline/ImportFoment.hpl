@@ -299,8 +299,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>224</yloc>
+      <xloc>272</xloc>
+      <yloc>208</yloc>
     </GUI>
   </transform>
   <transform>
@@ -321,9 +321,10 @@
         <condition>=</condition>
         <field>researcher_id</field>
         <name>researcher_id</name>
+        <name2/>
       </key>
       <schema>"public"</schema>
-      <table>subsidy</table>
+      <table>foment</table>
       <value>
         <name>researcher_id</name>
         <rename>researcher_id</rename>
@@ -563,8 +564,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>528</xloc>
-      <yloc>96</yloc>
+      <xloc>496</xloc>
+      <yloc>80</yloc>
     </GUI>
   </transform>
   <transform>
@@ -597,8 +598,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>192</yloc>
+      <xloc>512</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -617,14 +618,14 @@
     <limit>0</limit>
     <sql>SELECT r.id, r.lattes_id
 FROM researcher r
- LEFT JOIN subsidy s ON s.researcher_id = r.id 
+ LEFT JOIN foment s ON s.researcher_id = r.id 
 WHERE s.researcher_id IS NULL;
 </sql>
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>64</yloc>
+      <xloc>256</xloc>
+      <yloc>128</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
