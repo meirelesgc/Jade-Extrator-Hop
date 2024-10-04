@@ -75,7 +75,7 @@
     <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
-    <sql>SELECT id, first_leader, second_leader FROM research_group_dgp</sql>
+    <sql>SELECT id, first_leader, second_leader FROM research_group</sql>
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
@@ -299,14 +299,16 @@
     <commit>100</commit>
     <connection>main_database</connection>
     <error_ignored>N</error_ignored>
+    <ignore_flag_field/>
     <lookup>
       <key>
         <condition>=</condition>
         <field>id</field>
         <name>id</name>
+        <name2/>
       </key>
       <schema>"public"</schema>
-      <table>research_group_dgp</table>
+      <table>research_group</table>
       <value>
         <name>second_leader_id</name>
         <rename>second_leader_id</rename>
