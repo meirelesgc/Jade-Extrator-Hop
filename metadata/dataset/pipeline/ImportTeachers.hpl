@@ -139,8 +139,8 @@ FROM
     <lookup>
       <key>
         <condition>=</condition>
-        <field>lattes_id</field>
-        <name>lattes_id</name>
+        <field>researcher_id</field>
+        <name>researcher_id</name>
         <name2/>
       </key>
       <schema>"public"</schema>
@@ -218,11 +218,6 @@ FROM
       <value>
         <name>researcher_id</name>
         <rename>researcher_id</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>lattes_id</name>
-        <rename>lattes_id</rename>
         <update>Y</update>
       </value>
     </lookup>
@@ -408,9 +403,6 @@ FROM
       </field>
       <field>
         <name>researcher_id</name>
-      </field>
-      <field>
-        <name>lattes_id</name>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
