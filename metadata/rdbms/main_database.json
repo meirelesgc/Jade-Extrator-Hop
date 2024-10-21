@@ -1,7 +1,7 @@
 {
   "rdbms": {
     "POSTGRESQL": {
-      "databaseName": "conectee",
+      "databaseName": "barema",
       "pluginId": "POSTGRESQL",
       "accessType": 0,
       "hostname": "localhost",

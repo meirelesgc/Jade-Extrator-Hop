@@ -63,7 +63,7 @@
     <hop>
       <from>Filter rows</from>
       <to>Table output</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
   </order>
   <transform>
