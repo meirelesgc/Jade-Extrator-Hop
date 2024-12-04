@@ -23,12 +23,12 @@
     <hop>
       <from>Leitura dos XML</from>
       <to>Read XML Participação em projeto</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML Participação em projeto</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Read XML Participação em projeto</from>

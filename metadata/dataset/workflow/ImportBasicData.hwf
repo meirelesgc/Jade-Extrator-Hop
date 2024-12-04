@@ -26,8 +26,8 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>192</xloc>
-      <yloc>48</yloc>
+      <xloc>208</xloc>
+      <yloc>32</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -80,8 +80,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>672</xloc>
-      <yloc>112</yloc>
+      <xloc>480</xloc>
+      <yloc>240</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -106,8 +106,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>352</xloc>
-      <yloc>192</yloc>
+      <xloc>192</xloc>
+      <yloc>256</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -132,8 +132,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>176</xloc>
-      <yloc>192</yloc>
+      <xloc>192</xloc>
+      <yloc>368</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -158,8 +158,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>368</xloc>
-      <yloc>48</yloc>
+      <xloc>352</xloc>
+      <yloc>80</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -184,7 +184,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>544</xloc>
+      <xloc>320</xloc>
       <yloc>192</yloc>
       <attributes_hac/>
     </action>
@@ -210,8 +210,60 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>0</xloc>
-      <yloc>192</yloc>
+      <xloc>304</xloc>
+      <yloc>464</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ReadXML.hpl  8</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>656</xloc>
+      <yloc>96</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ImportLattesInstitution.hpl</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportLattesInstitution.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>640</xloc>
+      <yloc>224</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -238,20 +290,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportCity.hpl</from>
-      <to>ImportInstitution.hpl</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ImportInstitution.hpl</from>
-      <to>ImportGraduateProgram.hpl</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>ImportGraduateProgram.hpl</from>
       <to>ReadXML.hpl 7</to>
       <enabled>Y</enabled>
@@ -261,6 +299,34 @@
     <hop>
       <from>ImportPeriodicalMagazine.hpl</from>
       <to>ImportIncit.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportCity.hpl</from>
+      <to>ReadXML.hpl  8</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ReadXML.hpl  8</from>
+      <to>ImportLattesInstitution.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportLattesInstitution.hpl</from>
+      <to>ImportInstitution.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportInstitution.hpl</from>
+      <to>ImportGraduateProgram.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

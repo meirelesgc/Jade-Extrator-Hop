@@ -299,8 +299,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>208</yloc>
+      <xloc>352</xloc>
+      <yloc>384</yloc>
     </GUI>
   </transform>
   <transform>
@@ -321,7 +321,6 @@
         <condition>=</condition>
         <field>researcher_id</field>
         <name>researcher_id</name>
-        <name2/>
       </key>
       <schema>"public"</schema>
       <table>foment</table>

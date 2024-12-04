@@ -664,8 +664,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>64</xloc>
-      <yloc>304</yloc>
+      <xloc>0</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>

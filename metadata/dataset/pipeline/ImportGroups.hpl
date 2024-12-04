@@ -418,7 +418,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>INNER</join_type>
+    <join_type>LEFT OUTER</join_type>
     <keys_1>
       <key>﻿name</key>
       <key>institution</key>
@@ -744,7 +744,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>656</xloc>
+      <xloc>640</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
@@ -786,7 +786,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>656</xloc>
+      <xloc>640</xloc>
       <yloc>208</yloc>
     </GUI>
   </transform>
@@ -828,7 +828,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>816</xloc>
+      <xloc>784</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
@@ -903,7 +903,7 @@
     <return_keys>N</return_keys>
     <schema>"public"</schema>
     <specify_fields>Y</specify_fields>
-    <table>research_group_dgp</table>
+    <table>research_group</table>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
     <truncate>N</truncate>
@@ -968,7 +968,7 @@
     <reject_duplicate_row>N</reject_duplicate_row>
     <attributes/>
     <GUI>
-      <xloc>944</xloc>
+      <xloc>928</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>

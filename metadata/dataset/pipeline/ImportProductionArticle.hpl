@@ -284,8 +284,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>64</xloc>
-      <yloc>400</yloc>
+      <xloc>0</xloc>
+      <yloc>384</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1468,8 +1468,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1696</xloc>
-      <yloc>272</yloc>
+      <xloc>1616</xloc>
+      <yloc>208</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1503,8 +1503,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1024</xloc>
-      <yloc>432</yloc>
+      <xloc>928</xloc>
+      <yloc>416</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1881,8 +1881,8 @@ FROM "public".bibliographic_production_article
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>1904</xloc>
-      <yloc>272</yloc>
+      <xloc>1840</xloc>
+      <yloc>160</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1983,7 +1983,7 @@ FROM "public".periodical_magazine
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>1024</xloc>
+      <xloc>976</xloc>
       <yloc>528</yloc>
     </GUI>
   </transform>

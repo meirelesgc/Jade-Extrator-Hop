@@ -26,7 +26,7 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>128</xloc>
+      <xloc>16</xloc>
       <yloc>64</yloc>
       <attributes_hac/>
     </action>
@@ -52,8 +52,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>272</xloc>
-      <yloc>224</yloc>
+      <xloc>176</xloc>
+      <yloc>112</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -79,7 +79,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>384</xloc>
-      <yloc>80</yloc>
+      <yloc>112</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -104,8 +104,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>576</xloc>
-      <yloc>192</yloc>
+      <xloc>560</xloc>
+      <yloc>128</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -130,8 +130,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>800</xloc>
-      <yloc>64</yloc>
+      <xloc>768</xloc>
+      <yloc>112</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -146,8 +146,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -158,8 +156,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>144</xloc>
-      <yloc>160</yloc>
+      <xloc>128</xloc>
+      <yloc>0</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -184,8 +182,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>256</xloc>
-      <yloc>80</yloc>
+      <xloc>272</xloc>
+      <yloc>0</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -210,8 +208,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>416</xloc>
-      <yloc>176</yloc>
+      <xloc>512</xloc>
+      <yloc>16</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -236,8 +234,34 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>560</xloc>
-      <yloc>96</yloc>
+      <xloc>688</xloc>
+      <yloc>32</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ImportMestradoProfissional.hpl</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportMestradoProfissional.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>768</xloc>
+      <yloc>224</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -294,6 +318,13 @@
     <hop>
       <from>ReadXML.hpl 4</from>
       <to>ImportMestrado.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportMestrado.hpl</from>
+      <to>ImportMestradoProfissional.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

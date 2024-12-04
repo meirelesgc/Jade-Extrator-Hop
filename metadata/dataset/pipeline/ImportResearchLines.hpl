@@ -550,7 +550,7 @@
     <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
-    <sql>SELECT id, name FROM research_group_dgp</sql>
+    <sql>SELECT id, name FROM research_group</sql>
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>

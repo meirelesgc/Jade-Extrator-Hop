@@ -61,16 +61,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values 4</from>
-      <to>Group by 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Group by 2</from>
-      <to>Table insert periodical_magazine</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>String operations 2</from>
       <to>Value mapper</to>
       <enabled>Y</enabled>
@@ -94,6 +84,16 @@
       <from>Leitura dos XML</from>
       <to>Read XML REVISTA </to>
       <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Select values 4</from>
+      <to>Unique rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unique rows</from>
+      <to>Table insert periodical_magazine</to>
+      <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
@@ -164,36 +164,6 @@
     <attributes/>
     <GUI>
       <xloc>16</xloc>
-      <yloc>256</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Group by 2</name>
-    <type>GroupBy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <add_linenr>N</add_linenr>
-    <all_rows>N</all_rows>
-    <directory>${java.io.tmpdir}</directory>
-    <fields>
-</fields>
-    <give_back_row>N</give_back_row>
-    <group>
-      <field>
-        <name>issn</name>
-      </field>
-    </group>
-    <ignore_aggregate>N</ignore_aggregate>
-    <prefix>grp</prefix>
-    <attributes/>
-    <GUI>
-      <xloc>1376</xloc>
       <yloc>256</yloc>
     </GUI>
   </transform>
@@ -576,6 +546,10 @@
     <connection>main_database</connection>
     <fields>
       <field>
+        <column_name>name</column_name>
+        <stream_name>name</stream_name>
+      </field>
+      <field>
         <column_name>issn</column_name>
         <stream_name>issn</stream_name>
       </field>
@@ -595,7 +569,7 @@
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1632</xloc>
+      <xloc>1568</xloc>
       <yloc>256</yloc>
     </GUI>
   </transform>
@@ -628,6 +602,31 @@ FROM "public".periodical_magazine
     <GUI>
       <xloc>976</xloc>
       <yloc>512</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Unique rows</name>
+    <type>Unique</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <count_rows>N</count_rows>
+    <fields>
+      <field>
+        <case_insensitive>N</case_insensitive>
+        <name>issn</name>
+      </field>
+    </fields>
+    <reject_duplicate_row>N</reject_duplicate_row>
+    <attributes/>
+    <GUI>
+      <xloc>1376</xloc>
+      <yloc>256</yloc>
     </GUI>
   </transform>
   <transform>

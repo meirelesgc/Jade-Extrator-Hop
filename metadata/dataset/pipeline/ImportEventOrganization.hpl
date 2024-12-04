@@ -248,7 +248,7 @@
     <rownum>N</rownum>
     <attributes/>
     <GUI>
-      <xloc>336</xloc>
+      <xloc>368</xloc>
       <yloc>352</yloc>
     </GUI>
   </transform>
@@ -567,7 +567,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1216</xloc>
+      <xloc>1232</xloc>
       <yloc>560</yloc>
     </GUI>
   </transform>
@@ -677,7 +677,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1216</xloc>
+      <xloc>1232</xloc>
       <yloc>352</yloc>
     </GUI>
   </transform>
@@ -866,7 +866,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1216</xloc>
+      <xloc>1232</xloc>
       <yloc>464</yloc>
     </GUI>
   </transform>
@@ -900,7 +900,7 @@ FROM "public".event_organization
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>1216</xloc>
+      <xloc>1232</xloc>
       <yloc>672</yloc>
     </GUI>
   </transform>

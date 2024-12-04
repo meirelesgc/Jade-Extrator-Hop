@@ -1,7 +1,7 @@
 {
   "rdbms": {
     "POSTGRESQL": {
-      "databaseName": "conectee_simcc",
+      "databaseName": "iapos",
       "pluginId": "POSTGRESQL",
       "accessType": 0,
       "hostname": "localhost",
