@@ -1,11 +1,11 @@
 {
   "rdbms": {
     "POSTGRESQL": {
-      "databaseName": "iapos",
+      "databaseName": "simcc",
       "pluginId": "POSTGRESQL",
       "accessType": 0,
       "hostname": "localhost",
-      "password": "Encrypted 2be98afc86aa7f2e4bb16bd64d980aac9",
+      "password": "Encrypted 2be98afc86af29797a85aea228ec0fb9f",
       "pluginName": "PostgreSQL",
       "port": "5432",
       "attributes": {
