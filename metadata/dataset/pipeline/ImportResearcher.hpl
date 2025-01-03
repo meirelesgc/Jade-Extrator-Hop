@@ -512,8 +512,8 @@ FROM researcher;
     </fields>
     <attributes/>
     <GUI>
-      <xloc>0</xloc>
-      <yloc>688</yloc>
+      <xloc>112</xloc>
+      <yloc>576</yloc>
     </GUI>
   </transform>
   <transform>

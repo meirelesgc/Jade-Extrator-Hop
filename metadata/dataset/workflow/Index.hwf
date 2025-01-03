@@ -183,7 +183,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>160</xloc>
+      <xloc>48</xloc>
       <yloc>224</yloc>
       <attributes_hac/>
     </action>
@@ -209,8 +209,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>256</xloc>
-      <yloc>160</yloc>
+      <xloc>208</xloc>
+      <yloc>224</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -247,13 +247,6 @@
       <from>ImportUFMG.hwf</from>
       <to>AdjustingRelationships.hwf</to>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ImportProductionData.hwf</from>
-      <to>AdjustingRelationships.hwf</to>
-      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>

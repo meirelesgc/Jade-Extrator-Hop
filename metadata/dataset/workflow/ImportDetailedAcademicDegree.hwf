@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workflow>
-  <name>ImportGraduation</name>
+  <name>ImportDetailedAcademicDegree</name>
   <name_sync_with_filename>Y</name_sync_with_filename>
   <description/>
   <extended_description/>
@@ -26,112 +26,8 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>16</xloc>
-      <yloc>64</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>ImportGraduacao.hpl</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportGraduacao.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>176</xloc>
-      <yloc>112</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>ImportEspecializacao.hpl</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportEspecializacao.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>384</xloc>
-      <yloc>112</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>ImportDoutorado.hpl</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportDoutorado.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>560</xloc>
-      <yloc>128</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>ImportMestrado.hpl</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportMestrado.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>768</xloc>
-      <yloc>112</yloc>
+      <xloc>240</xloc>
+      <yloc>224</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -156,8 +52,34 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>128</xloc>
-      <yloc>0</yloc>
+      <xloc>432</xloc>
+      <yloc>224</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ImportUnderGraduateDegree.hpl</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportUnderGraduateDegree.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>608</xloc>
+      <yloc>224</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -182,8 +104,34 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>272</xloc>
-      <yloc>0</yloc>
+      <xloc>800</xloc>
+      <yloc>224</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ImportSpecialization.hpl</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportSpecialization.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>976</xloc>
+      <yloc>224</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -208,8 +156,34 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>512</xloc>
-      <yloc>16</yloc>
+      <xloc>1168</xloc>
+      <yloc>224</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ImportDoctorate.hpl</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportDoctorate.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>1168</xloc>
+      <yloc>352</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -234,12 +208,12 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>688</xloc>
-      <yloc>32</yloc>
+      <xloc>976</xloc>
+      <yloc>352</yloc>
       <attributes_hac/>
     </action>
     <action>
-      <name>ImportMestradoProfissional.hpl</name>
+      <name>ImportMastersDegree.hpl</name>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
@@ -249,7 +223,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportMestradoProfissional.hpl</filename>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportMastersDegree.hpl</filename>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -260,8 +234,60 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>768</xloc>
-      <yloc>224</yloc>
+      <xloc>784</xloc>
+      <yloc>352</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ReadXML.hpl 5</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>560</xloc>
+      <yloc>352</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ImportProfessionalMastersDegree.hpl</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportProfessionalMastersDegree.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>304</xloc>
+      <yloc>352</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -275,13 +301,13 @@
     </hop>
     <hop>
       <from>ReadXML.hpl</from>
-      <to>ImportGraduacao.hpl</to>
+      <to>ImportUnderGraduateDegree.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportGraduacao.hpl</from>
+      <from>ImportUnderGraduateDegree.hpl</from>
       <to>ReadXML.hpl 2</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
@@ -289,13 +315,13 @@
     </hop>
     <hop>
       <from>ReadXML.hpl 2</from>
-      <to>ImportEspecializacao.hpl</to>
+      <to>ImportSpecialization.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportEspecializacao.hpl</from>
+      <from>ImportSpecialization.hpl</from>
       <to>ReadXML.hpl 3</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
@@ -303,13 +329,13 @@
     </hop>
     <hop>
       <from>ReadXML.hpl 3</from>
-      <to>ImportDoutorado.hpl</to>
+      <to>ImportDoctorate.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportDoutorado.hpl</from>
+      <from>ImportDoctorate.hpl</from>
       <to>ReadXML.hpl 4</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
@@ -317,14 +343,21 @@
     </hop>
     <hop>
       <from>ReadXML.hpl 4</from>
-      <to>ImportMestrado.hpl</to>
+      <to>ImportMastersDegree.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportMestrado.hpl</from>
-      <to>ImportMestradoProfissional.hpl</to>
+      <from>ImportMastersDegree.hpl</from>
+      <to>ReadXML.hpl 5</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ReadXML.hpl 5</from>
+      <to>ImportProfessionalMastersDegree.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
