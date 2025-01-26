@@ -99,8 +99,8 @@ WHERE
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>16</xloc>
-      <yloc>0</yloc>
+      <xloc>528</xloc>
+      <yloc>240</yloc>
     </GUI>
   </transform>
   <transform>
@@ -123,8 +123,8 @@ FROM researcher;
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>0</xloc>
-      <yloc>144</yloc>
+      <xloc>512</xloc>
+      <yloc>384</yloc>
     </GUI>
   </transform>
   <transform>
@@ -153,8 +153,8 @@ FROM researcher;
         <name>semester</name>
         <name2/>
       </key>
-      <schema>"public"</schema>
-      <table>ufmg_teacher</table>
+      <schema>ufmg</schema>
+      <table>researcher</table>
       <value>
         <name>inscufmg</name>
         <rename>inscufmg</rename>
@@ -234,8 +234,8 @@ FROM researcher;
     <update_bypassed>N</update_bypassed>
     <attributes/>
     <GUI>
-      <xloc>704</xloc>
-      <yloc>80</yloc>
+      <xloc>1216</xloc>
+      <yloc>320</yloc>
     </GUI>
   </transform>
   <transform>
@@ -260,8 +260,8 @@ FROM researcher;
     <transform2>Sort rows</transform2>
     <attributes/>
     <GUI>
-      <xloc>464</xloc>
-      <yloc>80</yloc>
+      <xloc>976</xloc>
+      <yloc>320</yloc>
     </GUI>
   </transform>
   <transform>
@@ -326,8 +326,8 @@ FROM researcher;
     </fields>
     <attributes/>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>0</yloc>
+      <xloc>720</xloc>
+      <yloc>240</yloc>
     </GUI>
   </transform>
   <transform>
@@ -353,8 +353,8 @@ FROM researcher;
     </fields>
     <attributes/>
     <GUI>
-      <xloc>176</xloc>
-      <yloc>144</yloc>
+      <xloc>688</xloc>
+      <yloc>384</yloc>
     </GUI>
   </transform>
   <transform>
@@ -418,8 +418,8 @@ FROM researcher;
     </fields>
     <attributes/>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>80</yloc>
+      <xloc>1104</xloc>
+      <yloc>320</yloc>
     </GUI>
   </transform>
   <transform>
@@ -433,27 +433,24 @@ FROM researcher;
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>lattes_id</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>lattes_id</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>320</xloc>
-      <yloc>144</yloc>
+      <xloc>832</xloc>
+      <yloc>384</yloc>
     </GUI>
   </transform>
   <transform>
@@ -467,27 +464,24 @@ FROM researcher;
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>lattes_id_adm</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>lattes_id_adm</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>320</xloc>
-      <yloc>0</yloc>
+      <xloc>832</xloc>
+      <yloc>240</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

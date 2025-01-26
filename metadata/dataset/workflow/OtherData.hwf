@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workflow>
-  <name>AdjustingRelationships</name>
+  <name>OtherData</name>
   <name_sync_with_filename>Y</name_sync_with_filename>
   <description/>
   <extended_description/>
@@ -26,8 +26,8 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>0</xloc>
-      <yloc>96</yloc>
+      <xloc>480</xloc>
+      <yloc>352</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -52,8 +52,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>368</xloc>
-      <yloc>48</yloc>
+      <xloc>1120</xloc>
+      <yloc>352</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -78,12 +78,12 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>688</xloc>
-      <yloc>48</yloc>
+      <xloc>1360</xloc>
+      <yloc>512</yloc>
       <attributes_hac/>
     </action>
     <action>
-      <name>SQL</name>
+      <name>Delete graduate program researcher</name>
       <description/>
       <type>SQL</type>
       <attributes/>
@@ -93,12 +93,12 @@
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
-      <xloc>224</xloc>
-      <yloc>0</yloc>
+      <xloc>848</xloc>
+      <yloc>352</yloc>
       <attributes_hac/>
     </action>
     <action>
-      <name>SQL 2</name>
+      <name>Delete graduate program student</name>
       <description/>
       <type>SQL</type>
       <attributes/>
@@ -108,8 +108,8 @@
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
-      <xloc>528</xloc>
-      <yloc>0</yloc>
+      <xloc>1360</xloc>
+      <yloc>352</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -134,8 +134,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1024</xloc>
-      <yloc>208</yloc>
+      <xloc>816</xloc>
+      <yloc>688</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -160,8 +160,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>896</xloc>
-      <yloc>128</yloc>
+      <xloc>1024</xloc>
+      <yloc>688</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -186,12 +186,12 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>720</xloc>
-      <yloc>240</yloc>
+      <xloc>1360</xloc>
+      <yloc>688</yloc>
       <attributes_hac/>
     </action>
     <action>
-      <name>SQL 3</name>
+      <name>Delete incite</name>
       <description/>
       <type>SQL</type>
       <attributes/>
@@ -201,8 +201,8 @@
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
-      <xloc>1136</xloc>
-      <yloc>112</yloc>
+      <xloc>608</xloc>
+      <yloc>688</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -227,21 +227,29 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1216</xloc>
-      <yloc>208</yloc>
+      <xloc>608</xloc>
+      <yloc>864</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>Update routine_status</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <connection>main_database</connection>
+      <sendOneStatement>N</sendOneStatement>
+      <sql>UPDATE researcher SET routine_status = ARRAY['HOP-UPDATED'] WHERE routine_status = ARRAY['OUTDATED']</sql>
+      <sqlfromfile>N</sqlfromfile>
+      <useVariableSubstitution>N</useVariableSubstitution>
+      <parallel>N</parallel>
+      <xloc>640</xloc>
+      <yloc>352</yloc>
       <attributes_hac/>
     </action>
   </actions>
   <hops>
     <hop>
-      <from>Start</from>
-      <to>SQL</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>SQL</from>
+      <from>Delete graduate program researcher</from>
       <to>ImportGraduateProgramResearcher.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
@@ -249,13 +257,13 @@
     </hop>
     <hop>
       <from>ImportGraduateProgramResearcher.hpl</from>
-      <to>SQL 2</to>
+      <to>Delete graduate program student</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>SQL 2</from>
+      <from>Delete graduate program student</from>
       <to>ImportGraduateProgramStudent.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
@@ -284,17 +292,31 @@
     </hop>
     <hop>
       <from>ImportFoment.hpl</from>
-      <to>SQL 3</to>
+      <to>Delete incite</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>SQL 3</from>
+      <from>Delete incite</from>
       <to>ImportIncitResearcher.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Start</from>
+      <to>Update routine_status</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Update routine_status</from>
+      <to>Delete graduate program researcher</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
     </hop>
   </hops>
   <notepads>

@@ -53,8 +53,8 @@
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>0</xloc>
-      <yloc>16</yloc>
+      <xloc>736</xloc>
+      <yloc>608</yloc>
     </GUI>
   </transform>
   <transform>
@@ -75,9 +75,10 @@
         <condition>=</condition>
         <field>dep_id</field>
         <name>dep_id</name>
+        <name2/>
       </key>
-      <schema>"public"</schema>
-      <table>ufmg_departament</table>
+      <schema>ufmg</schema>
+      <table>departament</table>
       <value>
         <name>org_cod</name>
         <rename>org_cod</rename>
@@ -127,8 +128,8 @@
     <update_bypassed>N</update_bypassed>
     <attributes/>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>16</yloc>
+      <xloc>960</xloc>
+      <yloc>448</yloc>
     </GUI>
   </transform>
   <transform>
@@ -174,8 +175,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>192</xloc>
-      <yloc>16</yloc>
+      <xloc>736</xloc>
+      <yloc>448</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

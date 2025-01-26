@@ -141,7 +141,8 @@
       <attributes/>
       <connection>main_database</connection>
       <sendOneStatement>N</sendOneStatement>
-      <sql>DELETE FROM ufmg_departament_technician</sql>
+      <sql>DELETE FROM ufmg.departament_technician</sql>
+      <sqlfilename/>
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
@@ -156,7 +157,7 @@
       <attributes/>
       <connection>main_database</connection>
       <sendOneStatement>N</sendOneStatement>
-      <sql>DELETE FROM public.departament_researcher</sql>
+      <sql>DELETE FROM ufmg.departament_researcher</sql>
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
@@ -186,7 +187,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>992</xloc>
+      <xloc>1040</xloc>
       <yloc>112</yloc>
       <attributes_hac/>
     </action>

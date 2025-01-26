@@ -27,8 +27,8 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>224</xloc>
-      <yloc>64</yloc>
+      <xloc>544</xloc>
+      <yloc>176</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -53,8 +53,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>384</xloc>
-      <yloc>64</yloc>
+      <xloc>704</xloc>
+      <yloc>176</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -79,8 +79,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>576</xloc>
-      <yloc>64</yloc>
+      <xloc>896</xloc>
+      <yloc>176</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -105,8 +105,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>576</xloc>
-      <yloc>224</yloc>
+      <xloc>896</xloc>
+      <yloc>336</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -131,8 +131,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>368</xloc>
-      <yloc>224</yloc>
+      <xloc>688</xloc>
+      <yloc>336</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -157,34 +157,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>368</xloc>
-      <yloc>352</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>AdjustingRelationships.hwf</name>
-      <description/>
-      <type>WORKFLOW</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/workflow/AdjustingRelationships.hwf</filename>
-      <logext>log</logext>
-      <logfile>${PROJECT_HOME}/metadata/dataset/log/Index</logfile>
-      <loglevel>Debug</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>Y</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>48</xloc>
-      <yloc>224</yloc>
+      <xloc>688</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -209,8 +183,32 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>208</xloc>
-      <yloc>224</yloc>
+      <xloc>528</xloc>
+      <yloc>336</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>OtherData.hwf</name>
+      <description/>
+      <type>WORKFLOW</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/workflow/OtherData.hwf</filename>
+      <loglevel>Nothing</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>352</xloc>
+      <yloc>336</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -244,13 +242,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportUFMG.hwf</from>
-      <to>AdjustingRelationships.hwf</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>Start</from>
       <to>ImportBasicData.hwf</to>
       <enabled>Y</enabled>
@@ -260,6 +251,13 @@
     <hop>
       <from>ImportBasicData.hwf</from>
       <to>ImportExpertiseData.hwf</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportUFMG.hwf</from>
+      <to>OtherData.hwf</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

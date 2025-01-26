@@ -51,8 +51,8 @@
         <name>nome</name>
         <name2/>
       </key>
-      <schema>"public"</schema>
-      <table>ufmg_technician</table>
+      <schema>ufmg</schema>
+      <table>technician</table>
       <value>
         <name>nome</name>
         <rename>nome</rename>

@@ -54,7 +54,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>544</xloc>
+      <xloc>512</xloc>
       <yloc>48</yloc>
       <attributes_hac/>
     </action>
