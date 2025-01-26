@@ -26,7 +26,7 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>480</xloc>
+      <xloc>656</xloc>
       <yloc>352</yloc>
       <attributes_hac/>
     </action>
@@ -231,21 +231,6 @@
       <yloc>864</yloc>
       <attributes_hac/>
     </action>
-    <action>
-      <name>Update routine_status</name>
-      <description/>
-      <type>SQL</type>
-      <attributes/>
-      <connection>main_database</connection>
-      <sendOneStatement>N</sendOneStatement>
-      <sql>UPDATE researcher SET routine_status = ARRAY['HOP-UPDATED'] WHERE routine_status = ARRAY['OUTDATED']</sql>
-      <sqlfromfile>N</sqlfromfile>
-      <useVariableSubstitution>N</useVariableSubstitution>
-      <parallel>N</parallel>
-      <xloc>640</xloc>
-      <yloc>352</yloc>
-      <attributes_hac/>
-    </action>
   </actions>
   <hops>
     <hop>
@@ -306,13 +291,6 @@
     </hop>
     <hop>
       <from>Start</from>
-      <to>Update routine_status</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>Update routine_status</from>
       <to>Delete graduate program researcher</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
