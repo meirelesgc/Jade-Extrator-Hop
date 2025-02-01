@@ -174,7 +174,7 @@
     <hop>
       <from>Merge join</from>
       <to>Update</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Adicionar ou Atualizar</from>
@@ -263,7 +263,7 @@
     <connection>adm_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
-    <sql>SELECT  researcher_id, LPAD(lattes_id, 16, '0') as lattes_id, institution_id, extra_field
+    <sql>SELECT  researcher_id, LPAD(lattes_id, 16, '0') as lattes_id, institution_id, extra_field, status
 FROM researcher;
 </sql>
     <variables_active>N</variables_active>
@@ -597,7 +597,7 @@ FROM researcher;
     <transform2>Sort Lattes XML</transform2>
     <attributes/>
     <GUI>
-      <xloc>752</xloc>
+      <xloc>720</xloc>
       <yloc>640</yloc>
     </GUI>
   </transform>
@@ -824,6 +824,9 @@ FROM researcher;
       </field>
       <field>
         <name>extra_field</name>
+      </field>
+      <field>
+        <name>status</name>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1069,6 +1072,9 @@ FROM researcher;
       <field>
         <name>extra_field</name>
       </field>
+      <field>
+        <name>status</name>
+      </field>
       <select_unspecified>N</select_unspecified>
       <meta>
         <name>lattes_id</name>
@@ -1152,6 +1158,9 @@ FROM researcher;
       </field>
       <field>
         <name>extra_field</name>
+      </field>
+      <field>
+        <name>status</name>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1601,6 +1610,10 @@ FROM researcher;
         <column_name>extra_field</column_name>
         <stream_name>extra_field</stream_name>
       </field>
+      <field>
+        <column_name>status</column_name>
+        <stream_name>status</stream_name>
+      </field>
     </fields>
     <ignore_errors>N</ignore_errors>
     <only_when_have_rows>N</only_when_have_rows>
@@ -1678,6 +1691,10 @@ FROM researcher;
       <value>
         <name>extra_field</name>
         <rename>extra_field</rename>
+      </value>
+      <value>
+        <name>status</name>
+        <rename>status</rename>
       </value>
     </lookup>
     <skip_lookup>N</skip_lookup>
