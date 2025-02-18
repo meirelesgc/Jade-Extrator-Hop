@@ -529,13 +529,16 @@ FROM researcher;
     </partitioning>
     <doNotFailIfNoFile>N</doNotFailIfNoFile>
     <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <exclude_wildcard_Field/>
     <file>
+      <exclude_filemask/>
       <file_required>N</file_required>
       <filemask>.*xml</filemask>
       <include_subfolders>N</include_subfolders>
       <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
     </file>
     <filefield>N</filefield>
+    <filename_Field/>
     <filter>
       <filterfiletype>all_files</filterfiletype>
     </filter>
@@ -543,6 +546,8 @@ FROM researcher;
     <limit>0</limit>
     <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
     <rownum>N</rownum>
+    <rownum_field/>
+    <wildcard_Field/>
     <attributes/>
     <GUI>
       <xloc>112</xloc>
@@ -1235,72 +1240,95 @@ FROM researcher;
     <fields>
       <field>
         <name>filename</name>
+        <rename/>
       </field>
       <field>
         <name>short_filename</name>
+        <rename/>
       </field>
       <field>
         <name>path</name>
+        <rename/>
       </field>
       <field>
         <name>type</name>
+        <rename/>
       </field>
       <field>
         <name>exists</name>
+        <rename/>
       </field>
       <field>
         <name>ishidden</name>
+        <rename/>
       </field>
       <field>
         <name>isreadable</name>
+        <rename/>
       </field>
       <field>
         <name>iswriteable</name>
+        <rename/>
       </field>
       <field>
         <name>lastmodifiedtime</name>
+        <rename/>
       </field>
       <field>
         <name>size</name>
+        <rename/>
       </field>
       <field>
         <name>extension</name>
+        <rename/>
       </field>
       <field>
         <name>uri</name>
+        <rename/>
       </field>
       <field>
         <name>rooturi</name>
+        <rename/>
       </field>
       <field>
         <name>NOME</name>
+        <rename/>
       </field>
       <field>
         <name>PAIS-DE-NACIONALIDADE</name>
+        <rename/>
       </field>
       <field>
         <name>ORCID</name>
+        <rename/>
       </field>
       <field>
         <name>CIDADE-NASCIMENTO</name>
+        <rename/>
       </field>
       <field>
         <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <rename/>
       </field>
       <field>
         <name>RESUMO</name>
+        <rename/>
       </field>
       <field>
         <name>RESUMO-EN</name>
+        <rename/>
       </field>
       <field>
         <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <rename/>
       </field>
       <field>
         <name>DATA-ATUALIZACAO</name>
+        <rename/>
       </field>
       <field>
         <name>HORA-ATUALIZACAO</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1321,20 +1349,23 @@ FROM researcher;
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix/>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>city_name_simcc</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>city_name_simcc</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1184</xloc>
@@ -1352,20 +1383,23 @@ FROM researcher;
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix/>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>CIDADE-NASCIMENTO</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>CIDADE-NASCIMENTO</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1184</xloc>
@@ -1383,20 +1417,23 @@ FROM researcher;
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix/>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>lattes_id_adm</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>lattes_id_adm</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1600</xloc>
@@ -1414,20 +1451,23 @@ FROM researcher;
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix/>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>lattes_id_simcc</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>lattes_id_simcc</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>608</xloc>
@@ -1445,20 +1485,23 @@ FROM researcher;
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix/>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>NUMERO-IDENTIFICADOR</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>NUMERO-IDENTIFICADOR</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>608</xloc>
@@ -1476,20 +1519,23 @@ FROM researcher;
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix/>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>NUMERO-IDENTIFICADOR</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>NUMERO-IDENTIFICADOR</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1456</xloc>
@@ -1507,20 +1553,23 @@ FROM researcher;
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix/>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>lattes_id_simcc</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>lattes_id_simcc</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1344</xloc>

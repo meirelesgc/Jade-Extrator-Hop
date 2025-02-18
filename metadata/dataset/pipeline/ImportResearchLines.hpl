@@ -26,7 +26,7 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Table input</from>
+      <from>Table input research_group</from>
       <to>Select values 2</to>
       <enabled>Y</enabled>
     </hop>
@@ -57,7 +57,7 @@
     </hop>
     <hop>
       <from>Select values 3</from>
-      <to>Table output</to>
+      <to>Table output research_lines</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -80,7 +80,6 @@
     <enclosure>"</enclosure>
     <header>Y</header>
     <buffer_size>50000</buffer_size>
-    <schemaDefinition/>
     <lazy_conversion>Y</lazy_conversion>
     <add_filename_result>N</add_filename_result>
     <parallel>N</parallel>
@@ -537,7 +536,7 @@
     </GUI>
   </transform>
   <transform>
-    <name>Table input</name>
+    <name>Table input research_group</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -554,12 +553,12 @@
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>320</xloc>
+      <xloc>240</xloc>
       <yloc>0</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Table output</name>
+    <name>Table output research_lines</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -609,11 +608,14 @@
     <only_when_have_rows>N</only_when_have_rows>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
     <partitioning_monthly>Y</partitioning_monthly>
+    <return_field/>
     <return_keys>N</return_keys>
     <schema>"public"</schema>
     <specify_fields>Y</specify_fields>
     <table>research_lines</table>
+    <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
     <truncate>N</truncate>
