@@ -27,18 +27,13 @@
     </hop>
     <hop>
       <from>Get rows files xml</from>
-      <to>Read XML  Organização de eventos</to>
+      <to>Read XML  Instituição de atuação</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Leitura dos XML</from>
-      <to>Read XML  Organização de eventos</to>
+      <from>Leitura dos XML - para testes</from>
+      <to>Read XML  Instituição de atuação</to>
       <enabled>N</enabled>
-    </hop>
-    <hop>
-      <from>Read XML  Organização de eventos</from>
-      <to>Filter rows</to>
-      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Select researcher</from>
@@ -135,6 +130,41 @@
       <to>Filter rows 2</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Leitura dos XML - para testes</from>
+      <to>Read XML  vinculos de atuações </to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Read XML  Instituição de atuação</from>
+      <to>Sort rows inst. atuação</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Read XML  vinculos de atuações </from>
+      <to>Sort rows  vinculos</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows  vinculos</from>
+      <to>Merge join 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows inst. atuação</from>
+      <to>Merge join 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Merge join 2</from>
+      <to>Filter rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get rows files xml</from>
+      <to>Read XML  vinculos de atuações </to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <transform>
     <name>Dummy (already registered)</name>
@@ -223,8 +253,8 @@
     <send_true_to>String operations</send_true_to>
     <attributes/>
     <GUI>
-      <xloc>608</xloc>
-      <yloc>208</yloc>
+      <xloc>688</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -277,8 +307,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>208</yloc>
+      <xloc>288</xloc>
+      <yloc>240</yloc>
     </GUI>
   </transform>
   <transform>
@@ -360,7 +390,7 @@
     </GUI>
   </transform>
   <transform>
-    <name>Leitura dos XML</name>
+    <name>Leitura dos XML - para testes</name>
     <type>GetFileNames</type>
     <description/>
     <distribute>N</distribute>
@@ -372,17 +402,23 @@
     </partitioning>
     <doNotFailIfNoFile>N</doNotFailIfNoFile>
     <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <exclude_wildcard_Field/>
     <file>
+      <exclude_filemask/>
       <file_required>N</file_required>
       <filemask>.*xml</filemask>
       <include_subfolders>N</include_subfolders>
       <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
     </file>
     <file>
+      <exclude_filemask/>
       <file_required>N</file_required>
+      <filemask/>
       <include_subfolders>N</include_subfolders>
+      <name/>
     </file>
     <filefield>N</filefield>
+    <filename_Field/>
     <filter>
       <filterfiletype>all_files</filterfiletype>
     </filter>
@@ -390,10 +426,12 @@
     <limit>0</limit>
     <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
     <rownum>N</rownum>
+    <rownum_field/>
+    <wildcard_Field/>
     <attributes/>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>352</yloc>
+      <xloc>0</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -425,6 +463,32 @@
     </GUI>
   </transform>
   <transform>
+    <name>Merge join 2</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <keys_1>
+      <key>JOIN-NOME-INSTITUICAO</key>
+    </keys_1>
+    <keys_2>
+      <key>NOME-INSTITUICAO</key>
+    </keys_2>
+    <transform1>Sort rows  vinculos</transform1>
+    <transform2>Sort rows inst. atuação</transform2>
+    <attributes/>
+    <GUI>
+      <xloc>576</xloc>
+      <yloc>224</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>Merge join researcher </name>
     <type>MergeJoin</type>
     <description/>
@@ -451,7 +515,95 @@
     </GUI>
   </transform>
   <transform>
-    <name>Read XML  Organização de eventos</name>
+    <name>Read XML  Instituição de atuação</name>
+    <type>getXMLData</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <addresultfile>N</addresultfile>
+    <namespaceaware>N</namespaceaware>
+    <ignorecomments>N</ignorecomments>
+    <readurl>N</readurl>
+    <validating>N</validating>
+    <usetoken>N</usetoken>
+    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <rownum_field/>
+    <encoding>UTF-8</encoding>
+    <file>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/Lynn Rosalina Gama Alves.xml</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>NOME-INSTITUICAO</name>
+        <xpath>@NOME-INSTITUICAO</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>IDENTIFICADOR</name>
+        <xpath>/CURRICULO-VITAE/@NUMERO-IDENTIFICADOR</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <loopxpath>/CURRICULO-VITAE/DADOS-GERAIS/ATUACOES-PROFISSIONAIS/ATUACAO-PROFISSIONAL</loopxpath>
+    <IsInFields>Y</IsInFields>
+    <IsAFile>Y</IsAFile>
+    <XmlField>filename</XmlField>
+    <prunePath/>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <attributes/>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>128</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Read XML  Organização de eventos 2</name>
     <type>getXMLData</type>
     <description/>
     <distribute>N</distribute>
@@ -667,9 +819,24 @@
         <trim_type>none</trim_type>
         <repeat>N</repeat>
       </field>
+      <field>
+        <name>teste</name>
+        <xpath>@OUTRAS-INFORMACOES</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
     </fields>
     <limit>0</limit>
-    <loopxpath>/CURRICULO-VITAE/DADOS-GERAIS/ATUACOES-PROFISSIONAIS/ATUACAO-PROFISSIONAL</loopxpath>
+    <loopxpath>/CURRICULO-VITAE/DADOS-GERAIS/ATUACOES-PROFISSIONAIS</loopxpath>
     <IsInFields>Y</IsInFields>
     <IsAFile>Y</IsAFile>
     <XmlField>filename</XmlField>
@@ -684,8 +851,246 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>208</yloc>
+      <xloc>0</xloc>
+      <yloc>128</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Read XML  vinculos de atuações </name>
+    <type>getXMLData</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <addresultfile>N</addresultfile>
+    <namespaceaware>N</namespaceaware>
+    <ignorecomments>N</ignorecomments>
+    <readurl>N</readurl>
+    <validating>N</validating>
+    <usetoken>N</usetoken>
+    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <rownum_field/>
+    <encoding>UTF-8</encoding>
+    <file>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/Lynn Rosalina Gama Alves.xml</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>TIPO-DE-VINCULO</name>
+        <xpath>@TIPO-DE-VINCULO</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>ANO-INICIO</name>
+        <xpath>@ANO-INICIO</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>ANO-FINAL</name>
+        <xpath>@ANO-FIM</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>FLAG-DEDICACAO-EXCLUSIVA</name>
+        <xpath>@FLAG-DEDICACAO-EXCLUSIVA</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>NOME-COMPLETO</name>
+        <xpath>/CURRICULO-VITAE/DADOS-GERAIS/@NOME-COMPLETO</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>CARGA-HORARIA-SEMANAL</name>
+        <xpath>@CARGA-HORARIA-SEMANAL</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>OUTRAS-INFORMACOES</name>
+        <xpath>@OUTRAS-INFORMACOES</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>IDENTIFICADOR</name>
+        <xpath>/CURRICULO-VITAE/@NUMERO-IDENTIFICADOR</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>OUTRO-VINCULO-INFORMADO</name>
+        <xpath>@OUTRO-VINCULO-INFORMADO</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>OUTRO-ENQUADRAMENTO-FUNCIONAL</name>
+        <xpath>@OUTRO-ENQUADRAMENTO-FUNCIONAL-INFORMADO</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>ENQUADRAMENTO-FUNCIONAL</name>
+        <xpath>@ENQUADRAMENTO-FUNCIONAL</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>JOIN-NOME-INSTITUICAO</name>
+        <xpath>../@NOME-INSTITUICAO</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <loopxpath>/CURRICULO-VITAE/DADOS-GERAIS/ATUACOES-PROFISSIONAIS/ATUACAO-PROFISSIONAL/VINCULOS</loopxpath>
+    <IsInFields>Y</IsInFields>
+    <IsAFile>Y</IsAFile>
+    <XmlField>filename</XmlField>
+    <prunePath/>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <attributes/>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>352</yloc>
     </GUI>
   </transform>
   <transform>
@@ -960,7 +1365,7 @@
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>researcher_id</name>
+        <name>lattes_id</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -1009,6 +1414,40 @@
     </GUI>
   </transform>
   <transform>
+    <name>Sort rows  vinculos</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>${java.io.tmpdir}</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>JOIN-NOME-INSTITUICAO</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>352</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>Sort rows 2</name>
     <type>SortRows</type>
     <description/>
@@ -1048,6 +1487,40 @@
     <GUI>
       <xloc>1232</xloc>
       <yloc>208</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Sort rows inst. atuação</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>${java.io.tmpdir}</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>NOME-INSTITUICAO</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>128</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1216,7 +1689,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>688</xloc>
+      <xloc>816</xloc>
       <yloc>320</yloc>
     </GUI>
   </transform>
