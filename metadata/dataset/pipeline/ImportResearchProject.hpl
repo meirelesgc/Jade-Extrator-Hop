@@ -23,12 +23,12 @@
     <hop>
       <from>Leitura dos XML</from>
       <to>Read XML Participação em projeto</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML Participação em projeto</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Read XML Participação em projeto</from>
@@ -839,31 +839,28 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>NOME-DO-PROJETO</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>NOME-DO-PROJETO</name>
         <presorted>N</presorted>
       </field>
       <field>
-        <name>NUMERO-IDENTIFICADOR</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>NUMERO-IDENTIFICADOR</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1408</xloc>
@@ -881,31 +878,28 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>project_name</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>project_name</name>
         <presorted>N</presorted>
       </field>
       <field>
-        <name>lattes_id</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>lattes_id</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1584</xloc>
@@ -923,23 +917,20 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>lattes_id</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>lattes_id</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>2112</xloc>
@@ -957,23 +948,20 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>NUMERO-IDENTIFICADOR</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>NUMERO-IDENTIFICADOR</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1968</xloc>

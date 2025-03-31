@@ -305,13 +305,11 @@
         <condition>=</condition>
         <field>researcher_id</field>
         <name>researcher_id</name>
-        <name2/>
       </key>
       <key>
         <condition>=</condition>
         <field>order</field>
         <name>order</name>
-        <name2/>
       </key>
       <schema>"public"</schema>
       <table>researcher_area_expertise</table>
@@ -1171,23 +1169,20 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>area_expertise_name</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>area_expertise_name</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>656</xloc>
@@ -1205,23 +1200,20 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>area_specialty_name</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>area_specialty_name</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>656</xloc>
@@ -1239,23 +1231,20 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>sub_area_expertise_name</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>sub_area_expertise_name</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>656</xloc>
@@ -1273,23 +1262,20 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>NOME-DA-AREA-DO-CONHECIMENTO</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>NOME-DA-AREA-DO-CONHECIMENTO</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>864</xloc>
@@ -1307,23 +1293,20 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>NOME-DA-ESPECIALIDADE</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>NOME-DA-ESPECIALIDADE</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>864</xloc>
@@ -1341,23 +1324,20 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>NOME-GRANDE-AREA-DO-CONHECIMENTO</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>NOME-GRANDE-AREA-DO-CONHECIMENTO</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>864</xloc>
@@ -1375,23 +1355,20 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>NOME-DA-SUB-AREA-DO-CONHECIMENTO</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>NOME-DA-SUB-AREA-DO-CONHECIMENTO</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>864</xloc>
@@ -1409,23 +1386,20 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>great_area_expertise_name</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>great_area_expertise_name</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>656</xloc>
@@ -1443,23 +1417,20 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>researcher_name</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>researcher_name</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1232</xloc>
@@ -1477,55 +1448,52 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
         <name>researcher_id_db</name>
+        <presorted>N</presorted>
+      </field>
+      <field>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
         <name>sub_area_expertise_id_db</name>
+        <presorted>N</presorted>
+      </field>
+      <field>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
         <name>area_expertise_id_db</name>
+        <presorted>N</presorted>
+      </field>
+      <field>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
         <name>great_area_expertise_id_db</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
-        <name>area_specialty_id_db</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>area_specialty_id_db</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1424</xloc>
@@ -1543,23 +1511,20 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>NOME-COMPLETO</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>NOME-COMPLETO</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1072</xloc>
@@ -1577,55 +1542,52 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
         <name>researcher_id</name>
+        <presorted>N</presorted>
+      </field>
+      <field>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
         <name>sub_area_expertise_id</name>
+        <presorted>N</presorted>
+      </field>
+      <field>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
         <name>area_expertise_id</name>
+        <presorted>N</presorted>
+      </field>
+      <field>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
         <name>great_area_expertise_id</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
-        <name>area_specialty_id</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>area_specialty_id</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1424</xloc>

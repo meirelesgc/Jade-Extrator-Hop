@@ -35,21 +35,17 @@
     <arguments>
 </arguments>
     <connection>main_database</connection>
-    <delete_field/>
     <execute_each_row>N</execute_each_row>
-    <insert_field/>
     <quoteString>N</quoteString>
-    <read_field/>
     <replace_variables>N</replace_variables>
     <set_params>N</set_params>
     <single_statement>N</single_statement>
     <sql>INSERT INTO logs.routine (type, error, detail)
 VALUES ('HOP', 'False', NULL)</sql>
-    <update_field/>
     <attributes/>
     <GUI>
-      <xloc>640</xloc>
-      <yloc>320</yloc>
+      <xloc>736</xloc>
+      <yloc>480</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
