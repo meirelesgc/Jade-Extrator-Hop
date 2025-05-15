@@ -21,53 +21,131 @@
   </notepads>
   <order>
     <hop>
-      <from>Sort rows</from>
-      <to>Unique rows</to>
+      <from>CSV - Grupos de pesquisa</from>
+      <to>Sort 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Leitura do CSV</from>
-      <to>Sort rows</to>
+      <from>CSV - Linhas de pesquisa</from>
+      <to>Filtro 1</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Unique rows</from>
-      <to>Merge join</to>
+      <from>Filtro 1</from>
+      <to>Sort 1</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Merge join</from>
-      <to>Select values</to>
+      <from>Merge</from>
+      <to>Filtro 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values</from>
+      <from>Filtro 2</from>
       <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>CSV file input</from>
-      <to>Select values 2 2 2</to>
+      <from>Sort 1</from>
+      <to>Merge</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values 2 2 2</from>
-      <to>Sort rows 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows 2 2 2</from>
-      <to>Unique rows 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Unique rows 2 2 2</from>
-      <to>Merge join</to>
+      <from>Sort 2</from>
+      <to>Merge</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
-    <name>CSV file input</name>
+    <name>CSV - Grupos de pesquisa</name>
+    <type>CSVInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <filename>${PROJECT_HOME}/metadata/dataset/csv/research_groups.csv</filename>
+    <filename_field/>
+    <rownum_field/>
+    <include_filename>N</include_filename>
+    <separator>,</separator>
+    <enclosure>"</enclosure>
+    <header>N</header>
+    <buffer_size>50000</buffer_size>
+    <schemaDefinition/>
+    <lazy_conversion>Y</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <encoding>UTF-8</encoding>
+    <fields>
+      <field>
+        <name>﻿name</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>139</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>institution</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>11</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>first_leader</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>45</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>second_leader</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>47</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>area</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>42</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>208</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>CSV - Linhas de pesquisa</name>
     <type>CSVInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -315,13 +393,13 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>528</xloc>
+      <xloc>640</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Leitura do CSV</name>
-    <type>CSVInput</type>
+    <name>Filtro 1</name>
+    <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -330,85 +408,166 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${PROJECT_HOME}/metadata/dataset/csv/research_groups.csv</filename>
-    <filename_field/>
-    <rownum_field/>
-    <include_filename>N</include_filename>
-    <separator>,</separator>
-    <enclosure>"</enclosure>
-    <header>N</header>
-    <buffer_size>50000</buffer_size>
-    <schemaDefinition/>
-    <lazy_conversion>Y</lazy_conversion>
-    <add_filename_result>N</add_filename_result>
-    <parallel>N</parallel>
-    <newline_possible>N</newline_possible>
-    <encoding>UTF-8</encoding>
     <fields>
       <field>
-        <name>﻿name</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>139</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
+        <length>-2</length>
+        <name>ANO_DO_CENSO</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>institution</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>11</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
+        <length>-2</length>
+        <name>DATA_INICIO_DA_COLETA</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>first_leader</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>45</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
+        <length>-2</length>
+        <name>DATA_FIM_DA_COLETA</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>second_leader</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>47</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
+        <length>-2</length>
+        <name>IDENTIFICADOR_GRUPO</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>area</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>42</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
+        <length>-2</length>
+        <name>NOME_DO_GRUPO</name>
+        <precision>-2</precision>
       </field>
+      <field>
+        <length>-2</length>
+        <name>ANO_FORMACAO_GRUPO</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>NOME_DA_INSTITUICAO</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>SIGLA_DA_INSTITUICAO</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>CATEGORIA_ADMINISTRATIVA</name>
+        <precision>-2</precision>
+      </field>
+      <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>528</xloc>
+      <xloc>800</xloc>
+      <yloc>64</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Filtro 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <length>-2</length>
+        <name>﻿name</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>institution</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>first_leader</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>second_leader</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>area</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>ANO_DO_CENSO</name>
+        <precision>-2</precision>
+        <rename>census</rename>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>DATA_INICIO_DA_COLETA</name>
+        <precision>-2</precision>
+        <rename>start_of_collection</rename>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>DATA_FIM_DA_COLETA</name>
+        <precision>-2</precision>
+        <rename>end_of_collection</rename>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>IDENTIFICADOR_GRUPO</name>
+        <precision>-2</precision>
+        <rename>group_identifier</rename>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>NOME_DO_GRUPO</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>ANO_FORMACAO_GRUPO</name>
+        <precision>-2</precision>
+        <rename>year</rename>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>NOME_DA_INSTITUICAO</name>
+        <precision>-2</precision>
+        <rename>institution_name</rename>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>SIGLA_DA_INSTITUICAO</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>CATEGORIA_ADMINISTRATIVA</name>
+        <precision>-2</precision>
+        <rename>category</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1072</xloc>
       <yloc>208</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Merge join</name>
+    <name>Merge</name>
     <type>MergeJoin</type>
     <description/>
     <distribute>Y</distribute>
@@ -427,8 +586,8 @@
       <key>NOME_DO_GRUPO</key>
       <key>SIGLA_DA_INSTITUICAO</key>
     </keys_2>
-    <transform1>Unique rows</transform1>
-    <transform2>Unique rows 2 2 2</transform2>
+    <transform1>Sort 2</transform1>
+    <transform2>Sort 1</transform2>
     <attributes/>
     <GUI>
       <xloc>928</xloc>
@@ -436,8 +595,8 @@
     </GUI>
   </transform>
   <transform>
-    <name>Select values</name>
-    <type>SelectValues</type>
+    <name>Sort 1</name>
+    <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -446,310 +605,37 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <compress>N</compress>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>﻿name</name>
-      </field>
-      <field>
-        <name>institution</name>
-      </field>
-      <field>
-        <name>first_leader</name>
-      </field>
-      <field>
-        <name>second_leader</name>
-      </field>
-      <field>
-        <name>area</name>
-      </field>
-      <field>
-        <name>ANO_DO_CENSO</name>
-      </field>
-      <field>
-        <name>DATA_INICIO_DA_COLETA</name>
-      </field>
-      <field>
-        <name>DATA_FIM_DA_COLETA</name>
-      </field>
-      <field>
-        <name>IDENTIFICADOR_GRUPO</name>
-      </field>
-      <field>
-        <name>ANO_FORMACAO_GRUPO</name>
-      </field>
-      <field>
-        <name>NOME_DA_INSTITUICAO</name>
-      </field>
-      <field>
-        <name>CATEGORIA_ADMINISTRATIVA</name>
-      </field>
-      <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
         <name>NOME_DO_GRUPO</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-      <remove>
-        <name>NOME_DO_GRUPO</name>
-      </remove>
-      <meta>
-        <name>﻿name</name>
-        <rename>﻿name</rename>
-        <type>String</type>
-        <length>139</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>institution</name>
-        <rename>institution</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>first_leader</name>
-        <rename>first_leader</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>second_leader</name>
-        <rename>second_leader</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>area</name>
-        <rename>area</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>ANO_DO_CENSO</name>
-        <rename>census</rename>
-        <type>Integer</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>DATA_INICIO_DA_COLETA</name>
-        <rename>start_of_collection</rename>
-        <type>Date</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>DATA_FIM_DA_COLETA</name>
-        <rename>end_of_collection</rename>
-        <type>Date</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>IDENTIFICADOR_GRUPO</name>
-        <rename>group_identifier</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>ANO_FORMACAO_GRUPO</name>
-        <rename>year</rename>
-        <type>Integer</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>NOME_DA_INSTITUICAO</name>
-        <rename>institution_name</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>CATEGORIA_ADMINISTRATIVA</name>
-        <rename>category</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>1088</xloc>
-      <yloc>208</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Select values 2 2 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>ANO_DO_CENSO</name>
+        <presorted>N</presorted>
       </field>
       <field>
-        <name>DATA_INICIO_DA_COLETA</name>
-      </field>
-      <field>
-        <name>DATA_FIM_DA_COLETA</name>
-      </field>
-      <field>
-        <name>IDENTIFICADOR_GRUPO</name>
-      </field>
-      <field>
-        <name>NOME_DO_GRUPO</name>
-      </field>
-      <field>
-        <name>ANO_FORMACAO_GRUPO</name>
-      </field>
-      <field>
-        <name>NOME_DA_INSTITUICAO</name>
-      </field>
-      <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
         <name>SIGLA_DA_INSTITUICAO</name>
+        <presorted>N</presorted>
       </field>
-      <field>
-        <name>CATEGORIA_ADMINISTRATIVA</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
     </fields>
+    <sort_prefix>srt</sort_prefix>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>640</xloc>
+      <xloc>928</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Sort rows</name>
+    <name>Sort 2</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -759,77 +645,33 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
         <name>﻿name</name>
+        <presorted>N</presorted>
+      </field>
+      <field>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
         <name>institution</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
         <presorted>N</presorted>
       </field>
     </fields>
-    <attributes/>
-    <GUI>
-      <xloc>640</xloc>
-      <yloc>208</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Sort rows 2 2 2</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
+    <sort_prefix>srt</sort_prefix>
     <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
     <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>NOME_DO_GRUPO</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>SIGLA_DA_INSTITUICAO</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
     <attributes/>
     <GUI>
       <xloc>784</xloc>
-      <yloc>64</yloc>
+      <yloc>208</yloc>
     </GUI>
   </transform>
   <transform>
@@ -912,64 +754,6 @@
     <GUI>
       <xloc>1232</xloc>
       <yloc>208</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Unique rows</name>
-    <type>Unique</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <count_rows>N</count_rows>
-    <fields>
-      <field>
-        <case_insensitive>Y</case_insensitive>
-        <name>﻿name</name>
-      </field>
-      <field>
-        <case_insensitive>N</case_insensitive>
-        <name>institution</name>
-      </field>
-    </fields>
-    <reject_duplicate_row>N</reject_duplicate_row>
-    <attributes/>
-    <GUI>
-      <xloc>784</xloc>
-      <yloc>208</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Unique rows 2 2 2</name>
-    <type>Unique</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <count_rows>N</count_rows>
-    <fields>
-      <field>
-        <case_insensitive>N</case_insensitive>
-        <name>NOME_DO_GRUPO</name>
-      </field>
-      <field>
-        <case_insensitive>N</case_insensitive>
-        <name>SIGLA_DA_INSTITUICAO</name>
-      </field>
-    </fields>
-    <reject_duplicate_row>N</reject_duplicate_row>
-    <attributes/>
-    <GUI>
-      <xloc>928</xloc>
-      <yloc>64</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
