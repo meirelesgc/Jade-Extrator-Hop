@@ -1,13 +1,13 @@
 {
   "rdbms": {
     "POSTGRESQL": {
-      "databaseName": "simcc_admin",
+      "databaseName": "${DATABASE_ADMIN}",
       "pluginId": "POSTGRESQL",
       "accessType": 0,
-      "hostname": "localhost",
-      "password": "Encrypted 2be98afc86aa7f2e4bb16bd64d980aac9",
+      "hostname": "${HOST}",
+      "password": "${PASSWORD}",
       "pluginName": "PostgreSQL",
-      "port": "5432",
+      "port": "${PORT}",
       "attributes": {
         "SUPPORTS_TIMESTAMP_DATA_TYPE": "Y",
         "QUOTE_ALL_FIELDS": "N",
