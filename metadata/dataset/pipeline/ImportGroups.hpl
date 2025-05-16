@@ -31,11 +31,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filtro 1</from>
-      <to>Sort 1</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Merge</from>
       <to>Filtro 2</to>
       <enabled>Y</enabled>
@@ -46,12 +41,27 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort 1</from>
+      <from>Sort 2</from>
       <to>Merge</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort 2</from>
+      <from>Filtro 1</from>
+      <to>Sort 1</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort 1</from>
+      <to>Limpeza</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Limpeza</from>
+      <to>Sort 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort 3</from>
       <to>Merge</to>
       <enabled>Y</enabled>
     </hop>
@@ -141,7 +151,7 @@
     <attributes/>
     <GUI>
       <xloc>640</xloc>
-      <yloc>208</yloc>
+      <yloc>368</yloc>
     </GUI>
   </transform>
   <transform>
@@ -394,7 +404,7 @@
     <attributes/>
     <GUI>
       <xloc>640</xloc>
-      <yloc>64</yloc>
+      <yloc>48</yloc>
     </GUI>
   </transform>
   <transform>
@@ -458,8 +468,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>64</yloc>
+      <xloc>784</xloc>
+      <yloc>48</yloc>
     </GUI>
   </transform>
   <transform>
@@ -478,31 +488,26 @@
         <length>-2</length>
         <name>﻿name</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>institution</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>first_leader</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>second_leader</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>area</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
@@ -532,7 +537,6 @@
         <length>-2</length>
         <name>NOME_DO_GRUPO</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
@@ -550,7 +554,6 @@
         <length>-2</length>
         <name>SIGLA_DA_INSTITUICAO</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
@@ -563,7 +566,32 @@
     <attributes/>
     <GUI>
       <xloc>1072</xloc>
-      <yloc>208</yloc>
+      <yloc>368</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Limpeza</name>
+    <type>Unique</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <count_rows>N</count_rows>
+    <fields>
+      <field>
+        <case_insensitive>N</case_insensitive>
+        <name>IDENTIFICADOR_GRUPO</name>
+      </field>
+    </fields>
+    <reject_duplicate_row>N</reject_duplicate_row>
+    <attributes/>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>160</yloc>
     </GUI>
   </transform>
   <transform>
@@ -587,11 +615,11 @@
       <key>SIGLA_DA_INSTITUICAO</key>
     </keys_2>
     <transform1>Sort 2</transform1>
-    <transform2>Sort 1</transform2>
+    <transform2>Sort 3</transform2>
     <attributes/>
     <GUI>
       <xloc>928</xloc>
-      <yloc>208</yloc>
+      <yloc>368</yloc>
     </GUI>
   </transform>
   <transform>
@@ -613,15 +641,7 @@
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>NOME_DO_GRUPO</name>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <name>SIGLA_DA_INSTITUICAO</name>
+        <name>IDENTIFICADOR_GRUPO</name>
         <presorted>N</presorted>
       </field>
     </fields>
@@ -631,7 +651,7 @@
     <attributes/>
     <GUI>
       <xloc>928</xloc>
-      <yloc>64</yloc>
+      <yloc>48</yloc>
     </GUI>
   </transform>
   <transform>
@@ -671,7 +691,47 @@
     <attributes/>
     <GUI>
       <xloc>784</xloc>
-      <yloc>208</yloc>
+      <yloc>368</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Sort 3</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compress>N</compress>
+    <directory>${java.io.tmpdir}</directory>
+    <fields>
+      <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <name>NOME_DO_GRUPO</name>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <name>NOME_DA_INSTITUICAO</name>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <sort_prefix>out</sort_prefix>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
+    <attributes/>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>256</yloc>
     </GUI>
   </transform>
   <transform>
@@ -753,7 +813,7 @@
     <attributes/>
     <GUI>
       <xloc>1232</xloc>
-      <yloc>208</yloc>
+      <yloc>368</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
