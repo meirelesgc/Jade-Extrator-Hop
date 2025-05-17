@@ -80,6 +80,7 @@
     <enclosure>"</enclosure>
     <header>Y</header>
     <buffer_size>50000</buffer_size>
+    <schemaDefinition/>
     <lazy_conversion>Y</lazy_conversion>
     <add_filename_result>N</add_filename_result>
     <parallel>N</parallel>
@@ -309,8 +310,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>336</xloc>
-      <yloc>112</yloc>
+      <xloc>256</xloc>
+      <yloc>272</yloc>
     </GUI>
   </transform>
   <transform>
@@ -335,8 +336,8 @@
     <transform2>Sort rows</transform2>
     <attributes/>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>64</yloc>
+      <xloc>784</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -352,43 +353,59 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>TITULO_LINHA_PESQUISA</name>
+        <precision>-2</precision>
         <rename>title</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>OBJETIVO_DA_LINHA_DE_PESQUISA</name>
+        <precision>-2</precision>
         <rename>objective</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>PALAVRA_CHAVE</name>
+        <precision>-2</precision>
         <rename>keyword</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>IDENTIFICADOR_GRUPO</name>
+        <precision>-2</precision>
         <rename>group_identifier</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME_DO_GRUPO</name>
+        <precision>-2</precision>
         <rename>group_name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO_FORMACAO_GRUPO</name>
+        <precision>-2</precision>
         <rename>year</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>GRANDE_AREA_PREDOMINANTE</name>
+        <precision>-2</precision>
         <rename>predominant_major_area</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>AREA_PREDOMINANTE</name>
+        <precision>-2</precision>
         <rename>predominant_area</rename>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>464</xloc>
-      <yloc>112</yloc>
+      <xloc>480</xloc>
+      <yloc>272</yloc>
     </GUI>
   </transform>
   <transform>
@@ -404,19 +421,23 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>research_group_id_db</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>research_group_name_db</rename>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>464</xloc>
-      <yloc>0</yloc>
+      <xloc>480</xloc>
+      <yloc>160</yloc>
     </GUI>
   </transform>
   <transform>
@@ -432,39 +453,57 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>research_group_id_db</name>
+        <precision>-2</precision>
         <rename>research_group_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>title</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>objective</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>keyword</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>group_identifier</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>group_name</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>year</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>predominant_major_area</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>predominant_area</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>832</xloc>
-      <yloc>64</yloc>
+      <xloc>912</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -478,27 +517,24 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>group_name</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>group_name</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>112</yloc>
+      <xloc>608</xloc>
+      <yloc>272</yloc>
     </GUI>
   </transform>
   <transform>
@@ -512,27 +548,24 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>research_group_name_db</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>research_group_name_db</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>0</yloc>
+      <xloc>608</xloc>
+      <yloc>160</yloc>
     </GUI>
   </transform>
   <transform>
@@ -553,8 +586,8 @@
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>0</yloc>
+      <xloc>256</xloc>
+      <yloc>160</yloc>
     </GUI>
   </transform>
   <transform>
@@ -608,22 +641,19 @@
     <only_when_have_rows>N</only_when_have_rows>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
     <partitioning_monthly>Y</partitioning_monthly>
-    <return_field/>
     <return_keys>N</return_keys>
     <schema>"public"</schema>
     <specify_fields>Y</specify_fields>
     <table>research_lines</table>
-    <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
     <truncate>N</truncate>
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>992</xloc>
-      <yloc>64</yloc>
+      <xloc>1056</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
