@@ -167,7 +167,6 @@ INNER JOIN public.researcher r ON r.researcher_id = rr.researcher_id
       <schema_name/>
     </partitioning>
     <compress>N</compress>
-    <compress_variables/>
     <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
@@ -179,7 +178,6 @@ INNER JOIN public.researcher r ON r.researcher_id = rr.researcher_id
         <presorted>N</presorted>
       </field>
     </fields>
-    <free_memory/>
     <sort_prefix>srt</sort_prefix>
     <sort_size>1000000</sort_size>
     <unique_rows>N</unique_rows>
