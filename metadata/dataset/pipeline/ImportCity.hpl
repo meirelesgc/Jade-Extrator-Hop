@@ -808,15 +808,21 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>city_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>city_name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>state_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -839,18 +845,26 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>country_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name_pt</name>
+        <precision>-2</precision>
         <rename>country_name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>alpha_2_code</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>alpha_3_code</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -873,14 +887,20 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>CIDADE-NASCIMENTO</name>
+        <precision>-2</precision>
         <rename>name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>state_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>country_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -903,14 +923,20 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>CIDADE-NASCIMENTO</name>
+        <precision>-2</precision>
         <rename>name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>state_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>country_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -933,17 +959,25 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>state_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>country_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>abbreviation</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -966,16 +1000,24 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>PAIS-DE-NACIONALIDADE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CIDADE-NASCIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>UF</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>SIGLA-PAIS-NACIONALIDADE:</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -998,20 +1040,30 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>PAIS-DE-NACIONALIDADE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CIDADE-NASCIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>country_id</name>
+        <precision>-2</precision>
         <rename>country_null_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>abbreviation</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>state_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

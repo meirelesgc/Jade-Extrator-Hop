@@ -19,11 +19,11 @@
       "description" : "NONE"
     }, {
       "name" : "DATABASE",
-      "value" : "conectee",
+      "value" : "simcc",
       "description" : "NONE"
     }, {
       "name" : "DATABASE_ADMIN",
-      "value" : "conectee_admin",
+      "value" : "simcc_admin",
       "description" : "NONE"
     } ]
   }

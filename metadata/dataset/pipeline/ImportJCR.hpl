@@ -46,8 +46,8 @@
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
-    <separator>;</separator>
-    <enclosure/>
+    <separator>,</separator>
+    <enclosure>"</enclosure>
     <header>Y</header>
     <buffer_size>50000</buffer_size>
     <schemaDefinition/>
@@ -58,315 +58,7 @@
     <encoding/>
     <fields>
       <field>
-        <name>rank</name>
-        <type>String</type>
-        <format>#</format>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>journalName</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>48</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>jcrYear</name>
-        <type>String</type>
-        <format>#</format>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>abbrJournal</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>20</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>46</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>issn</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>9</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>eissn</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>9</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>47</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>1453</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>totalCites</name>
-        <type>String</type>
-        <format>#</format>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>totalArticles</name>
-        <type>String</type>
-        <format>#</format>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>citableItems</name>
-        <type>String</type>
-        <format>#</format>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>citedHalfLife</name>
-        <type>String</type>
-        <format>#.#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>citingHalfLife</name>
-        <type>String</type>
-        <format>#.#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>jif2019</name>
-        <type>String</type>
-        <format>#.#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format>#.#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format>#.#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format>#.#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>2</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format>#.#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format>#.#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format>#,##0.00</format>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>2</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format>#.#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format>#.#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format>#.#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format>#.#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format>#.#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>2</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>-</name>
+        <name>"rank"</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
@@ -377,7 +69,18 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>-</name>
+        <name>"journalname"</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>99</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>"jcryear"</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
@@ -388,24 +91,112 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>-</name>
+        <name>"abbrjournal"</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>2</length>
+        <length>22</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>-</name>
+        <name>"issn"</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>2</length>
+        <length>11</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>"eissn"</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>11</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>"totalcites"</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>8</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>"totalarticles"</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>7</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>"citableitems"</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>7</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>"citedhalflife"</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>"citinghalflife"</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>"jif2019"</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>7</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>"url_revista"</name>
+        <type>Boolean</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -429,100 +220,69 @@
     </partitioning>
     <fields>
       <field>
-        <name>rank</name>
+        <length>-2</length>
+        <name>"rank"</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>journalName</name>
+        <length>-2</length>
+        <name>"journalname"</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>jcrYear</name>
+        <length>-2</length>
+        <name>"jcryear"</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>abbrJournal</name>
+        <length>-2</length>
+        <name>"abbrjournal"</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>-</name>
+        <length>-2</length>
+        <name>"issn"</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>issn</name>
+        <length>-2</length>
+        <name>"eissn"</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>eissn</name>
+        <length>-2</length>
+        <name>"totalcites"</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>-_1</name>
+        <length>-2</length>
+        <name>"totalarticles"</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>-_2</name>
+        <length>-2</length>
+        <name>"citableitems"</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>totalCites</name>
+        <length>-2</length>
+        <name>"citedhalflife"</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>totalArticles</name>
+        <length>-2</length>
+        <name>"citinghalflife"</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>citableItems</name>
+        <length>-2</length>
+        <name>"jif2019"</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>citedHalfLife</name>
-      </field>
-      <field>
-        <name>citingHalfLife</name>
-      </field>
-      <field>
-        <name>jif2019</name>
-      </field>
-      <field>
-        <name>-_3</name>
-      </field>
-      <field>
-        <name>-_4</name>
-      </field>
-      <field>
-        <name>-_5</name>
-      </field>
-      <field>
-        <name>-_6</name>
-      </field>
-      <field>
-        <name>-_7</name>
-      </field>
-      <field>
-        <name>-_8</name>
-      </field>
-      <field>
-        <name>-_9</name>
-      </field>
-      <field>
-        <name>-_10</name>
-      </field>
-      <field>
-        <name>-_11</name>
-      </field>
-      <field>
-        <name>-_12</name>
-      </field>
-      <field>
-        <name>-_13</name>
-      </field>
-      <field>
-        <name>-_14</name>
-      </field>
-      <field>
-        <name>-_15</name>
-      </field>
-      <field>
-        <name>-_16</name>
-      </field>
-      <field>
-        <name>-_17</name>
-      </field>
-      <field>
-        <name>-_18</name>
-      </field>
-      <field>
-        <name>-_19</name>
+        <length>-2</length>
+        <name>"url_revista"</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -548,62 +308,69 @@
     <fields>
       <field>
         <column_name>rank</column_name>
-        <stream_name>rank</stream_name>
+        <stream_name>"rank"</stream_name>
       </field>
       <field>
-        <column_name>journalName</column_name>
-        <stream_name>journalName</stream_name>
+        <column_name>journalname</column_name>
+        <stream_name>"journalname"</stream_name>
       </field>
       <field>
-        <column_name>jcrYear</column_name>
-        <stream_name>jcrYear</stream_name>
+        <column_name>jcryear</column_name>
+        <stream_name>"jcryear"</stream_name>
       </field>
       <field>
-        <column_name>abbrJournal</column_name>
-        <stream_name>abbrJournal</stream_name>
+        <column_name>abbrjournal</column_name>
+        <stream_name>"abbrjournal"</stream_name>
       </field>
       <field>
         <column_name>issn</column_name>
-        <stream_name>issn</stream_name>
+        <stream_name>"issn"</stream_name>
       </field>
       <field>
         <column_name>eissn</column_name>
-        <stream_name>eissn</stream_name>
+        <stream_name>"eissn"</stream_name>
       </field>
       <field>
-        <column_name>totalCites</column_name>
-        <stream_name>totalCites</stream_name>
+        <column_name>totalcites</column_name>
+        <stream_name>"totalcites"</stream_name>
       </field>
       <field>
-        <column_name>totalArticles</column_name>
-        <stream_name>totalArticles</stream_name>
+        <column_name>totalarticles</column_name>
+        <stream_name>"totalarticles"</stream_name>
       </field>
       <field>
-        <column_name>citableItems</column_name>
-        <stream_name>citableItems</stream_name>
-      </field>
-      <field>
-        <column_name>citingHalfLife</column_name>
-        <stream_name>citingHalfLife</stream_name>
-      </field>
-      <field>
-        <column_name>jif2019</column_name>
-        <stream_name>jif2019</stream_name>
+        <column_name>citableitems</column_name>
+        <stream_name>"citableitems"</stream_name>
       </field>
       <field>
         <column_name>citedhalflife</column_name>
-        <stream_name>citedHalfLife</stream_name>
+        <stream_name>"citedhalflife"</stream_name>
+      </field>
+      <field>
+        <column_name>citinghalflife</column_name>
+        <stream_name>"citinghalflife"</stream_name>
+      </field>
+      <field>
+        <column_name>jif2019</column_name>
+        <stream_name>"jif2019"</stream_name>
+      </field>
+      <field>
+        <column_name>url_revista</column_name>
+        <stream_name>"url_revista"</stream_name>
       </field>
     </fields>
     <ignore_errors>N</ignore_errors>
     <only_when_have_rows>N</only_when_have_rows>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
     <partitioning_monthly>Y</partitioning_monthly>
+    <return_field/>
     <return_keys>N</return_keys>
     <schema>"public"</schema>
     <specify_fields>Y</specify_fields>
     <table>jcr</table>
+    <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
     <truncate>N</truncate>
