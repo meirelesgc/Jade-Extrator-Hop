@@ -106,11 +106,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter rows 3</from>
-      <to>Insert table city</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Filter rows por country-id</from>
       <to>Select values 2</to>
       <enabled>Y</enabled>
@@ -118,11 +113,6 @@
     <hop>
       <from>Filter rows por country-id</from>
       <to>Select insert table</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows</from>
-      <to>Insert table city</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -200,6 +190,26 @@
       <to>Read XML city </to>
       <enabled>N</enabled>
     </hop>
+    <hop>
+      <from>Unique rows</from>
+      <to>Insert table city</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Sort rows 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows 2</from>
+      <to>Unique rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows 3</from>
+      <to>Sort rows 2</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <transform>
     <name>Filter rows</name>
@@ -222,8 +232,8 @@
         <operator>-</operator>
       </condition>
     </compare>
-    <send_false_to>Insert table city</send_false_to>
-    <send_true_to>Insert table city</send_true_to>
+    <send_false_to>Sort rows 2</send_false_to>
+    <send_true_to>Unique rows</send_true_to>
     <attributes/>
     <GUI>
       <xloc>1760</xloc>
@@ -280,7 +290,8 @@
         <operator>-</operator>
       </condition>
     </compare>
-    <send_true_to>Insert table city</send_true_to>
+    <send_false_to>Sort rows 2</send_false_to>
+    <send_true_to>Unique rows</send_true_to>
     <attributes/>
     <GUI>
       <xloc>1552</xloc>
@@ -341,7 +352,7 @@
     <attributes/>
     <GUI>
       <xloc>1136</xloc>
-      <yloc>224</yloc>
+      <yloc>256</yloc>
     </GUI>
   </transform>
   <transform>
@@ -440,8 +451,8 @@
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1648</xloc>
-      <yloc>368</yloc>
+      <xloc>1664</xloc>
+      <yloc>496</yloc>
     </GUI>
   </transform>
   <transform>
@@ -503,8 +514,8 @@
     <transform2>Sort state db</transform2>
     <attributes/>
     <GUI>
-      <xloc>1104</xloc>
-      <yloc>0</yloc>
+      <xloc>1184</xloc>
+      <yloc>16</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1100,8 +1111,8 @@
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>1120</xloc>
-      <yloc>128</yloc>
+      <xloc>1056</xloc>
+      <yloc>112</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1195,6 +1206,38 @@
     <GUI>
       <xloc>1936</xloc>
       <yloc>0</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Sort rows 2</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compress>N</compress>
+    <directory>${java.io.tmpdir}</directory>
+    <fields>
+      <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <name>name</name>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <sort_prefix>out</sort_prefix>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
+    <attributes/>
+    <GUI>
+      <xloc>1664</xloc>
+      <yloc>320</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1479,6 +1522,39 @@ FROM "public".country
     <GUI>
       <xloc>1488</xloc>
       <yloc>0</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Unique rows</name>
+    <type>Unique</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <count_rows>N</count_rows>
+    <fields>
+      <field>
+        <case_insensitive>N</case_insensitive>
+        <name>name</name>
+      </field>
+      <field>
+        <case_insensitive>N</case_insensitive>
+        <name>country_id</name>
+      </field>
+      <field>
+        <case_insensitive>N</case_insensitive>
+        <name>state_id</name>
+      </field>
+    </fields>
+    <reject_duplicate_row>N</reject_duplicate_row>
+    <attributes/>
+    <GUI>
+      <xloc>1664</xloc>
+      <yloc>416</yloc>
     </GUI>
   </transform>
   <transform>

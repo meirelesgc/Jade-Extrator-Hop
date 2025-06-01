@@ -370,13 +370,19 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-PERIODICO-OU-REVISTA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ISSN</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>QUALIS</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -399,15 +405,21 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-PERIODICO-OU-REVISTA</name>
+        <precision>-2</precision>
         <rename>name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>ISSN</name>
+        <precision>-2</precision>
         <rename>issn</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>QUALIS</name>
+        <precision>-2</precision>
         <rename>qualis</rename>
       </field>
       <select_unspecified>N</select_unspecified>

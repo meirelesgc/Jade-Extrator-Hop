@@ -647,11 +647,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher _id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>researcher_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -675,34 +679,54 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher _id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>researcher_name</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-SOFTWARE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FINALIDADE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PLATAFORMA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>AMBIENTE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DISPONIBILIDADE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>INSTITUICAO-FINANCIADORA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -725,11 +749,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
         <rename>researcher_id_db</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>title</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

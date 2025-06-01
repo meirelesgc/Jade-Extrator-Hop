@@ -23,7 +23,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML Area_Expertise </to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Read XML Area_Expertise </from>
@@ -208,7 +208,7 @@
     <hop>
       <from>Leitura dos XML</from>
       <to>Read XML Area_Expertise </to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Filter rows</from>
@@ -368,7 +368,7 @@
       <file_required>N</file_required>
       <filemask>.*xml</filemask>
       <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/atual</name>
+      <name>${PROJECT_HOME}/metadata/dataset/xml</name>
     </file>
     <file>
       <file_required>N</file_required>
@@ -904,25 +904,39 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-GRANDE-AREA-DO-CONHECIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DA-AREA-DO-CONHECIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DA-SUB-AREA-DO-CONHECIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>SEQUENCIA-AREA-DE-ATUACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DA-ESPECIALIDADE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -945,11 +959,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>area_expertise_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>area_expertise_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -973,11 +991,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>great_area_expertise_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>great_area_expertise_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -1001,13 +1023,19 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>researcher_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -1031,11 +1059,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>sub_area_expertise_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>sub_area_expertise_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -1059,11 +1091,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>area_specialty_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>area_specialty_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -1087,24 +1123,36 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>sub_area_expertise_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>SEQUENCIA-AREA-DE-ATUACAO</name>
+        <precision>-2</precision>
         <rename>order</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>area_expertise_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>great_area_expertise_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>area_specialty_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1127,27 +1175,39 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename> researcher_area_expertise_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
         <rename>researcher_id_db</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>sub_area_expertise_id</name>
+        <precision>-2</precision>
         <rename>sub_area_expertise_id_db</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>area_expertise_id</name>
+        <precision>-2</precision>
         <rename>area_expertise_id_db</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>great_area_expertise_id</name>
+        <precision>-2</precision>
         <rename>great_area_expertise_id_db</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>area_specialty_id</name>
+        <precision>-2</precision>
         <rename>area_specialty_id_db</rename>
       </field>
       <select_unspecified>N</select_unspecified>

@@ -216,7 +216,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>LEFT OUTER</join_type>
+    <join_type>INNER</join_type>
     <keys_1>
       <key>NOME-DO-PROJETO</key>
       <key>NUMERO-IDENTIFICADOR</key>
@@ -396,19 +396,29 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DO-PROJETO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CODIGO-INSTITUICAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-INSTITUICAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -431,19 +441,27 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>CODIGO-INSTITUICAO</name>
+        <precision>-2</precision>
         <rename>agency_code</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-INSTITUICAO</name>
+        <precision>-2</precision>
         <rename>agency_name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
         <rename>nature</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>project_id</rename>
       </field>
       <select_unspecified>N</select_unspecified>

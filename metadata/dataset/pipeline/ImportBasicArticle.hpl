@@ -1085,58 +1085,86 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-ARTIGO</name>
+        <precision>-2</precision>
         <rename>title</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DO-ARTIGO</name>
+        <precision>-2</precision>
         <rename>year</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>IDIOMA</name>
+        <precision>-2</precision>
         <rename>language</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>MEIO-DE-DIVULGACAO</name>
+        <precision>-2</precision>
         <rename>means_divulgation</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-RELEVANCIA</name>
+        <precision>-2</precision>
         <rename>relevance</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-DIVULGACAO-CIENTIFICA</name>
+        <precision>-2</precision>
         <rename>scientific_divulgation</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
         <rename>nature</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>HOME-PAGE-DO-TRABALHO</name>
+        <precision>-2</precision>
         <rename>homepage</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-TRABALHO-INGLES</name>
+        <precision>-2</precision>
         <rename>title_en</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>DOI</name>
+        <precision>-2</precision>
         <rename>doi</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>country_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>type</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
         <rename>nome-completo</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>AUTORES</name>
+        <precision>-2</precision>
         <rename>authors</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -1160,15 +1188,21 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>researcher_name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1191,64 +1225,104 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-ARTIGO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DO-ARTIGO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>IDIOMA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>MEIO-DE-DIVULGACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-RELEVANCIA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-DIVULGACAO-CIENTIFICA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HOME-PAGE-DO-TRABALHO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-TRABALHO-INGLES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS-DO-ARTIGO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DOI</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-PERIODICO-OU-REVISTA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ISSN</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>VOLUME</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>SERIE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAGINA-INICIAL</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAGINA-FINAL</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FASCICULO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>AUTORES</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1271,14 +1345,20 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>title</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>type</name>
+        <precision>-2</precision>
         <rename>type_BP</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

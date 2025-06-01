@@ -71,11 +71,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Renomeando</from>
-      <to>Insetindo projetos</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Pesquisadores</from>
       <to>Sort Pesquisadores</to>
       <enabled>Y</enabled>
@@ -108,6 +103,21 @@
     <hop>
       <from>String operations</from>
       <to>Sort Nome do projeto</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Renomeando</from>
+      <to>Filter rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Dummy (do nothing) 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Insetindo projetos</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -143,6 +153,52 @@
     <GUI>
       <xloc>1776</xloc>
       <yloc>176</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Dummy (do nothing) 3</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <GUI>
+      <xloc>2432</xloc>
+      <yloc>464</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compare>
+      <condition>
+        <conditions>
+</conditions>
+        <function>IS NULL</function>
+        <leftvalue>researcher_id</leftvalue>
+        <negated>N</negated>
+        <operator>-</operator>
+      </condition>
+    </compare>
+    <send_false_to>Insetindo projetos</send_false_to>
+    <send_true_to>Dummy (do nothing) 3</send_true_to>
+    <attributes/>
+    <GUI>
+      <xloc>2432</xloc>
+      <yloc>336</yloc>
     </GUI>
   </transform>
   <transform>
@@ -335,43 +391,69 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>ANO-INICIO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-FIM</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CODIGO-ORGAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-ORGAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DO-PROJETO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>SITUACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-GRADUACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-ESPECIALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-MESTRADO-ACADEMICO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-DOUTORADO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DESCRICAO-DO-PROJETO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -420,7 +502,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>LEFT OUTER</join_type>
+    <join_type>INNER</join_type>
     <keys_1>
       <key>NUMERO-IDENTIFICADOR</key>
     </keys_1>
@@ -769,55 +851,81 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>ANO-INICIO</name>
+        <precision>-2</precision>
         <rename>start_year</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-FIM</name>
+        <precision>-2</precision>
         <rename>end_year</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>CODIGO-ORGAO</name>
+        <precision>-2</precision>
         <rename>agency_code</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-ORGAO</name>
+        <precision>-2</precision>
         <rename>agency_name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DO-PROJETO</name>
+        <precision>-2</precision>
         <rename>project_name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>SITUACAO</name>
+        <precision>-2</precision>
         <rename>status</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
         <rename>nature</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-GRADUACAO</name>
+        <precision>-2</precision>
         <rename>number_undergraduates</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-ESPECIALIZACAO</name>
+        <precision>-2</precision>
         <rename>number_specialists</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-MESTRADO-ACADEMICO</name>
+        <precision>-2</precision>
         <rename>number_academic_masters</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-DOUTORADO</name>
+        <precision>-2</precision>
         <rename>number_phd</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>DESCRICAO-DO-PROJETO</name>
+        <precision>-2</precision>
         <rename>description</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher_id</rename>
       </field>
       <select_unspecified>N</select_unspecified>

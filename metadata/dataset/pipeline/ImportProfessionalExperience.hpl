@@ -28,7 +28,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML  Instituição de atuação</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Leitura dos XML - para testes</from>
@@ -163,7 +163,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML  vinculos de atuações </to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
   </order>
   <transform>
@@ -845,42 +845,66 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>professional_experience_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
         <rename>professional_experience_researcher_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>enterprise</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>start_year</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>end_year</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>employment_type</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>other_employment_type</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>functional_classification</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>other_functional_classification</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>workload_hours_weekly</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>exclusive_dedication</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>additional_info</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -903,15 +927,21 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>researcher_name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -934,43 +964,69 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-INSTITUICAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TIPO-DE-VINCULO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-INICIO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-FINAL</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-DEDICACAO-EXCLUSIVA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CARGA-HORARIA-SEMANAL</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRAS-INFORMACOES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRO-VINCULO-INFORMADO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRO-ENQUADRAMENTO-FUNCIONAL</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ENQUADRAMENTO-FUNCIONAL</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -993,46 +1049,74 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-INSTITUICAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TIPO-DE-VINCULO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-INICIO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-FINAL</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-DEDICACAO-EXCLUSIVA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CARGA-HORARIA-SEMANAL</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRAS-INFORMACOES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRO-VINCULO-INFORMADO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRO-ENQUADRAMENTO-FUNCIONAL</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ENQUADRAMENTO-FUNCIONAL</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>professional_experience_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

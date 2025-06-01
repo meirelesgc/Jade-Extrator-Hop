@@ -658,11 +658,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>expertise_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>expertise_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -686,10 +690,14 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>sub_expetise_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -713,11 +721,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NOME-DA-SUB-AREA-DO-CONHECIMENTO</name>
+        <precision>-2</precision>
         <rename>name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>expertise_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -740,16 +752,24 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DA-AREA-DO-CONHECIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DA-SUB-AREA-DO-CONHECIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>SEQUENCIA-AREA-DE-ATUACAO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

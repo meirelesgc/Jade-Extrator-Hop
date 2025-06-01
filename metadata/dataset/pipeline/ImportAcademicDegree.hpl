@@ -83,7 +83,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML graduation</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Read XML graduation teste</from>
@@ -93,7 +93,7 @@
     <hop>
       <from>Leitura dos XML</from>
       <to>Read XML graduation</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
@@ -541,10 +541,14 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>maiorTitulacao</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -567,11 +571,15 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher _id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>researcher_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -595,22 +603,34 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>GRADUACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ESPECIALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>MESTRADO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DOUTORADO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>POSDOUTORADO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -633,10 +653,14 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher _id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>maiorTitulacao</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

@@ -578,10 +578,14 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NOME-DA-SUB-AREA-DO-CONHECIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DA-ESPECIALIDADE</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -604,11 +608,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>area_specialty_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>area_specialty_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -632,11 +640,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>sub_area_expertise_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>sub_area_expertise_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -660,10 +672,14 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>sub_area_expertise_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DA-ESPECIALIDADE</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
