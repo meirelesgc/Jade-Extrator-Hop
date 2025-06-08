@@ -130,8 +130,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>624</xloc>
-      <yloc>432</yloc>
+      <xloc>736</xloc>
+      <yloc>320</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -156,8 +156,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>992</xloc>
-      <yloc>416</yloc>
+      <xloc>1024</xloc>
+      <yloc>352</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -208,7 +208,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>768</xloc>
+      <xloc>752</xloc>
       <yloc>560</yloc>
       <attributes_hac/>
     </action>
@@ -438,8 +438,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>208</xloc>
-      <yloc>672</yloc>
+      <xloc>224</xloc>
+      <yloc>688</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -828,8 +828,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>688</xloc>
-      <yloc>336</yloc>
+      <xloc>624</xloc>
+      <yloc>400</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -854,7 +854,7 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>864</xloc>
+      <xloc>880</xloc>
       <yloc>400</yloc>
       <attributes_hac/>
     </action>
@@ -880,8 +880,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1056</xloc>
-      <yloc>464</yloc>
+      <xloc>1152</xloc>
+      <yloc>432</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1010,7 +1010,7 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>112</xloc>
+      <xloc>80</xloc>
       <yloc>608</yloc>
       <attributes_hac/>
     </action>
@@ -1218,8 +1218,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1280</xloc>
-      <yloc>1072</yloc>
+      <xloc>1248</xloc>
+      <yloc>1040</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1348,7 +1348,7 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>0</xloc>
+      <xloc>32</xloc>
       <yloc>1120</yloc>
       <attributes_hac/>
     </action>
@@ -1454,6 +1454,58 @@ update event_organization set is_new = false;</sql>
       <parallel>N</parallel>
       <xloc>816</xloc>
       <yloc>1136</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ReadXML.hpl 28</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>1232</xloc>
+      <yloc>1232</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ImportProductionWorkInEvent.hpl</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportProductionWorkInEvent.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>1376</xloc>
+      <yloc>1200</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -1839,6 +1891,20 @@ update event_organization set is_new = false;</sql>
     <hop>
       <from>ImportDidacticMaterial.hpl</from>
       <to>ReadXML.hpl 27</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportProfessionalExperience.hpl</from>
+      <to>ReadXML.hpl 28</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ReadXML.hpl 28</from>
+      <to>ImportProductionWorkInEvent.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
