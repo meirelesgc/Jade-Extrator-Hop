@@ -190,47 +190,6 @@
       <yloc>688</yloc>
       <attributes_hac/>
     </action>
-    <action>
-      <name>Delete incite</name>
-      <description/>
-      <type>SQL</type>
-      <attributes/>
-      <connection>main_database</connection>
-      <sendOneStatement>N</sendOneStatement>
-      <sql>DELETE FROM incite_graduate_program</sql>
-      <sqlfromfile>N</sqlfromfile>
-      <useVariableSubstitution>N</useVariableSubstitution>
-      <parallel>N</parallel>
-      <xloc>608</xloc>
-      <yloc>688</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>ImportIncitResearcher.hpl</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportIncitResearcher.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>608</xloc>
-      <yloc>864</yloc>
-      <attributes_hac/>
-    </action>
   </actions>
   <hops>
     <hop>
@@ -271,20 +230,6 @@
     <hop>
       <from>ImportGroupSecondLeaders.hpl</from>
       <to>ImportGroupFirstLeaders.hpl</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ImportFoment.hpl</from>
-      <to>Delete incite</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Delete incite</from>
-      <to>ImportIncitResearcher.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
