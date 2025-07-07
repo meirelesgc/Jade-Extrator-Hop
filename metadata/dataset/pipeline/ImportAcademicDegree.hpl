@@ -138,7 +138,15 @@
       <file_required>N</file_required>
       <filemask>.*xml</filemask>
       <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
+      <name>${PROJECT_HOME}/metadata/dataset/xml</name>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
     </file>
     <file>
       <file_required>N</file_required>
@@ -155,7 +163,7 @@
     <attributes/>
     <GUI>
       <xloc>192</xloc>
-      <yloc>112</yloc>
+      <yloc>96</yloc>
     </GUI>
   </transform>
   <transform>
@@ -169,7 +177,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>RIGHT OUTER</join_type>
+    <join_type>INNER</join_type>
     <keys_1>
       <key>researcher_name</key>
     </keys_1>
@@ -541,10 +549,14 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>maiorTitulacao</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -567,18 +579,22 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher _id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>researcher_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>720</xloc>
+      <xloc>704</xloc>
       <yloc>112</yloc>
     </GUI>
   </transform>
@@ -595,22 +611,34 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>GRADUACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ESPECIALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>MESTRADO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DOUTORADO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>POSDOUTORADO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -633,10 +661,14 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher _id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>maiorTitulacao</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -673,7 +705,7 @@ if(POSDOUTORADO =="CONCLUIDO"){
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>864</xloc>
+      <xloc>848</xloc>
       <yloc>112</yloc>
     </GUI>
   </transform>
@@ -794,7 +826,7 @@ FROM "public".researcher
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>576</xloc>
+      <xloc>560</xloc>
       <yloc>112</yloc>
     </GUI>
   </transform>

@@ -669,37 +669,59 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NOME</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS-DE-NACIONALIDADE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ORCID</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CIDADE-NASCIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO-EN</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DATA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HORA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -722,37 +744,59 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NOME</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS-DE-NACIONALIDADE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ORCID</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CIDADE-NASCIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO-EN</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DATA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HORA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -775,58 +819,94 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher_id_adm</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>institution_id_adm</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>city_id_simcc</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>city_name_simcc</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>country_id_simcc</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS-DE-NACIONALIDADE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ORCID</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CIDADE-NASCIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO-EN</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DATA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HORA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>extra_field</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>status</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -979,34 +1059,33 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher_id_simcc</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>last_update</name>
+        <precision>-2</precision>
         <rename>last_update_simcc</rename>
       </field>
-      <select_unspecified>N</select_unspecified>
       <meta>
-        <name>lattes_id</name>
-        <rename>lattes_id_simcc</rename>
-        <type>String</type>
+        <date_format_lenient>N</date_format_lenient>
         <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>lattes_id</name>
         <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
+        <rename>lattes_id_simcc</rename>
         <storage_type/>
+        <type>String</type>
       </meta>
+      <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
@@ -1027,15 +1106,21 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>city_id_simcc</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>city_name_simcc</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>country_id</name>
+        <precision>-2</precision>
         <rename>country_id_simcc</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -1059,40 +1144,43 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
         <rename>researcher_id_adm</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>institution_id</name>
+        <precision>-2</precision>
         <rename>institution_id_adm</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>extra_field</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>status</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>lattes_id</name>
-        <rename>lattes_id_adm</rename>
-        <type>String</type>
         <length>-2</length>
+        <name>status</name>
         <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
+      </field>
+      <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>lattes_id</name>
+        <precision>-2</precision>
+        <rename>lattes_id_adm</rename>
         <storage_type/>
+        <type>String</type>
       </meta>
+      <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
@@ -1113,54 +1201,80 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher_id_adm</name>
+        <precision>-2</precision>
         <rename>id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>institution_id_adm</name>
+        <precision>-2</precision>
         <rename>institution_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>city_id_simcc</name>
+        <precision>-2</precision>
         <rename>city_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>country_id_simcc</name>
+        <precision>-2</precision>
         <rename>country_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME</name>
+        <precision>-2</precision>
         <rename>name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <precision>-2</precision>
         <rename>citations</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO</name>
+        <precision>-2</precision>
         <rename>abstract</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO-EN</name>
+        <precision>-2</precision>
         <rename>abstract_en</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <precision>-2</precision>
         <rename>other_information</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
         <rename>lattes_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>orcid_cut</name>
+        <precision>-2</precision>
         <rename>orcid</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>extra_field</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>status</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1183,35 +1297,51 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher_id_simcc</name>
+        <precision>-2</precision>
         <rename>id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME</name>
+        <precision>-2</precision>
         <rename>name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <precision>-2</precision>
         <rename>citations</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO</name>
+        <precision>-2</precision>
         <rename>abstract</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO-EN</name>
+        <precision>-2</precision>
         <rename>abstract_en</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <precision>-2</precision>
         <rename>other_information</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>orcid_cut</name>
+        <precision>-2</precision>
         <rename>orcid</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>lattes_id_simcc</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1234,73 +1364,119 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>filename</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>short_filename</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>path</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>type</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>exists</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ishidden</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>isreadable</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>iswriteable</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>lastmodifiedtime</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>size</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>extension</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>uri</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>rooturi</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS-DE-NACIONALIDADE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ORCID</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CIDADE-NASCIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO-EN</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DATA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HORA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
