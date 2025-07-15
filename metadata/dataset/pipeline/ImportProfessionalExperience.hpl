@@ -33,7 +33,7 @@
     <hop>
       <from>Leitura dos XML - para testes</from>
       <to>Read XML  Instituição de atuação</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Select researcher</from>
@@ -133,7 +133,7 @@
     <hop>
       <from>Leitura dos XML - para testes</from>
       <to>Read XML  vinculos de atuações </to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Read XML  Instituição de atuação</from>
@@ -143,11 +143,6 @@
     <hop>
       <from>Read XML  vinculos de atuações </from>
       <to>Sort rows  vinculos</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows  vinculos</from>
-      <to>Merge join 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -163,6 +158,16 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML  vinculos de atuações </to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows  vinculos</from>
+      <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows  vinculos</from>
+      <to>Merge join 2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -441,10 +446,14 @@
     <keys_1>
       <key>professional_experience_researcher_id</key>
       <key>enterprise</key>
+      <key>start_year</key>
+      <key>end_year</key>
     </keys_1>
     <keys_2>
       <key>researcher_id</key>
       <key>NOME-INSTITUICAO</key>
+      <key>ANO-INICIO</key>
+      <key>ANO-FINAL</key>
     </keys_2>
     <transform1>Sort professional_experience </transform1>
     <transform2>Sort rows 2</transform2>
@@ -1043,6 +1052,47 @@
     </GUI>
   </transform>
   <transform>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>IDENTIFICADOR</name>
+      </field>
+      <field>
+        <name>OUTRO-VINCULO-INFORMADO</name>
+      </field>
+      <field>
+        <name>OUTRO-ENQUADRAMENTO-FUNCIONAL</name>
+      </field>
+      <field>
+        <name>ENQUADRAMENTO-FUNCIONAL</name>
+      </field>
+      <field>
+        <name>JOIN-NOME-INSTITUICAO</name>
+      </field>
+      <field>
+        <name>ANO-FINAL</name>
+      </field>
+      <field>
+        <name>ANO-INICIO</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>480</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>Sort professional_experience </name>
     <type>SortRows</type>
     <description/>
@@ -1053,28 +1103,47 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix>srt</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>professional_experience_researcher_id</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>professional_experience_researcher_id</name>
         <presorted>N</presorted>
       </field>
       <field>
+        <name>enterprise</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>enterprise</name>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>start_year</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>end_year</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1408</xloc>
@@ -1092,20 +1161,23 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix>srt</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>lattes_id</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>lattes_id</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1024</xloc>
@@ -1123,20 +1195,23 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix/>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>IDENTIFICADOR</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>IDENTIFICADOR</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>880</xloc>
@@ -1147,27 +1222,30 @@
     <name>Sort rows  vinculos</name>
     <type>SortRows</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix/>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>JOIN-NOME-INSTITUICAO</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>JOIN-NOME-INSTITUICAO</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>496</xloc>
@@ -1185,28 +1263,47 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix>srt</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>researcher_id</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>researcher_id</name>
         <presorted>N</presorted>
       </field>
       <field>
+        <name>NOME-INSTITUICAO</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>NOME-INSTITUICAO</name>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>ANO-INICIO</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>ANO-FINAL</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1232</xloc>
@@ -1224,20 +1321,23 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix/>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>NOME-INSTITUICAO</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>NOME-INSTITUICAO</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>496</xloc>

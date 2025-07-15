@@ -116,11 +116,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Merge join Researcher_name</from>
-      <to>Insert table Bibliographic_production</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Sort country</from>
       <to>Merge join</to>
       <enabled>Y</enabled>
@@ -179,6 +174,11 @@
       <from>Leitura dos XML</from>
       <to>Read XML ARTICLE </to>
       <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Merge join Researcher_name</from>
+      <to>Insert table Bibliographic_production</to>
+      <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
@@ -515,8 +515,8 @@
     <use_batch>N</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1888</xloc>
-      <yloc>544</yloc>
+      <xloc>2144</xloc>
+      <yloc>528</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1340,20 +1340,23 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix/>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>PAIS-DO-ARTIGO</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>PAIS-DO-ARTIGO</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>752</xloc>
@@ -1371,28 +1374,31 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix/>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>TITULO-DO-ARTIGO</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>TITULO-DO-ARTIGO</name>
         <presorted>N</presorted>
       </field>
       <field>
+        <name>NOME-COMPLETO</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>NOME-COMPLETO</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>352</xloc>
@@ -1410,20 +1416,23 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix/>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>researcher_name</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>researcher_name</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1648</xloc>
@@ -1441,20 +1450,23 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix/>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>name_pt</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>name_pt</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>960</xloc>
@@ -1472,20 +1484,23 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix>srt</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>nome-completo</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>nome-completo</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1472</xloc>
@@ -1503,28 +1518,31 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compress>N</compress>
     <directory>${java.io.tmpdir}</directory>
+    <prefix/>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
+        <name>title</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>title</name>
         <presorted>N</presorted>
       </field>
       <field>
+        <name>name</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>name</name>
         <presorted>N</presorted>
       </field>
     </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>576</xloc>
