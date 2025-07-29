@@ -1,13 +1,13 @@
 {
   "rdbms": {
     "POSTGRESQL": {
-      "databaseName": "${DATABASE_ADMIN}",
+      "databaseName": "${ADMIN_DATABASE}",
       "pluginId": "POSTGRESQL",
       "accessType": 0,
-      "hostname": "${HOST}",
-      "password": "${PASSWORD}",
+      "hostname": "${ADMIN_HOST}",
+      "password": "${ADMIN_PASSWORD}",
       "pluginName": "PostgreSQL",
-      "port": "${PORT}",
+      "port": "${ADMIN_PORT}",
       "attributes": {
         "SUPPORTS_TIMESTAMP_DATA_TYPE": "Y",
         "QUOTE_ALL_FIELDS": "N",

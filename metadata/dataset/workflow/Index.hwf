@@ -183,8 +183,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>528</xloc>
-      <yloc>336</yloc>
+      <xloc>352</xloc>
+      <yloc>192</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -207,7 +207,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>352</xloc>
+      <xloc>496</xloc>
       <yloc>336</yloc>
       <attributes_hac/>
     </action>
@@ -234,7 +234,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>352</xloc>
-      <yloc>176</yloc>
+      <yloc>336</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -261,13 +261,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportProductionData.hwf</from>
-      <to>ImportUFMG.hwf</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>Start</from>
       <to>ImportBasicData.hwf</to>
       <enabled>Y</enabled>
@@ -282,7 +275,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportUFMG.hwf</from>
+      <from>ImportProductionData.hwf</from>
       <to>OtherData.hwf</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
@@ -291,6 +284,13 @@
     <hop>
       <from>OtherData.hwf</from>
       <to>UpdateLog.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>UpdateLog.hpl</from>
+      <to>ImportUFMG.hwf</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

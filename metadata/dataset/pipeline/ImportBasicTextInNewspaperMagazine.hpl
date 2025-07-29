@@ -282,8 +282,8 @@
     </partitioning>
     <attributes/>
     <GUI>
-      <xloc>688</xloc>
-      <yloc>432</yloc>
+      <xloc>704</xloc>
+      <yloc>336</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1106,53 +1106,79 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-TEXTO</name>
+        <precision>-2</precision>
         <rename>title</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DO-TEXTO</name>
+        <precision>-2</precision>
         <rename>year</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>IDIOMA</name>
+        <precision>-2</precision>
         <rename>language</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>MEIO-DE-DIVULGACAO</name>
+        <precision>-2</precision>
         <rename>means_divulgation</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-RELEVANCIA</name>
+        <precision>-2</precision>
         <rename>relevance</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-DIVULGACAO-CIENTIFICA</name>
+        <precision>-2</precision>
         <rename>scientific_divulgation</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
         <rename>nature</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>HOME-PAGE-DO-TRABALHO</name>
+        <precision>-2</precision>
         <rename>homepage</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-TEXTO-INGLES</name>
+        <precision>-2</precision>
         <rename>title_en</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>country_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>type</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
         <rename>numero-identificador</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1175,40 +1201,64 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-TEXTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DO-TEXTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>IDIOMA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>MEIO-DE-DIVULGACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-RELEVANCIA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-DIVULGACAO-CIENTIFICA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HOME-PAGE-DO-TRABALHO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-TEXTO-INGLES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS-DO-TEXTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1231,15 +1281,21 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>researcher_name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1262,48 +1318,76 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-TEXTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DO-TEXTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>IDIOMA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>MEIO-DE-DIVULGACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-RELEVANCIA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-DIVULGACAO-CIENTIFICA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HOME-PAGE-DO-TRABALHO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-TEXTO-INGLES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS-DO-TEXTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>country_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name_pt</name>
+        <precision>-2</precision>
         <rename>country_name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1326,14 +1410,20 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>title</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>type</name>
+        <precision>-2</precision>
         <rename>type_BP</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1512,7 +1602,7 @@
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>544</xloc>
+      <xloc>560</xloc>
       <yloc>336</yloc>
     </GUI>
   </transform>
@@ -1551,7 +1641,7 @@
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>576</xloc>
+      <xloc>560</xloc>
       <yloc>128</yloc>
     </GUI>
   </transform>

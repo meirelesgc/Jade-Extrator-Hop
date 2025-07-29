@@ -578,10 +578,14 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NOME-DA-SUB-AREA-DO-CONHECIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DA-ESPECIALIDADE</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -604,11 +608,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>area_specialty_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>area_specialty_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -632,18 +640,22 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>sub_area_expertise_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>sub_area_expertise_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1616</xloc>
+      <xloc>1600</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
@@ -660,10 +672,14 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>sub_area_expertise_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DA-ESPECIALIDADE</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -762,7 +778,7 @@
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>1776</xloc>
+      <xloc>1760</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
@@ -898,7 +914,7 @@ FROM "public".sub_area_expertise
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>1424</xloc>
+      <xloc>1408</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>

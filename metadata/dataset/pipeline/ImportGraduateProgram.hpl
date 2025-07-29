@@ -49,10 +49,14 @@
         <condition>=</condition>
         <field>graduate_program_id</field>
         <name>graduate_program_id</name>
-        <name2/>
       </key>
       <schema>"public"</schema>
       <table>graduate_program</table>
+      <value>
+        <name>graduate_program_id</name>
+        <rename>graduate_program_id</rename>
+        <update>Y</update>
+      </value>
       <value>
         <name>code</name>
         <rename>code</rename>
@@ -61,6 +65,21 @@
       <value>
         <name>name</name>
         <rename>name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>name_en</name>
+        <rename>name_en</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>basic_area</name>
+        <rename>basic_area</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>cooperation_project</name>
+        <rename>cooperation_project</rename>
         <update>Y</update>
       </value>
       <value>
@@ -79,11 +98,6 @@
         <update>Y</update>
       </value>
       <value>
-        <name>rating</name>
-        <rename>rating</rename>
-        <update>Y</update>
-      </value>
-      <value>
         <name>institution_id</name>
         <rename>institution_id</rename>
         <update>Y</update>
@@ -99,38 +113,48 @@
         <update>Y</update>
       </value>
       <value>
-        <name>url_image</name>
-        <rename>url_image</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>region</name>
-        <rename>region</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>acronym</name>
-        <rename>acronym</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>description</name>
-        <rename>description</rename>
-        <update>Y</update>
-      </value>
-      <value>
         <name>visible</name>
         <rename>visible</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>graduate_program_id</name>
-        <rename>graduate_program_id</rename>
+        <name>site</name>
+        <rename>site</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>site</name>
-        <rename>site</rename>
+        <name>coordinator</name>
+        <rename>coordinator</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>email</name>
+        <rename>email</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>start</name>
+        <rename>start</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>phone</name>
+        <rename>phone</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>periodicity</name>
+        <rename>periodicity</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>created_at</name>
+        <rename>created_at</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>updated_at</name>
+        <rename>updated_at</rename>
         <update>Y</update>
       </value>
     </lookup>
@@ -154,68 +178,109 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>graduate_program_id</name>
-        <rename/>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>code</name>
-        <rename/>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
-        <rename/>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
+        <name>name_en</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>basic_area</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>cooperation_project</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
         <name>area</name>
-        <rename/>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>modality</name>
-        <rename/>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>type</name>
-        <rename/>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>rating</name>
-        <rename/>
-      </field>
-      <field>
+        <length>-2</length>
         <name>institution_id</name>
-        <rename/>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>state</name>
-        <rename/>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>city</name>
-        <rename/>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>region</name>
-        <rename/>
-      </field>
-      <field>
-        <name>url_image</name>
-        <rename/>
-      </field>
-      <field>
-        <name>acronym</name>
-        <rename/>
-      </field>
-      <field>
-        <name>description</name>
-        <rename/>
-      </field>
-      <field>
+        <length>-2</length>
         <name>visible</name>
-        <rename/>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>site</name>
-        <rename/>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>coordinator</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>email</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>start</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>phone</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>periodicity</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>created_at</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>updated_at</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -239,28 +304,8 @@
     <connection>adm_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
-    <sql>SELECT
-    graduate_program_id,
-    code,
-    name,
-    area,
-    modality,
-    type,
-    rating,
-    institution_id,
-    state,
-    city,
-    region,
-    url_image,
-    visible,
-    created_at,
-    updated_at,
-    description,
-    site,
-    acronym
-FROM
-    graduate_program;
-</sql>
+    <sql>SELECT graduate_program_id, code, name, name_en, basic_area, cooperation_project, area, modality, type, institution_id, state, city, visible, site, coordinator, email, start, phone, periodicity, created_at, updated_at
+	FROM public.graduate_program;</sql>
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>

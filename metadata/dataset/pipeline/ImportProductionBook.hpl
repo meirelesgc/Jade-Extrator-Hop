@@ -1008,35 +1008,51 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NUMERO-DE-VOLUMES</name>
+        <precision>-2</precision>
         <rename>qtt_volume</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>ISBN</name>
+        <precision>-2</precision>
         <rename>isbn</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-DA-EDICAO-REVISAO</name>
+        <precision>-2</precision>
         <rename>num_edition_revision</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>CIDADE-DA-EDITORA</name>
+        <precision>-2</precision>
         <rename>publishing_company_city</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DA-EDITORA</name>
+        <precision>-2</precision>
         <rename>publishing_company</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>bibliographic_production_id</name>
+        <precision>-2</precision>
         <rename>bibliographic_production_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-DE-PAGINAS</name>
+        <precision>-2</precision>
         <rename>qtt_pages</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NUM-SERIES</name>
+        <precision>-2</precision>
         <rename>num_series</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -1060,58 +1076,94 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-LIVRO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DO-LIVRO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>IDIOMA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>MEIO-DE-DIVULGACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-RELEVANCIA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-DIVULGACAO-CIENTIFICA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HOME-PAGE-DO-TRABALHO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-LIVRO-INGLES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS-DO-LIVRO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-DE-VOLUMES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-DE-PAGINAS</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ISBN</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-DA-EDICAO-REVISAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CIDADE-DA-EDITORA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DA-EDITORA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUM-SERIES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1134,17 +1186,25 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>bibliographic_production_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>type</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>title</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1167,7 +1227,9 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>bibliographic_production_id</name>
+        <precision>-2</precision>
         <rename>bibliographic_production_id_BPB</rename>
       </field>
       <select_unspecified>N</select_unspecified>

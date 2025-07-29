@@ -31,7 +31,7 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>ImportTeachers.hpl</name>
+      <name>ImportResearchers.hpl</name>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
@@ -78,8 +78,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>352</xloc>
-      <yloc>48</yloc>
+      <xloc>336</xloc>
+      <yloc>32</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -142,7 +142,6 @@
       <connection>main_database</connection>
       <sendOneStatement>N</sendOneStatement>
       <sql>DELETE FROM ufmg.departament_technician</sql>
-      <sqlfilename/>
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
@@ -195,13 +194,13 @@
   <hops>
     <hop>
       <from>Start</from>
-      <to>ImportTeachers.hpl</to>
+      <to>ImportResearchers.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>ImportTeachers.hpl</from>
+      <from>ImportResearchers.hpl</from>
       <to>ImportTechnician.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>

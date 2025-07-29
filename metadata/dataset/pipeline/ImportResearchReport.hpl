@@ -134,8 +134,8 @@
     </partitioning>
     <attributes/>
     <GUI>
-      <xloc>1616</xloc>
-      <yloc>0</yloc>
+      <xloc>1504</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -162,8 +162,8 @@
     <send_true_to>String operations</send_true_to>
     <attributes/>
     <GUI>
-      <xloc>736</xloc>
-      <yloc>112</yloc>
+      <xloc>576</xloc>
+      <yloc>336</yloc>
     </GUI>
   </transform>
   <transform>
@@ -191,8 +191,8 @@
     <send_true_to>Select values</send_true_to>
     <attributes/>
     <GUI>
-      <xloc>1424</xloc>
-      <yloc>0</yloc>
+      <xloc>1312</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -319,8 +319,8 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>112</yloc>
+      <xloc>432</xloc>
+      <yloc>336</yloc>
     </GUI>
   </transform>
   <transform>
@@ -462,8 +462,8 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>736</xloc>
-      <yloc>224</yloc>
+      <xloc>576</xloc>
+      <yloc>464</yloc>
     </GUI>
   </transform>
   <transform>
@@ -487,8 +487,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>400</xloc>
-      <yloc>112</yloc>
+      <xloc>240</xloc>
+      <yloc>336</yloc>
     </GUI>
   </transform>
   <transform>
@@ -541,8 +541,8 @@
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1680</xloc>
-      <yloc>128</yloc>
+      <xloc>1568</xloc>
+      <yloc>352</yloc>
     </GUI>
   </transform>
   <transform>
@@ -578,8 +578,8 @@
     <rownum>N</rownum>
     <attributes/>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>240</yloc>
+      <xloc>432</xloc>
+      <yloc>464</yloc>
     </GUI>
   </transform>
   <transform>
@@ -606,8 +606,8 @@
     <transform2>Sort rows</transform2>
     <attributes/>
     <GUI>
-      <xloc>1328</xloc>
-      <yloc>0</yloc>
+      <xloc>1168</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -632,8 +632,8 @@
     <transform2>Sort by nome completo</transform2>
     <attributes/>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>0</yloc>
+      <xloc>896</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -649,22 +649,28 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>researcher_name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>0</yloc>
+      <xloc>432</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -680,29 +686,41 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DO-PROJETO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>INSTITUICAO-FINANCIADORA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1488</xloc>
-      <yloc>128</yloc>
+      <xloc>1376</xloc>
+      <yloc>352</yloc>
     </GUI>
   </transform>
   <transform>
@@ -718,21 +736,27 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
         <rename>researcher_id_db</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>title</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1328</xloc>
-      <yloc>352</yloc>
+      <xloc>1168</xloc>
+      <yloc>576</yloc>
     </GUI>
   </transform>
   <transform>
@@ -762,8 +786,8 @@
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>112</yloc>
+      <xloc>896</xloc>
+      <yloc>336</yloc>
     </GUI>
   </transform>
   <transform>
@@ -793,8 +817,8 @@
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>0</yloc>
+      <xloc>640</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -832,8 +856,8 @@
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>1328</xloc>
-      <yloc>128</yloc>
+      <xloc>1168</xloc>
+      <yloc>352</yloc>
     </GUI>
   </transform>
   <transform>
@@ -871,8 +895,8 @@
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>1216</xloc>
-      <yloc>0</yloc>
+      <xloc>1056</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -916,8 +940,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>896</xloc>
-      <yloc>112</yloc>
+      <xloc>736</xloc>
+      <yloc>336</yloc>
     </GUI>
   </transform>
   <transform>
@@ -961,8 +985,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1328</xloc>
-      <yloc>256</yloc>
+      <xloc>1168</xloc>
+      <yloc>480</yloc>
     </GUI>
   </transform>
   <transform>
@@ -989,8 +1013,8 @@ FROM "public".researcher
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>0</yloc>
+      <xloc>256</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1016,8 +1040,8 @@ FROM "public".research_report
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>1328</xloc>
-      <yloc>464</yloc>
+      <xloc>1168</xloc>
+      <yloc>688</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

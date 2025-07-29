@@ -52,7 +52,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>208</xloc>
+      <xloc>128</xloc>
       <yloc>128</yloc>
       <attributes_hac/>
     </action>
@@ -78,7 +78,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>400</xloc>
+      <xloc>256</xloc>
       <yloc>128</yloc>
       <attributes_hac/>
     </action>
@@ -104,7 +104,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>560</xloc>
+      <xloc>512</xloc>
       <yloc>128</yloc>
       <attributes_hac/>
     </action>
@@ -130,7 +130,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>736</xloc>
+      <xloc>640</xloc>
       <yloc>128</yloc>
       <attributes_hac/>
     </action>
@@ -156,7 +156,33 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>928</xloc>
+      <xloc>800</xloc>
+      <yloc>128</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ImportState.hpl</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportState.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>384</xloc>
       <yloc>128</yloc>
       <attributes_hac/>
     </action>
@@ -177,13 +203,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportCountry.hpl</from>
-      <to>ImportQualis.hpl</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>ImportQualis.hpl</from>
       <to>ImportGroups.hpl</to>
       <enabled>Y</enabled>
@@ -193,6 +212,20 @@
     <hop>
       <from>ImportGroups.hpl</from>
       <to>ImportResearchLines.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportCountry.hpl</from>
+      <to>ImportState.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportState.hpl</from>
+      <to>ImportQualis.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

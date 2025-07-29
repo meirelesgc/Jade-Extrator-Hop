@@ -75,7 +75,6 @@
         <condition>=</condition>
         <field>dep_id</field>
         <name>dep_id</name>
-        <name2/>
       </key>
       <schema>ufmg</schema>
       <table>departament</table>
@@ -145,31 +144,49 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>dep_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>org_cod</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>dep_nom</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>dep_des</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>dep_email</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>dep_site</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>dep_sigla</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>dep_tel</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>img_data</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

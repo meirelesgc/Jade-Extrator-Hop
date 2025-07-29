@@ -26,8 +26,8 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>288</xloc>
-      <yloc>64</yloc>
+      <xloc>208</xloc>
+      <yloc>160</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -52,8 +52,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>288</xloc>
-      <yloc>144</yloc>
+      <xloc>208</xloc>
+      <yloc>272</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -78,8 +78,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>304</xloc>
-      <yloc>352</yloc>
+      <xloc>208</xloc>
+      <yloc>368</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -104,8 +104,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>560</xloc>
-      <yloc>272</yloc>
+      <xloc>208</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -130,8 +130,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>624</xloc>
-      <yloc>432</yloc>
+      <xloc>208</xloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -156,8 +156,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>992</xloc>
-      <yloc>416</yloc>
+      <xloc>208</xloc>
+      <yloc>656</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -182,8 +182,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1040</xloc>
-      <yloc>544</yloc>
+      <xloc>592</xloc>
+      <yloc>656</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -208,7 +208,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>768</xloc>
+      <xloc>592</xloc>
       <yloc>560</yloc>
       <attributes_hac/>
     </action>
@@ -234,8 +234,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>240</xloc>
-      <yloc>576</yloc>
+      <xloc>592</xloc>
+      <yloc>368</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -260,8 +260,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>496</xloc>
-      <yloc>576</yloc>
+      <xloc>592</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -286,8 +286,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>48</xloc>
-      <yloc>496</yloc>
+      <xloc>2080</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -312,8 +312,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>32</xloc>
-      <yloc>688</yloc>
+      <xloc>592</xloc>
+      <yloc>272</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -338,8 +338,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>640</xloc>
-      <yloc>672</yloc>
+      <xloc>976</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -364,8 +364,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>448</xloc>
-      <yloc>672</yloc>
+      <xloc>976</xloc>
+      <yloc>368</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -390,8 +390,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>816</xloc>
-      <yloc>672</yloc>
+      <xloc>976</xloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -412,8 +412,8 @@ update event_organization set is_new = false;</sql>
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
-      <xloc>128</xloc>
-      <yloc>64</yloc>
+      <xloc>16</xloc>
+      <yloc>160</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -438,8 +438,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>208</xloc>
-      <yloc>672</yloc>
+      <xloc>976</xloc>
+      <yloc>272</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -464,7 +464,7 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>992</xloc>
+      <xloc>976</xloc>
       <yloc>656</yloc>
       <attributes_hac/>
     </action>
@@ -490,8 +490,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1168</xloc>
-      <yloc>768</yloc>
+      <xloc>1344</xloc>
+      <yloc>656</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -516,8 +516,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1280</xloc>
-      <yloc>944</yloc>
+      <xloc>1344</xloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -542,8 +542,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>800</xloc>
-      <yloc>1040</yloc>
+      <xloc>1344</xloc>
+      <yloc>368</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -568,8 +568,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1056</xloc>
-      <yloc>1040</yloc>
+      <xloc>1344</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -594,8 +594,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>320</xloc>
-      <yloc>1040</yloc>
+      <xloc>1712</xloc>
+      <yloc>272</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -620,8 +620,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>64</xloc>
-      <yloc>1008</yloc>
+      <xloc>1712</xloc>
+      <yloc>368</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -646,8 +646,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>544</xloc>
-      <yloc>1040</yloc>
+      <xloc>1344</xloc>
+      <yloc>272</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -672,8 +672,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>336</xloc>
-      <yloc>1184</yloc>
+      <xloc>1712</xloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -698,8 +698,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>656</xloc>
-      <yloc>1184</yloc>
+      <xloc>1728</xloc>
+      <yloc>656</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -724,8 +724,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>112</xloc>
-      <yloc>1184</yloc>
+      <xloc>1712</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -750,8 +750,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>128</xloc>
-      <yloc>176</yloc>
+      <xloc>16</xloc>
+      <yloc>272</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -776,8 +776,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>288</xloc>
-      <yloc>240</yloc>
+      <xloc>16</xloc>
+      <yloc>368</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -802,8 +802,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>464</xloc>
-      <yloc>352</yloc>
+      <xloc>16</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -828,8 +828,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>688</xloc>
-      <yloc>336</yloc>
+      <xloc>16</xloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -854,8 +854,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>864</xloc>
-      <yloc>400</yloc>
+      <xloc>16</xloc>
+      <yloc>656</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -880,8 +880,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1056</xloc>
-      <yloc>464</yloc>
+      <xloc>400</xloc>
+      <yloc>656</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -906,8 +906,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>896</xloc>
-      <yloc>496</yloc>
+      <xloc>400</xloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -932,8 +932,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>608</xloc>
-      <yloc>512</yloc>
+      <xloc>400</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -958,8 +958,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>352</xloc>
-      <yloc>512</yloc>
+      <xloc>400</xloc>
+      <yloc>368</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -984,8 +984,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>112</xloc>
-      <yloc>400</yloc>
+      <xloc>1888</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1010,8 +1010,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>112</xloc>
-      <yloc>608</yloc>
+      <xloc>400</xloc>
+      <yloc>272</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1036,8 +1036,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>128</xloc>
-      <yloc>768</yloc>
+      <xloc>784</xloc>
+      <yloc>272</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1062,8 +1062,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>320</xloc>
-      <yloc>736</yloc>
+      <xloc>784</xloc>
+      <yloc>368</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1088,8 +1088,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>528</xloc>
-      <yloc>752</yloc>
+      <xloc>784</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1114,8 +1114,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>720</xloc>
-      <yloc>768</yloc>
+      <xloc>784</xloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1140,8 +1140,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>912</xloc>
-      <yloc>752</yloc>
+      <xloc>784</xloc>
+      <yloc>656</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1166,8 +1166,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1056</xloc>
-      <yloc>736</yloc>
+      <xloc>1152</xloc>
+      <yloc>656</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1192,8 +1192,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1280</xloc>
-      <yloc>848</yloc>
+      <xloc>1152</xloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1218,8 +1218,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1280</xloc>
-      <yloc>1072</yloc>
+      <xloc>1152</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1244,8 +1244,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>896</xloc>
-      <yloc>944</yloc>
+      <xloc>1152</xloc>
+      <yloc>368</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1270,8 +1270,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>656</xloc>
-      <yloc>976</yloc>
+      <xloc>1152</xloc>
+      <yloc>272</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1296,8 +1296,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>416</xloc>
-      <yloc>960</yloc>
+      <xloc>1520</xloc>
+      <yloc>272</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1322,8 +1322,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>224</xloc>
-      <yloc>944</yloc>
+      <xloc>1536</xloc>
+      <yloc>368</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1348,8 +1348,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>0</xloc>
-      <yloc>1120</yloc>
+      <xloc>1536</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1374,8 +1374,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>224</xloc>
-      <yloc>1136</yloc>
+      <xloc>1536</xloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1400,8 +1400,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>496</xloc>
-      <yloc>1136</yloc>
+      <xloc>1536</xloc>
+      <yloc>656</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1426,8 +1426,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1024</xloc>
-      <yloc>1184</yloc>
+      <xloc>2080</xloc>
+      <yloc>656</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1452,8 +1452,60 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>816</xloc>
-      <yloc>1136</yloc>
+      <xloc>1888</xloc>
+      <yloc>656</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ReadXML.hpl 28</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>1888</xloc>
+      <yloc>560</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ImportProductionWorkInEvent.hpl</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportProductionWorkInEvent.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>2080</xloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -1466,22 +1518,8 @@ update event_organization set is_new = false;</sql>
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>ReadXML.hpl</from>
-      <to>ImportBasicArticle.hpl</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>SQL</from>
       <to>ReadXML.hpl</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ImportBasicArticle.hpl</from>
-      <to>ReadXML.hpl 2</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
@@ -1491,7 +1529,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportProductionArticle.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportProductionArticle.hpl</from>
@@ -1505,7 +1543,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportBasicBook.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportBasicBook.hpl</from>
@@ -1519,7 +1557,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportProductionBook.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportProductionBook.hpl</from>
@@ -1533,7 +1571,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportBasicBookChapter.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportBasicBookChapter.hpl</from>
@@ -1547,7 +1585,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportProductionBookChapter.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportProductionBookChapter.hpl</from>
@@ -1561,7 +1599,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportBasicWorkInEvent.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportBasicWorkInEvent.hpl</from>
@@ -1575,7 +1613,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportResearchReport.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportResearchReport.hpl</from>
@@ -1589,27 +1627,6 @@ update event_organization set is_new = false;</sql>
       <to>ImportBasicTextInNewspaperMagazine.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>ImportBasicTextInNewspaperMagazine.hpl</from>
-      <to>ReadXML.hpl 10</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ReadXML.hpl 10</from>
-      <to>UpdateDate.hpl</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>UpdateDate.hpl</from>
-      <to>ReadXML.hpl 11</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
@@ -1617,7 +1634,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportGuidance.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportGuidance.hpl</from>
@@ -1631,7 +1648,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportParticipationInEvents.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportParticipationInEvents.hpl</from>
@@ -1645,7 +1662,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportSoftware.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportSoftware.hpl</from>
@@ -1659,7 +1676,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportPatent.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportPatent.hpl</from>
@@ -1673,7 +1690,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportBrand.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportBrand.hpl</from>
@@ -1687,7 +1704,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportEventOrganization.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportEventOrganization.hpl</from>
@@ -1701,7 +1718,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportResearchProjects.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportResearchProjects.hpl</from>
@@ -1715,7 +1732,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportResearchProjectComponents.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportResearchProjectComponents.hpl</from>
@@ -1729,7 +1746,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportResearchProjectProduction.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportResearchProjectProduction.hpl</from>
@@ -1743,7 +1760,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportResearchProjectFoment.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportResearchProjectFoment.hpl</from>
@@ -1757,7 +1774,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportTechnicalWorkProgram.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportTechnicalWorkProgram.hpl</from>
@@ -1771,7 +1788,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportTechnicalWork.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportTechnicalWork.hpl</from>
@@ -1785,7 +1802,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportWorkPresentation.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportWorkPresentation.hpl</from>
@@ -1799,7 +1816,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportArtisticProduction.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportArtisticProduction.hpl</from>
@@ -1813,7 +1830,7 @@ update event_organization set is_new = false;</sql>
       <to>ImportTechnologicalProduct.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportTechnologicalProduct.hpl</from>
@@ -1827,18 +1844,67 @@ update event_organization set is_new = false;</sql>
       <to>ImportDidacticMaterial.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ReadXML.hpl 27</from>
       <to>ImportProfessionalExperience.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportDidacticMaterial.hpl</from>
       <to>ReadXML.hpl 27</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportProfessionalExperience.hpl</from>
+      <to>ReadXML.hpl 28</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ReadXML.hpl 28</from>
+      <to>ImportProductionWorkInEvent.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ReadXML.hpl</from>
+      <to>ImportBasicArticle.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportBasicArticle.hpl</from>
+      <to>ReadXML.hpl 2</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportBasicTextInNewspaperMagazine.hpl</from>
+      <to>ReadXML.hpl 11</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportProductionWorkInEvent.hpl</from>
+      <to>ReadXML.hpl 10</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ReadXML.hpl 10</from>
+      <to>UpdateDate.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

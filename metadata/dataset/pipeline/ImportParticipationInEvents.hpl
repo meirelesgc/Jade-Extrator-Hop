@@ -1366,11 +1366,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher _id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>researcher_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -1394,30 +1398,44 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher _id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>Nome do Evento </name>
+        <precision>-2</precision>
         <rename>event_name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>Ano</name>
+        <precision>-2</precision>
         <rename>year</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>Forma de Participacao</name>
+        <precision>-2</precision>
         <rename>form_participation</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>Tipo de Participacao</name>
+        <precision>-2</precision>
         <rename>type_participation</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>Natureza</name>
+        <precision>-2</precision>
         <rename>nature</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>Titulo </name>
+        <precision>-2</precision>
         <rename>title</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -1441,14 +1459,20 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
         <rename>researcher_id_db</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>event_name</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>title</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

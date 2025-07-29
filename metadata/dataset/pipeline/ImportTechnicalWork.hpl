@@ -230,7 +230,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>RIGHT OUTER</join_type>
+    <join_type>INNER</join_type>
     <keys_1>
       <key>IDENTIFICADOR_BANCO</key>
     </keys_1>
@@ -444,25 +444,39 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-TRABALHO-TECNICO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>INSTITUICAO-FINANCIADORA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DURACAO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -485,10 +499,14 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
         <rename>IDENTIFICADOR_BANCO</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -512,30 +530,44 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-TRABALHO-TECNICO</name>
+        <precision>-2</precision>
         <rename>title</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
         <rename>nature</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO</name>
+        <precision>-2</precision>
         <rename>year</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS</name>
+        <precision>-2</precision>
         <rename>country</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>INSTITUICAO-FINANCIADORA</name>
+        <precision>-2</precision>
         <rename>funding_institution</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>DURACAO</name>
+        <precision>-2</precision>
         <rename>duration</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -559,11 +591,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>title</name>
+        <precision>-2</precision>
         <rename>TITULO_BANCO</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -586,26 +622,40 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>title</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>nature</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>year</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>country</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>funding_institution</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>duration</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

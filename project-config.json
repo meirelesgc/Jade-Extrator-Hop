@@ -1,36 +1,42 @@
 {
-    "metadataBaseFolder": "${PROJECT_HOME}/metadata",
-    "unitTestsBasePath": "${PROJECT_HOME}",
-    "dataSetsCsvFolder": "${PROJECT_HOME}/datasets",
-    "enforcingExecutionInHome": true,
-    "parentProjectName": "default",
-    "config": {
-        "variables": [
-            {
-                "name": "HOST",
-                "value": "localhost",
-                "description": "NONE"
-            },
-            {
-                "name": "PORT",
-                "value": "5432",
-                "description": "NONE"
-            },
-            {
-                "name": "PASSWORD",
-                "value": "postgres",
-                "description": "NONE"
-            },
-            {
-                "name": "DATABASE",
-                "value": "simcc",
-                "description": "NONE"
-            },
-            {
-                "name": "DATABASE_ADMIN",
-                "value": "simcc_admin",
-                "description": "NONE"
-            }
-        ]
-    }
+  "metadataBaseFolder" : "${PROJECT_HOME}/metadata",
+  "unitTestsBasePath" : "${PROJECT_HOME}",
+  "dataSetsCsvFolder" : "${PROJECT_HOME}/datasets",
+  "enforcingExecutionInHome" : true,
+  "parentProjectName" : "default",
+  "config" : {
+    "variables" : [ {
+      "name" : "HOST",
+      "value" : "localhost",
+      "description" : "NONE"
+    }, {
+      "name" : "PORT",
+      "value" : "5433",
+      "description" : "NONE"
+    }, {
+      "name" : "PASSWORD",
+      "value" : "postgres",
+      "description" : "NONE"
+    }, {
+      "name" : "DATABASE",
+      "value" : "simcc",
+      "description" : "NONE"
+    }, {
+      "name" : "ADMIN_DATABASE",
+      "value" : "simcc_admin",
+      "description" : "NONE"
+    }, {
+      "name" : "ADMIN_PORT",
+      "value" : "5432",
+      "description" : "NONE"
+    }, {
+      "name" : "ADMIN_HOST",
+      "value" : "localhost",
+      "description" : "NONE"
+    }, {
+      "name" : "ADMIN_PASSWORD",
+      "value" : "postgres",
+      "description" : "NONE"
+    } ]
+  }
 }

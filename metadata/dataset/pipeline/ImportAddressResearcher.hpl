@@ -337,7 +337,7 @@
       <file_required>N</file_required>
       <filemask>.*xml</filemask>
       <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/atual</name>
+      <name>${PROJECT_HOME}/metadata/dataset/xml</name>
     </file>
     <file>
       <file_required>N</file_required>
@@ -1006,52 +1006,84 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-DE-PREFERENCIA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PUBLIC_PLACE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DISTRICT</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CEP</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HOME-PAGE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TELEFONE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DDD</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FAX</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>EMAIL</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CIDADE-ENDERECO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>INSTITUICAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ORGAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>UNIDADE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>UF</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1074,78 +1106,99 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>PUBLIC_PLACE</name>
+        <precision>-2</precision>
         <rename>public_place</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>DISTRICT</name>
+        <precision>-2</precision>
         <rename>district</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>CEP</name>
+        <precision>-2</precision>
         <rename>cep</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>HOME-PAGE</name>
+        <precision>-2</precision>
         <rename>url_homepage</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>telephone</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FAX</name>
+        <precision>-2</precision>
         <rename>fax</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>EMAIL</name>
+        <precision>-2</precision>
         <rename>mailbox</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>CIDADE-ENDERECO</name>
+        <precision>-2</precision>
         <rename>city</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>INSTITUICAO</name>
+        <precision>-2</precision>
         <rename>institution</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>ORGAO</name>
+        <precision>-2</precision>
         <rename>organ</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>UNIDADE</name>
+        <precision>-2</precision>
         <rename>unity</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS</name>
+        <precision>-2</precision>
         <rename>country</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>UF</name>
+        <precision>-2</precision>
         <rename>uf</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher_id</rename>
       </field>
-      <select_unspecified>N</select_unspecified>
       <meta>
-        <name>CEP</name>
-        <rename>CEP</rename>
-        <type>String</type>
+        <date_format_lenient>N</date_format_lenient>
         <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>CEP</name>
         <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
+        <rename>CEP</rename>
         <storage_type/>
+        <type>String</type>
       </meta>
+      <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
@@ -1166,46 +1219,74 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>public_place</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>district</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CEP</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>url_homepage</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>telephone</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>fax</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>mailbox</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>city</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>institution</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>organ</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>unity</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>country</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>uf</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

@@ -120,6 +120,16 @@
       <to>Read XML Patent</to>
       <enabled>N</enabled>
     </hop>
+    <hop>
+      <from>Dummy (already registered)</from>
+      <to>Select values 2 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 2 3</from>
+      <to>Update</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <transform>
     <name>Dummy (already registered)</name>
@@ -233,6 +243,10 @@
       <field>
         <column_name>deposit_date</column_name>
         <stream_name>DATA-PEDIDO-DE-DEPOSITO</stream_name>
+      </field>
+      <field>
+        <column_name>code</column_name>
+        <stream_name>CODIGO-DO-REGISTRO-OU-PATENTE</stream_name>
       </field>
     </fields>
     <ignore_errors>N</ignore_errors>
@@ -370,12 +384,7 @@
     <rownum_field/>
     <encoding>UTF-8</encoding>
     <file>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/Teste/88185575568.xml</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-      <name/>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/3365695090552840.xml</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -475,6 +484,21 @@
       <field>
         <name>DATA-PEDIDO-DE-DEPOSITO</name>
         <xpath>DETALHAMENTO-DA-PATENTE/REGISTRO-OU-PATENTE/@DATA-PEDIDO-DE-DEPOSITO</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>CODIGO-DO-REGISTRO-OU-PATENTE</name>
+        <xpath>DETALHAMENTO-DA-PATENTE/REGISTRO-OU-PATENTE/@CODIGO-DO-REGISTRO-OU-PATENTE</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>None</type>
@@ -684,11 +708,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher _id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>researcher_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -712,67 +740,79 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher _id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>researcher_name</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DESENVOLVIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CATEGORIA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>INFORMACOES-ADICIONAIS</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
-      </field>
-      <field>
-        <name>DATA-DE-CONCESSAO</name>
-      </field>
-      <field>
-        <name>DATA-PEDIDO-DE-DEPOSITO</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>DATA-PEDIDO-DE-DEPOSITO</name>
-        <rename>DATA-PEDIDO-DE-DEPOSITO</rename>
-        <type>Date</type>
-        <length>-2</length>
         <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>DATA-DE-CONCESSAO</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>DATA-PEDIDO-DE-DEPOSITO</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>CODIGO-DO-REGISTRO-OU-PATENTE</name>
+        <precision>-2</precision>
+      </field>
+      <meta>
         <conversion_mask>ddMMyyyy</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
+        <date_format_lenient>N</date_format_lenient>
         <date_format_locale>pt_BR</date_format_locale>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>DATA-PEDIDO-DE-DEPOSITO</name>
+        <precision>-2</precision>
+        <rename>DATA-PEDIDO-DE-DEPOSITO</rename>
         <storage_type/>
+        <type>Date</type>
       </meta>
       <meta>
-        <name>DATA-DE-CONCESSAO</name>
-        <rename>DATA-DE-CONCESSAO</rename>
-        <type>Date</type>
-        <length>-2</length>
-        <precision>-2</precision>
         <conversion_mask>ddMMyyyy</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>DATA-DE-CONCESSAO</name>
+        <precision>-2</precision>
+        <rename>DATA-DE-CONCESSAO</rename>
         <storage_type/>
+        <type>Date</type>
       </meta>
+      <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
@@ -793,67 +833,79 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher _id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>researcher_name</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DESENVOLVIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CATEGORIA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>INFORMACOES-ADICIONAIS</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
-      </field>
-      <field>
-        <name>DATA-DE-CONCESSAO</name>
-      </field>
-      <field>
-        <name>DATA-PEDIDO-DE-DEPOSITO</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>DATA-PEDIDO-DE-DEPOSITO</name>
-        <rename>DATA-PEDIDO-DE-DEPOSITO</rename>
-        <type>Date</type>
-        <length>-2</length>
         <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>DATA-DE-CONCESSAO</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>DATA-PEDIDO-DE-DEPOSITO</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>CODIGO-DO-REGISTRO-OU-PATENTE</name>
+        <precision>-2</precision>
+      </field>
+      <meta>
         <conversion_mask>dd-MM-yyyy</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
+        <date_format_lenient>N</date_format_lenient>
         <date_format_locale>pt_BR</date_format_locale>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>DATA-PEDIDO-DE-DEPOSITO</name>
+        <precision>-2</precision>
+        <rename>DATA-PEDIDO-DE-DEPOSITO</rename>
         <storage_type/>
+        <type>Date</type>
       </meta>
       <meta>
-        <name>DATA-DE-CONCESSAO</name>
-        <rename>DATA-DE-CONCESSAO</rename>
-        <type>Date</type>
-        <length>-2</length>
-        <precision>-2</precision>
         <conversion_mask>dd-MM-yyyy</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>DATA-DE-CONCESSAO</name>
+        <precision>-2</precision>
+        <rename>DATA-DE-CONCESSAO</rename>
         <storage_type/>
+        <type>Date</type>
       </meta>
+      <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
@@ -874,11 +926,21 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
         <rename>researcher_id_db</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>title</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>id</name>
+        <precision>-2</precision>
+        <rename>patent_id</rename>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -886,6 +948,104 @@
     <GUI>
       <xloc>1040</xloc>
       <yloc>592</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values 2 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <length>-2</length>
+        <name>researcher _id</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>researcher_name</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>TITULO</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>ANO-DESENVOLVIMENTO</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>CATEGORIA</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>INFORMACOES-ADICIONAIS</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>DATA-DE-CONCESSAO</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>DATA-PEDIDO-DE-DEPOSITO</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>CODIGO-DO-REGISTRO-OU-PATENTE</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>patent_id</name>
+        <precision>-2</precision>
+      </field>
+      <meta>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>DATA-PEDIDO-DE-DEPOSITO</name>
+        <precision>-2</precision>
+        <rename>DATA-PEDIDO-DE-DEPOSITO</rename>
+        <storage_type/>
+        <type>Date</type>
+      </meta>
+      <meta>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>DATA-DE-CONCESSAO</name>
+        <precision>-2</precision>
+        <rename>DATA-DE-CONCESSAO</rename>
+        <storage_type/>
+        <type>Date</type>
+      </meta>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1360</xloc>
+      <yloc>128</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1188,6 +1348,69 @@ FROM "public".researcher
     <GUI>
       <xloc>240</xloc>
       <yloc>384</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Update</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <commit>100</commit>
+    <connection>main_database</connection>
+    <error_ignored>N</error_ignored>
+    <lookup>
+      <key>
+        <condition>=</condition>
+        <field>id</field>
+        <name>patent_id</name>
+      </key>
+      <schema>"public"</schema>
+      <table>patent</table>
+      <value>
+        <name>researcher_id</name>
+        <rename>researcher _id</rename>
+      </value>
+      <value>
+        <name>title</name>
+        <rename>TITULO</rename>
+      </value>
+      <value>
+        <name>development_year</name>
+        <rename>ANO-DESENVOLVIMENTO</rename>
+      </value>
+      <value>
+        <name>category</name>
+        <rename>CATEGORIA</rename>
+      </value>
+      <value>
+        <name>details</name>
+        <rename>INFORMACOES-ADICIONAIS</rename>
+      </value>
+      <value>
+        <name>grant_date</name>
+        <rename>DATA-DE-CONCESSAO</rename>
+      </value>
+      <value>
+        <name>deposit_date</name>
+        <rename>DATA-PEDIDO-DE-DEPOSITO</rename>
+      </value>
+      <value>
+        <name>code</name>
+        <rename>CODIGO-DO-REGISTRO-OU-PATENTE</rename>
+      </value>
+    </lookup>
+    <skip_lookup>N</skip_lookup>
+    <use_batch>N</use_batch>
+    <attributes/>
+    <GUI>
+      <xloc>1504</xloc>
+      <yloc>128</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

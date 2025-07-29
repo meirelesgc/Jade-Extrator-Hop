@@ -129,7 +129,7 @@
     </partitioning>
     <attributes/>
     <GUI>
-      <xloc>1360</xloc>
+      <xloc>1344</xloc>
       <yloc>16</yloc>
     </GUI>
   </transform>
@@ -482,11 +482,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher _id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>researcher_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -510,30 +514,44 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher _id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
         <rename>nature</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>INSTITUICAO-PROMOTORA</name>
+        <precision>-2</precision>
         <rename>promoter_institution</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO</name>
+        <precision>-2</precision>
         <rename>title</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO</name>
+        <precision>-2</precision>
         <rename>year</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>DURACAO-EM-SEMANAS</name>
+        <precision>-2</precision>
         <rename>duration_in_weeks</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>LOCAL</name>
+        <precision>-2</precision>
         <rename>local</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -557,10 +575,14 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>title</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
         <rename>researcher_id_db</rename>
       </field>
       <select_unspecified>N</select_unspecified>

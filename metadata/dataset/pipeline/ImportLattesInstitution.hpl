@@ -23,7 +23,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML INSTITUICAO</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Table institution</from>
@@ -93,7 +93,7 @@
     <hop>
       <from>Leitura dos XML</from>
       <to>Read XML INSTITUICAO</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Select values</from>
@@ -383,7 +383,7 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>496</xloc>
+      <xloc>480</xloc>
       <yloc>400</yloc>
     </GUI>
   </transform>
@@ -400,13 +400,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NOME-INSTITUICAO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>496</xloc>
+      <xloc>480</xloc>
       <yloc>240</yloc>
     </GUI>
   </transform>
@@ -423,11 +425,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>institution_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>institution_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -451,7 +457,9 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NOME-INSTITUICAO</name>
+        <precision>-2</precision>
         <rename>name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -640,7 +648,7 @@ FROM "public".institution
     <reject_duplicate_row>N</reject_duplicate_row>
     <attributes/>
     <GUI>
-      <xloc>1264</xloc>
+      <xloc>1312</xloc>
       <yloc>144</yloc>
     </GUI>
   </transform>
@@ -678,7 +686,7 @@ FROM "public".institution
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1408</xloc>
+      <xloc>1488</xloc>
       <yloc>144</yloc>
     </GUI>
   </transform>

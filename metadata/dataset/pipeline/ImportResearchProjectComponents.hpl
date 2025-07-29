@@ -23,12 +23,12 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML Participação em projeto</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Leitura dos XML</from>
       <to>Read XML Participação em projeto</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Projetos existentes</from>
@@ -265,19 +265,29 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-PARA-CITACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NRO-ID-CNPQ</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DO-PROJETO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -326,7 +336,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>LEFT OUTER</join_type>
+    <join_type>INNER</join_type>
     <keys_1>
       <key>id</key>
       <key>project_name</key>
@@ -580,19 +590,27 @@ FROM
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
         <rename>name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-PARA-CITACAO</name>
+        <precision>-2</precision>
         <rename>citations</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NRO-ID-CNPQ</name>
+        <precision>-2</precision>
         <rename>lattes_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>project_id</rename>
       </field>
       <select_unspecified>N</select_unspecified>

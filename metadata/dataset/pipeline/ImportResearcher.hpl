@@ -102,31 +102,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Dados Administrativo</from>
-      <to>Renomeando 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Renomeando 3</from>
-      <to>Sort Lattes Adm</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort Lattes Adm</from>
-      <to>Join Lattes - 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort Lattes XML 2</from>
-      <to>Join Lattes - 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Renomeando 4</from>
-      <to>Table output</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Join Lattes - 2</from>
       <to>Limpando 3</to>
       <enabled>Y</enabled>
@@ -167,11 +142,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort Lattes Adm</from>
-      <to>Merge join</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Merge join</from>
       <to>Update</to>
       <enabled>Y</enabled>
@@ -194,6 +164,51 @@
     <hop>
       <from>Limpando Orcid</from>
       <to>Renomeando 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Dados Administrativo</from>
+      <to>Renomeando 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Renomeando 3</from>
+      <to>Sort Lattes Adm</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Dados Administrativo 2</from>
+      <to>Renomeando 3 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Renomeando 3 2</from>
+      <to>Sort Lattes Adm 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort Lattes Adm</from>
+      <to>Merge join</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort Lattes Adm 2</from>
+      <to>Join Lattes - 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Renomeando 4</from>
+      <to>Table output</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort Lattes XML 2</from>
+      <to>Dummy (do nothing)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Dummy (do nothing)</from>
+      <to>Join Lattes - 2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -270,7 +285,48 @@ FROM researcher;
     <attributes/>
     <GUI>
       <xloc>1264</xloc>
-      <yloc>528</yloc>
+      <yloc>192</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Dados Administrativo 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>adm_database</connection>
+    <execute_each_row>N</execute_each_row>
+    <limit>0</limit>
+    <sql>SELECT  researcher_id, LPAD(lattes_id, 16, '0') as lattes_id, institution_id, extra_field, status
+FROM researcher;
+</sql>
+    <variables_active>N</variables_active>
+    <attributes/>
+    <GUI>
+      <xloc>1264</xloc>
+      <yloc>512</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Dummy (do nothing)</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <GUI>
+      <xloc>1520</xloc>
+      <yloc>832</yloc>
     </GUI>
   </transform>
   <transform>
@@ -612,15 +668,15 @@ FROM researcher;
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>RIGHT OUTER</join_type>
+    <join_type>INNER</join_type>
     <keys_1>
       <key>lattes_id_adm</key>
     </keys_1>
     <keys_2>
       <key>NUMERO-IDENTIFICADOR</key>
     </keys_2>
-    <transform1>Sort Lattes Adm</transform1>
-    <transform2>Sort Lattes XML 2</transform2>
+    <transform1>Sort Lattes Adm 2</transform1>
+    <transform2>Dummy (do nothing)</transform2>
     <attributes/>
     <GUI>
       <xloc>1600</xloc>
@@ -669,37 +725,59 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NOME</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS-DE-NACIONALIDADE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ORCID</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CIDADE-NASCIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO-EN</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DATA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HORA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -722,37 +800,59 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NOME</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS-DE-NACIONALIDADE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ORCID</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CIDADE-NASCIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO-EN</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DATA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HORA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -775,64 +875,100 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher_id_adm</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>institution_id_adm</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>city_id_simcc</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>city_name_simcc</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>country_id_simcc</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS-DE-NACIONALIDADE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ORCID</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CIDADE-NASCIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO-EN</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DATA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HORA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>extra_field</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>status</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1712</xloc>
+      <xloc>1760</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -857,7 +993,7 @@ FROM researcher;
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1824</xloc>
+      <xloc>1872</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -979,34 +1115,33 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher_id_simcc</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>last_update</name>
+        <precision>-2</precision>
         <rename>last_update_simcc</rename>
       </field>
-      <select_unspecified>N</select_unspecified>
       <meta>
-        <name>lattes_id</name>
-        <rename>lattes_id_simcc</rename>
-        <type>String</type>
+        <date_format_lenient>N</date_format_lenient>
         <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>lattes_id</name>
         <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
+        <rename>lattes_id_simcc</rename>
         <storage_type/>
+        <type>String</type>
       </meta>
+      <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
@@ -1027,15 +1162,21 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>city_id_simcc</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>city_name_simcc</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>country_id</name>
+        <precision>-2</precision>
         <rename>country_id_simcc</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -1059,45 +1200,105 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
         <rename>researcher_id_adm</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>institution_id</name>
+        <precision>-2</precision>
         <rename>institution_id_adm</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>extra_field</name>
+        <precision>-2</precision>
       </field>
       <field>
-        <name>status</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>lattes_id</name>
-        <rename>lattes_id_adm</rename>
-        <type>String</type>
         <length>-2</length>
+        <name>status</name>
         <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
+      </field>
+      <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>lattes_id</name>
+        <precision>-2</precision>
+        <rename>lattes_id_adm</rename>
         <storage_type/>
+        <type>String</type>
       </meta>
+      <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
       <xloc>1424</xloc>
-      <yloc>528</yloc>
+      <yloc>192</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Renomeando 3 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <length>-2</length>
+        <name>researcher_id</name>
+        <precision>-2</precision>
+        <rename>researcher_id_adm</rename>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>lattes_id</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>institution_id</name>
+        <precision>-2</precision>
+        <rename>institution_id_adm</rename>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>extra_field</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>status</name>
+        <precision>-2</precision>
+      </field>
+      <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>lattes_id</name>
+        <precision>-2</precision>
+        <rename>lattes_id_adm</rename>
+        <storage_type/>
+        <type>String</type>
+      </meta>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1424</xloc>
+      <yloc>512</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1113,60 +1314,86 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher_id_adm</name>
+        <precision>-2</precision>
         <rename>id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>institution_id_adm</name>
+        <precision>-2</precision>
         <rename>institution_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>city_id_simcc</name>
+        <precision>-2</precision>
         <rename>city_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>country_id_simcc</name>
+        <precision>-2</precision>
         <rename>country_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME</name>
+        <precision>-2</precision>
         <rename>name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <precision>-2</precision>
         <rename>citations</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO</name>
+        <precision>-2</precision>
         <rename>abstract</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO-EN</name>
+        <precision>-2</precision>
         <rename>abstract_en</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <precision>-2</precision>
         <rename>other_information</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
         <rename>lattes_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>orcid_cut</name>
+        <precision>-2</precision>
         <rename>orcid</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>extra_field</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>status</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1968</xloc>
+      <xloc>2016</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -1183,35 +1410,51 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>researcher_id_simcc</name>
+        <precision>-2</precision>
         <rename>id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME</name>
+        <precision>-2</precision>
         <rename>name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <precision>-2</precision>
         <rename>citations</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO</name>
+        <precision>-2</precision>
         <rename>abstract</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO-EN</name>
+        <precision>-2</precision>
         <rename>abstract_en</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <precision>-2</precision>
         <rename>other_information</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>orcid_cut</name>
+        <precision>-2</precision>
         <rename>orcid</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>lattes_id_simcc</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1234,73 +1477,119 @@ FROM researcher;
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>filename</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>short_filename</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>path</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>type</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>exists</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ishidden</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>isreadable</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>iswriteable</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>lastmodifiedtime</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>size</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>extension</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>uri</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>rooturi</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS-DE-NACIONALIDADE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ORCID</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CIDADE-NASCIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO-EN</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DATA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HORA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1368,7 +1657,7 @@ FROM researcher;
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>1184</xloc>
+      <xloc>1200</xloc>
       <yloc>640</yloc>
     </GUI>
   </transform>
@@ -1400,7 +1689,38 @@ FROM researcher;
     <attributes/>
     <GUI>
       <xloc>1600</xloc>
-      <yloc>528</yloc>
+      <yloc>192</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Sort Lattes Adm 2</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compress>N</compress>
+    <directory>${java.io.tmpdir}</directory>
+    <fields>
+      <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <name>lattes_id_adm</name>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
+    <attributes/>
+    <GUI>
+      <xloc>1600</xloc>
+      <yloc>512</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1492,7 +1812,7 @@ FROM researcher;
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>1456</xloc>
+      <xloc>1408</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -1614,6 +1934,10 @@ FROM researcher;
         <column_name>status</column_name>
         <stream_name>status</stream_name>
       </field>
+      <field>
+        <column_name>id</column_name>
+        <stream_name>id</stream_name>
+      </field>
     </fields>
     <ignore_errors>N</ignore_errors>
     <only_when_have_rows>N</only_when_have_rows>
@@ -1630,7 +1954,7 @@ FROM researcher;
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>2160</xloc>
+      <xloc>2304</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>

@@ -818,40 +818,64 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NOME</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS-DE-NACIONALIDADE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ORCID</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>CIDADE-NASCIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>RESUMO-EN</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DATA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HORA-ATUALIZACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-INSTITUICAO-EMPRESA</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -874,15 +898,21 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher _id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>researcher_name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1060,24 +1090,19 @@ FROM "public".researcher
       <schema_name/>
     </partitioning>
     <fields>
-      <select_unspecified>N</select_unspecified>
       <meta>
-        <name>last_update</name>
-        <rename>last_update</rename>
-        <type>Date</type>
-        <length>-2</length>
-        <precision>-2</precision>
         <conversion_mask>ddMMyyyyHHmmss</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
+        <date_format_lenient>N</date_format_lenient>
         <date_format_locale>pt_BR</date_format_locale>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>last_update</name>
+        <precision>-2</precision>
+        <rename>last_update</rename>
         <storage_type/>
+        <type>Date</type>
       </meta>
+      <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
@@ -1097,126 +1122,78 @@ FROM "public".researcher
       <schema_name/>
     </partitioning>
     <fields>
-      <select_unspecified>N</select_unspecified>
       <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
         <name>NOME</name>
+        <precision>-2</precision>
         <rename>name</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
         <storage_type/>
+        <type>None</type>
       </meta>
       <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
         <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <precision>-2</precision>
         <rename>citations</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
         <storage_type/>
+        <type>None</type>
       </meta>
       <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
         <name>RESUMO</name>
+        <precision>-2</precision>
         <rename> abstract</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
         <storage_type/>
+        <type>None</type>
       </meta>
       <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
         <name>RESUMO-EN</name>
+        <precision>-2</precision>
         <rename>abstract_en</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
         <storage_type/>
+        <type>None</type>
       </meta>
       <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
         <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <precision>-2</precision>
         <rename> other_information</rename>
+        <storage_type/>
         <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
       </meta>
       <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
         <name>NUMERO-IDENTIFICADOR</name>
-        <rename> lattes_id</rename>
-        <type>String</type>
-        <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
+        <rename> lattes_id</rename>
         <storage_type/>
+        <type>String</type>
       </meta>
       <meta>
-        <name>last_update</name>
-        <rename>last_update</rename>
-        <type>Date</type>
-        <length>-2</length>
-        <precision>-2</precision>
         <conversion_mask>yyyy-MM-dd HH:mm:ss</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>last_update</name>
+        <precision>-2</precision>
+        <rename>last_update</rename>
         <storage_type/>
+        <type>Date</type>
       </meta>
+      <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>

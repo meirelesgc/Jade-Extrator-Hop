@@ -1,3 +1,4 @@
 metadata/dataset/csv/research_lines.csv
 *.zip
 *.xml
+dev.project-config.json

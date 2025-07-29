@@ -121,16 +121,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter rows 2</from>
-      <to>Sort rows bibliographic_production_id</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 2</from>
-      <to>Dummy (do nothing)</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Table periodical_magazine</from>
       <to>Select values DB</to>
       <enabled>Y</enabled>
@@ -143,11 +133,6 @@
     <hop>
       <from>If Null</from>
       <to>String operations</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Merge join 2</from>
-      <to>Filter rows 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -169,6 +154,21 @@
       <from>Leitura dos XML</from>
       <to>Read XML ARTICLE </to>
       <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Merge join 2</from>
+      <to>Filter rows 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows 2</from>
+      <to>Sort rows bibliographic_production_id</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows 2</from>
+      <to>Dummy (do nothing)</to>
+      <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
@@ -201,8 +201,8 @@
     </partitioning>
     <attributes/>
     <GUI>
-      <xloc>1248</xloc>
-      <yloc>80</yloc>
+      <xloc>1296</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -260,7 +260,7 @@
     <attributes/>
     <GUI>
       <xloc>1232</xloc>
-      <yloc>240</yloc>
+      <yloc>304</yloc>
     </GUI>
   </transform>
   <transform>
@@ -284,7 +284,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>0</xloc>
+      <xloc>64</xloc>
       <yloc>384</yloc>
     </GUI>
   </transform>
@@ -1242,61 +1242,99 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-ARTIGO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DO-ARTIGO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>IDIOMA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>MEIO-DE-DIVULGACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-RELEVANCIA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-DIVULGACAO-CIENTIFICA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HOME-PAGE-DO-TRABALHO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-TRABALHO-INGLES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS-DO-ARTIGO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DOI</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-PERIODICO-OU-REVISTA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>VOLUME</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>SERIE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAGINA-INICIAL</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAGINA-FINAL</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FASCICULO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ISSN</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1319,19 +1357,29 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>type</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>title</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>year</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1354,37 +1402,55 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>bibliographic_production_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>title</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-PERIODICO-OU-REVISTA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>VOLUME</name>
+        <precision>-2</precision>
         <rename>volume</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>SERIE</name>
+        <precision>-2</precision>
         <rename>serie</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>PAGINA-INICIAL</name>
+        <precision>-2</precision>
         <rename>start_page</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>PAGINA-FINAL</name>
+        <precision>-2</precision>
         <rename>end_page</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>FASCICULO</name>
+        <precision>-2</precision>
         <rename>fascicle</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>ISSN</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1407,38 +1473,60 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>bibliographic_production_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>volume</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>serie</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>start_page</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>end_page</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>fascicle</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>id_db</name>
+        <precision>-2</precision>
         <rename>periodical_magazine_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-PERIODICO-OU-REVISTA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>name_db</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>issn</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>qualis</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1461,7 +1549,9 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>bibliographic_production_id</name>
+        <precision>-2</precision>
         <rename>bibliographic_production_id_BPA</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -1485,19 +1575,27 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>id_db</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>name_db</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>issn</name>
+        <precision>-2</precision>
         <rename>issn_db</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>qualis</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1863,8 +1961,8 @@ FROM "public".bibliographic_production_article
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>1840</xloc>
-      <yloc>160</yloc>
+      <xloc>1856</xloc>
+      <yloc>144</yloc>
     </GUI>
   </transform>
   <transform>

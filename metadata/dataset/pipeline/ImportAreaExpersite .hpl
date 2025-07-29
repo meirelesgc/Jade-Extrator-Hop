@@ -582,7 +582,7 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>816</xloc>
+      <xloc>800</xloc>
       <yloc>560</yloc>
     </GUI>
   </transform>
@@ -599,10 +599,14 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NOME-GRANDE-AREA-DO-CONHECIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-DA-AREA-DO-CONHECIMENTO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -625,11 +629,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>expertise_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>expertise_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -653,11 +661,15 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>great_area_expertise_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>great_area_expertise_name</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -681,13 +693,19 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NOME-DA-AREA-DO-CONHECIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-GRANDE-AREA-DO-CONHECIMENTO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>great_area_expertise_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

@@ -116,11 +116,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Merge join Researcher_name</from>
-      <to>Insert table Bibliographic_production</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Sort country</from>
       <to>Merge join</to>
       <enabled>Y</enabled>
@@ -180,6 +175,11 @@
       <to>Read XML ARTICLE </to>
       <enabled>N</enabled>
     </hop>
+    <hop>
+      <from>Merge join Researcher_name</from>
+      <to>Insert table Bibliographic_production</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <transform>
     <name>Add constants type</name>
@@ -205,7 +205,7 @@
     <attributes/>
     <GUI>
       <xloc>880</xloc>
-      <yloc>720</yloc>
+      <yloc>736</yloc>
     </GUI>
   </transform>
   <transform>
@@ -233,7 +233,7 @@
     <attributes/>
     <GUI>
       <xloc>752</xloc>
-      <yloc>624</yloc>
+      <yloc>640</yloc>
     </GUI>
   </transform>
   <transform>
@@ -261,7 +261,7 @@
     <attributes/>
     <GUI>
       <xloc>752</xloc>
-      <yloc>528</yloc>
+      <yloc>544</yloc>
     </GUI>
   </transform>
   <transform>
@@ -278,7 +278,7 @@
     <attributes/>
     <GUI>
       <xloc>960</xloc>
-      <yloc>208</yloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -342,8 +342,8 @@
     <send_true_to>String operations</send_true_to>
     <attributes/>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>480</yloc>
+      <xloc>304</xloc>
+      <yloc>496</yloc>
     </GUI>
   </transform>
   <transform>
@@ -372,7 +372,7 @@
     <attributes/>
     <GUI>
       <xloc>752</xloc>
-      <yloc>208</yloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -396,8 +396,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>720</yloc>
+      <xloc>144</xloc>
+      <yloc>592</yloc>
     </GUI>
   </transform>
   <transform>
@@ -426,7 +426,7 @@
     <attributes/>
     <GUI>
       <xloc>752</xloc>
-      <yloc>720</yloc>
+      <yloc>736</yloc>
     </GUI>
   </transform>
   <transform>
@@ -515,7 +515,7 @@
     <use_batch>N</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1888</xloc>
+      <xloc>2128</xloc>
       <yloc>544</yloc>
     </GUI>
   </transform>
@@ -552,8 +552,8 @@
     <rownum>N</rownum>
     <attributes/>
     <GUI>
-      <xloc>464</xloc>
-      <yloc>736</yloc>
+      <xloc>512</xloc>
+      <yloc>592</yloc>
     </GUI>
   </transform>
   <transform>
@@ -579,7 +579,7 @@
     <attributes/>
     <GUI>
       <xloc>752</xloc>
-      <yloc>432</yloc>
+      <yloc>448</yloc>
     </GUI>
   </transform>
   <transform>
@@ -606,8 +606,8 @@
     <transform2>Sort rows BP</transform2>
     <attributes/>
     <GUI>
-      <xloc>560</xloc>
-      <yloc>240</yloc>
+      <xloc>576</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1068,7 +1068,7 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>336</xloc>
+      <xloc>304</xloc>
       <yloc>592</yloc>
     </GUI>
   </transform>
@@ -1085,58 +1085,86 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-ARTIGO</name>
+        <precision>-2</precision>
         <rename>title</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DO-ARTIGO</name>
+        <precision>-2</precision>
         <rename>year</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>IDIOMA</name>
+        <precision>-2</precision>
         <rename>language</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>MEIO-DE-DIVULGACAO</name>
+        <precision>-2</precision>
         <rename>means_divulgation</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-RELEVANCIA</name>
+        <precision>-2</precision>
         <rename>relevance</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-DIVULGACAO-CIENTIFICA</name>
+        <precision>-2</precision>
         <rename>scientific_divulgation</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
         <rename>nature</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>HOME-PAGE-DO-TRABALHO</name>
+        <precision>-2</precision>
         <rename>homepage</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-TRABALHO-INGLES</name>
+        <precision>-2</precision>
         <rename>title_en</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>DOI</name>
+        <precision>-2</precision>
         <rename>doi</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>country_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>type</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
         <rename>nome-completo</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>AUTORES</name>
+        <precision>-2</precision>
         <rename>authors</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -1160,15 +1188,21 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>researcher_id</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
         <rename>researcher_name</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1191,70 +1225,110 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-ARTIGO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DO-ARTIGO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>IDIOMA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>MEIO-DE-DIVULGACAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-RELEVANCIA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FLAG-DIVULGACAO-CIENTIFICA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NATUREZA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>HOME-PAGE-DO-TRABALHO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-TRABALHO-INGLES</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAIS-DO-ARTIGO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>DOI</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>TITULO-DO-PERIODICO-OU-REVISTA</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ISSN</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>VOLUME</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>SERIE</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAGINA-INICIAL</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PAGINA-FINAL</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>FASCICULO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-COMPLETO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>AUTORES</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>320</xloc>
+      <xloc>304</xloc>
       <yloc>320</yloc>
     </GUI>
   </transform>
@@ -1271,21 +1345,27 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>title</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>type</name>
+        <precision>-2</precision>
         <rename>type_BP</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>name</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
       <xloc>240</xloc>
-      <yloc>112</yloc>
+      <yloc>96</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1326,7 +1406,7 @@
     <attributes/>
     <GUI>
       <xloc>1072</xloc>
-      <yloc>720</yloc>
+      <yloc>736</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1357,7 +1437,7 @@
     <attributes/>
     <GUI>
       <xloc>752</xloc>
-      <yloc>320</yloc>
+      <yloc>336</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1395,8 +1475,8 @@
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>352</xloc>
-      <yloc>208</yloc>
+      <xloc>304</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1458,7 +1538,7 @@
     <attributes/>
     <GUI>
       <xloc>960</xloc>
-      <yloc>432</yloc>
+      <yloc>448</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1585,7 +1665,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>288</xloc>
+      <xloc>304</xloc>
       <yloc>416</yloc>
     </GUI>
   </transform>
@@ -1680,8 +1760,8 @@ FROM "public".researcher
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>144</xloc>
-      <yloc>16</yloc>
+      <xloc>48</xloc>
+      <yloc>96</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1713,7 +1793,7 @@ FROM "public".country
     <attributes/>
     <GUI>
       <xloc>960</xloc>
-      <yloc>336</yloc>
+      <yloc>352</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
