@@ -11,7 +11,7 @@
       "description" : "NONE"
     }, {
       "name" : "PORT",
-      "value" : "5433",
+      "value" : "5434",
       "description" : "NONE"
     }, {
       "name" : "PASSWORD",
