@@ -157,6 +157,11 @@
         <rename>updated_at</rename>
         <update>Y</update>
       </value>
+      <value>
+        <name>rating</name>
+        <rename>rating</rename>
+        <update>Y</update>
+      </value>
     </lookup>
     <update_bypassed>N</update_bypassed>
     <attributes/>
@@ -282,6 +287,11 @@
         <name>updated_at</name>
         <precision>-2</precision>
       </field>
+      <field>
+        <length>-2</length>
+        <name>rating</name>
+        <precision>-2</precision>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -304,7 +314,7 @@
     <connection>adm_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
-    <sql>SELECT graduate_program_id, code, name, name_en, basic_area, cooperation_project, area, modality, type, institution_id, state, city, visible, site, coordinator, email, start, phone, periodicity, created_at, updated_at
+    <sql>SELECT graduate_program_id, code, name, name_en, basic_area, cooperation_project, area, modality, type, institution_id, state, city, visible, site, coordinator, email, start, phone, periodicity, created_at, updated_at, rating
 	FROM public.graduate_program;</sql>
     <variables_active>N</variables_active>
     <attributes/>
