@@ -23,12 +23,7 @@
     <hop>
       <from>Get Curriculos</from>
       <to>Extração dos dados</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get file names</from>
-      <to>Extração dos dados</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Extração dos dados</from>
@@ -128,6 +123,11 @@
     <hop>
       <from>Filter rows</from>
       <to>Inserir</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Leitura dos XML</from>
+      <to>Extração dos dados</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -329,6 +329,35 @@ FROM public.education WHERE degree = 'SPECIALIZATION';</sql>
     </GUI>
   </transform>
   <transform>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compare>
+      <condition>
+        <conditions>
+</conditions>
+        <function>IS NOT NULL</function>
+        <leftvalue>UUID-PESQUISADOR</leftvalue>
+        <negated>N</negated>
+        <operator>-</operator>
+      </condition>
+    </compare>
+    <send_false_to>Não me pergunte</send_false_to>
+    <send_true_to>Inserir</send_true_to>
+    <attributes/>
+    <GUI>
+      <xloc>1888</xloc>
+      <yloc>448</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>Get Curriculos</name>
     <type>RowsFromResult</type>
     <description/>
@@ -351,39 +380,6 @@ FROM public.education WHERE degree = 'SPECIALIZATION';</sql>
     <GUI>
       <xloc>400</xloc>
       <yloc>368</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Get file names</name>
-    <type>GetFileNames</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <file>
-      <file_required>N</file_required>
-      <filemask>.*xml</filemask>
-      <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
-    </file>
-    <filefield>N</filefield>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <rownum>N</rownum>
-    <attributes/>
-    <GUI>
-      <xloc>640</xloc>
-      <yloc>512</yloc>
     </GUI>
   </transform>
   <transform>
@@ -484,22 +480,34 @@ FROM public.education WHERE degree = 'SPECIALIZATION';</sql>
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-CURSO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DE-INICIO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DE-CONCLUSAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-INSTITUICAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>id_db</name>
+        <precision>-2</precision>
         <rename>UUID-PESQUISADOR</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -523,58 +531,94 @@ FROM public.education WHERE degree = 'SPECIALIZATION';</sql>
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>filename</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>short_filename</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>path</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>type</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>exists</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ishidden</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>isreadable</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>iswriteable</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>lastmodifiedtime</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>size</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>extension</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>uri</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>rooturi</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-CURSO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DE-INICIO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DE-CONCLUSAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-INSTITUICAO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -684,6 +728,23 @@ FROM public.education WHERE degree = 'SPECIALIZATION';</sql>
     </GUI>
   </transform>
   <transform>
+    <name>Não me pergunte</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <GUI>
+      <xloc>1728</xloc>
+      <yloc>448</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>Pesquisadores Cadastrados</name>
     <type>TableInput</type>
     <description/>
@@ -718,11 +779,15 @@ FROM public.education WHERE degree = 'SPECIALIZATION';</sql>
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
         <rename>lattes_db</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>id_db</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -746,13 +811,19 @@ FROM public.education WHERE degree = 'SPECIALIZATION';</sql>
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>education_name</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -950,8 +1021,8 @@ FROM public.education WHERE degree = 'SPECIALIZATION';</sql>
     </GUI>
   </transform>
   <transform>
-    <name>Filter rows</name>
-    <type>FilterRows</type>
+    <name>Leitura dos XML</name>
+    <type>GetFileNames</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -960,39 +1031,30 @@ FROM public.education WHERE degree = 'SPECIALIZATION';</sql>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compare>
-      <condition>
-        <conditions>
-</conditions>
-        <function>IS NOT NULL</function>
-        <leftvalue>UUID-PESQUISADOR</leftvalue>
-        <negated>N</negated>
-        <operator>-</operator>
-      </condition>
-    </compare>
-    <send_false_to>Não me pergunte</send_false_to>
-    <send_true_to>Inserir</send_true_to>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <file>
+      <file_required>N</file_required>
+      <filemask>.*xml</filemask>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <filefield>N</filefield>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <rownum>N</rownum>
     <attributes/>
     <GUI>
-      <xloc>1888</xloc>
-      <yloc>448</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Não me pergunte</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-    <GUI>
-      <xloc>1728</xloc>
-      <yloc>448</yloc>
+      <xloc>656</xloc>
+      <yloc>528</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

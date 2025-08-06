@@ -23,11 +23,6 @@
     <hop>
       <from>Get Curriculos</from>
       <to>Extração dos dados</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get file names</from>
-      <to>Extração dos dados</to>
       <enabled>N</enabled>
     </hop>
     <hop>
@@ -128,6 +123,11 @@
     <hop>
       <from>Filter rows</from>
       <to>Não me pergunte</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Leitura dos XML</from>
+      <to>Extração dos dados</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -360,39 +360,6 @@
     </GUI>
   </transform>
   <transform>
-    <name>Get file names</name>
-    <type>GetFileNames</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <file>
-      <file_required>N</file_required>
-      <filemask>.*xml</filemask>
-      <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
-    </file>
-    <filefield>N</filefield>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <rownum>N</rownum>
-    <attributes/>
-    <GUI>
-      <xloc>368</xloc>
-      <yloc>432</yloc>
-    </GUI>
-  </transform>
-  <transform>
     <name>Graduações Cadastradas</name>
     <type>TableInput</type>
     <description/>
@@ -513,22 +480,34 @@ FROM public.education WHERE degree = 'UNDERGRADUATE';</sql>
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-CURSO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DE-INICIO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DE-CONCLUSAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-INSTITUICAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>id_db</name>
+        <precision>-2</precision>
         <rename>UUID-PESQUISADOR</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -552,19 +531,29 @@ FROM public.education WHERE degree = 'UNDERGRADUATE';</sql>
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-CURSO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DE-INICIO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DE-CONCLUSAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-INSTITUICAO</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -725,11 +714,15 @@ FROM public.education WHERE degree = 'UNDERGRADUATE';</sql>
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
         <rename>lattes_db</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>id_db</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -753,13 +746,19 @@ FROM public.education WHERE degree = 'UNDERGRADUATE';</sql>
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>education_name</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -954,6 +953,43 @@ FROM public.education WHERE degree = 'UNDERGRADUATE';</sql>
     <GUI>
       <xloc>1776</xloc>
       <yloc>64</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Leitura dos XML</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <file>
+      <file_required>N</file_required>
+      <filemask>.*xml</filemask>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <filefield>N</filefield>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <rownum>N</rownum>
+    <attributes/>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>448</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

@@ -21,14 +21,9 @@
   </notepads>
   <order>
     <hop>
-      <from>Leitura dos XML</from>
-      <to>Read XML Participação em projeto</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
       <from>Get rows files xml</from>
       <to>Read XML Participação em projeto</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Read XML Participação em projeto</from>
@@ -118,6 +113,11 @@
     <hop>
       <from>Filter rows</from>
       <to>Insetindo projetos</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Leitura dos XML</from>
+      <to>Read XML Participação em projeto</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -338,43 +338,6 @@
     <attributes/>
     <GUI>
       <xloc>2528</xloc>
-      <yloc>336</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Leitura dos XML</name>
-    <type>GetFileNames</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <file>
-      <file_required>N</file_required>
-      <filemask>.*xml</filemask>
-      <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <filefield>N</filefield>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <rownum>N</rownum>
-    <attributes/>
-    <GUI>
-      <xloc>224</xloc>
       <yloc>336</yloc>
     </GUI>
   </transform>
@@ -1262,6 +1225,43 @@
     <GUI>
       <xloc>1200</xloc>
       <yloc>336</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Leitura dos XML</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <file>
+      <file_required>N</file_required>
+      <filemask>.*xml</filemask>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <filefield>N</filefield>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <rownum>N</rownum>
+    <attributes/>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>368</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

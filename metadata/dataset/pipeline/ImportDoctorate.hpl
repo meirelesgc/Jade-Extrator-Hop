@@ -113,17 +113,12 @@
     <hop>
       <from>Get Curriculos</from>
       <to>Extraindo os dados</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Extraindo os dados</from>
       <to>Limpando - 1</to>
       <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get file names</from>
-      <to>Extraindo os dados</to>
-      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Limpando - 2</from>
@@ -133,6 +128,11 @@
     <hop>
       <from>Concat Fields</from>
       <to>Sort Lattes XML</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Leitura dos XML</from>
+      <to>Extraindo os dados</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -540,39 +540,6 @@ FROM public.education WHERE degree = 'DOCTORATE';</sql>
     </GUI>
   </transform>
   <transform>
-    <name>Get file names</name>
-    <type>GetFileNames</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <file>
-      <file_required>N</file_required>
-      <filemask>.*xml</filemask>
-      <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
-    </file>
-    <filefield>N</filefield>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <rownum>N</rownum>
-    <attributes/>
-    <GUI>
-      <xloc>432</xloc>
-      <yloc>1120</yloc>
-    </GUI>
-  </transform>
-  <transform>
     <name>Grau</name>
     <type>Constant</type>
     <description/>
@@ -674,26 +641,40 @@ FROM public.education WHERE degree = 'DOCTORATE';</sql>
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-CURSO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DE-INICIO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DE-CONCLUSAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-INSTITUICAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>id_db</name>
+        <precision>-2</precision>
         <rename>UUID-PESQUISADOR</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>PALAVRAS-CHAVE</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -716,37 +697,59 @@ FROM public.education WHERE degree = 'DOCTORATE';</sql>
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-CURSO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DE-INICIO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>ANO-DE-CONCLUSAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>NOME-INSTITUICAO</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PALAVRA-CHAVE-1</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PALAVRA-CHAVE-2</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PALAVRA-CHAVE-3</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PALAVRA-CHAVE-4</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PALAVRA-CHAVE-5</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>PALAVRA-CHAVE-6</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -985,11 +988,15 @@ FROM public.education WHERE degree = 'DOCTORATE';</sql>
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
         <rename>lattes_db</rename>
       </field>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
         <rename>id_db</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -1013,13 +1020,19 @@ FROM public.education WHERE degree = 'DOCTORATE';</sql>
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>education_name</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1214,6 +1227,43 @@ FROM public.education WHERE degree = 'DOCTORATE';</sql>
     <GUI>
       <xloc>1952</xloc>
       <yloc>720</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Leitura dos XML</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <file>
+      <file_required>N</file_required>
+      <filemask>.*xml</filemask>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <filefield>N</filefield>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <rownum>N</rownum>
+    <attributes/>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>1104</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
