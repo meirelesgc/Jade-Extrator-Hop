@@ -23,7 +23,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML Researcher</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Read XML Researcher</from>
@@ -88,7 +88,7 @@
     <hop>
       <from>Leitura dos XML</from>
       <to>Read XML Researcher</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
