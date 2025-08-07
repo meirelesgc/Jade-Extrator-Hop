@@ -144,7 +144,9 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/UpdateLog.hpl</filename>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/Logs/UpdateLog.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
