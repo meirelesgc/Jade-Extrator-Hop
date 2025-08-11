@@ -53,7 +53,7 @@
     <hop>
       <from>Select to create</from>
       <to>Insert researcher_professional_experience</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Select professional_experience </from>
@@ -93,7 +93,7 @@
     <hop>
       <from>Filter null</from>
       <to>Update</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Filter null</from>
@@ -158,12 +158,12 @@
     <hop>
       <from>Leitura dos XML</from>
       <to>Read XML  Instituição de atuação</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Leitura dos XML</from>
       <to>Read XML  vinculos de atuações </to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
@@ -180,7 +180,7 @@
     <attributes/>
     <GUI>
       <xloc>1824</xloc>
-      <yloc>128</yloc>
+      <yloc>80</yloc>
     </GUI>
   </transform>
   <transform>
@@ -197,7 +197,7 @@
     <attributes/>
     <GUI>
       <xloc>2240</xloc>
-      <yloc>256</yloc>
+      <yloc>240</yloc>
     </GUI>
   </transform>
   <transform>
@@ -226,7 +226,7 @@
     <attributes/>
     <GUI>
       <xloc>2240</xloc>
-      <yloc>128</yloc>
+      <yloc>80</yloc>
     </GUI>
   </transform>
   <transform>
@@ -386,7 +386,7 @@
     <attributes/>
     <GUI>
       <xloc>2144</xloc>
-      <yloc>368</yloc>
+      <yloc>400</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1037,7 +1037,7 @@
     <attributes/>
     <GUI>
       <xloc>1824</xloc>
-      <yloc>368</yloc>
+      <yloc>400</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1127,7 +1127,7 @@
     <attributes/>
     <GUI>
       <xloc>2032</xloc>
-      <yloc>128</yloc>
+      <yloc>80</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1631,7 +1631,7 @@ FROM "public".researcher_professional_experience
     <attributes/>
     <GUI>
       <xloc>2528</xloc>
-      <yloc>128</yloc>
+      <yloc>80</yloc>
     </GUI>
   </transform>
   <transform>

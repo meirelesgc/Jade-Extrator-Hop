@@ -190,30 +190,6 @@
       <yloc>688</yloc>
       <attributes_hac/>
     </action>
-    <action>
-      <name>SyncAdmin.hwf</name>
-      <description/>
-      <type>WORKFLOW</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/workflow/SyncAdmin.hwf</filename>
-      <loglevel>Nothing</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>640</xloc>
-      <yloc>352</yloc>
-      <attributes_hac/>
-    </action>
   </actions>
   <hops>
     <hop>
@@ -260,17 +236,10 @@
     </hop>
     <hop>
       <from>Start</from>
-      <to>SyncAdmin.hwf</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>SyncAdmin.hwf</from>
       <to>Delete graduate program researcher</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
+      <unconditional>Y</unconditional>
     </hop>
   </hops>
   <notepads>

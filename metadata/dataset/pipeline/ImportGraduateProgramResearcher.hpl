@@ -207,19 +207,29 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>graduate_program_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>year</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>type_</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -242,19 +252,29 @@
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>graduate_program_id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>year</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>type_</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>researcher_id</name>
+        <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -363,7 +383,9 @@ FROM
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>graduate_program_id</name>
+        <precision>-2</precision>
         <rename>uuid_simcc</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -387,10 +409,14 @@ FROM
     </partitioning>
     <fields>
       <field>
+        <length>-2</length>
         <name>id</name>
+        <precision>-2</precision>
       </field>
       <field>
+        <length>-2</length>
         <name>lattes_id</name>
+        <precision>-2</precision>
         <rename>lattes_id_db</rename>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -412,23 +438,20 @@ FROM
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>uuid_simcc</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>uuid_simcc</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>656</xloc>
@@ -446,23 +469,20 @@ FROM
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>graduate_program_id</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>graduate_program_id</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>480</xloc>
@@ -480,23 +500,20 @@ FROM
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>lattes_id</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>lattes_id</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1024</xloc>
@@ -514,23 +531,20 @@ FROM
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
     <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
+    <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
-        <name>lattes_id_db</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
+        <name>lattes_id_db</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>1216</xloc>
