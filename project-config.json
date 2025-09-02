@@ -11,7 +11,7 @@
       "description" : "NONE"
     }, {
       "name" : "PORT",
-      "value" : "5434",
+      "value" : "5432",
       "description" : "NONE"
     }, {
       "name" : "PASSWORD",
@@ -19,11 +19,11 @@
       "description" : "NONE"
     }, {
       "name" : "DATABASE",
-      "value" : "simcc",
+      "value" : "conectee",
       "description" : "NONE"
     }, {
       "name" : "ADMIN_DATABASE",
-      "value" : "simcc_admin",
+      "value" : "conectee_admin",
       "description" : "NONE"
     }, {
       "name" : "ADMIN_PORT",

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pipeline>
   <info>
-    <name>UpdateLog</name>
+    <name>UpdateLogTechnicalProduction</name>
     <name_sync_with_filename>Y</name_sync_with_filename>
     <description/>
     <extended_description/>
@@ -35,13 +35,17 @@
     <arguments>
 </arguments>
     <connection>main_database</connection>
+    <delete_field/>
     <execute_each_row>N</execute_each_row>
+    <insert_field/>
     <quoteString>N</quoteString>
+    <read_field/>
     <replace_variables>N</replace_variables>
     <set_params>N</set_params>
     <single_statement>N</single_statement>
     <sql>INSERT INTO logs.routine (type, error, detail)
-VALUES ('HOP', 'False', NULL)</sql>
+VALUES ('STEP_TECHNICAL_PRODUCTION', 'False', NULL)</sql>
+    <update_field/>
     <attributes/>
     <GUI>
       <xloc>736</xloc>
