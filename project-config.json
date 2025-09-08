@@ -19,15 +19,15 @@
       "description" : "NONE"
     }, {
       "name" : "DATABASE",
-      "value" : "conectee",
+      "value" : "simcc",
       "description" : "NONE"
     }, {
       "name" : "ADMIN_DATABASE",
-      "value" : "conectee_admin",
+      "value" : "simcc_admin",
       "description" : "NONE"
     }, {
       "name" : "ADMIN_PORT",
-      "value" : "5432",
+      "value" : "5434",
       "description" : "NONE"
     }, {
       "name" : "ADMIN_HOST",

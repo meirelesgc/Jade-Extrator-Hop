@@ -290,8 +290,6 @@ update event_organization set is_new = false;</sql>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>C:\Local\hop\config\projects\Jade-Extrator-Hop\metadata\dataset\pipeline\Logs\UpdateLogGeralProduction.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
