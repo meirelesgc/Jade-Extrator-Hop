@@ -145,6 +145,8 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/pipeline/Logs/UpdateLog.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -218,7 +220,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>C:\Local\hop\config\projects\Jade-Extrator-Hop\metadata\dataset\pipeline\Logs\UpdateLogStepResearcher.hpl</filename>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/Logs/UpdateLogStepResearcher.hpl</filename>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -244,7 +246,9 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>C:\Local\hop\config\projects\Jade-Extrator-Hop\metadata\dataset\pipeline\Logs\UpdateLogStepProduction.hpl</filename>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/Logs/UpdateLogStepProduction.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>

@@ -211,7 +211,7 @@ update event_organization set is_new = false;</sql>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>C:\Local\hop\config\projects\Jade-Extrator-Hop\metadata\dataset\pipeline\Logs\UpdateLogArticle.hpl</filename>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/Logs/UpdateLogArticle.hpl</filename>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -237,7 +237,7 @@ update event_organization set is_new = false;</sql>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>C:\Local\hop\config\projects\Jade-Extrator-Hop\metadata\dataset\pipeline\Logs\UpdateLogBook.hpl</filename>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/Logs/UpdateLogBook.hpl</filename>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -263,7 +263,7 @@ update event_organization set is_new = false;</sql>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>C:\Local\hop\config\projects\Jade-Extrator-Hop\metadata\dataset\pipeline\Logs\UpdateLogTechnicalProduction.hpl</filename>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/Logs/UpdateLogTechnicalProduction.hpl</filename>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -289,7 +289,7 @@ update event_organization set is_new = false;</sql>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>C:\Local\hop\config\projects\Jade-Extrator-Hop\metadata\dataset\pipeline\Logs\UpdateLogGeralProduction.hpl</filename>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/Logs/UpdateLogGeralProduction.hpl</filename>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
