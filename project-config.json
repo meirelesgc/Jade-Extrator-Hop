@@ -7,7 +7,7 @@
   "config" : {
     "variables" : [ {
       "name" : "HOST",
-      "value" : "localhost",
+      "value" : "172.25.0.84",
       "description" : "NONE"
     }, {
       "name" : "PORT",
@@ -15,27 +15,27 @@
       "description" : "NONE"
     }, {
       "name" : "PASSWORD",
-      "value" : "postgres",
+      "value" : "9f63b0d4-2bbc-4d21-97ef-4c0e7a28224c",
       "description" : "NONE"
     }, {
       "name" : "DATABASE",
-      "value" : "simcc",
+      "value" : "iapos",
       "description" : "NONE"
     }, {
       "name" : "ADMIN_DATABASE",
-      "value" : "simcc_admin",
+      "value" : "iapos_admin",
       "description" : "NONE"
     }, {
       "name" : "ADMIN_PORT",
-      "value" : "5434",
+      "value" : "5432",
       "description" : "NONE"
     }, {
       "name" : "ADMIN_HOST",
-      "value" : "localhost",
+      "value" : "172.25.0.84",
       "description" : "NONE"
     }, {
       "name" : "ADMIN_PASSWORD",
-      "value" : "postgres",
+      "value" : "9f63b0d4-2bbc-4d21-97ef-4c0e7a28224c",
       "description" : "NONE"
     } ]
   }
