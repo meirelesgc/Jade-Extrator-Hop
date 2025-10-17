@@ -18,6 +18,7 @@
       <type>SPECIAL</type>
       <attributes/>
       <DayOfMonth>1</DayOfMonth>
+      <doNotWaitOnFirstExecution>N</doNotWaitOnFirstExecution>
       <hour>12</hour>
       <intervalMinutes>60</intervalMinutes>
       <intervalSeconds>0</intervalSeconds>
@@ -241,16 +242,20 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>ImportDetailedAcademicDegree.hwf</name>
+      <name>ImportEducation.hpl</name>
       <description/>
-      <type>WORKFLOW</type>
+      <type>PIPELINE</type>
       <attributes/>
       <add_date>N</add_date>
       <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportDetailedAcademicDegree.hwf</filename>
-      <loglevel>Nothing</loglevel>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportEducation.hpl</filename>
+      <logext/>
+      <logfile/>
+      <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
@@ -260,7 +265,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>208</xloc>
+      <xloc>224</xloc>
       <yloc>320</yloc>
       <attributes_hac/>
     </action>
@@ -324,7 +329,7 @@
     </hop>
     <hop>
       <from>ImportAcademicDegree.hpl</from>
-      <to>ImportDetailedAcademicDegree.hwf</to>
+      <to>ImportEducation.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

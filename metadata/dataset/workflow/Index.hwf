@@ -19,6 +19,7 @@
       <type>SPECIAL</type>
       <attributes/>
       <DayOfMonth>1</DayOfMonth>
+      <doNotWaitOnFirstExecution>N</doNotWaitOnFirstExecution>
       <hour>12</hour>
       <intervalMinutes>60</intervalMinutes>
       <intervalSeconds>0</intervalSeconds>
@@ -28,7 +29,7 @@
       <weekDay>1</weekDay>
       <parallel>N</parallel>
       <xloc>688</xloc>
-      <yloc>64</yloc>
+      <yloc>48</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -58,58 +59,6 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>ImportProfnit.hpl</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportProfnit.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>688</xloc>
-      <yloc>464</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>ImportUFMG.hwf</name>
-      <description/>
-      <type>WORKFLOW</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportUFMG.hwf</filename>
-      <logext>log</logext>
-      <logfile>${PROJECT_HOME}/metadata/dataset/log/Index</logfile>
-      <loglevel>Debug</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>Y</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>352</xloc>
-      <yloc>192</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
       <name>OtherData.hwf</name>
       <description/>
       <type>WORKFLOW</type>
@@ -129,36 +78,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>496</xloc>
-      <yloc>336</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>UpdateLog.hpl</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/Logs/UpdateLog.hpl</filename>
-      <logext/>
-      <logfile/>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>352</xloc>
-      <yloc>336</yloc>
+      <xloc>688</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -185,110 +106,11 @@
       <yloc>192</yloc>
       <attributes_hac/>
     </action>
-    <action>
-      <name>SyncAdmin.hwf</name>
-      <description/>
-      <type>WORKFLOW</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/workflow/SyncAdmin.hwf</filename>
-      <loglevel>Nothing</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>160</xloc>
-      <yloc>192</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>UpdateLogStepResearcher.hpl</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/Logs/UpdateLogStepResearcher.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>912</xloc>
-      <yloc>192</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>UpdateLogStepProduction.hpl</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/Logs/UpdateLogStepProduction.hpl</filename>
-      <logext/>
-      <logfile/>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>912</xloc>
-      <yloc>336</yloc>
-      <attributes_hac/>
-    </action>
   </actions>
   <hops>
     <hop>
       <from>ImportProductionData.hwf</from>
-      <to>ImportProfnit.hpl</to>
-      <enabled>N</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ImportProductionData.hwf</from>
       <to>OtherData.hwf</to>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>OtherData.hwf</from>
-      <to>UpdateLog.hpl</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>UpdateLog.hpl</from>
-      <to>ImportUFMG.hwf</to>
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
       <unconditional>Y</unconditional>
@@ -303,27 +125,6 @@
     <hop>
       <from>StepResearcher.hwf</from>
       <to>ImportProductionData.hwf</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ImportUFMG.hwf</from>
-      <to>SyncAdmin.hwf</to>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>StepResearcher.hwf</from>
-      <to>UpdateLogStepResearcher.hpl</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ImportProductionData.hwf</from>
-      <to>UpdateLogStepProduction.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

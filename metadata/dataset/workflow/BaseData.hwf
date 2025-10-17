@@ -18,6 +18,7 @@
       <type>SPECIAL</type>
       <attributes/>
       <DayOfMonth>1</DayOfMonth>
+      <doNotWaitOnFirstExecution>N</doNotWaitOnFirstExecution>
       <hour>12</hour>
       <intervalMinutes>60</intervalMinutes>
       <intervalSeconds>0</intervalSeconds>
@@ -205,7 +206,7 @@
     <hop>
       <from>ImportQualis.hpl</from>
       <to>ImportGroups.hpl</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>

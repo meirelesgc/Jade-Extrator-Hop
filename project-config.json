@@ -7,7 +7,7 @@
   "config" : {
     "variables" : [ {
       "name" : "HOST",
-      "value" : "172.25.0.84",
+      "value" : "localhost",
       "description" : "NONE"
     }, {
       "name" : "PORT",
@@ -15,27 +15,27 @@
       "description" : "NONE"
     }, {
       "name" : "PASSWORD",
-      "value" : "9f63b0d4-2bbc-4d21-97ef-4c0e7a28224c",
+      "value" : "postgres",
       "description" : "NONE"
     }, {
       "name" : "DATABASE",
-      "value" : "iapos",
+      "value" : "dmdc",
       "description" : "NONE"
     }, {
       "name" : "ADMIN_DATABASE",
-      "value" : "iapos_admin",
+      "value" : "dmdc",
       "description" : "NONE"
     }, {
       "name" : "ADMIN_PORT",
-      "value" : "5432",
+      "value" : "5434",
       "description" : "NONE"
     }, {
       "name" : "ADMIN_HOST",
-      "value" : "172.25.0.84",
+      "value" : "localhost",
       "description" : "NONE"
     }, {
       "name" : "ADMIN_PASSWORD",
-      "value" : "9f63b0d4-2bbc-4d21-97ef-4c0e7a28224c",
+      "value" : "postgres",
       "description" : "NONE"
     } ]
   }
