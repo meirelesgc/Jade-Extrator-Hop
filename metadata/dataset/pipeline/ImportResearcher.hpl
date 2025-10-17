@@ -278,7 +278,7 @@
     <connection>adm_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
-    <sql>SELECT  researcher_id, LPAD(lattes_id, 16, '0') as lattes_id, institution_id, extra_field, status
+    <sql>SELECT  researcher_id, LPAD(lattes_id, 16, '0') as lattes_id, institution_id, extra_field, status, area
 FROM researcher;
 </sql>
     <variables_active>N</variables_active>
@@ -302,9 +302,8 @@ FROM researcher;
     <connection>adm_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
-    <sql>SELECT  researcher_id, LPAD(lattes_id, 16, '0') as lattes_id, institution_id, extra_field, status
-FROM researcher;
-</sql>
+    <sql>SELECT  researcher_id, LPAD(lattes_id, 16, '0') as lattes_id, institution_id, extra_field, status, area
+FROM researcher;</sql>
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
@@ -680,6 +679,43 @@ FROM researcher;
     </GUI>
   </transform>
   <transform>
+    <name>Leitura dos XML</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <file>
+      <file_required>N</file_required>
+      <filemask>.*xml</filemask>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <filefield>N</filefield>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <rownum>N</rownum>
+    <attributes/>
+    <GUI>
+      <xloc>112</xloc>
+      <yloc>800</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>Limpando</name>
     <type>SelectValues</type>
     <description/>
@@ -929,6 +965,11 @@ FROM researcher;
       <field>
         <length>-2</length>
         <name>status</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>area</name>
         <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -1193,6 +1234,11 @@ FROM researcher;
         <name>status</name>
         <precision>-2</precision>
       </field>
+      <field>
+        <length>-2</length>
+        <name>area</name>
+        <precision>-2</precision>
+      </field>
       <meta>
         <date_format_lenient>N</date_format_lenient>
         <length>-2</length>
@@ -1200,6 +1246,7 @@ FROM researcher;
         <name>lattes_id</name>
         <precision>-2</precision>
         <rename>lattes_id_adm</rename>
+        <roundingType>half_even</roundingType>
         <storage_type/>
         <type>String</type>
       </meta>
@@ -1250,6 +1297,11 @@ FROM researcher;
         <name>status</name>
         <precision>-2</precision>
       </field>
+      <field>
+        <length>-2</length>
+        <name>area</name>
+        <precision>-2</precision>
+      </field>
       <meta>
         <date_format_lenient>N</date_format_lenient>
         <length>-2</length>
@@ -1257,6 +1309,7 @@ FROM researcher;
         <name>lattes_id</name>
         <precision>-2</precision>
         <rename>lattes_id_adm</rename>
+        <roundingType>half_even</roundingType>
         <storage_type/>
         <type>String</type>
       </meta>
@@ -1354,6 +1407,11 @@ FROM researcher;
       <field>
         <length>-2</length>
         <name>status</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>area</name>
         <precision>-2</precision>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -1905,6 +1963,10 @@ FROM researcher;
         <column_name>id</column_name>
         <stream_name>id</stream_name>
       </field>
+      <field>
+        <column_name>area</column_name>
+        <stream_name>area</stream_name>
+      </field>
     </fields>
     <ignore_errors>N</ignore_errors>
     <only_when_have_rows>N</only_when_have_rows>
@@ -1921,7 +1983,7 @@ FROM researcher;
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>2304</xloc>
+      <xloc>2208</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -1987,50 +2049,17 @@ FROM researcher;
         <name>status</name>
         <rename>status</rename>
       </value>
+      <value>
+        <name>area</name>
+        <rename>area</rename>
+      </value>
     </lookup>
     <skip_lookup>N</skip_lookup>
     <use_batch>N</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1776</xloc>
+      <xloc>1840</xloc>
       <yloc>384</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Leitura dos XML</name>
-    <type>GetFileNames</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <file>
-      <file_required>N</file_required>
-      <filemask>.*xml</filemask>
-      <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <filefield>N</filefield>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <rownum>N</rownum>
-    <attributes/>
-    <GUI>
-      <xloc>112</xloc>
-      <yloc>800</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

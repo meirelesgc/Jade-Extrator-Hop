@@ -27,7 +27,7 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>608</xloc>
+      <xloc>928</xloc>
       <yloc>352</yloc>
       <attributes_hac/>
     </action>
@@ -80,21 +80,6 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>1360</xloc>
-      <yloc>512</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>Delete graduate program researcher</name>
-      <description/>
-      <type>SQL</type>
-      <attributes/>
-      <connection>main_database</connection>
-      <sendOneStatement>N</sendOneStatement>
-      <sql>DELETE FROM graduate_program_researcher</sql>
-      <sqlfromfile>N</sqlfromfile>
-      <useVariableSubstitution>N</useVariableSubstitution>
-      <parallel>N</parallel>
-      <xloc>848</xloc>
       <yloc>352</yloc>
       <attributes_hac/>
     </action>
@@ -110,7 +95,7 @@
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
       <xloc>1360</xloc>
-      <yloc>352</yloc>
+      <yloc>288</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -135,8 +120,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>816</xloc>
-      <yloc>688</yloc>
+      <xloc>928</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -161,8 +146,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1024</xloc>
-      <yloc>688</yloc>
+      <xloc>1120</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -188,18 +173,26 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>1360</xloc>
-      <yloc>688</yloc>
+      <yloc>464</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>Delete graduate program researcher</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <connection>main_database</connection>
+      <sendOneStatement>N</sendOneStatement>
+      <sql>DELETE FROM graduate_program_researcher</sql>
+      <sqlfromfile>N</sqlfromfile>
+      <useVariableSubstitution>N</useVariableSubstitution>
+      <parallel>N</parallel>
+      <xloc>1120</xloc>
+      <yloc>288</yloc>
       <attributes_hac/>
     </action>
   </actions>
   <hops>
-    <hop>
-      <from>Delete graduate program researcher</from>
-      <to>ImportGraduateProgramResearcher.hpl</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
     <hop>
       <from>ImportGraduateProgramResearcher.hpl</from>
       <to>Delete graduate program student</to>
@@ -241,6 +234,13 @@
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Delete graduate program researcher</from>
+      <to>ImportGraduateProgramResearcher.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
     </hop>
   </hops>
   <notepads>
