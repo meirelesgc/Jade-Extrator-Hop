@@ -203,8 +203,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportResearcherArea.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -217,6 +215,23 @@
       <parallel>N</parallel>
       <xloc>928</xloc>
       <yloc>608</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>SQL</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <connection>main_database</connection>
+      <sendOneStatement>N</sendOneStatement>
+      <sql>INSERT INTO logs.routine (type, error)
+VALUES ('STEP_OUTHERDATA', False)</sql>
+      <sqlfilename/>
+      <sqlfromfile>N</sqlfromfile>
+      <useVariableSubstitution>N</useVariableSubstitution>
+      <parallel>N</parallel>
+      <xloc>944</xloc>
+      <yloc>720</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -273,6 +288,13 @@
     <hop>
       <from>ImportFoment.hpl</from>
       <to>ImportResearcherArea.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportResearcherArea.hpl</from>
+      <to>SQL</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

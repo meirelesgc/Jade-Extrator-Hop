@@ -201,6 +201,70 @@ update event_organization set is_new = false;</sql>
       <yloc>960</yloc>
       <attributes_hac/>
     </action>
+    <action>
+      <name>SQL 2</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <connection>main_database</connection>
+      <sendOneStatement>N</sendOneStatement>
+      <sql>INSERT INTO logs.routine (type, error)
+VALUES ('STEP_ARTICLE', False)</sql>
+      <sqlfromfile>N</sqlfromfile>
+      <useVariableSubstitution>N</useVariableSubstitution>
+      <parallel>N</parallel>
+      <xloc>432</xloc>
+      <yloc>400</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>SQL 3</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <connection>main_database</connection>
+      <sendOneStatement>N</sendOneStatement>
+      <sql>INSERT INTO logs.routine (type, error)
+VALUES ('STEP_BOOK', False)</sql>
+      <sqlfromfile>N</sqlfromfile>
+      <useVariableSubstitution>N</useVariableSubstitution>
+      <parallel>N</parallel>
+      <xloc>432</xloc>
+      <yloc>544</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>SQL 4</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <connection>main_database</connection>
+      <sendOneStatement>N</sendOneStatement>
+      <sql>INSERT INTO logs.routine (type, error)
+VALUES ('STEP_TECHNICAL_PRODUCTION', False)</sql>
+      <sqlfromfile>N</sqlfromfile>
+      <useVariableSubstitution>N</useVariableSubstitution>
+      <parallel>N</parallel>
+      <xloc>432</xloc>
+      <yloc>688</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>SQL 5</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <connection>main_database</connection>
+      <sendOneStatement>N</sendOneStatement>
+      <sql>INSERT INTO logs.routine (type, error)
+VALUES ('STEP_GERAL_PRODUCTION', False)</sql>
+      <sqlfromfile>N</sqlfromfile>
+      <useVariableSubstitution>N</useVariableSubstitution>
+      <parallel>N</parallel>
+      <xloc>432</xloc>
+      <yloc>816</yloc>
+      <attributes_hac/>
+    </action>
   </actions>
   <hops>
     <hop>
@@ -251,6 +315,34 @@ update event_organization set is_new = false;</sql>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>StepArticle.hwf</from>
+      <to>SQL 2</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>StepBook.hwf</from>
+      <to>SQL 3</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>StepTechnicalProduction.hwf</from>
+      <to>SQL 4</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>StepGeralProduction.hwf</from>
+      <to>SQL 5</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
     </hop>
   </hops>
   <notepads>
