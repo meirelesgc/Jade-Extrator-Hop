@@ -150,14 +150,13 @@
     <connection>adm_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
-    <sql>SELECT researcher_id, area, lattes_id
-FROM researcher
-WHERE area IS NOT NULL</sql>
+    <sql>SELECT researcher_id, area, lattes_id, status
+FROM researcher</sql>
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
       <xloc>160</xloc>
-      <yloc>48</yloc>
+      <yloc>96</yloc>
     </GUI>
   </transform>
   <transform>
@@ -208,6 +207,10 @@ FROM researcher</sql>
       <value>
         <name>area</name>
         <rename>area</rename>
+      </value>
+      <value>
+        <name>status</name>
+        <rename>status</rename>
       </value>
     </lookup>
     <skip_lookup>N</skip_lookup>

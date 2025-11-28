@@ -27,8 +27,8 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>928</xloc>
-      <yloc>352</yloc>
+      <xloc>640</xloc>
+      <yloc>288</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -53,8 +53,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1120</xloc>
-      <yloc>352</yloc>
+      <xloc>1136</xloc>
+      <yloc>288</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -79,8 +79,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1360</xloc>
-      <yloc>352</yloc>
+      <xloc>1456</xloc>
+      <yloc>400</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -94,7 +94,7 @@
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
-      <xloc>1360</xloc>
+      <xloc>1456</xloc>
       <yloc>288</yloc>
       <attributes_hac/>
     </action>
@@ -120,8 +120,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>928</xloc>
-      <yloc>464</yloc>
+      <xloc>784</xloc>
+      <yloc>400</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -146,8 +146,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1120</xloc>
-      <yloc>464</yloc>
+      <xloc>1008</xloc>
+      <yloc>400</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -172,8 +172,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1360</xloc>
-      <yloc>464</yloc>
+      <xloc>1232</xloc>
+      <yloc>400</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -187,8 +187,8 @@
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
-      <xloc>1120</xloc>
-      <yloc>256</yloc>
+      <xloc>864</xloc>
+      <yloc>288</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -213,8 +213,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>928</xloc>
-      <yloc>608</yloc>
+      <xloc>576</xloc>
+      <yloc>400</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -226,12 +226,11 @@
       <sendOneStatement>N</sendOneStatement>
       <sql>INSERT INTO logs.routine (type, error)
 VALUES ('STEP_OUTHERDATA', False)</sql>
-      <sqlfilename/>
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
-      <xloc>944</xloc>
-      <yloc>720</yloc>
+      <xloc>400</xloc>
+      <yloc>400</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -254,7 +253,7 @@ VALUES ('STEP_OUTHERDATA', False)</sql>
       <from>ImportGroupFirstLeaders.hpl</from>
       <to>ImportFoment.hpl</to>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
+      <evaluation>N</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
