@@ -1,42 +1,51 @@
 {
-  "metadataBaseFolder" : "${PROJECT_HOME}/metadata",
-  "unitTestsBasePath" : "${PROJECT_HOME}",
-  "dataSetsCsvFolder" : "${PROJECT_HOME}/datasets",
-  "enforcingExecutionInHome" : true,
-  "parentProjectName" : "default",
-  "config" : {
-    "variables" : [ {
-      "name" : "HOST",
-      "value" : "172.25.0.84",
-      "description" : "NONE"
-    }, {
-      "name" : "PORT",
-      "value" : "5432",
-      "description" : "NONE"
-    }, {
-      "name" : "PASSWORD",
-      "value" : "9f63b0d4-2bbc-4d21-97ef-4c0e7a28224c",
-      "description" : "NONE"
-    }, {
-      "name" : "DATABASE",
-      "value" : "iapos",
-      "description" : "NONE"
-    }, {
-      "name" : "ADMIN_DATABASE",
-      "value" : "iapos_admin",
-      "description" : "NONE"
-    }, {
-      "name" : "ADMIN_PORT",
-      "value" : "5432",
-      "description" : "NONE"
-    }, {
-      "name" : "ADMIN_HOST",
-      "value" : "172.25.0.84",
-      "description" : "NONE"
-    }, {
-      "name" : "ADMIN_PASSWORD",
-      "value" : "9f63b0d4-2bbc-4d21-97ef-4c0e7a28224c",
-      "description" : "NONE"
-    } ]
-  }
+    "metadataBaseFolder": "${PROJECT_HOME}/metadata",
+    "unitTestsBasePath": "${PROJECT_HOME}",
+    "dataSetsCsvFolder": "${PROJECT_HOME}/datasets",
+    "enforcingExecutionInHome": true,
+    "parentProjectName": "default",
+    "config": {
+        "variables": [
+            {
+                "name": "HOST",
+                "value": "${HOST:-localhost}",
+                "description": "NONE"
+            },
+            {
+                "name": "PORT",
+                "value": "${PORT:-5432}",
+                "description": "NONE"
+            },
+            {
+                "name": "PASSWORD",
+                "value": "${PASSWORD:-postgres}",
+                "description": "NONE"
+            },
+            {
+                "name": "DATABASE",
+                "value": "${DATABASE:-conectee}",
+                "description": "NONE"
+            },
+            {
+                "name": "ADMIN_DATABASE",
+                "value": "${ADMIN_DATABASE:-conectee}",
+                "description": "NONE"
+            },
+            {
+                "name": "ADMIN_PORT",
+                "value": "${ADMIN_PORT:-5434}",
+                "description": "NONE"
+            },
+            {
+                "name": "ADMIN_HOST",
+                "value": "${ADMIN_HOST:-localhost}",
+                "description": "NONE"
+            },
+            {
+                "name": "ADMIN_PASSWORD",
+                "value": "${ADMIN_PASSWORD:-postgres}",
+                "description": "NONE"
+            }
+        ]
+    }
 }
