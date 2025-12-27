@@ -8,42 +8,42 @@
         "variables": [
             {
                 "name": "HOST",
-                "value": "${HOST:-localhost}",
+                "value": "localhost",
                 "description": "NONE"
             },
             {
                 "name": "PORT",
-                "value": "${PORT:-5432}",
+                "value": "5432",
                 "description": "NONE"
             },
             {
                 "name": "PASSWORD",
-                "value": "${PASSWORD:-postgres}",
+                "value": "postgres",
                 "description": "NONE"
             },
             {
                 "name": "DATABASE",
-                "value": "${DATABASE:-conectee}",
+                "value": "conectee",
                 "description": "NONE"
             },
             {
                 "name": "ADMIN_DATABASE",
-                "value": "${ADMIN_DATABASE:-conectee}",
+                "value": "conectee",
                 "description": "NONE"
             },
             {
                 "name": "ADMIN_PORT",
-                "value": "${ADMIN_PORT:-5434}",
+                "value": "5434",
                 "description": "NONE"
             },
             {
                 "name": "ADMIN_HOST",
-                "value": "${ADMIN_HOST:-localhost}",
+                "value": "localhost",
                 "description": "NONE"
             },
             {
                 "name": "ADMIN_PASSWORD",
-                "value": "${ADMIN_PASSWORD:-postgres}",
+                "value": "postgres",
                 "description": "NONE"
             }
         ]

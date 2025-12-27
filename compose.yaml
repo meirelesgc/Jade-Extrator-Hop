@@ -1,0 +1,15 @@
+services:
+  hop:
+    image: jade-extrator-image
+    network_mode: host
+    environment:
+      DB_HOST: localhost
+      DB_PORT: 5432
+      DB_NAME: conectee
+      DB_PASSWORD: postgres
+      ADMIN_DB_HOST: localhost
+      ADMIN_DB_PORT: 5434
+      ADMIN_DB_NAME: conectee
+      ADMIN_DB_PASSWORD: postgres
+    volumes:
+      - /mnt/c/Local/Hop/config/projects/Jade-Extrator-Hop/metadata/dataset/xml:/opt/hop/projects/jade-extrator/metadata/dataset/xml

@@ -1,0 +1,51 @@
+{
+    "metadataBaseFolder": "${PROJECT_HOME}/metadata",
+    "unitTestsBasePath": "${PROJECT_HOME}",
+    "dataSetsCsvFolder": "${PROJECT_HOME}/datasets",
+    "enforcingExecutionInHome": true,
+    "parentProjectName": "default",
+    "config": {
+        "variables": [
+            {
+                "name": "HOST",
+                "value": "${DB_HOST}",
+                "description": "NONE"
+            },
+            {
+                "name": "PORT",
+                "value": "${DB_PORT}",
+                "description": "NONE"
+            },
+            {
+                "name": "PASSWORD",
+                "value": "${DB_PASSWORD}",
+                "description": "NONE"
+            },
+            {
+                "name": "DATABASE",
+                "value": "${DB_NAME}",
+                "description": "NONE"
+            },
+            {
+                "name": "ADMIN_DATABASE",
+                "value": "${ADMIN_DB_NAME}",
+                "description": "NONE"
+            },
+            {
+                "name": "ADMIN_PORT",
+                "value": "${ADMIN_DB_PORT}",
+                "description": "NONE"
+            },
+            {
+                "name": "ADMIN_HOST",
+                "value": "${ADMIN_DB_HOST}",
+                "description": "NONE"
+            },
+            {
+                "name": "ADMIN_PASSWORD",
+                "value": "${ADMIN_DB_PASSWORD}",
+                "description": "NONE"
+            }
+        ]
+    }
+}

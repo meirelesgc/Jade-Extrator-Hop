@@ -28,8 +28,8 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>688</xloc>
-      <yloc>48</yloc>
+      <xloc>416</xloc>
+      <yloc>96</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -54,8 +54,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>688</xloc>
-      <yloc>336</yloc>
+      <xloc>416</xloc>
+      <yloc>384</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -78,8 +78,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>896</xloc>
-      <yloc>336</yloc>
+      <xloc>624</xloc>
+      <yloc>384</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -102,8 +102,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>688</xloc>
-      <yloc>192</yloc>
+      <xloc>416</xloc>
+      <yloc>240</yloc>
       <attributes_hac/>
     </action>
   </actions>
