@@ -8,42 +8,42 @@
         "variables": [
             {
                 "name": "HOST",
-                "value": "${DB_HOST}",
+                "value": "${HOST}",
                 "description": "NONE"
             },
             {
                 "name": "PORT",
-                "value": "${DB_PORT}",
+                "value": "${PORT}",
                 "description": "NONE"
             },
             {
                 "name": "PASSWORD",
-                "value": "${DB_PASSWORD}",
+                "value": "${PASSWORD}",
                 "description": "NONE"
             },
             {
                 "name": "DATABASE",
-                "value": "${DB_NAME}",
+                "value": "${DATABASE}",
                 "description": "NONE"
             },
             {
                 "name": "ADMIN_DATABASE",
-                "value": "${ADMIN_DB_NAME}",
+                "value": "${ADMIN_DATABASE}",
                 "description": "NONE"
             },
             {
                 "name": "ADMIN_PORT",
-                "value": "${ADMIN_DB_PORT}",
+                "value": "${ADMIN_PORT}",
                 "description": "NONE"
             },
             {
                 "name": "ADMIN_HOST",
-                "value": "${ADMIN_DB_HOST}",
+                "value": "${ADMIN_HOST}",
                 "description": "NONE"
             },
             {
                 "name": "ADMIN_PASSWORD",
-                "value": "${ADMIN_DB_PASSWORD}",
+                "value": "${ADMIN_PASSWORD}",
                 "description": "NONE"
             }
         ]
