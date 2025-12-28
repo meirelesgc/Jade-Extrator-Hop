@@ -5,7 +5,7 @@ services:
     environment:
       DB_HOST: localhost
       DB_PORT: 5432
-      DB_NAME: conectee
+      DB_NAME: conectee_api
       DB_PASSWORD: postgres
       ADMIN_DB_HOST: localhost
       ADMIN_DB_PORT: 5434
