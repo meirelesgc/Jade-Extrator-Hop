@@ -30,6 +30,11 @@
       <to>Write to log</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Write to log</from>
+      <to>JavaScript</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <transform>
     <name>Leitura dos XML</name>
@@ -116,6 +121,33 @@ ${DATABASE}</logmessage>
     <attributes/>
     <GUI>
       <xloc>256</xloc>
+      <yloc>48</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>JavaScript</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>java.lang.Thread.sleep(30000);
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>384</xloc>
       <yloc>48</yloc>
     </GUI>
   </transform>

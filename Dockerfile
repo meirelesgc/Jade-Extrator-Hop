@@ -10,7 +10,7 @@ ENV HOP_CUSTOM_ENTRYPOINT_EXTENSION_SHELL_FILE_PATH="/home/hop/entrypoint.sh"
 
 USER root
 
-RUN apk add --no-cache gettext
+RUN apk add --no-cache gettext postgresql-client
 
 RUN mkdir -p ${HOP_PROJECT_FOLDER}
 
