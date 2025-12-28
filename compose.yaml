@@ -3,13 +3,7 @@ services:
     image: jade-extrator-image
     network_mode: host
     environment:
-      HOST: localhost
-      PORT: 5432
-      DATABASE: conectee_api
-      PASSWORD: postgres
-      ADMIN_HOST: localhost
-      ADMIN_PORT: 5434
-      ADMIN_DATABASE: conectee
-      ADMIN_PASSWORD: postgres
+      - DATABASE_URL=postgresql://postgres:postgres@localhost:5432/conectee_api
+      - ADMIN_DATABASE_URL=postgresql://postgres:postgres@localhost:5434/conectee
     volumes:
       - /mnt/c/Local/Hop/config/projects/Jade-Extrator-Hop/metadata/dataset/xml:/opt/hop/projects/jade-extrator/metadata/dataset/xml
