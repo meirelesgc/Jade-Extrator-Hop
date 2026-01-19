@@ -833,8 +833,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>2192</xloc>
-      <yloc>640</yloc>
+      <xloc>2544</xloc>
+      <yloc>736</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -859,8 +859,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>2000</xloc>
-      <yloc>640</yloc>
+      <xloc>2352</xloc>
+      <yloc>736</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -886,7 +886,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>2000</xloc>
-      <yloc>544</yloc>
+      <yloc>640</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -912,7 +912,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>2192</xloc>
-      <yloc>544</yloc>
+      <yloc>640</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -938,7 +938,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>2000</xloc>
-      <yloc>448</yloc>
+      <yloc>544</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -964,7 +964,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>2192</xloc>
-      <yloc>448</yloc>
+      <yloc>544</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -990,7 +990,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>2000</xloc>
-      <yloc>368</yloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1016,7 +1016,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>2192</xloc>
-      <yloc>368</yloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1042,7 +1042,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>2000</xloc>
-      <yloc>256</yloc>
+      <yloc>352</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1068,7 +1068,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>2192</xloc>
-      <yloc>256</yloc>
+      <yloc>352</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1094,7 +1094,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>2368</xloc>
-      <yloc>256</yloc>
+      <yloc>352</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1120,7 +1120,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>2544</xloc>
-      <yloc>256</yloc>
+      <yloc>352</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1146,7 +1146,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>2368</xloc>
-      <yloc>352</yloc>
+      <yloc>448</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1172,7 +1172,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>2544</xloc>
-      <yloc>352</yloc>
+      <yloc>448</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1198,7 +1198,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>2368</xloc>
-      <yloc>464</yloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -1224,33 +1224,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>2544</xloc>
-      <yloc>464</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>ReadXML.hpl 2 2 2 2 2 2</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>2368</xloc>
-      <yloc>576</yloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -1342,13 +1316,6 @@
     <hop>
       <from>ImportTechnologicalProduct.hpl</from>
       <to>ReadXML.hpl 26</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ImportDidacticMaterial.hpl</from>
-      <to>ReadXML.hpl 27</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
@@ -1466,13 +1433,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportProfessionalExperience.hpl</from>
-      <to>ReadXML.hpl 28</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>ReadXML.hpl 27</from>
       <to>ImportProfessionalExperience.hpl</to>
       <enabled>Y</enabled>
@@ -1578,8 +1538,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportIndustrialDesign.hpl</from>
-      <to>ReadXML.hpl 2 2 2 2 2 2</to>
+      <from>ImportDidacticMaterial.hpl</from>
+      <to>ReadXML.hpl 28</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

@@ -49,6 +49,7 @@
         <condition>=</condition>
         <field>graduate_program_id</field>
         <name>graduate_program_id</name>
+        <name2/>
       </key>
       <schema>"public"</schema>
       <table>graduate_program</table>
