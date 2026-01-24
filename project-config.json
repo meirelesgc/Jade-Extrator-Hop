@@ -7,7 +7,7 @@
   "config" : {
     "variables" : [ {
       "name" : "HOST",
-      "value" : "localhost",
+      "value" : "172.25.0.84",
       "description" : "NONE"
     }, {
       "name" : "PORT",
@@ -15,11 +15,11 @@
       "description" : "NONE"
     }, {
       "name" : "PASSWORD",
-      "value" : "postgres",
+      "value" : "9f63b0d4-2bbc-4d21-97ef-4c0e7a28224",
       "description" : "NONE"
     }, {
       "name" : "DATABASE",
-      "value" : "postgres",
+      "value" : "iapos",
       "description" : "NONE"
     }, {
       "name" : "ADMIN_DATABASE",

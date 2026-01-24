@@ -21,18 +21,43 @@
   </notepads>
   <order>
     <hop>
-      <from>Microsoft Excel input</from>
-      <to>String operations</to>
+      <from>Normalize</from>
+      <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>String operations</from>
-      <to>Table output</to>
+      <from>GET qualis-2017-2020</from>
+      <to>column 2017-2020</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>column 2017-2020</from>
+      <to>Order ISSN, Name</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Order ISSN, Name</from>
+      <to>Unique Magazine</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>GET qualis-2021-2024</from>
+      <to>column 2021-2025</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>column 2021-2025</from>
+      <to>Order ISSN, Name</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unique Magazine</from>
+      <to>Normalize</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
-    <name>Microsoft Excel input</name>
+    <name>GET qualis-2017-2020</name>
     <type>ExcelInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -85,9 +110,10 @@
     <file>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/metadata/dataset/csv/classificações_publicadas_todas_as_areas_avaliacao1672761192111.xlsx</name>
+      <name>${PROJECT_HOME}/metadata/dataset/csv/qualis-2017-2020.xlsx</name>
     </file>
     <header>Y</header>
+    <ignore_fields>N</ignore_fields>
     <limit>0</limit>
     <line_number_files_extension>line</line_number_files_extension>
     <noempty>Y</noempty>
@@ -103,12 +129,89 @@
     <strict_types>N</strict_types>
     <attributes/>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>208</yloc>
+      <xloc>144</xloc>
+      <yloc>144</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>String operations</name>
+    <name>GET qualis-2021-2024</name>
+    <type>ExcelInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <accept_filenames>N</accept_filenames>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_ignored>N</error_ignored>
+    <error_line_files_extension>error</error_line_files_extension>
+    <error_line_skipped>N</error_line_skipped>
+    <fields>
+      <field>
+        <length>-1</length>
+        <name>ISSN</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Título</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Área de Avaliação</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Estrato</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+    </fields>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/metadata/dataset/csv/qualis-2021-2024.xlsx</name>
+    </file>
+    <header>Y</header>
+    <ignore_fields>N</ignore_fields>
+    <limit>0</limit>
+    <line_number_files_extension>line</line_number_files_extension>
+    <noempty>Y</noempty>
+    <sheets>
+      <sheet>
+        <name>RelatorioQualis</name>
+        <startcol>0</startcol>
+        <startrow>0</startrow>
+      </sheet>
+    </sheets>
+    <spreadsheet_type>SAX_POI</spreadsheet_type>
+    <stoponempty>N</stoponempty>
+    <strict_types>N</strict_types>
+    <attributes/>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>304</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Normalize</name>
     <type>StringOperations</type>
     <description/>
     <distribute>Y</distribute>
@@ -161,8 +264,56 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>208</yloc>
+      <xloc>832</xloc>
+      <yloc>224</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Order ISSN, Name</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compress>N</compress>
+    <directory>${java.io.tmpdir}</directory>
+    <fields>
+      <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <name>ISSN</name>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <name>Título</name>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <name>reference_period</name>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <sort_prefix>out</sort_prefix>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
+    <attributes/>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
@@ -176,8 +327,13 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <add_columns>N</add_columns>
+    <always_drop_and_recreate>N</always_drop_and_recreate>
+    <auto_update_table_structure>N</auto_update_table_structure>
+    <change_column_types>N</change_column_types>
     <commit>1000</commit>
     <connection>main_database</connection>
+    <drop_columns>N</drop_columns>
     <fields>
       <field>
         <column_name>issn</column_name>
@@ -190,6 +346,10 @@
       <field>
         <column_name>qualis</column_name>
         <stream_name>Estrato</stream_name>
+      </field>
+      <field>
+        <column_name>reference_period</column_name>
+        <stream_name>reference_period</stream_name>
       </field>
     </fields>
     <ignore_errors>N</ignore_errors>
@@ -207,8 +367,96 @@
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>208</yloc>
+      <xloc>1024</xloc>
+      <yloc>224</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Unique Magazine</name>
+    <type>Unique</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <count_field>Teste</count_field>
+    <count_rows>N</count_rows>
+    <fields>
+      <field>
+        <case_insensitive>Y</case_insensitive>
+        <name>ISSN</name>
+      </field>
+      <field>
+        <case_insensitive>Y</case_insensitive>
+        <name>Título</name>
+      </field>
+      <field>
+        <case_insensitive>Y</case_insensitive>
+        <name>reference_period</name>
+      </field>
+    </fields>
+    <reject_duplicate_row>N</reject_duplicate_row>
+    <attributes/>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>224</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>column 2017-2020</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <length>-1</length>
+        <name>reference_period</name>
+        <nullif>2017-2020</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>320</xloc>
+      <yloc>144</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>column 2021-2025</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <length>-1</length>
+        <name>reference_period</name>
+        <nullif>2021-2025</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>304</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
