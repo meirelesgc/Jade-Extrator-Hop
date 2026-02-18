@@ -1,9 +1,0 @@
-services:
-  hop:
-    image: jade-extrator-image
-    network_mode: host
-    environment:
-      - DATABASE_URL=postgresql://postgres:postgres@localhost:5432/conectee_api
-      - ADMIN_DATABASE_URL=postgresql://postgres:postgres@localhost:5434/conectee
-    volumes:
-      - /mnt/c/Local/Hop/config/projects/Jade-Extrator-Hop/metadata/dataset/xml:/opt/hop/projects/jade-extrator/metadata/dataset/xml

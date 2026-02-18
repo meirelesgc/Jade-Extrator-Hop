@@ -1,42 +1,15 @@
 {
-  "metadataBaseFolder" : "${HOP_PROJECT_FOLDER}/metadata",
-  "unitTestsBasePath" : "${HOP_PROJECT_FOLDER}",
-  "dataSetsCsvFolder" : "${HOP_PROJECT_FOLDER}/datasets",
+  "description" : "Jade-Extrator",
+  "company" : "NPAI",
+  "metadataBaseFolder" : "${PROJECT_HOME}/metadata",
+  "unitTestsBasePath" : "${PROJECT_HOME}",
+  "dataSetsCsvFolder" : "${PROJECT_HOME}/datasets",
   "enforcingExecutionInHome" : true,
   "parentProjectName" : "default",
   "config" : {
     "variables" : [ {
-      "name" : "HOST",
-      "value" : "172.25.0.84",
-      "description" : "NONE"
-    }, {
-      "name" : "PORT",
-      "value" : "5432",
-      "description" : "NONE"
-    }, {
-      "name" : "PASSWORD",
-      "value" : "9f63b0d4-2bbc-4d21-97ef-4c0e7a28224",
-      "description" : "NONE"
-    }, {
-      "name" : "DATABASE",
-      "value" : "iapos",
-      "description" : "NONE"
-    }, {
-      "name" : "ADMIN_DATABASE",
-      "value" : "postgres",
-      "description" : "NONE"
-    }, {
-      "name" : "ADMIN_PORT",
-      "value" : "5434",
-      "description" : "NONE"
-    }, {
-      "name" : "ADMIN_HOST",
-      "value" : "localhost",
-      "description" : "NONE"
-    }, {
-      "name" : "ADMIN_PASSWORD",
-      "value" : "postgres",
-      "description" : "NONE"
+      "name" : "DATABASE_URL",
+      "value" : "jdbc:postgresql://localhost:5432/barema?user=postgres&password=postgres"
     } ]
   }
 }
