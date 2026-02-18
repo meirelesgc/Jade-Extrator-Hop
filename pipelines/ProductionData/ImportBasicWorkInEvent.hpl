@@ -615,7 +615,7 @@
     <rownum_field/>
     <encoding>UTF-8</encoding>
     <file>
-      <name>${PROJECT_HOME}/datasets\lattes_xml/curriculos_xml/Teste/00131639579.xml</name>
+      <name>${PROJECT_HOME}/datasets/lattes_xml/curriculos_xml/Teste/00131639579.xml</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -858,7 +858,7 @@
     <rownum_field/>
     <encoding>UTF-8</encoding>
     <file>
-      <name>${PROJECT_HOME}/datasets\lattes_xml/Teste/1594166432902815.xml</name>
+      <name>${PROJECT_HOME}/datasets/lattes_xml/Teste/1594166432902815.xml</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -1858,7 +1858,7 @@ FROM "public".country
       <file_required>N</file_required>
       <filemask>.*xml</filemask>
       <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/datasets\lattes_xml/</name>
+      <name>${PROJECT_HOME}/datasets/lattes_xml/</name>
     </file>
     <file>
       <file_required>N</file_required>

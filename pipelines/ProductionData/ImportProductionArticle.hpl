@@ -395,7 +395,7 @@
       <file_required>N</file_required>
       <filemask>.*xml</filemask>
       <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/datasets\lattes_xml/</name>
+      <name>${PROJECT_HOME}/datasets/lattes_xml/</name>
     </file>
     <file>
       <file_required>N</file_required>
@@ -822,7 +822,7 @@
     <file>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/datasets\lattes_xml/curriculos_xml/Teste/00131639579.xml</name>
+      <name>${PROJECT_HOME}/datasets/lattes_xml/curriculos_xml/Teste/00131639579.xml</name>
     </file>
     <ignorecomments>N</ignorecomments>
     <include>N</include>
