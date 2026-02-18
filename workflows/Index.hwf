@@ -41,8 +41,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/workflows/ImportBasicData.hwf</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -67,8 +65,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/workflows/ImportExpertiseData.hwf</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -93,8 +89,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/workflows/ImportResearcherData.hwf</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -119,8 +113,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/workflows/ImportProductionData.hwf</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
