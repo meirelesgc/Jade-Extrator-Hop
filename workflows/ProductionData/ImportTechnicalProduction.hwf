@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workflow>
-  <name>ImportProductionData</name>
+  <name>ImportTechnicalProduction</name>
   <name_sync_with_filename>Y</name_sync_with_filename>
   <description/>
   <extended_description/>
   <workflow_version/>
   <created_user>-</created_user>
-  <created_date>2026/02/17 23:56:05.101</created_date>
+  <created_date>2026/02/18 13:48:55.747</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2026/02/17 23:56:05.101</modified_date>
+  <modified_date>2026/02/18 13:48:55.747</modified_date>
   <parameters>
     </parameters>
   <actions>
@@ -27,21 +27,23 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>112</xloc>
-      <yloc>176</yloc>
+      <xloc>64</xloc>
+      <yloc>144</yloc>
       <attributes_hac/>
     </action>
     <action>
-      <name>ImportBibliographicProduction.hwf</name>
+      <name>ImportBrand.hpl</name>
       <description/>
-      <type>WORKFLOW</type>
+      <type>PIPELINE</type>
       <attributes/>
       <add_date>N</add_date>
       <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/workflows/ProductionData/ImportBibliographicProduction.hwf</filename>
-      <loglevel>Nothing</loglevel>
+      <filename>${PROJECT_HOME}/pipelines/ProductionData/ImportBrand.hpl</filename>
+      <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
@@ -51,21 +53,23 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>336</xloc>
-      <yloc>176</yloc>
+      <xloc>320</xloc>
+      <yloc>144</yloc>
       <attributes_hac/>
     </action>
     <action>
-      <name>ImportTechnicalProduction.hwf</name>
+      <name>ImportPatent.hpl</name>
       <description/>
-      <type>WORKFLOW</type>
+      <type>PIPELINE</type>
       <attributes/>
       <add_date>N</add_date>
       <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/workflows/ProductionData/ImportTechnicalProduction.hwf</filename>
-      <loglevel>Nothing</loglevel>
+      <filename>${PROJECT_HOME}/pipelines/ProductionData/ImportPatent.hpl</filename>
+      <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
@@ -75,21 +79,23 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>336</xloc>
-      <yloc>320</yloc>
+      <xloc>624</xloc>
+      <yloc>144</yloc>
       <attributes_hac/>
     </action>
     <action>
-      <name>ImportOtherProductions.hwf</name>
+      <name>ImportSoftware.hpl</name>
       <description/>
-      <type>WORKFLOW</type>
+      <type>PIPELINE</type>
       <attributes/>
       <add_date>N</add_date>
       <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/workflows/ProductionData/ImportOtherProductions.hwf</filename>
-      <loglevel>Nothing</loglevel>
+      <filename>${PROJECT_HOME}/pipelines/ProductionData/ImportSoftware.hpl</filename>
+      <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
@@ -99,29 +105,62 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>112</xloc>
-      <yloc>320</yloc>
+      <xloc>624</xloc>
+      <yloc>368</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ImportResearchReport.hpl</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/pipelines/ProductionData/ImportResearchReport.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>320</xloc>
+      <yloc>368</yloc>
       <attributes_hac/>
     </action>
   </actions>
   <hops>
     <hop>
       <from>Start</from>
-      <to>ImportBibliographicProduction.hwf</to>
+      <to>ImportBrand.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>ImportBibliographicProduction.hwf</from>
-      <to>ImportTechnicalProduction.hwf</to>
+      <from>ImportBrand.hpl</from>
+      <to>ImportPatent.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportTechnicalProduction.hwf</from>
-      <to>ImportOtherProductions.hwf</to>
+      <from>ImportPatent.hpl</from>
+      <to>ImportSoftware.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportSoftware.hpl</from>
+      <to>ImportResearchReport.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
