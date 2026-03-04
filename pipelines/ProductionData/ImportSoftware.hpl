@@ -21,11 +21,6 @@
   </notepads>
   <order>
     <hop>
-      <from>Get rows files xml</from>
-      <to>Read XML  Software</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
       <from>Read XML  Software</from>
       <to>String operations</to>
       <enabled>Y</enabled>
@@ -106,11 +101,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Read XML  Software  teste</from>
-      <to>String operations</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
       <from>Leitura dos XML</from>
       <to>Read XML  Software</to>
       <enabled>Y</enabled>
@@ -163,8 +153,8 @@
     </GUI>
   </transform>
   <transform>
-    <name>Get rows files xml</name>
-    <type>RowsFromResult</type>
+    <name>Leitura dos XML</name>
+    <type>GetFileNames</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -173,17 +163,29 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fields>
-      <field>
-        <name>filename</name>
-        <type>None</type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <file>
+      <file_required>N</file_required>
+      <filemask>.*xml</filemask>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/datasets/lattes_xml/</name>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <filefield>N</filefield>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <rownum>N</rownum>
     <attributes/>
     <GUI>
-      <xloc>128</xloc>
+      <xloc>80</xloc>
       <yloc>144</yloc>
     </GUI>
   </transform>
@@ -252,349 +254,172 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <namespaceaware>N</namespaceaware>
-    <ignorecomments>N</ignorecomments>
-    <readurl>N</readurl>
-    <validating>N</validating>
-    <usetoken>N</usetoken>
+    <IsAFile>Y</IsAFile>
     <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <IsInFields>Y</IsInFields>
+    <XmlField>filename</XmlField>
+    <addresultfile>N</addresultfile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <rownum_field/>
     <encoding>UTF-8</encoding>
+    <fields>
+      <field>
+        <currency/>
+        <decimal/>
+        <element_type>Node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>TITULO-DO-SOFTWARE</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>String</type>
+        <xPath>DADOS-BASICOS-DO-SOFTWARE/@TITULO-DO-SOFTWARE</xPath>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <element_type>Node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>FINALIDADE</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>String</type>
+        <xPath>DETALHAMENTO-DO-SOFTWARE/@FINALIDADE</xPath>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <element_type>Node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>PLATAFORMA</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>String</type>
+        <xPath>DETALHAMENTO-DO-SOFTWARE/@PLATAFORMA</xPath>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <element_type>Node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>AMBIENTE</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>String</type>
+        <xPath>DETALHAMENTO-DO-SOFTWARE/@AMBIENTE</xPath>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <element_type>Node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>DISPONIBILIDADE</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DETALHAMENTO-DO-SOFTWARE/@DISPONIBILIDADE</xPath>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <element_type>Node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>INSTITUICAO-FINANCIADORA</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DETALHAMENTO-DO-SOFTWARE/@INSTITUICAO-FINANCIADORA</xPath>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <element_type>Node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>NOME-COMPLETO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>/CURRICULO-VITAE/DADOS-GERAIS/@NOME-COMPLETO</xPath>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <element_type>Node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>ANO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DADOS-BASICOS-DO-SOFTWARE/@ANO</xPath>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <element_type>Node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>REGISTRO-OU-PATENTE</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DETALHAMENTO-DO-SOFTWARE/REGISTRO-OU-PATENTE/@CODIGO-DO-REGISTRO-OU-PATENTE</xPath>
+      </field>
+    </fields>
     <file>
-      <name>${PROJECT_HOME}/datasets/lattes_xml/Teste/88185575568.xml</name>
-      <filemask/>
-      <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
+      <name>${PROJECT_HOME}/datasets/lattes_xml/Teste/88185575568.xml</name>
+    </file>
+    <file>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
     </file>
-    <fields>
-      <field>
-        <name>TITULO-DO-SOFTWARE</name>
-        <xpath>DADOS-BASICOS-DO-SOFTWARE/@TITULO-DO-SOFTWARE</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>FINALIDADE</name>
-        <xpath>DETALHAMENTO-DO-SOFTWARE/@FINALIDADE</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>PLATAFORMA</name>
-        <xpath>DETALHAMENTO-DO-SOFTWARE/@PLATAFORMA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>AMBIENTE</name>
-        <xpath>DETALHAMENTO-DO-SOFTWARE/@AMBIENTE</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>DISPONIBILIDADE</name>
-        <xpath>DETALHAMENTO-DO-SOFTWARE/@DISPONIBILIDADE</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>INSTITUICAO-FINANCIADORA</name>
-        <xpath>DETALHAMENTO-DO-SOFTWARE/@INSTITUICAO-FINANCIADORA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>NOME-COMPLETO</name>
-        <xpath>/CURRICULO-VITAE/DADOS-GERAIS/@NOME-COMPLETO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>ANO</name>
-        <xpath>DADOS-BASICOS-DO-SOFTWARE/@ANO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-    </fields>
+    <ignorecomments>N</ignorecomments>
+    <include>N</include>
     <limit>0</limit>
     <loopxpath>/CURRICULO-VITAE/PRODUCAO-TECNICA/SOFTWARE</loopxpath>
-    <IsInFields>Y</IsInFields>
-    <IsAFile>Y</IsAFile>
-    <XmlField>filename</XmlField>
-    <prunePath/>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
+    <namespaceaware>N</namespaceaware>
+    <readurl>N</readurl>
+    <rownum>N</rownum>
+    <usetoken>N</usetoken>
+    <validating>N</validating>
     <attributes/>
     <GUI>
       <xloc>304</xloc>
       <yloc>144</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Read XML  Software  teste</name>
-    <type>getXMLData</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <namespaceaware>N</namespaceaware>
-    <ignorecomments>N</ignorecomments>
-    <readurl>N</readurl>
-    <validating>N</validating>
-    <usetoken>N</usetoken>
-    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <rownum_field/>
-    <encoding>UTF-8</encoding>
-    <file>
-      <name>${PROJECT_HOME}/datasets/lattes_xml/Teste/152.470.585-34.xml</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <fields>
-      <field>
-        <name>TITULO-DO-SOFTWARE</name>
-        <xpath>DADOS-BASICOS-DO-SOFTWARE/@TITULO-DO-SOFTWARE</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>FINALIDADE</name>
-        <xpath>DETALHAMENTO-DO-SOFTWARE/@FINALIDADE</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>PLATAFORMA</name>
-        <xpath>DETALHAMENTO-DO-SOFTWARE/@PLATAFORMA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>AMBIENTE</name>
-        <xpath>DETALHAMENTO-DO-SOFTWARE/@AMBIENTE</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>DISPONIBILIDADE</name>
-        <xpath>DETALHAMENTO-DO-SOFTWARE/@DISPONIBILIDADE</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>INSTITUICAO-FINANCIADORA</name>
-        <xpath>DETALHAMENTO-DO-SOFTWARE/@INSTITUICAO-FINANCIADORA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>NOME-COMPLETO</name>
-        <xpath>/CURRICULO-VITAE/DADOS-GERAIS/@NOME-COMPLETO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>ANO</name>
-        <xpath>DADOS-BASICOS-DO-SOFTWARE/@ANO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-    </fields>
-    <limit>0</limit>
-    <loopxpath>/CURRICULO-VITAE/PRODUCAO-TECNICA/SOFTWARE</loopxpath>
-    <IsInFields>N</IsInFields>
-    <IsAFile>Y</IsAFile>
-    <XmlField>filename</XmlField>
-    <prunePath/>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-    <attributes/>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>0</yloc>
     </GUI>
   </transform>
   <transform>
@@ -645,51 +470,67 @@
         <length>-2</length>
         <name>researcher _id</name>
         <precision>-2</precision>
+        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>researcher_name</name>
         <precision>-2</precision>
+        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>TITULO-DO-SOFTWARE</name>
         <precision>-2</precision>
+        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>FINALIDADE</name>
         <precision>-2</precision>
+        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>PLATAFORMA</name>
         <precision>-2</precision>
+        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>AMBIENTE</name>
         <precision>-2</precision>
+        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>DISPONIBILIDADE</name>
         <precision>-2</precision>
+        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>INSTITUICAO-FINANCIADORA</name>
         <precision>-2</precision>
+        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>NOME-COMPLETO</name>
         <precision>-2</precision>
+        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>ANO</name>
         <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>REGISTRO-OU-PATENTE</name>
+        <precision>-2</precision>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -992,7 +833,6 @@
       <schema_name/>
     </partitioning>
     <fields>
-
       <field>
         <in_stream_name>title</in_stream_name>
         <out_stream_name/>
@@ -1083,8 +923,13 @@ FROM "public".software
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <add_columns>N</add_columns>
+    <always_drop_and_recreate>N</always_drop_and_recreate>
+    <auto_update_table_structure>N</auto_update_table_structure>
+    <change_column_types>N</change_column_types>
     <commit>100000</commit>
     <connection>ApplicationDB</connection>
+    <drop_columns>N</drop_columns>
     <fields>
       <field>
         <column_name>researcher_id</column_name>
@@ -1118,16 +963,23 @@ FROM "public".software
         <column_name>year</column_name>
         <stream_name>ANO</stream_name>
       </field>
+      <field>
+        <column_name>code</column_name>
+        <stream_name>REGISTRO-OU-PATENTE</stream_name>
+      </field>
     </fields>
     <ignore_errors>N</ignore_errors>
     <only_when_have_rows>N</only_when_have_rows>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
     <partitioning_monthly>Y</partitioning_monthly>
+    <return_field/>
     <return_keys>N</return_keys>
     <schema>"public"</schema>
     <specify_fields>Y</specify_fields>
     <table>software</table>
+    <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
     <truncate>N</truncate>
@@ -1136,43 +988,6 @@ FROM "public".software
     <GUI>
       <xloc>1360</xloc>
       <yloc>320</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Leitura dos XML</name>
-    <type>GetFileNames</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <file>
-      <file_required>N</file_required>
-      <filemask>.*xml</filemask>
-      <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/datasets/lattes_xml/</name>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <filefield>N</filefield>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <rownum>N</rownum>
-    <attributes/>
-    <GUI>
-      <xloc>288</xloc>
-      <yloc>48</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
