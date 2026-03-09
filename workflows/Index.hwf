@@ -27,7 +27,7 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>48</xloc>
+      <xloc>64</xloc>
       <yloc>144</yloc>
       <attributes_hac/>
     </action>
@@ -123,7 +123,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>272</xloc>
+      <xloc>256</xloc>
       <yloc>304</yloc>
       <attributes_hac/>
     </action>

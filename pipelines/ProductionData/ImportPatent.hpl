@@ -36,11 +36,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get rows files xml</from>
-      <to>Read XML Patent</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
       <from>Read XML Patent</from>
       <to>String operations</to>
       <enabled>Y</enabled>
@@ -111,11 +106,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Read XML Patent teste</from>
-      <to>String operations</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
       <from>Dummy (already registered)</from>
       <to>Select values 2 3</to>
       <enabled>Y</enabled>
@@ -178,31 +168,6 @@
     </GUI>
   </transform>
   <transform>
-    <name>Get rows files xml</name>
-    <type>RowsFromResult</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>filename</name>
-        <type>None</type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>240</xloc>
-      <yloc>208</yloc>
-    </GUI>
-  </transform>
-  <transform>
     <name>Import table patent</name>
     <type>TableOutput</type>
     <description/>
@@ -213,8 +178,13 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <add_columns>N</add_columns>
+    <always_drop_and_recreate>N</always_drop_and_recreate>
+    <auto_update_table_structure>N</auto_update_table_structure>
+    <change_column_types>N</change_column_types>
     <commit>100000</commit>
     <connection>ApplicationDB</connection>
+    <drop_columns>N</drop_columns>
     <fields>
       <field>
         <column_name>researcher_id</column_name>
@@ -301,8 +271,8 @@
     <rownum>N</rownum>
     <attributes/>
     <GUI>
-      <xloc>400</xloc>
-      <yloc>96</yloc>
+      <xloc>256</xloc>
+      <yloc>208</yloc>
     </GUI>
   </transform>
   <transform>
@@ -370,329 +340,153 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <namespaceaware>N</namespaceaware>
-    <ignorecomments>N</ignorecomments>
-    <readurl>N</readurl>
-    <validating>N</validating>
-    <usetoken>N</usetoken>
+    <IsAFile>Y</IsAFile>
     <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <IsInFields>Y</IsInFields>
+    <XmlField>filename</XmlField>
+    <addresultfile>N</addresultfile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <rownum_field/>
     <encoding>UTF-8</encoding>
-    <file>
-      <name>${PROJECT_HOME}/datasets/lattes_xml/3365695090552840.xml</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
     <fields>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>TITULO</name>
-        <xpath>DADOS-BASICOS-DA-PATENTE/@TITULO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>String</type>
+        <xPath>DADOS-BASICOS-DA-PATENTE/@TITULO</xPath>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>ANO-DESENVOLVIMENTO</name>
-        <xpath>DADOS-BASICOS-DA-PATENTE/@ANO-DESENVOLVIMENTO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>String</type>
+        <xPath>DADOS-BASICOS-DA-PATENTE/@ANO-DESENVOLVIMENTO</xPath>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>CATEGORIA</name>
-        <xpath>DETALHAMENTO-DA-PATENTE/@CATEGORIA</xpath>
-        <element_type>node</element_type>
+        <precision>-1</precision>
+        <repeat>N</repeat>
         <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
+        <xPath>DETALHAMENTO-DA-PATENTE/@CATEGORIA</xPath>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>INFORMACOES-ADICIONAIS</name>
-        <xpath>INFORMACOES-ADICIONAIS/@DESCRICAO-INFORMACOES-ADICIONAIS</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>INFORMACOES-ADICIONAIS/@DESCRICAO-INFORMACOES-ADICIONAIS</xPath>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>NOME-COMPLETO</name>
-        <xpath>/CURRICULO-VITAE/DADOS-GERAIS/@NOME-COMPLETO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>/CURRICULO-VITAE/DADOS-GERAIS/@NOME-COMPLETO</xPath>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>DATA-DE-CONCESSAO</name>
-        <xpath>DETALHAMENTO-DA-PATENTE/REGISTRO-OU-PATENTE/@DATA-DE-CONCESSAO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DETALHAMENTO-DA-PATENTE/REGISTRO-OU-PATENTE/@DATA-DE-CONCESSAO</xPath>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>DATA-PEDIDO-DE-DEPOSITO</name>
-        <xpath>DETALHAMENTO-DA-PATENTE/REGISTRO-OU-PATENTE/@DATA-PEDIDO-DE-DEPOSITO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DETALHAMENTO-DA-PATENTE/REGISTRO-OU-PATENTE/@DATA-PEDIDO-DE-DEPOSITO</xPath>
       </field>
       <field>
-        <name>CODIGO-DO-REGISTRO-OU-PATENTE</name>
-        <xpath>DETALHAMENTO-DA-PATENTE/REGISTRO-OU-PATENTE/@CODIGO-DO-REGISTRO-OU-PATENTE</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
         <currency/>
         <decimal/>
+        <element_type>node</element_type>
+        <format/>
         <group/>
         <length>-1</length>
+        <name>CODIGO-DO-REGISTRO-OU-PATENTE</name>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DETALHAMENTO-DA-PATENTE/REGISTRO-OU-PATENTE/@CODIGO-DO-REGISTRO-OU-PATENTE</xPath>
       </field>
     </fields>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/datasets/lattes_xml/3365695090552840.xml</name>
+    </file>
+    <ignorecomments>N</ignorecomments>
+    <include>N</include>
     <limit>0</limit>
     <loopxpath>/CURRICULO-VITAE/PRODUCAO-TECNICA/PATENTE</loopxpath>
-    <IsInFields>Y</IsInFields>
-    <IsAFile>Y</IsAFile>
-    <XmlField>filename</XmlField>
-    <prunePath/>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
+    <namespaceaware>N</namespaceaware>
+    <readurl>N</readurl>
+    <rownum>N</rownum>
+    <usetoken>N</usetoken>
+    <validating>N</validating>
     <attributes/>
     <GUI>
       <xloc>416</xloc>
       <yloc>208</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Read XML Patent teste</name>
-    <type>getXMLData</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <namespaceaware>N</namespaceaware>
-    <ignorecomments>N</ignorecomments>
-    <readurl>N</readurl>
-    <validating>N</validating>
-    <usetoken>N</usetoken>
-    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <rownum_field/>
-    <encoding>UTF-8</encoding>
-    <file>
-      <name>${PROJECT_HOME}/datasets/lattes_xml/Teste/119.244.398-59.xml</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <fields>
-      <field>
-        <name>TITULO</name>
-        <xpath>DADOS-BASICOS-DA-PATENTE/@TITULO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>ANO-DESENVOLVIMENTO</name>
-        <xpath>DADOS-BASICOS-DA-PATENTE/@ANO-DESENVOLVIMENTO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>CATEGORIA</name>
-        <xpath>DETALHAMENTO-DA-PATENTE/@CATEGORIA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>INFORMACOES-ADICIONAIS</name>
-        <xpath>INFORMACOES-ADICIONAIS/@DESCRICAO-INFORMACOES-ADICIONAIS</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>NOME-COMPLETO</name>
-        <xpath>/CURRICULO-VITAE/DADOS-GERAIS/@NOME-COMPLETO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>DATA-DE-CONCESSAO</name>
-        <xpath>DETALHAMENTO-DA-PATENTE/REGISTRO-OU-PATENTE/@DATA-DE-CONCESSAO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>DATA-PEDIDO-DE-DEPOSITO</name>
-        <xpath>DETALHAMENTO-DA-PATENTE/REGISTRO-OU-PATENTE/@DATA-PEDIDO-DE-DEPOSITO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-    </fields>
-    <limit>0</limit>
-    <loopxpath>/CURRICULO-VITAE/PRODUCAO-TECNICA/PATENTE</loopxpath>
-    <IsInFields>N</IsInFields>
-    <IsAFile>Y</IsAFile>
-    <XmlField>filename</XmlField>
-    <prunePath/>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-    <attributes/>
-    <GUI>
-      <xloc>608</xloc>
-      <yloc>80</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1258,7 +1052,6 @@
       <schema_name/>
     </partitioning>
     <fields>
-
       <field>
         <in_stream_name>title</in_stream_name>
         <out_stream_name/>
