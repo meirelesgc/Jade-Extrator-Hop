@@ -1,0 +1,4 @@
+services:
+  barema_hop:
+    build: .
+    image: gleidsoncosta/simcc-extrator:latest

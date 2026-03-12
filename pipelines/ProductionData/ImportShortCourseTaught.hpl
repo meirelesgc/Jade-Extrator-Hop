@@ -148,97 +148,6 @@
     </GUI>
   </transform>
   <transform>
-    <name>Leitura dos XML</name>
-    <type>GetFileNames</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <file>
-      <file_required>N</file_required>
-      <filemask>.*xml</filemask>
-      <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/datasets/lattes_xml/</name>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <filefield>N</filefield>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <rownum>N</rownum>
-    <attributes/>
-    <GUI>
-      <xloc>240</xloc>
-      <yloc>336</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Merge join</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>INNER</join_type>
-    <keys_1>
-      <key>IDENTIFICADOR_BANCO</key>
-    </keys_1>
-    <keys_2>
-      <key>NUMERO-IDENTIFICADOR</key>
-    </keys_2>
-    <transform1>Sort rows</transform1>
-    <transform2>Sort rows 2</transform2>
-    <attributes/>
-    <GUI>
-      <xloc>992</xloc>
-      <yloc>512</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Merge join 2</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>RIGHT OUTER</join_type>
-    <keys_1>
-      <key>TITULO-DO-PROCESSO-BANCO</key>
-      <key>researcher_id</key>
-    </keys_1>
-    <keys_2>
-      <key>TITULO</key>
-      <key>id</key>
-    </keys_2>
-    <transform1>Sort rows 3</transform1>
-    <transform2>Sort rows 4</transform2>
-    <attributes/>
-    <GUI>
-      <xloc>1328</xloc>
-      <yloc>512</yloc>
-    </GUI>
-  </transform>
-  <transform>
     <name>LEITURA XML</name>
     <type>getXMLData</type>
     <description/>
@@ -256,7 +165,6 @@
     <addresultfile>N</addresultfile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
     <encoding>ISO-8859-1</encoding>
-    <extensionFieldName/>
     <fields>
       <field>
         <currency/>
@@ -410,29 +318,17 @@
       </field>
     </fields>
     <file>
-      <exclude_filemask/>
       <file_required>N</file_required>
-      <filemask/>
       <include_subfolders>N</include_subfolders>
       <name>${PROJECT_HOME}/datasets/lattes_xml/curriculos_xml/Teste/00131639579.xml</name>
     </file>
-    <hiddenFieldName/>
     <ignorecomments>N</ignorecomments>
     <include>N</include>
-    <include_field/>
-    <lastModificationTimeFieldName/>
     <limit>0</limit>
     <loopxpath>/CURRICULO-VITAE/PRODUCAO-TECNICA/DEMAIS-TIPOS-DE-PRODUCAO-TECNICA/CURSO-DE-CURTA-DURACAO-MINISTRADO</loopxpath>
     <namespaceaware>N</namespaceaware>
-    <pathFieldName/>
-    <prunePath/>
     <readurl>N</readurl>
-    <rootUriNameFieldName/>
     <rownum>N</rownum>
-    <rownum_field/>
-    <shortFileFieldName/>
-    <sizeFieldName/>
-    <uriNameFieldName/>
     <usetoken>N</usetoken>
     <validating>N</validating>
     <attributes/>
@@ -457,67 +353,180 @@
         <length>-2</length>
         <name>NUMERO-IDENTIFICADOR</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>TITULO</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>ANO</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>PAIS</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>IDIOMA</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>MEIO-DE-DIVULGACAO</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>HOME-PAGE-DO-TRABALHO</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>FLAG-RELEVANCIA</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>DOI</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>TITULO-INGLES</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
       <xloc>480</xloc>
+      <yloc>512</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Leitura dos XML</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <file>
+      <file_required>N</file_required>
+      <filemask>.*xml</filemask>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/datasets/lattes_xml/</name>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <filefield>N</filefield>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <rownum>N</rownum>
+    <attributes/>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>336</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Merge join</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <keys_1>
+      <key>IDENTIFICADOR_BANCO</key>
+    </keys_1>
+    <keys_2>
+      <key>NUMERO-IDENTIFICADOR</key>
+    </keys_2>
+    <transform1>Sort rows</transform1>
+    <transform2>SORT NUMERO-IDENTIFICADOR</transform2>
+    <attributes/>
+    <GUI>
+      <xloc>992</xloc>
+      <yloc>512</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Merge join 2</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>RIGHT OUTER</join_type>
+    <keys_1>
+      <key>TITULO-DO-PROCESSO-BANCO</key>
+      <key>researcher_id</key>
+    </keys_1>
+    <keys_2>
+      <key>TITULO</key>
+      <key>id</key>
+    </keys_2>
+    <transform1>Sort rows 3</transform1>
+    <transform2>Sort rows 4</transform2>
+    <attributes/>
+    <GUI>
+      <xloc>1328</xloc>
+      <yloc>512</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>SORT NUMERO-IDENTIFICADOR</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compress>N</compress>
+    <directory>${java.io.tmpdir}</directory>
+    <fields>
+      <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <name>NUMERO-IDENTIFICADOR</name>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <sort_prefix>out</sort_prefix>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
+    <attributes/>
+    <GUI>
+      <xloc>704</xloc>
       <yloc>512</yloc>
     </GUI>
   </transform>
@@ -682,40 +691,6 @@
     <GUI>
       <xloc>992</xloc>
       <yloc>352</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>SORT NUMERO-IDENTIFICADOR</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compress>N</compress>
-    <compress_variables/>
-    <directory>${java.io.tmpdir}</directory>
-    <fields>
-      <field>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <name>NUMERO-IDENTIFICADOR</name>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <free_memory/>
-    <sort_prefix>out</sort_prefix>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
-    <attributes/>
-    <GUI>
-      <xloc>704</xloc>
-      <yloc>512</yloc>
     </GUI>
   </transform>
   <transform>
@@ -903,14 +878,11 @@ FROM short_course_taught</sql>
     <only_when_have_rows>N</only_when_have_rows>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
     <partitioning_monthly>Y</partitioning_monthly>
-    <return_field/>
     <return_keys>N</return_keys>
     <schema>"public"</schema>
     <specify_fields>Y</specify_fields>
     <table>short_course_taught</table>
-    <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
     <truncate>N</truncate>

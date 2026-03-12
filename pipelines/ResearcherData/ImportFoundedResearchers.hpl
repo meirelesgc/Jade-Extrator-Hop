@@ -21,44 +21,14 @@
   </notepads>
   <order>
     <hop>
-      <from>Renomeando campos 2</from>
-      <to>Sort rows 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Listagem dos pesquisadores</from>
       <to>Renomeando campos 1</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Renomeando campos 1</from>
-      <to>Sort rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Select values 3</from>
       <to>Insert / update</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows</from>
-      <to>Merge join</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Merge join</from>
-      <to>Select values 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows 2</from>
-      <to>String operations</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>String operations</from>
-      <to>Merge join</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Leitura do CSV</from>
@@ -70,7 +40,106 @@
       <to>Renomeando campos 2</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Renomeando campos 2</from>
+      <to>Sort rows 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Renomeando campos 1</from>
+      <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>Merge join</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows 2</from>
+      <to>Merge join</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Merge join</from>
+      <to>Select values 3</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
+  <transform>
+    <name>Insert / update</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <commit>100</commit>
+    <connection>ApplicationDB</connection>
+    <lookup>
+      <key>
+        <condition>=</condition>
+        <field>researcher_id</field>
+        <name>researcher_id</name>
+      </key>
+      <schema>"public"</schema>
+      <table>foment</table>
+      <value>
+        <name>researcher_id</name>
+        <rename>researcher_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>modality_code</name>
+        <rename>modality_code</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>modality_name</name>
+        <rename>modality_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>call_title</name>
+        <rename>call_title</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>category_level_code</name>
+        <rename>category_level_code</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>funding_program_name</name>
+        <rename>funding_program_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>institute_name</name>
+        <rename>institute_name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>aid_quantity</name>
+        <rename>aid_quantity</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>scholarship_quantity</name>
+        <rename>scholarship_quantity</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <update_bypassed>N</update_bypassed>
+    <attributes/>
+    <GUI>
+      <xloc>1024</xloc>
+      <yloc>64</yloc>
+    </GUI>
+  </transform>
   <transform>
     <name>Leitura do CSV</name>
     <type>CSVInput</type>
@@ -310,13 +379,13 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>32</xloc>
+      <xloc>224</xloc>
       <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Tipos de bolsa validos</name>
-    <type>FilterRows</type>
+    <name>Listagem dos pesquisadores</name>
+    <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -325,140 +394,24 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compare>
-      <condition>
-        <conditions>
-          <condition>
-            <conditions>
-</conditions>
-            <function>=</function>
-            <leftvalue># Cod Modalidade</leftvalue>
-            <negated>N</negated>
-            <operator>-</operator>
-            <value>
-              <isnull>N</isnull>
-              <length>-1</length>
-              <name>constant</name>
-              <precision>-1</precision>
-              <text>PQ</text>
-              <type>String</type>
-            </value>
-          </condition>
-          <condition>
-            <conditions>
-</conditions>
-            <function>=</function>
-            <leftvalue># Cod Modalidade</leftvalue>
-            <negated>N</negated>
-            <operator>OR</operator>
-            <value>
-              <isnull>N</isnull>
-              <length>-1</length>
-              <name>constant</name>
-              <precision>-1</precision>
-              <text>DT</text>
-              <type>String</type>
-            </value>
-          </condition>
-        </conditions>
-        <function>=</function>
-        <leftvalue># Cod Modalidade</leftvalue>
-        <negated>N</negated>
-        <operator>-</operator>
-        <value>
-          <isnull>N</isnull>
-          <length>-1</length>
-          <name>constant</name>
-          <precision>-1</precision>
-          <text>PQ</text>
-          <type>String</type>
-        </value>
-      </condition>
-    </compare>
-    <attributes/>
-    <GUI>
-      <xloc>160</xloc>
-      <yloc>224</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Insert / update</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <commit>100</commit>
     <connection>ApplicationDB</connection>
-    <lookup>
-      <key>
-        <condition>=</condition>
-        <field>researcher_id</field>
-        <name>researcher_id</name>
-        <name2/>
-      </key>
-      <schema>"public"</schema>
-      <table>foment</table>
-      <value>
-        <name>researcher_id</name>
-        <rename>researcher_id</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>modality_code</name>
-        <rename>modality_code</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>modality_name</name>
-        <rename>modality_name</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>call_title</name>
-        <rename>call_title</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>category_level_code</name>
-        <rename>category_level_code</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>funding_program_name</name>
-        <rename>funding_program_name</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>institute_name</name>
-        <rename>institute_name</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>aid_quantity</name>
-        <rename>aid_quantity</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>scholarship_quantity</name>
-        <rename>scholarship_quantity</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <update_bypassed>N</update_bypassed>
+    <execute_each_row>N</execute_each_row>
+    <limit>0</limit>
+    <sql>SELECT 
+  r.id,
+  RPAD(r.lattes_id::text, 16, '0') AS lattes_id, r.name
+FROM researcher r;
+</sql>
+    <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>1024</xloc>
+      <xloc>96</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Merge join</name>
-    <type>MergeJoin</type>
+    <name>Renomeando campos 1</name>
+    <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -467,18 +420,30 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>INNER</join_type>
-    <keys_1>
-      <key>lattes_id</key>
-    </keys_1>
-    <keys_2>
-      <key>lattes_id</key>
-    </keys_2>
-    <transform1>String operations</transform1>
-    <transform2>Sort rows</transform2>
+    <fields>
+      <field>
+        <length>-2</length>
+        <name>lattes_id</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>id</name>
+        <precision>-2</precision>
+        <rename>researcher_id</rename>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>name</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
     <attributes/>
     <GUI>
-      <xloc>640</xloc>
+      <xloc>288</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
@@ -552,40 +517,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>320</xloc>
+      <xloc>512</xloc>
       <yloc>224</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Renomeando campos 1</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <length>-2</length>
-        <name>lattes_id</name>
-        <precision>-2</precision>
-        <rename/>
-      </field>
-      <field>
-        <length>-2</length>
-        <name>id</name>
-        <precision>-2</precision>
-        <rename>researcher_id</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>304</xloc>
-      <yloc>64</yloc>
     </GUI>
   </transform>
   <transform>
@@ -680,7 +613,7 @@
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>464</xloc>
+      <xloc>528</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
@@ -711,13 +644,13 @@
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>464</xloc>
+      <xloc>688</xloc>
       <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>String operations</name>
-    <type>StringOperations</type>
+    <name>Tipos de bolsa validos</name>
+    <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -726,30 +659,65 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>lattes_id</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>none</lower_upper>
-        <padding_type>right</padding_type>
-        <pad_char>0</pad_char>
-        <pad_len>16</pad_len>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-      </field>
-    </fields>
+    <compare>
+      <condition>
+        <conditions>
+          <condition>
+            <conditions>
+</conditions>
+            <function>=</function>
+            <leftvalue># Cod Modalidade</leftvalue>
+            <negated>N</negated>
+            <operator>-</operator>
+            <value>
+              <isnull>N</isnull>
+              <length>-1</length>
+              <name>constant</name>
+              <precision>-1</precision>
+              <text>PQ</text>
+              <type>String</type>
+            </value>
+          </condition>
+          <condition>
+            <conditions>
+</conditions>
+            <function>=</function>
+            <leftvalue># Cod Modalidade</leftvalue>
+            <negated>N</negated>
+            <operator>OR</operator>
+            <value>
+              <isnull>N</isnull>
+              <length>-1</length>
+              <name>constant</name>
+              <precision>-1</precision>
+              <text>DT</text>
+              <type>String</type>
+            </value>
+          </condition>
+        </conditions>
+        <function>=</function>
+        <leftvalue># Cod Modalidade</leftvalue>
+        <negated>N</negated>
+        <operator>-</operator>
+        <value>
+          <isnull>N</isnull>
+          <length>-1</length>
+          <name>constant</name>
+          <precision>-1</precision>
+          <text>PQ</text>
+          <type>String</type>
+        </value>
+      </condition>
+    </compare>
     <attributes/>
     <GUI>
-      <xloc>640</xloc>
+      <xloc>352</xloc>
       <yloc>224</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Listagem dos pesquisadores</name>
-    <type>TableInput</type>
+    <name>Merge join</name>
+    <type>MergeJoin</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -758,20 +726,18 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>ApplicationDB</connection>
-    <execute_each_row>N</execute_each_row>
-    <limit>0</limit>
-    <sql>SELECT 
-  r.id,
-  RPAD(r.lattes_id::text, 16, '0') AS lattes_id
-FROM researcher r
-LEFT JOIN foment s ON s.researcher_id = r.id 
-WHERE s.researcher_id IS NULL;
-</sql>
-    <variables_active>N</variables_active>
+    <join_type>LEFT OUTER</join_type>
+    <keys_1>
+      <key>lattes_id</key>
+    </keys_1>
+    <keys_2>
+      <key>lattes_id</key>
+    </keys_2>
+    <transform1>Sort rows</transform1>
+    <transform2>Sort rows 2</transform2>
     <attributes/>
     <GUI>
-      <xloc>96</xloc>
+      <xloc>688</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>

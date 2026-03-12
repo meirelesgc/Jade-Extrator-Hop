@@ -470,67 +470,56 @@
         <length>-2</length>
         <name>researcher _id</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>researcher_name</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>TITULO-DO-SOFTWARE</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>FINALIDADE</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>PLATAFORMA</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>AMBIENTE</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>DISPONIBILIDADE</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>INSTITUICAO-FINANCIADORA</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>NOME-COMPLETO</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>ANO</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <field>
         <length>-2</length>
         <name>REGISTRO-OU-PATENTE</name>
         <precision>-2</precision>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -972,14 +961,11 @@ FROM "public".software
     <only_when_have_rows>N</only_when_have_rows>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
     <partitioning_monthly>Y</partitioning_monthly>
-    <return_field/>
     <return_keys>N</return_keys>
     <schema>"public"</schema>
     <specify_fields>Y</specify_fields>
     <table>software</table>
-    <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
     <truncate>N</truncate>
