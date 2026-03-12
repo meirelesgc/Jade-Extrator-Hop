@@ -10,6 +10,9 @@
     "variables" : [ {
       "name" : "DATABASE_URL",
       "value" : "jdbc:postgresql://localhost:5432/barema?user=postgres&password=postgres"
+    }, {
+      "name" : "ADMIN_DATABASE_URL",
+      "value" : "jdbc:postgresql://localhost:5432/admin?user=postgres&password=postgres"
     } ]
   }
 }

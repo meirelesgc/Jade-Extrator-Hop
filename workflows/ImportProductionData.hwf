@@ -27,7 +27,7 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>112</xloc>
+      <xloc>96</xloc>
       <yloc>176</yloc>
       <attributes_hac/>
     </action>
