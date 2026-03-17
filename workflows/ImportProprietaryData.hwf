@@ -27,7 +27,7 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>64</xloc>
+      <xloc>32</xloc>
       <yloc>144</yloc>
       <attributes_hac/>
     </action>
@@ -41,8 +41,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/workflows/ProprietaryData/ImportAdminMapping.hwf</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>

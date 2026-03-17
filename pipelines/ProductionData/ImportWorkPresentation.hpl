@@ -184,6 +184,43 @@
     </GUI>
   </transform>
   <transform>
+    <name>Leitura dos XML</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <file>
+      <file_required>N</file_required>
+      <filemask>.*xml</filemask>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/datasets/lattes_xml/</name>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <filefield>N</filefield>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <rownum>N</rownum>
+    <attributes/>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>112</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>Merge join</name>
     <type>MergeJoin</type>
     <description/>
@@ -194,7 +231,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>RIGHT OUTER</join_type>
+    <join_type>INNER</join_type>
     <keys_1>
       <key>lattes_db</key>
     </keys_1>
@@ -248,147 +285,134 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <namespaceaware>N</namespaceaware>
-    <ignorecomments>N</ignorecomments>
-    <readurl>N</readurl>
-    <validating>N</validating>
-    <usetoken>N</usetoken>
+    <IsAFile>Y</IsAFile>
     <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <IsInFields>Y</IsInFields>
+    <XmlField>filename</XmlField>
+    <addresultfile>N</addresultfile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <rownum_field/>
     <encoding>ISO-8859-1</encoding>
-    <file>
-      <name>${PROJECT_HOME}/datasets/lattes_xml/4267103581435092.xml</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
     <fields>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>NUMERO-IDENTIFICADOR</name>
-        <xpath>/CURRICULO-VITAE/@NUMERO-IDENTIFICADOR</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>/CURRICULO-VITAE/@NUMERO-IDENTIFICADOR</xPath>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>TITULO</name>
-        <xpath>DADOS-BASICOS-DA-APRESENTACAO-DE-TRABALHO/@TITULO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DADOS-BASICOS-DA-APRESENTACAO-DE-TRABALHO/@TITULO</xPath>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>ANO</name>
-        <xpath>DADOS-BASICOS-DA-APRESENTACAO-DE-TRABALHO/@ANO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DADOS-BASICOS-DA-APRESENTACAO-DE-TRABALHO/@ANO</xPath>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>PAIS</name>
-        <xpath>DADOS-BASICOS-DA-APRESENTACAO-DE-TRABALHO/@PAIS</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DADOS-BASICOS-DA-APRESENTACAO-DE-TRABALHO/@PAIS</xPath>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>NATUREZA</name>
-        <xpath>DADOS-BASICOS-DA-APRESENTACAO-DE-TRABALHO/@NATUREZA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DADOS-BASICOS-DA-APRESENTACAO-DE-TRABALHO/@NATUREZA</xPath>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>NOME-DO-EVENTO</name>
-        <xpath>DETALHAMENTO-DA-APRESENTACAO-DE-TRABALHO/@NOME-DO-EVENTO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DETALHAMENTO-DA-APRESENTACAO-DE-TRABALHO/@NOME-DO-EVENTO</xPath>
       </field>
       <field>
-        <name>INSTITUICAO-PROMOTORA</name>
-        <xpath>DETALHAMENTO-DA-APRESENTACAO-DE-TRABALHO/@INSTITUICAO-PROMOTORA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
         <currency/>
         <decimal/>
+        <element_type>node</element_type>
+        <format/>
         <group/>
         <length>-1</length>
+        <name>INSTITUICAO-PROMOTORA</name>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DETALHAMENTO-DA-APRESENTACAO-DE-TRABALHO/@INSTITUICAO-PROMOTORA</xPath>
       </field>
     </fields>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/datasets/lattes_xml/4267103581435092.xml</name>
+    </file>
+    <ignorecomments>N</ignorecomments>
+    <include>N</include>
     <limit>0</limit>
     <loopxpath>/CURRICULO-VITAE/PRODUCAO-TECNICA/DEMAIS-TIPOS-DE-PRODUCAO-TECNICA/APRESENTACAO-DE-TRABALHO</loopxpath>
-    <IsInFields>Y</IsInFields>
-    <IsAFile>Y</IsAFile>
-    <XmlField>filename</XmlField>
-    <prunePath/>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
+    <namespaceaware>N</namespaceaware>
+    <readurl>N</readurl>
+    <rownum>N</rownum>
+    <usetoken>N</usetoken>
+    <validating>N</validating>
     <attributes/>
     <GUI>
       <xloc>464</xloc>
@@ -699,8 +723,13 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <add_columns>N</add_columns>
+    <always_drop_and_recreate>N</always_drop_and_recreate>
+    <auto_update_table_structure>N</auto_update_table_structure>
+    <change_column_types>N</change_column_types>
     <commit>1000</commit>
     <connection>ApplicationDB</connection>
+    <drop_columns>N</drop_columns>
     <fields>
       <field>
         <column_name>researcher_id</column_name>
@@ -746,45 +775,8 @@
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1664</xloc>
+      <xloc>1712</xloc>
       <yloc>240</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Leitura dos XML</name>
-    <type>GetFileNames</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <file>
-      <file_required>N</file_required>
-      <filemask>.*xml</filemask>
-      <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/datasets/lattes_xml/</name>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <filefield>N</filefield>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <rownum>N</rownum>
-    <attributes/>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>128</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
