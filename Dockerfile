@@ -2,8 +2,8 @@ FROM apache/hop:latest
 
 USER root
 
-COPY . /files/jade-extrator
+COPY --chown=hop:hop . /files/jade-extrator
 
-RUN chown -R hop:hop /files/jade-extrator
+RUN chmod -R u+rwX /files/jade-extrator
 
 USER hop

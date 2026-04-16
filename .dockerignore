@@ -1,2 +1,3 @@
 datasets/lattes_xml
 datasets/research_lines.csv
+*.xml
