@@ -31,16 +31,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values 3</from>
-      <to>Sort rows 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>ordenação</from>
-      <to>merge</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Select values 4</from>
       <to>Table output bibliographic_production_article</to>
       <enabled>Y</enabled>
@@ -66,36 +56,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Merge join</from>
-      <to>Value mapper</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Value mapper</from>
-      <to>Select values 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values BPA</from>
-      <to>Sort rows BPA</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Table bibliographic_production_article</from>
-      <to>Select values BPA</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows BPA</from>
-      <to>Merge join 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows bibliographic_production_id</from>
-      <to>Merge join 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Filter rows</from>
       <to>Select values 4</to>
       <enabled>Y</enabled>
@@ -106,7 +66,7 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>qualis 2017-2020</from>
+      <from>input revistas</from>
       <to>renomeando dados</to>
       <enabled>Y</enabled>
     </hop>
@@ -121,11 +81,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Merge join 3</from>
-      <to>If Null 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>If Null 2</from>
       <to>Filter rows</to>
       <enabled>Y</enabled>
@@ -136,48 +91,58 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter rows 2</from>
-      <to>Sort rows bibliographic_production_id</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 2</from>
-      <to>Dummy (do nothing)</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Leitura dos XML</from>
       <to>Read XML ARTICLE </to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>renomeando dados 2</from>
+      <from>Filtro de ano</from>
+      <to>Acima de 2020</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filtro de ano</from>
+      <to>Até 2020</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>ordenação</from>
+      <to>merge</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Merge join</from>
+      <to>Filtro de ano</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Acima de 2020</from>
+      <to>Select values 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Até 2020</from>
+      <to>Select values 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 3</from>
       <to>ordenação 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>ordenação 2</from>
-      <to>merge 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>qualis 2021-2024</from>
-      <to>renomeando dados 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows 3</from>
-      <to>Filtro 2020</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filtro 2020</from>
       <to>merge</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filtro 2020</from>
-      <to>merge 2</to>
+      <from>input revistas 2</from>
+      <to>renomeando dados 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>renomeando dados 2</from>
+      <to>ordenação 3</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -186,11 +151,90 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>Filter rows 2</from>
+      <to>If Null 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>ordenação 3</from>
+      <to>merge 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>merge 2</from>
-      <to>Filter rows 2</to>
+      <to>If Null 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>ordenação 2 2</from>
+      <to>merge 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows 2</from>
+      <to>Select values 5</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 5</from>
+      <to>ordenação 2 2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
+  <transform>
+    <name>Acima de 2020</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <length>-1</length>
+        <name>reference_period</name>
+        <nullif>2021-2025</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1024</xloc>
+      <yloc>144</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Até 2020</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <length>-1</length>
+        <name>reference_period</name>
+        <nullif>2017-2020</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1024</xloc>
+      <yloc>208</yloc>
+    </GUI>
+  </transform>
   <transform>
     <name>Dummy (Article already registered)</name>
     <type>Dummy</type>
@@ -204,25 +248,8 @@
     </partitioning>
     <attributes/>
     <GUI>
-      <xloc>1792</xloc>
-      <yloc>560</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Dummy (do nothing)</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-    <GUI>
-      <xloc>1584</xloc>
-      <yloc>80</yloc>
+      <xloc>2000</xloc>
+      <yloc>320</yloc>
     </GUI>
   </transform>
   <transform>
@@ -239,7 +266,15 @@
     <compare>
       <condition>
         <conditions>
+          <condition>
+            <conditions>
 </conditions>
+            <function>IS NOT NULL</function>
+            <leftvalue>id_db</leftvalue>
+            <negated>N</negated>
+            <operator>-</operator>
+          </condition>
+        </conditions>
         <function>IS NULL</function>
         <leftvalue>bibliographic_production_id_BPA</leftvalue>
         <negated>N</negated>
@@ -250,41 +285,12 @@
     <send_true_to>Select values 4</send_true_to>
     <attributes/>
     <GUI>
-      <xloc>1792</xloc>
-      <yloc>416</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Filter rows 2</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compare>
-      <condition>
-        <conditions>
-</conditions>
-        <function>IS NOT NULL</function>
-        <leftvalue>id_db</leftvalue>
-        <negated>N</negated>
-        <operator>-</operator>
-      </condition>
-    </compare>
-    <send_false_to>Dummy (do nothing)</send_false_to>
-    <send_true_to>Sort rows bibliographic_production_id</send_true_to>
-    <attributes/>
-    <GUI>
-      <xloc>1584</xloc>
+      <xloc>2000</xloc>
       <yloc>176</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Filtro 2020</name>
+    <name>Filtro de ano</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -305,18 +311,19 @@
         <value>
           <isnull>N</isnull>
           <length>-1</length>
+          <mask>#</mask>
           <name>constant</name>
-          <precision>-1</precision>
+          <precision>0</precision>
           <text>2020</text>
-          <type>String</type>
+          <type>Integer</type>
         </value>
       </condition>
     </compare>
-    <send_false_to>merge 2</send_false_to>
-    <send_true_to>merge</send_true_to>
+    <send_false_to>Acima de 2020</send_false_to>
+    <send_true_to>Até 2020</send_true_to>
     <attributes/>
     <GUI>
-      <xloc>1232</xloc>
+      <xloc>880</xloc>
       <yloc>176</yloc>
     </GUI>
   </transform>
@@ -374,8 +381,8 @@
 </valuetypes>
     <attributes/>
     <GUI>
-      <xloc>1664</xloc>
-      <yloc>416</yloc>
+      <xloc>1792</xloc>
+      <yloc>176</yloc>
     </GUI>
   </transform>
   <transform>
@@ -441,32 +448,6 @@
     <GUI>
       <xloc>688</xloc>
       <yloc>176</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Merge join 3</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>RIGHT OUTER</join_type>
-    <keys_1>
-      <key>bibliographic_production_id_BPA</key>
-    </keys_1>
-    <keys_2>
-      <key>bibliographic_production_id</key>
-    </keys_2>
-    <transform1>Sort rows BPA</transform1>
-    <transform2>Sort rows bibliographic_production_id</transform2>
-    <attributes/>
-    <GUI>
-      <xloc>1584</xloc>
-      <yloc>416</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1067,11 +1048,16 @@
         <name>ANO-DO-ARTIGO</name>
         <precision>-2</precision>
       </field>
+      <field>
+        <length>-2</length>
+        <name>reference_period</name>
+        <precision>-2</precision>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>896</xloc>
+      <xloc>1168</xloc>
       <yloc>176</yloc>
     </GUI>
   </transform>
@@ -1147,34 +1133,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1920</xloc>
-      <yloc>416</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Select values BPA</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <length>-2</length>
-        <name>bibliographic_production_id</name>
-        <precision>-2</precision>
-        <rename>bibliographic_production_id_BPA</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>1584</xloc>
-      <yloc>688</yloc>
+      <xloc>2128</xloc>
+      <yloc>176</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1269,99 +1229,6 @@
     <GUI>
       <xloc>688</xloc>
       <yloc>48</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Sort rows 3</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compress>N</compress>
-    <directory>${java.io.tmpdir}</directory>
-    <fields>
-      <field>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <name>ISSN</name>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
-    <attributes/>
-    <GUI>
-      <xloc>1024</xloc>
-      <yloc>176</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Sort rows BPA</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compress>N</compress>
-    <directory>${java.io.tmpdir}</directory>
-    <fields>
-      <field>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <name>bibliographic_production_id_BPA</name>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
-    <attributes/>
-    <GUI>
-      <xloc>1584</xloc>
-      <yloc>560</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Sort rows bibliographic_production_id</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compress>N</compress>
-    <directory>${java.io.tmpdir}</directory>
-    <fields>
-      <field>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <name>bibliographic_production_id</name>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
-    <attributes/>
-    <GUI>
-      <xloc>1584</xloc>
-      <yloc>272</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1468,42 +1335,15 @@
 	bp.title, 
 	r.name,
 	bp.year
-from 
-	bibliographic_production bp, 
-	researcher r 
-where 
-	bp.researcher_id = r.id and bp.type='ARTICLE'</sql>
+from  bibliographic_production bp
+left join researcher r on r.id = bp.researcher_id
+left join bibliographic_production_article bpa on bpa.bibliographic_production_id = bp.id
+where bp.type = 'ARTICLE' and bpa.id is null</sql>
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
       <xloc>352</xloc>
       <yloc>48</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Table bibliographic_production_article</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>ApplicationDB</connection>
-    <execute_each_row>N</execute_each_row>
-    <limit>0</limit>
-    <sql>SELECT
-  id
-, bibliographic_production_id
-FROM "public".bibliographic_production_article
-</sql>
-    <variables_active>N</variables_active>
-    <attributes/>
-    <GUI>
-      <xloc>1584</xloc>
-      <yloc>800</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1581,13 +1421,13 @@ FROM "public".bibliographic_production_article
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>2160</xloc>
-      <yloc>416</yloc>
+      <xloc>2368</xloc>
+      <yloc>176</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Value mapper</name>
-    <type>ValueMapper</type>
+    <name>input revistas</name>
+    <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1596,21 +1436,21 @@ FROM "public".bibliographic_production_article
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <field_to_use>TITULO-DO-PERIODICO-OU-REVISTA</field_to_use>
-    <fields>
-      <field>
-        <source_value>Sodebras</source_value>
-        <target_value>Revista Sodebras</target_value>
-      </field>
-      <field>
-        <source_value>Sodebrás</source_value>
-        <target_value>Revista Sodebras</target_value>
-      </field>
-    </fields>
+    <connection>ApplicationDB</connection>
+    <execute_each_row>N</execute_each_row>
+    <limit>0</limit>
+    <sql>SELECT
+  id
+, "name"
+, issn
+, qualis
+, reference_period
+FROM "public".periodical_magazine</sql>
+    <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>784</xloc>
-      <yloc>176</yloc>
+      <xloc>1360</xloc>
+      <yloc>528</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1627,42 +1467,18 @@ FROM "public".bibliographic_production_article
     <join_type>LEFT OUTER</join_type>
     <keys_1>
       <key>ISSN</key>
+      <key>reference_period</key>
     </keys_1>
     <keys_2>
       <key>issn_db</key>
+      <key>reference_period_db</key>
     </keys_2>
-    <transform1>Filtro 2020</transform1>
+    <transform1>ordenação 2</transform1>
     <transform2>ordenação</transform2>
     <attributes/>
     <GUI>
-      <xloc>1152</xloc>
-      <yloc>256</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>merge 2</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>LEFT OUTER</join_type>
-    <keys_1>
-      <key>ISSN</key>
-    </keys_1>
-    <keys_2>
-      <key>issn_db</key>
-    </keys_2>
-    <transform1>Filtro 2020</transform1>
-    <transform2>ordenação 2</transform2>
-    <attributes/>
-    <GUI>
-      <xloc>1312</xloc>
-      <yloc>256</yloc>
+      <xloc>1360</xloc>
+      <yloc>176</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1687,14 +1503,22 @@ FROM "public".bibliographic_production_article
         <name>issn_db</name>
         <presorted>N</presorted>
       </field>
+      <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <name>reference_period_db</name>
+        <presorted>N</presorted>
+      </field>
     </fields>
     <sort_prefix>srt</sort_prefix>
     <sort_size>1000000</sort_size>
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>1152</xloc>
-      <yloc>368</yloc>
+      <xloc>1360</xloc>
+      <yloc>304</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1716,7 +1540,15 @@ FROM "public".bibliographic_production_article
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>issn_db</name>
+        <name>ISSN</name>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <name>reference_period</name>
         <presorted>N</presorted>
       </field>
     </fields>
@@ -1725,64 +1557,8 @@ FROM "public".bibliographic_production_article
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>1312</xloc>
-      <yloc>368</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>qualis 2017-2020</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>ApplicationDB</connection>
-    <execute_each_row>N</execute_each_row>
-    <limit>0</limit>
-    <sql>SELECT
-  id
-, "name"
-, issn
-, qualis
-FROM "public".periodical_magazine
-WHERE periodical_magazine.reference_period = '2017-2020'</sql>
-    <variables_active>N</variables_active>
-    <attributes/>
-    <GUI>
-      <xloc>1152</xloc>
-      <yloc>592</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>qualis 2021-2024</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>ApplicationDB</connection>
-    <execute_each_row>N</execute_each_row>
-    <limit>0</limit>
-    <sql>SELECT
-  id
-, "name"
-, issn
-, qualis
-FROM "public".periodical_magazine
-WHERE periodical_magazine.reference_period = '2021-2024'</sql>
-    <variables_active>N</variables_active>
-    <attributes/>
-    <GUI>
-      <xloc>1312</xloc>
-      <yloc>592</yloc>
+      <xloc>1264</xloc>
+      <yloc>176</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1820,12 +1596,81 @@ WHERE periodical_magazine.reference_period = '2021-2024'</sql>
         <name>qualis</name>
         <precision>-2</precision>
       </field>
+      <field>
+        <length>-2</length>
+        <name>reference_period</name>
+        <precision>-2</precision>
+        <rename>reference_period_db</rename>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1152</xloc>
-      <yloc>480</yloc>
+      <xloc>1360</xloc>
+      <yloc>416</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>input revistas 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>ApplicationDB</connection>
+    <execute_each_row>N</execute_each_row>
+    <limit>0</limit>
+    <sql>SELECT
+  id
+, "name"
+, issn
+, qualis
+, reference_period
+FROM "public".periodical_magazine
+WHERE reference_period IS NULL</sql>
+    <variables_active>N</variables_active>
+    <attributes/>
+    <GUI>
+      <xloc>1632</xloc>
+      <yloc>528</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>ordenação 3</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compress>N</compress>
+    <compress_variables/>
+    <directory>${java.io.tmpdir}</directory>
+    <fields>
+      <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <name>issn_db</name>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <free_memory/>
+    <sort_prefix>srt</sort_prefix>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
+    <attributes/>
+    <GUI>
+      <xloc>1632</xloc>
+      <yloc>304</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1863,12 +1708,130 @@ WHERE periodical_magazine.reference_period = '2021-2024'</sql>
         <name>qualis</name>
         <precision>-2</precision>
       </field>
+      <field>
+        <length>-2</length>
+        <name>reference_period</name>
+        <precision>-2</precision>
+        <rename>reference_period_db</rename>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1312</xloc>
-      <yloc>480</yloc>
+      <xloc>1632</xloc>
+      <yloc>416</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Filter rows 2</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compare>
+      <condition>
+        <conditions>
+</conditions>
+        <function>IS NOT NULL</function>
+        <leftvalue>id_db</leftvalue>
+        <negated>N</negated>
+        <operator>-</operator>
+      </condition>
+    </compare>
+    <send_false_to>Select values 5</send_false_to>
+    <send_true_to>If Null 2</send_true_to>
+    <attributes/>
+    <GUI>
+      <xloc>1456</xloc>
+      <yloc>176</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>merge 2</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>LEFT OUTER</join_type>
+    <keys_1>
+      <key>ISSN</key>
+    </keys_1>
+    <keys_2>
+      <key>issn_db</key>
+    </keys_2>
+    <transform1>ordenação 2 2</transform1>
+    <transform2>ordenação 3</transform2>
+    <attributes/>
+    <GUI>
+      <xloc>1632</xloc>
+      <yloc>240</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>ordenação 2 2</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compress>N</compress>
+    <compress_variables/>
+    <directory>${java.io.tmpdir}</directory>
+    <fields>
+      <field>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <name>ISSN</name>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <free_memory/>
+    <sort_prefix>srt</sort_prefix>
+    <sort_size>1000000</sort_size>
+    <unique_rows>N</unique_rows>
+    <attributes/>
+    <GUI>
+      <xloc>1536</xloc>
+      <yloc>240</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values 5</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <remove>
+        <name>id_db</name>
+      </remove>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1456</xloc>
+      <yloc>240</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

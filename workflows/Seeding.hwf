@@ -43,8 +43,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/pipelines/Seeding/ImportCountry.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -71,8 +69,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/pipelines/Seeding/ImportState.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -99,8 +95,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/pipelines/Seeding/ImportJCR.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -127,8 +121,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/pipelines/Seeding/ImportQualis.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -155,8 +147,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/pipelines/Seeding/ImportGroups.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -183,8 +173,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/pipelines/Seeding/ImportResearchLines.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -206,23 +194,14 @@
       <attributes/>
       <addfilenameresult>Y</addfilenameresult>
       <date_time_added>N</date_time_added>
-      <dest_fieldname/>
       <file_appended>N</file_appended>
       <headers>
 </headers>
       <ignore_ssl>N</ignore_ssl>
-      <non_proxy_hosts/>
       <password>Encrypted </password>
-      <proxy_host/>
-      <proxy_port/>
       <run_every_row>N</run_every_row>
       <targetfilename>${PROJECT_HOME}/datasets/research_lines.csv</targetfilename>
-      <targetfilename_extension/>
-      <upload_fieldname/>
-      <uploadfilename/>
       <url>http://ftp.cnpq.br/pub/Gestao_BI/DGP/Linhas%20de%20Pesquisa/Censo%202023%20linhas%20de%20pesquisa.csv</url>
-      <url_fieldname/>
-      <username/>
       <parallel>N</parallel>
       <xloc>640</xloc>
       <yloc>224</yloc>

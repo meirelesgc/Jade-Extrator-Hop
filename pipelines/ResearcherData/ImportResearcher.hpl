@@ -117,11 +117,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>String operations 3</from>
-      <to>Sort rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Filter rows</from>
       <to>Sort Researcher  by City</to>
       <enabled>Y</enabled>
@@ -214,6 +209,11 @@
     <hop>
       <from>Leitura dos XML</from>
       <to>Read XML Researcher</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>String operations 3</from>
+      <to>Sort rows</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -371,7 +371,7 @@
     <send_true_to>change </send_true_to>
     <attributes/>
     <GUI>
-      <xloc>1008</xloc>
+      <xloc>992</xloc>
       <yloc>48</yloc>
     </GUI>
   </transform>
@@ -442,7 +442,7 @@
     <attributes/>
     <GUI>
       <xloc>32</xloc>
-      <yloc>480</yloc>
+      <yloc>544</yloc>
     </GUI>
   </transform>
   <transform>
@@ -508,15 +508,15 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>RIGHT OUTER</join_type>
+    <join_type>LEFT OUTER</join_type>
     <keys_1>
-      <key>researcher_name</key>
+      <key>NUMERO-IDENTIFICADOR</key>
     </keys_1>
     <keys_2>
-      <key>NOME</key>
+      <key>lattes_id</key>
     </keys_2>
-    <transform1>Sort researcher </transform1>
-    <transform2>Sort rows</transform2>
+    <transform1>Sort rows</transform1>
+    <transform2>Sort researcher </transform2>
     <attributes/>
     <GUI>
       <xloc>624</xloc>
@@ -740,7 +740,7 @@
     <attributes/>
     <GUI>
       <xloc>208</xloc>
-      <yloc>480</yloc>
+      <yloc>544</yloc>
     </GUI>
   </transform>
   <transform>
@@ -820,7 +820,7 @@
     <attributes/>
     <GUI>
       <xloc>416</xloc>
-      <yloc>480</yloc>
+      <yloc>544</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1137,10 +1137,11 @@
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>researcher_name</name>
+        <name>lattes_id</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_prefix>srt</sort_prefix>
     <sort_size>1000000</sort_size>
     <unique_rows>N</unique_rows>
     <attributes/>
@@ -1168,16 +1169,17 @@
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
-        <name>NOME</name>
+        <name>NUMERO-IDENTIFICADOR</name>
         <presorted>N</presorted>
       </field>
     </fields>
+    <sort_prefix>srt</sort_prefix>
     <sort_size>1000000</sort_size>
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
       <xloc>624</xloc>
-      <yloc>384</yloc>
+      <yloc>400</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1241,7 +1243,7 @@
     <attributes/>
     <GUI>
       <xloc>624</xloc>
-      <yloc>480</yloc>
+      <yloc>544</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1288,7 +1290,7 @@ FROM "public".city
     <always_drop_and_recreate>N</always_drop_and_recreate>
     <auto_update_table_structure>N</auto_update_table_structure>
     <change_column_types>N</change_column_types>
-    <commit>1</commit>
+    <commit>100</commit>
     <connection>ApplicationDB</connection>
     <drop_columns>N</drop_columns>
     <fields>
@@ -1341,18 +1343,15 @@ FROM "public".city
     <only_when_have_rows>N</only_when_have_rows>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
     <partitioning_monthly>Y</partitioning_monthly>
-    <return_field/>
     <return_keys>N</return_keys>
     <schema>public</schema>
     <specify_fields>Y</specify_fields>
     <table>researcher</table>
-    <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
     <truncate>N</truncate>
-    <use_batch>N</use_batch>
+    <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
       <xloc>2080</xloc>
@@ -1411,9 +1410,8 @@ FROM "public".institution
   id
 , "name"
 , lattes_id
-,"abstract"
-FROM "public".researcher
-</sql>
+, "abstract"
+FROM "public".researcher</sql>
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
@@ -1435,13 +1433,11 @@ FROM "public".researcher
     <commit>100</commit>
     <connection>ApplicationDB</connection>
     <error_ignored>N</error_ignored>
-    <ignore_flag_field/>
     <lookup>
       <key>
         <condition>=</condition>
         <field>id</field>
         <name>researcher _id</name>
-        <name2/>
       </key>
       <schema>"public"</schema>
       <table>researcher</table>
@@ -1471,7 +1467,7 @@ FROM "public".researcher
       </value>
     </lookup>
     <skip_lookup>N</skip_lookup>
-    <use_batch>N</use_batch>
+    <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
       <xloc>2096</xloc>
@@ -1613,7 +1609,7 @@ FROM "public".researcher
     <name>format date and select fields to input </name>
     <type>SelectValues</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -1625,79 +1621,10 @@ FROM "public".researcher
         <date_format_lenient>N</date_format_lenient>
         <length>-2</length>
         <lenient_string_to_number>N</lenient_string_to_number>
-        <name>city_id</name>
-        <precision>-2</precision>
-        <rename>city_id</rename>
-        <storage_type/>
-        <type>None</type>
-      </meta>
-      <meta>
-        <date_format_lenient>N</date_format_lenient>
-        <length>-2</length>
-        <lenient_string_to_number>N</lenient_string_to_number>
-        <name>country_id</name>
-        <precision>-2</precision>
-        <rename>country_id</rename>
-        <storage_type/>
-        <type>None</type>
-      </meta>
-      <meta>
-        <date_format_lenient>N</date_format_lenient>
-        <length>-2</length>
-        <lenient_string_to_number>N</lenient_string_to_number>
-        <name>NOME</name>
-        <precision>-2</precision>
-        <rename>name</rename>
-        <storage_type/>
-        <type>None</type>
-      </meta>
-      <meta>
-        <date_format_lenient>N</date_format_lenient>
-        <length>-2</length>
-        <lenient_string_to_number>N</lenient_string_to_number>
-        <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
-        <precision>-2</precision>
-        <rename>citations</rename>
-        <storage_type/>
-        <type>None</type>
-      </meta>
-      <meta>
-        <date_format_lenient>N</date_format_lenient>
-        <length>-2</length>
-        <lenient_string_to_number>N</lenient_string_to_number>
-        <name>RESUMO</name>
-        <precision>-2</precision>
-        <rename> abstract</rename>
-        <storage_type/>
-        <type>None</type>
-      </meta>
-      <meta>
-        <date_format_lenient>N</date_format_lenient>
-        <length>-2</length>
-        <lenient_string_to_number>N</lenient_string_to_number>
-        <name>RESUMO-EN</name>
-        <precision>-2</precision>
-        <rename>abstract_en</rename>
-        <storage_type/>
-        <type>None</type>
-      </meta>
-      <meta>
-        <date_format_lenient>N</date_format_lenient>
-        <length>-2</length>
-        <lenient_string_to_number>N</lenient_string_to_number>
-        <name>OUTRAS-INFORMACOES-RELEVANTES</name>
-        <precision>-2</precision>
-        <rename> other_information</rename>
-        <storage_type/>
-        <type>None</type>
-      </meta>
-      <meta>
-        <date_format_lenient>N</date_format_lenient>
-        <length>-2</length>
-        <lenient_string_to_number>N</lenient_string_to_number>
         <name>NUMERO-IDENTIFICADOR</name>
         <precision>-2</precision>
         <rename> lattes_id</rename>
+        <roundingType>half_even</roundingType>
         <storage_type/>
         <type>String</type>
       </meta>
@@ -1709,8 +1636,86 @@ FROM "public".researcher
         <name>last_update</name>
         <precision>-2</precision>
         <rename>last_update</rename>
+        <roundingType>half_even</roundingType>
         <storage_type/>
         <type>Date</type>
+      </meta>
+      <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>city_id</name>
+        <precision>-2</precision>
+        <rename>city_id</rename>
+        <roundingType>half_even</roundingType>
+        <storage_type/>
+        <type>None</type>
+      </meta>
+      <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>country_id</name>
+        <precision>-2</precision>
+        <rename>country_id</rename>
+        <roundingType>half_even</roundingType>
+        <storage_type/>
+        <type>None</type>
+      </meta>
+      <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>NOME</name>
+        <precision>-2</precision>
+        <rename>name</rename>
+        <roundingType>half_even</roundingType>
+        <storage_type/>
+        <type>None</type>
+      </meta>
+      <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <precision>-2</precision>
+        <rename>citations</rename>
+        <roundingType>half_even</roundingType>
+        <storage_type/>
+        <type>None</type>
+      </meta>
+      <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>RESUMO</name>
+        <precision>-2</precision>
+        <rename> abstract</rename>
+        <roundingType>half_even</roundingType>
+        <storage_type/>
+        <type>None</type>
+      </meta>
+      <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>RESUMO-EN</name>
+        <precision>-2</precision>
+        <rename>abstract_en</rename>
+        <roundingType>half_even</roundingType>
+        <storage_type/>
+        <type>None</type>
+      </meta>
+      <meta>
+        <date_format_lenient>N</date_format_lenient>
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <precision>-2</precision>
+        <rename> other_information</rename>
+        <roundingType>half_even</roundingType>
+        <storage_type/>
+        <type>None</type>
       </meta>
       <meta>
         <date_format_lenient>N</date_format_lenient>
@@ -1719,6 +1724,7 @@ FROM "public".researcher
         <name> Institution_id</name>
         <precision>-2</precision>
         <rename> Institution_id</rename>
+        <roundingType>half_even</roundingType>
         <storage_type/>
         <type>String</type>
       </meta>
@@ -1799,11 +1805,23 @@ FROM "public".researcher
     </partitioning>
     <attributes/>
     <GUI>
-      <xloc>1008</xloc>
-      <yloc>192</yloc>
+      <xloc>992</xloc>
+      <yloc>176</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
+    <error>
+      <source_transform>Table Insert  Researcher</source_transform>
+      <target_transform/>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename/>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors/>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
   </transform_error_handling>
   <attributes/>
 </pipeline>

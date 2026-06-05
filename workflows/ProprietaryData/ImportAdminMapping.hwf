@@ -43,8 +43,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/pipelines/ProprietaryData/ImportInstitution.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -71,8 +69,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/pipelines/ProprietaryData/ImportResearcher.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -94,9 +90,10 @@
       <attributes/>
       <connection>ApplicationDB</connection>
       <sendOneStatement>N</sendOneStatement>
-      <sql>DELETE FROM graduate_program_researcher;
+      <sql>DELETE FROM research_lines_programs;
+DELETE FROM research_lines;
+DELETE FROM graduate_program_researcher;
 DELETE FROM graduate_program;</sql>
-      <sqlfilename/>
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
@@ -116,8 +113,6 @@ DELETE FROM graduate_program;</sql>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/pipelines/ProprietaryData/ImportGraduateProgram.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -144,8 +139,6 @@ DELETE FROM graduate_program;</sql>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/pipelines/ProprietaryData/ImportGraduateProgramResearcher.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>

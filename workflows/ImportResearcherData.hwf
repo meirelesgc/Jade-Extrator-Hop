@@ -27,7 +27,7 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>144</xloc>
+      <xloc>80</xloc>
       <yloc>256</yloc>
       <attributes_hac/>
     </action>
@@ -79,7 +79,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>448</xloc>
+      <xloc>496</xloc>
       <yloc>256</yloc>
       <attributes_hac/>
     </action>
@@ -105,7 +105,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>624</xloc>
+      <xloc>736</xloc>
       <yloc>256</yloc>
       <attributes_hac/>
     </action>
@@ -131,7 +131,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>624</xloc>
+      <xloc>736</xloc>
       <yloc>416</yloc>
       <attributes_hac/>
     </action>
@@ -157,7 +157,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>448</xloc>
+      <xloc>496</xloc>
       <yloc>416</yloc>
       <attributes_hac/>
     </action>
@@ -173,8 +173,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/pipelines/ResearcherData/ImportFoundedResearchers.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>

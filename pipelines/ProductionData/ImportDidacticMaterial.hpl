@@ -26,11 +26,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get rows files xml</from>
-      <to>Read XML Participação em projeto</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
       <from>Select values 2</from>
       <to>Sort rows</to>
       <enabled>Y</enabled>
@@ -114,8 +109,8 @@
     </partitioning>
     <attributes/>
     <GUI>
-      <xloc>1824</xloc>
-      <yloc>992</yloc>
+      <xloc>1072</xloc>
+      <yloc>496</yloc>
     </GUI>
   </transform>
   <transform>
@@ -148,6 +143,14 @@
             <negated>N</negated>
             <operator>AND</operator>
           </condition>
+          <condition>
+            <conditions>
+</conditions>
+            <function>IS NOT NULL</function>
+            <leftvalue>researcher_id</leftvalue>
+            <negated>N</negated>
+            <operator>AND</operator>
+          </condition>
         </conditions>
         <function>IS NULL</function>
         <leftvalue>title</leftvalue>
@@ -159,33 +162,45 @@
     <send_true_to>Select values 3</send_true_to>
     <attributes/>
     <GUI>
-      <xloc>1824</xloc>
-      <yloc>1104</yloc>
+      <xloc>1072</xloc>
+      <yloc>608</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Get rows files xml</name>
-    <type>RowsFromResult</type>
+    <name>Leitura dos XML</name>
+    <type>GetFileNames</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fields>
-      <field>
-        <name>filename</name>
-        <type>None</type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <file>
+      <file_required>N</file_required>
+      <filemask>.*xml</filemask>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/datasets/lattes_xml/</name>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <filefield>N</filefield>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <rownum>N</rownum>
     <attributes/>
     <GUI>
-      <xloc>624</xloc>
-      <yloc>1104</yloc>
+      <xloc>288</xloc>
+      <yloc>528</yloc>
     </GUI>
   </transform>
   <transform>
@@ -210,8 +225,8 @@
     <transform2>Sort rows 2</transform2>
     <attributes/>
     <GUI>
-      <xloc>1440</xloc>
-      <yloc>1104</yloc>
+      <xloc>688</xloc>
+      <yloc>608</yloc>
     </GUI>
   </transform>
   <transform>
@@ -236,8 +251,8 @@
     <transform2>Sort rows 3 2</transform2>
     <attributes/>
     <GUI>
-      <xloc>1680</xloc>
-      <yloc>1104</yloc>
+      <xloc>928</xloc>
+      <yloc>608</yloc>
     </GUI>
   </transform>
   <transform>
@@ -251,136 +266,123 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <namespaceaware>N</namespaceaware>
-    <ignorecomments>N</ignorecomments>
-    <readurl>N</readurl>
-    <validating>N</validating>
-    <usetoken>N</usetoken>
+    <IsAFile>Y</IsAFile>
     <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <IsInFields>Y</IsInFields>
+    <XmlField>filename</XmlField>
+    <addresultfile>N</addresultfile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <rownum_field/>
     <encoding>ISO-8859-1</encoding>
-    <file>
-      <name>${PROJECT_HOME}/datasets/lattes_xml/3513942129328330.xml</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
     <fields>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>NUMERO-IDENTIFICADOR</name>
-        <xpath>/CURRICULO-VITAE/@NUMERO-IDENTIFICADOR</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>/CURRICULO-VITAE/@NUMERO-IDENTIFICADOR</xPath>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>TITULO</name>
-        <xpath>DADOS-BASICOS-DO-MATERIAL-DIDATICO-OU-INSTRUCIONAL/@TITULO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DADOS-BASICOS-DO-MATERIAL-DIDATICO-OU-INSTRUCIONAL/@TITULO</xPath>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>PAIS</name>
-        <xpath>DADOS-BASICOS-DO-MATERIAL-DIDATICO-OU-INSTRUCIONAL/@PAIS</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DADOS-BASICOS-DO-MATERIAL-DIDATICO-OU-INSTRUCIONAL/@PAIS</xPath>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>ANO</name>
-        <xpath>DADOS-BASICOS-DO-MATERIAL-DIDATICO-OU-INSTRUCIONAL/@ANO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DADOS-BASICOS-DO-MATERIAL-DIDATICO-OU-INSTRUCIONAL/@ANO</xPath>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <element_type>node</element_type>
+        <format/>
+        <group/>
+        <length>-1</length>
         <name>NATUREZA</name>
-        <xpath>DADOS-BASICOS-DO-MATERIAL-DIDATICO-OU-INSTRUCIONAL/@NATUREZA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DADOS-BASICOS-DO-MATERIAL-DIDATICO-OU-INSTRUCIONAL/@NATUREZA</xPath>
       </field>
       <field>
-        <name>FINALIDADE</name>
-        <xpath>DETALHAMENTO-DO-MATERIAL-DIDATICO-OU-INSTRUCIONAL/@FINALIDADE</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
         <currency/>
         <decimal/>
+        <element_type>node</element_type>
+        <format/>
         <group/>
         <length>-1</length>
+        <name>FINALIDADE</name>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
         <repeat>N</repeat>
+        <result_type>valueof</result_type>
+        <trim_type>none</trim_type>
+        <type>None</type>
+        <xPath>DETALHAMENTO-DO-MATERIAL-DIDATICO-OU-INSTRUCIONAL/@FINALIDADE</xPath>
       </field>
     </fields>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/datasets/lattes_xml/3513942129328330.xml</name>
+    </file>
+    <ignorecomments>N</ignorecomments>
+    <include>N</include>
     <limit>0</limit>
     <loopxpath>/CURRICULO-VITAE/PRODUCAO-TECNICA/DEMAIS-TIPOS-DE-PRODUCAO-TECNICA/DESENVOLVIMENTO-DE-MATERIAL-DIDATICO-OU-INSTRUCIONAL</loopxpath>
-    <IsInFields>Y</IsInFields>
-    <IsAFile>Y</IsAFile>
-    <XmlField>filename</XmlField>
-    <prunePath/>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
+    <namespaceaware>N</namespaceaware>
+    <readurl>N</readurl>
+    <rownum>N</rownum>
+    <usetoken>N</usetoken>
+    <validating>N</validating>
     <attributes/>
     <GUI>
-      <xloc>976</xloc>
-      <yloc>1104</yloc>
+      <xloc>224</xloc>
+      <yloc>608</yloc>
     </GUI>
   </transform>
   <transform>
@@ -429,8 +431,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1168</xloc>
-      <yloc>1104</yloc>
+      <xloc>416</xloc>
+      <yloc>608</yloc>
     </GUI>
   </transform>
   <transform>
@@ -460,8 +462,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1440</xloc>
-      <yloc>928</yloc>
+      <xloc>688</xloc>
+      <yloc>432</yloc>
     </GUI>
   </transform>
   <transform>
@@ -516,8 +518,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1952</xloc>
-      <yloc>1104</yloc>
+      <xloc>1200</xloc>
+      <yloc>608</yloc>
     </GUI>
   </transform>
   <transform>
@@ -547,8 +549,8 @@
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>1440</xloc>
-      <yloc>1008</yloc>
+      <xloc>688</xloc>
+      <yloc>512</yloc>
     </GUI>
   </transform>
   <transform>
@@ -578,8 +580,8 @@
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>1312</xloc>
-      <yloc>1104</yloc>
+      <xloc>560</xloc>
+      <yloc>608</yloc>
     </GUI>
   </transform>
   <transform>
@@ -617,8 +619,8 @@
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>1680</xloc>
-      <yloc>992</yloc>
+      <xloc>928</xloc>
+      <yloc>496</yloc>
     </GUI>
   </transform>
   <transform>
@@ -656,8 +658,8 @@
     <unique_rows>N</unique_rows>
     <attributes/>
     <GUI>
-      <xloc>1552</xloc>
-      <yloc>1104</yloc>
+      <xloc>800</xloc>
+      <yloc>608</yloc>
     </GUI>
   </transform>
   <transform>
@@ -678,8 +680,8 @@
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>1440</xloc>
-      <yloc>848</yloc>
+      <xloc>688</xloc>
+      <yloc>352</yloc>
     </GUI>
   </transform>
   <transform>
@@ -700,8 +702,8 @@
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>1680</xloc>
-      <yloc>896</yloc>
+      <xloc>928</xloc>
+      <yloc>400</yloc>
     </GUI>
   </transform>
   <transform>
@@ -715,8 +717,13 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <add_columns>N</add_columns>
+    <always_drop_and_recreate>N</always_drop_and_recreate>
+    <auto_update_table_structure>N</auto_update_table_structure>
+    <change_column_types>N</change_column_types>
     <commit>1000</commit>
     <connection>ApplicationDB</connection>
+    <drop_columns>N</drop_columns>
     <fields>
       <field>
         <column_name>researcher_id</column_name>
@@ -758,45 +765,8 @@
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>2096</xloc>
-      <yloc>1104</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Leitura dos XML</name>
-    <type>GetFileNames</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <file>
-      <file_required>N</file_required>
-      <filemask>.*xml</filemask>
-      <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/datasets/lattes_xml/</name>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <filefield>N</filefield>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <rownum>N</rownum>
-    <attributes/>
-    <GUI>
-      <xloc>1040</xloc>
-      <yloc>1024</yloc>
+      <xloc>1344</xloc>
+      <yloc>608</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
