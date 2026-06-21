@@ -292,7 +292,7 @@
     <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
     <rownum_field/>
-    <encoding>UTF-8</encoding>
+    <encoding>ISO-8859-1</encoding>
     <file>
       <name>${PROJECT_HOME}/datasets/lattes_xml/Teste/Lynn Rosalina Gama Alves.xml</name>
       <filemask/>

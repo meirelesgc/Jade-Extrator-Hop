@@ -843,7 +843,7 @@
     <XmlField>filename</XmlField>
     <addresultfile>N</addresultfile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <encoding>UTF-8</encoding>
+    <encoding>ISO-8859-1</encoding>
     <fields>
       <field>
         <currency/>
@@ -977,7 +977,7 @@
     <XmlField>filename</XmlField>
     <addresultfile>N</addresultfile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <encoding>UTF-8</encoding>
+    <encoding>ISO-8859-1</encoding>
     <fields>
       <field>
         <currency/>
@@ -1111,7 +1111,7 @@
     <XmlField>filename</XmlField>
     <addresultfile>N</addresultfile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <encoding>UTF-8</encoding>
+    <encoding>ISO-8859-1</encoding>
     <fields>
       <field>
         <currency/>
@@ -1245,7 +1245,7 @@
     <XmlField>filename</XmlField>
     <addresultfile>N</addresultfile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <encoding>UTF-8</encoding>
+    <encoding>ISO-8859-1</encoding>
     <fields>
       <field>
         <currency/>
@@ -1379,7 +1379,7 @@
     <XmlField>filename</XmlField>
     <addresultfile>N</addresultfile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <encoding>UTF-8</encoding>
+    <encoding>ISO-8859-1</encoding>
     <fields>
       <field>
         <currency/>
@@ -1513,7 +1513,7 @@
     <XmlField>filename</XmlField>
     <addresultfile>N</addresultfile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <encoding>UTF-8</encoding>
+    <encoding>ISO-8859-1</encoding>
     <fields>
       <field>
         <currency/>
@@ -1647,7 +1647,7 @@
     <XmlField>filename</XmlField>
     <addresultfile>N</addresultfile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <encoding>UTF-8</encoding>
+    <encoding>ISO-8859-1</encoding>
     <fields>
       <field>
         <currency/>
@@ -1781,7 +1781,7 @@
     <XmlField>filename</XmlField>
     <addresultfile>N</addresultfile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <encoding>UTF-8</encoding>
+    <encoding>ISO-8859-1</encoding>
     <fields>
       <field>
         <currency/>

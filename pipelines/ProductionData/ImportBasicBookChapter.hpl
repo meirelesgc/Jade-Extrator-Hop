@@ -532,7 +532,7 @@
     <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
     <rownum_field/>
-    <encoding>UTF-8</encoding>
+    <encoding>ISO-8859-1</encoding>
     <file>
       <name>${PROJECT_HOME}/datasets/lattes_xml/curriculos_xml/Teste/00131639579.xml</name>
       <filemask/>
@@ -915,7 +915,7 @@
     <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
     <doNotFailIfNoFile>Y</doNotFailIfNoFile>
     <rownum_field/>
-    <encoding>UTF-8</encoding>
+    <encoding>ISO-8859-1</encoding>
     <file>
       <name>${PROJECT_HOME}/datasets/lattes_xml/Teste/88185575568.xml</name>
       <filemask/>

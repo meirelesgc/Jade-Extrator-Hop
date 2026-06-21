@@ -86,7 +86,7 @@
     <add_filename_result>N</add_filename_result>
     <parallel>N</parallel>
     <newline_possible>N</newline_possible>
-    <encoding>UTF-8</encoding>
+    <encoding>ISO-8859-1</encoding>
     <fields>
       <field>
         <name>﻿name</name>
