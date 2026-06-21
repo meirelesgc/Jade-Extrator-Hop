@@ -25,7 +25,7 @@
       <description/>
       <type>SPECIAL</type>
       <attributes/>
-      <xloc>48</xloc>
+      <xloc>16</xloc>
       <yloc>144</yloc>
       <parallel>N</parallel>
       <attributes_hac/>
@@ -268,13 +268,6 @@ DO UPDATE SET
   </actions>
   <hops>
     <hop>
-      <from>Start</from>
-      <to>ImportBasicData.hwf</to>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>ImportBasicData.hwf</from>
       <to>ImportExpertiseData.hwf</to>
       <evaluation>Y</evaluation>
@@ -335,6 +328,13 @@ DO UPDATE SET
       <to>SQL - Log 5</to>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Start</from>
+      <to>ImportBasicData.hwf</to>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
       <enabled>Y</enabled>
     </hop>
   </hops>

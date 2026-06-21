@@ -8,11 +8,14 @@
   "parentProjectName" : "default",
   "config" : {
     "variables" : [ {
-      "name" : "DATABASE_URL",
-      "value" : "jdbc:postgresql://localhost:5432/postgres?user=postgres&password=postgres"
-    }, {
       "name" : "ADMIN_DATABASE_URL",
-      "value" : "jdbc:postgresql://localhost:5432/simcc_admin?user=postgres&password=postgres"
-    } ]
+      "value" : "jdbc:postgresql://db:5432/conectee_admin?user=postgres&password=postgres",
+      "description" : ""
+    },
+    {
+      "name" : "DATABASE_URL",
+      "value" : "jdbc:postgresql://db:5432/conectee?user=postgres&password=postgres",
+      "description" : ""
+    }]
   }
 }
