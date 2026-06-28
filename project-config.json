@@ -9,13 +9,10 @@
   "config" : {
     "variables" : [ {
       "name" : "ADMIN_DATABASE_URL",
-      "value" : "jdbc:postgresql://db:5432/conectee_admin?user=postgres&password=postgres",
-      "description" : ""
-    },
-    {
+      "value" : "jdbc:postgresql://localhost:5432/db_admin?user=postgres&password=postgres"
+    }, {
       "name" : "DATABASE_URL",
-      "value" : "jdbc:postgresql://db:5432/conectee?user=postgres&password=postgres",
-      "description" : ""
-    }]
+      "value" : "jdbc:postgresql://localhost:5432/db?user=postgres&password=postgres"
+    } ]
   }
 }
