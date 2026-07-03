@@ -139,37 +139,6 @@
     <attributes/>
   </transform>
   <transform>
-    <type>GroupBy</type>
-    <name>Group by</name>
-    <all_rows>N</all_rows>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>grp</prefix>
-    <ignore_aggregate>N</ignore_aggregate>
-    <group>
-      <field>
-        <name> Institution_name</name>
-      </field>
-      <field>
-        <name> Institution_id</name>
-      </field>
-    </group>
-    <fields/>
-    <add_linenr>N</add_linenr>
-    <give_back_row>N</give_back_row>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>1504</xloc>
-      <yloc>208</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
     <type>GetFileNames</type>
     <name>Leitura dos XML</name>
     <file>
@@ -234,7 +203,6 @@
     <type>MergeJoin</type>
     <name>Merge join Institution</name>
     <join_type>LEFT OUTER</join_type>
-    <transform1>Sort Researcher  by Institution</transform1>
     <transform2>Sort Institution</transform2>
     <keys_1>
       <key>NOME-INSTITUICAO-EMPRESA</key>
@@ -245,7 +213,7 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>1376</xloc>
+      <xloc>1456</xloc>
       <yloc>320</yloc>
     </GUI>
     <description/>
@@ -735,7 +703,7 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>1856</xloc>
+      <xloc>1600</xloc>
       <yloc>208</yloc>
     </GUI>
     <description/>
@@ -797,7 +765,7 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>1376</xloc>
+      <xloc>1456</xloc>
       <yloc>208</yloc>
     </GUI>
     <description/>
@@ -923,37 +891,6 @@
     <GUI>
       <xloc>624</xloc>
       <yloc>400</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>StringOperations</type>
-    <name>String operations 2</name>
-    <fields>
-      <field>
-        <in_stream_name> Institution_name</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>lower</lower_upper>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-        <padding_type>none</padding_type>
-        <pad_len/>
-        <pad_char/>
-      </field>
-    </fields>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>1648</xloc>
-      <yloc>208</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -1093,7 +1030,7 @@ FROM "public".city
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>2080</xloc>
+      <xloc>2208</xloc>
       <yloc>512</yloc>
     </GUI>
     <description/>
@@ -1123,10 +1060,12 @@ FROM "public".institution
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <connection>ApplicationDB</connection>
+    <lookup/>
+    <sql_from_file/>
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>2000</xloc>
+      <xloc>1744</xloc>
       <yloc>208</yloc>
     </GUI>
     <description/>
@@ -1237,7 +1176,7 @@ FROM "public".researcher</sql>
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>1856</xloc>
+      <xloc>1984</xloc>
       <yloc>320</yloc>
     </GUI>
     <description/>
@@ -1292,7 +1231,7 @@ FROM "public".researcher</sql>
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>1712</xloc>
+      <xloc>1840</xloc>
       <yloc>320</yloc>
     </GUI>
     <description/>
@@ -1446,7 +1385,7 @@ FROM "public".researcher</sql>
     <distribute>N</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>2080</xloc>
+      <xloc>2208</xloc>
       <yloc>320</yloc>
     </GUI>
     <description/>
@@ -1473,7 +1412,7 @@ FROM "public".researcher</sql>
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>1552</xloc>
+      <xloc>1680</xloc>
       <yloc>320</yloc>
     </GUI>
     <description/>
@@ -1517,11 +1456,6 @@ FROM "public".researcher</sql>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort Researcher  by Institution</from>
-      <to>Merge join Institution</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Sort Institution</from>
       <to>Merge join Institution</to>
       <enabled>Y</enabled>
@@ -1534,11 +1468,6 @@ FROM "public".researcher</sql>
     <hop>
       <from>Table City</from>
       <to>Select City</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Merge join Institution</from>
-      <to>join in date  and hours</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -1559,21 +1488,6 @@ FROM "public".researcher</sql>
     <hop>
       <from>Select City</from>
       <to>Sort City</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values  Institution</from>
-      <to>String operations 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>String operations 2</from>
-      <to>Group by</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Group by</from>
-      <to>Sort Institution</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -1691,12 +1605,28 @@ FROM "public".researcher</sql>
       <to>join in date  and hours 2</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Merge join Institution</from>
+      <to>join in date  and hours</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort Researcher  by Institution</from>
+      <to>Merge join Institution</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values  Institution</from>
+      <to>Sort Institution</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <notepads/>
   <attributes/>
   <transform_error_handling>
     <error>
       <source_transform>Table Insert  Researcher</source_transform>
+      <target_transform>Text file output 2</target_transform>
       <is_enabled>Y</is_enabled>
       <nr_valuename/>
       <descriptions_valuename/>

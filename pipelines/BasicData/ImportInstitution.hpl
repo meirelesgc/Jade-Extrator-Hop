@@ -501,6 +501,22 @@ FROM "public".institution
     </partitioning>
     <attributes/>
   </transform>
+  <transform>
+    <type>RowsFromResult</type>
+    <name>Get rows from result</name>
+    <fields/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>320</xloc>
+      <yloc>384</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
   <order>
     <hop>
       <from>Table institution</from>
@@ -574,6 +590,11 @@ FROM "public".institution
     </hop>
     <hop>
       <from>Leitura dos XML 2</from>
+      <to>Read XML INSTITUICAO</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Get rows from result</from>
       <to>Read XML INSTITUICAO</to>
       <enabled>Y</enabled>
     </hop>

@@ -35,7 +35,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>1760</xloc>
-      <yloc>208</yloc>
+      <yloc>288</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -62,7 +62,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>1008</xloc>
-      <yloc>208</yloc>
+      <yloc>288</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -89,7 +89,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>1552</xloc>
-      <yloc>192</yloc>
+      <yloc>272</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -114,8 +114,8 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>512</xloc>
-      <yloc>336</yloc>
+      <xloc>448</xloc>
+      <yloc>464</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -142,7 +142,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>1136</xloc>
-      <yloc>256</yloc>
+      <yloc>288</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -168,8 +168,8 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>1264</xloc>
-      <yloc>112</yloc>
+      <xloc>1280</xloc>
+      <yloc>192</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -219,7 +219,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>1664</xloc>
-      <yloc>576</yloc>
+      <yloc>656</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -254,8 +254,8 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>480</yloc>
+      <xloc>304</xloc>
+      <yloc>608</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -279,8 +279,8 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>1184</xloc>
-      <yloc>16</yloc>
+      <xloc>1136</xloc>
+      <yloc>80</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -305,7 +305,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>2000</xloc>
-      <yloc>96</yloc>
+      <yloc>176</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -329,8 +329,8 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>864</xloc>
-      <yloc>160</yloc>
+      <xloc>800</xloc>
+      <yloc>288</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -428,8 +428,8 @@
     <distribute>N</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>336</yloc>
+      <xloc>304</xloc>
+      <yloc>464</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -464,8 +464,8 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>160</yloc>
+      <xloc>352</xloc>
+      <yloc>288</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -506,7 +506,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>1680</xloc>
-      <yloc>0</yloc>
+      <yloc>80</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -541,7 +541,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>1392</xloc>
-      <yloc>192</yloc>
+      <yloc>272</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -576,7 +576,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>1920</xloc>
-      <yloc>208</yloc>
+      <yloc>288</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -616,7 +616,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>688</xloc>
-      <yloc>0</yloc>
+      <yloc>80</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -654,8 +654,8 @@
     <distribute>N</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>640</xloc>
-      <yloc>336</yloc>
+      <xloc>576</xloc>
+      <yloc>464</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -700,7 +700,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>1424</xloc>
-      <yloc>96</yloc>
+      <yloc>176</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -730,8 +730,8 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>112</yloc>
+      <xloc>1136</xloc>
+      <yloc>176</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -761,8 +761,8 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>160</yloc>
+      <xloc>608</xloc>
+      <yloc>288</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -792,8 +792,8 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>864</xloc>
-      <yloc>256</yloc>
+      <xloc>800</xloc>
+      <yloc>384</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -824,7 +824,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>1936</xloc>
-      <yloc>0</yloc>
+      <yloc>80</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -849,13 +849,15 @@
     <directory>${java.io.tmpdir}</directory>
     <sort_prefix>out</sort_prefix>
     <sort_size>1000000</sort_size>
+    <free_memory/>
     <unique_rows>N</unique_rows>
     <compress>N</compress>
+    <compress_variables/>
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
       <xloc>1664</xloc>
-      <yloc>320</yloc>
+      <yloc>384</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -886,7 +888,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>1712</xloc>
-      <yloc>96</yloc>
+      <yloc>176</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -917,7 +919,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>912</xloc>
-      <yloc>0</yloc>
+      <yloc>80</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -947,8 +949,8 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>256</yloc>
+      <xloc>800</xloc>
+      <yloc>464</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -978,8 +980,8 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>528</xloc>
-      <yloc>160</yloc>
+      <xloc>464</xloc>
+      <yloc>288</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -1010,7 +1012,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>784</xloc>
-      <yloc>0</yloc>
+      <yloc>80</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -1041,7 +1043,7 @@
     <copies>1</copies>
     <GUI>
       <xloc>1808</xloc>
-      <yloc>0</yloc>
+      <yloc>80</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -1069,7 +1071,7 @@ FROM "public"."state"
     <copies>1</copies>
     <GUI>
       <xloc>512</xloc>
-      <yloc>0</yloc>
+      <yloc>80</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -1096,8 +1098,8 @@ FROM "public".city
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>160</yloc>
+      <xloc>192</xloc>
+      <yloc>288</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -1126,7 +1128,7 @@ FROM "public".country
     <copies>1</copies>
     <GUI>
       <xloc>1488</xloc>
-      <yloc>0</yloc>
+      <yloc>80</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -1139,26 +1141,20 @@ FROM "public".country
     <type>Unique</type>
     <name>Unique rows</name>
     <count_rows>N</count_rows>
+    <count_field/>
     <fields>
       <field>
         <name>name</name>
         <case_insensitive>N</case_insensitive>
       </field>
-      <field>
-        <name>country_id</name>
-        <case_insensitive>N</case_insensitive>
-      </field>
-      <field>
-        <name>state_id</name>
-        <case_insensitive>N</case_insensitive>
-      </field>
     </fields>
     <reject_duplicate_row>N</reject_duplicate_row>
+    <error_description/>
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
       <xloc>1664</xloc>
-      <yloc>416</yloc>
+      <yloc>512</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -1174,9 +1170,25 @@ FROM "public".country
     <copies>1</copies>
     <GUI>
       <xloc>1008</xloc>
-      <yloc>368</yloc>
+      <yloc>448</yloc>
     </GUI>
     <description/>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>RowsFromResult</type>
+    <name>Get rows from result</name>
+    <fields/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>464</yloc>
+    </GUI>
     <partitioning>
       <method>none</method>
       <schema_name/>
@@ -1342,7 +1354,7 @@ FROM "public".country
     <hop>
       <from>Leitura dos XML</from>
       <to>Read XML city </to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Unique rows</from>
@@ -1362,6 +1374,11 @@ FROM "public".country
     <hop>
       <from>Filter rows 3</from>
       <to>Sort rows 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get rows from result</from>
+      <to>Read XML city </to>
       <enabled>Y</enabled>
     </hop>
   </order>
