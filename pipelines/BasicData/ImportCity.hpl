@@ -229,42 +229,6 @@
     <attributes/>
   </transform>
   <transform>
-    <type>GetFileNames</type>
-    <name>Leitura dos XML</name>
-    <file>
-      <name>${PROJECT_HOME}/datasets/lattes_xml/</name>
-      <filemask>.*xml</filemask>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <rownum>N</rownum>
-    <filefield>N</filefield>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>304</xloc>
-      <yloc>608</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
     <type>MergeJoin</type>
     <name>Merge join</name>
     <join_type>LEFT OUTER</join_type>
@@ -839,7 +803,7 @@
     <fields>
       <field>
         <name>name</name>
-        <ascending>Y</ascending>
+        <ascending>N</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
         <collator_strength>0</collator_strength>
@@ -1145,16 +1109,16 @@ FROM "public".country
     <fields>
       <field>
         <name>name</name>
-        <case_insensitive>N</case_insensitive>
+        <case_insensitive>Y</case_insensitive>
       </field>
     </fields>
-    <reject_duplicate_row>N</reject_duplicate_row>
-    <error_description/>
+    <reject_duplicate_row>Y</reject_duplicate_row>
+    <error_description>DUP</error_description>
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
       <xloc>1664</xloc>
-      <yloc>512</yloc>
+      <yloc>528</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -1188,6 +1152,21 @@ FROM "public".country
     <GUI>
       <xloc>128</xloc>
       <yloc>464</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>Dummy</type>
+    <name>Dummy (do nothing)</name>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>1472</xloc>
+      <yloc>528</yloc>
     </GUI>
     <partitioning>
       <method>none</method>
@@ -1352,11 +1331,6 @@ FROM "public".country
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Leitura dos XML</from>
-      <to>Read XML city </to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
       <from>Unique rows</from>
       <to>Insert table city</to>
       <enabled>Y</enabled>
@@ -1381,8 +1355,30 @@ FROM "public".country
       <to>Read XML city </to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Unique rows</from>
+      <to>Dummy (do nothing)</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <notepads/>
   <attributes/>
-  <transform_error_handling/>
+  <transform_error_handling>
+    <error>
+      <source_transform>Insert table city</source_transform>
+      <target_transform>Dummy (do nothing)</target_transform>
+      <is_enabled>N</is_enabled>
+      <max_errors/>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+    <error>
+      <source_transform>Unique rows</source_transform>
+      <target_transform>Dummy (do nothing)</target_transform>
+      <is_enabled>Y</is_enabled>
+      <max_errors/>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+  </transform_error_handling>
 </pipeline>

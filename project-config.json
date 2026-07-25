@@ -8,11 +8,11 @@
   "parentProjectName" : "default",
   "config" : {
     "variables" : [ {
-      "name" : "ADMIN_DATABASE_URL",
-      "value" : "jdbc:postgresql://localhost:5432/db_admin?user=postgres&password=postgres"
-    }, {
       "name" : "DATABASE_URL",
-      "value" : "jdbc:postgresql://localhost:5432/db?user=postgres&password=postgres"
+      "value" : "jdbc:postgresql://172.25.0.84:5432/iapos?user=postgres&password=9f63b0d4-2bbc-4d21-97ef-4c0e7a28224c"
+    }, {
+      "name" : "ADMIN_DATABASE_URL",
+      "value" : "jdbc:postgresql://172.25.0.84:5432/iapos_admin?user=postgres&password=9f63b0d4-2bbc-4d21-97ef-4c0e7a28224c"
     } ]
   }
 }

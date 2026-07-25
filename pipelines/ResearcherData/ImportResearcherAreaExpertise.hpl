@@ -61,30 +61,6 @@
     <attributes/>
   </transform>
   <transform>
-    <type>RowsFromResult</type>
-    <name>Get rows files xml</name>
-    <fields>
-      <field>
-        <name>filename</name>
-        <type>None</type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>192</xloc>
-      <yloc>1040</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
     <type>InsertUpdate</type>
     <name>Insert table researcher_area_expertise</name>
     <lookup>
@@ -139,42 +115,6 @@
     <GUI>
       <xloc>2208</xloc>
       <yloc>592</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>GetFileNames</type>
-    <name>Leitura dos XML 2</name>
-    <file>
-      <name>${PROJECT_HOME}/datasets/lattes_xml/</name>
-      <filemask>.*xml</filemask>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <rownum>N</rownum>
-    <filefield>N</filefield>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>352</xloc>
-      <yloc>1136</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -485,153 +425,6 @@
     <GUI>
       <xloc>464</xloc>
       <yloc>1040</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>getXMLData</type>
-    <name>Read XML Area_Expertise Test </name>
-    <file>
-      <name>${PROJECT_HOME}/datasets/lattes_xml/Teste/1706259684834362.xml</name>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <include>N</include>
-    <rownum>N</rownum>
-    <limit>0</limit>
-    <loopxpath>/CURRICULO-VITAE/DADOS-GERAIS/AREAS-DE-ATUACAO/AREA-DE-ATUACAO</loopxpath>
-    <fields>
-      <field>
-        <name>NUMERO-IDENTIFICADOR</name>
-        <xPath>/CURRICULO-VITAE/@NUMERO-IDENTIFICADOR</xPath>
-        <type>None</type>
-        <length>-1</length>
-        <format/>
-        <trim_type>none</trim_type>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <precision>-1</precision>
-        <currency/>
-        <decimal/>
-        <group/>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>NOME-GRANDE-AREA-DO-CONHECIMENTO</name>
-        <xPath>@NOME-GRANDE-AREA-DO-CONHECIMENTO</xPath>
-        <type>None</type>
-        <length>-1</length>
-        <format/>
-        <trim_type>none</trim_type>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <precision>-1</precision>
-        <currency/>
-        <decimal/>
-        <group/>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>NOME-DA-AREA-DO-CONHECIMENTO</name>
-        <xPath>@NOME-DA-AREA-DO-CONHECIMENTO</xPath>
-        <type>None</type>
-        <length>-1</length>
-        <format/>
-        <trim_type>none</trim_type>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <precision>-1</precision>
-        <currency/>
-        <decimal/>
-        <group/>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>NOME-DA-SUB-AREA-DO-CONHECIMENTO</name>
-        <xPath>@NOME-DA-SUB-AREA-DO-CONHECIMENTO</xPath>
-        <type>None</type>
-        <length>-1</length>
-        <format/>
-        <trim_type>none</trim_type>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <precision>-1</precision>
-        <currency/>
-        <decimal/>
-        <group/>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>SEQUENCIA-AREA-DE-ATUACAO</name>
-        <xPath>@SEQUENCIA-AREA-DE-ATUACAO</xPath>
-        <type>None</type>
-        <length>-1</length>
-        <format/>
-        <trim_type>none</trim_type>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <precision>-1</precision>
-        <currency/>
-        <decimal/>
-        <group/>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>NOME-DA-ESPECIALIDADE</name>
-        <xPath>@NOME-DA-ESPECIALIDADE</xPath>
-        <type>None</type>
-        <length>-1</length>
-        <format/>
-        <trim_type>none</trim_type>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <precision>-1</precision>
-        <currency/>
-        <decimal/>
-        <group/>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>NOME-COMPLETO</name>
-        <xPath>/CURRICULO-VITAE/DADOS-GERAIS/@NOME-COMPLETO</xPath>
-        <type>None</type>
-        <length>-1</length>
-        <format/>
-        <trim_type>none</trim_type>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <precision>-1</precision>
-        <currency/>
-        <decimal/>
-        <group/>
-        <repeat>N</repeat>
-      </field>
-    </fields>
-    <encoding>ISO-8859-1</encoding>
-    <IsInFields>N</IsInFields>
-    <IsAFile>N</IsAFile>
-    <addresultfile>N</addresultfile>
-    <namespaceaware>N</namespaceaware>
-    <validating>N</validating>
-    <usetoken>N</usetoken>
-    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <ignorecomments>N</ignorecomments>
-    <readurl>N</readurl>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>688</xloc>
-      <yloc>1184</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -1632,21 +1425,27 @@ FROM "public".researcher
     </partitioning>
     <attributes/>
   </transform>
+  <transform>
+    <type>RowsFromResult</type>
+    <name>Get rows from result</name>
+    <fields/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>1040</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
   <order>
-    <hop>
-      <from>Get rows files xml</from>
-      <to>Read XML Area_Expertise </to>
-      <enabled>N</enabled>
-    </hop>
     <hop>
       <from>Read XML Area_Expertise </from>
       <to>Select Area_Expertise</to>
       <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Read XML Area_Expertise Test </from>
-      <to>Select Area_Expertise</to>
-      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Select sub Expertise</from>
@@ -1824,7 +1623,7 @@ FROM "public".researcher
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Leitura dos XML 2</from>
+      <from>Get rows from result</from>
       <to>Read XML Area_Expertise </to>
       <enabled>Y</enabled>
     </hop>

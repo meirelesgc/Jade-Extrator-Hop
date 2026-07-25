@@ -88,42 +88,6 @@
     <attributes/>
   </transform>
   <transform>
-    <type>GetFileNames</type>
-    <name>Leitura dos XML</name>
-    <file>
-      <name>${PROJECT_HOME}/datasets/lattes_xml/</name>
-      <filemask>.*xml</filemask>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <rownum>N</rownum>
-    <filefield>N</filefield>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>208</xloc>
-      <yloc>416</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
     <type>MergeJoin</type>
     <name>Merge join 2</name>
     <join_type>LEFT OUTER</join_type>
@@ -617,11 +581,6 @@ FROM "public".periodical_magazine
       <from>Unique rows</from>
       <to>Table insert periodical_magazine</to>
       <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Leitura dos XML</from>
-      <to>Read XML REVISTA </to>
-      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Get rows from result</from>

@@ -55,7 +55,7 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>336</xloc>
+      <xloc>304</xloc>
       <yloc>176</yloc>
     </GUI>
     <partitioning>
