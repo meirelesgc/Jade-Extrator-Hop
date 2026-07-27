@@ -265,32 +265,6 @@ DO UPDATE SET
       <parallel>N</parallel>
       <attributes_hac/>
     </action>
-    <action>
-      <filename>${PROJECT_HOME}/pipelines/ResearcherData/ImportResearcher.hpl</filename>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <create_parent_folder>N</create_parent_folder>
-      <set_logfile>N</set_logfile>
-      <set_append_logfile>N</set_append_logfile>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Basic</loglevel>
-      <wait_until_finished>Y</wait_until_finished>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <run_configuration>local</run_configuration>
-      <name>ImportResearcher.hpl</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <xloc>464</xloc>
-      <yloc>256</yloc>
-      <parallel>N</parallel>
-      <attributes_hac/>
-    </action>
   </actions>
   <hops>
     <hop>
@@ -358,13 +332,6 @@ DO UPDATE SET
     </hop>
     <hop>
       <from>ImportExpertiseData.hwf</from>
-      <to>ImportResearcher.hpl</to>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>ImportResearcher.hpl</from>
       <to>ImportResearcherData.hwf</to>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

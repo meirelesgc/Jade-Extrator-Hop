@@ -113,8 +113,8 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>2208</xloc>
-      <yloc>592</yloc>
+      <xloc>2240</xloc>
+      <yloc>624</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -423,7 +423,7 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>464</xloc>
+      <xloc>384</xloc>
       <yloc>1040</yloc>
     </GUI>
     <description/>
@@ -1441,6 +1441,41 @@ FROM "public".researcher
     </partitioning>
     <attributes/>
   </transform>
+  <transform>
+    <type>GetFileNames</type>
+    <name>Leitura dos XML</name>
+    <file>
+      <name>${PROJECT_HOME}/datasets/lattes_xml/</name>
+      <filemask>.*xml</filemask>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <rownum>N</rownum>
+    <filefield>N</filefield>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>1184</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
   <order>
     <hop>
       <from>Read XML Area_Expertise </from>
@@ -1624,6 +1659,11 @@ FROM "public".researcher
     </hop>
     <hop>
       <from>Get rows from result</from>
+      <to>Read XML Area_Expertise </to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Leitura dos XML</from>
       <to>Read XML Area_Expertise </to>
       <enabled>Y</enabled>
     </hop>

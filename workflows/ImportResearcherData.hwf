@@ -25,7 +25,7 @@
       <description/>
       <type>SPECIAL</type>
       <attributes/>
-      <xloc>80</xloc>
+      <xloc>0</xloc>
       <yloc>256</yloc>
       <parallel>N</parallel>
       <attributes_hac/>
@@ -52,7 +52,7 @@
       <type>PIPELINE</type>
       <attributes/>
       <xloc>208</xloc>
-      <yloc>112</yloc>
+      <yloc>80</yloc>
       <parallel>N</parallel>
       <attributes_hac/>
     </action>
@@ -77,8 +77,8 @@
       <description/>
       <type>PIPELINE</type>
       <attributes/>
-      <xloc>448</xloc>
-      <yloc>112</yloc>
+      <xloc>544</xloc>
+      <yloc>64</yloc>
       <parallel>N</parallel>
       <attributes_hac/>
     </action>
@@ -104,7 +104,7 @@
       <type>PIPELINE</type>
       <attributes/>
       <xloc>208</xloc>
-      <yloc>480</yloc>
+      <yloc>448</yloc>
       <parallel>N</parallel>
       <attributes_hac/>
     </action>
@@ -129,8 +129,8 @@
       <description/>
       <type>PIPELINE</type>
       <attributes/>
-      <xloc>448</xloc>
-      <yloc>480</yloc>
+      <xloc>544</xloc>
+      <yloc>448</yloc>
       <parallel>N</parallel>
       <attributes_hac/>
     </action>
@@ -155,7 +155,7 @@
       <description/>
       <type>PIPELINE</type>
       <attributes/>
-      <xloc>448</xloc>
+      <xloc>544</xloc>
       <yloc>256</yloc>
       <parallel>N</parallel>
       <attributes_hac/>
@@ -182,6 +182,32 @@
       <name>ReadXML.hpl</name>
       <type>PIPELINE</type>
       <attributes/>
+      <xloc>368</xloc>
+      <yloc>256</yloc>
+      <parallel>N</parallel>
+      <attributes_hac/>
+    </action>
+    <action>
+      <filename>${PROJECT_HOME}/pipelines/ResearcherData/ImportResearcher.hpl</filename>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <create_parent_folder>N</create_parent_folder>
+      <set_logfile>N</set_logfile>
+      <set_append_logfile>N</set_append_logfile>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <wait_until_finished>Y</wait_until_finished>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <run_configuration>local</run_configuration>
+      <name>ImportResearcher.hpl</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
       <xloc>208</xloc>
       <yloc>256</yloc>
       <parallel>N</parallel>
@@ -189,13 +215,6 @@
     </action>
   </actions>
   <hops>
-    <hop>
-      <from>Start</from>
-      <to>ReadXML.hpl</to>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-      <enabled>Y</enabled>
-    </hop>
     <hop>
       <from>ReadXML.hpl</from>
       <to>ImportAddressResearcher.hpl</to>
@@ -227,6 +246,20 @@
     <hop>
       <from>ReadXML.hpl</from>
       <to>ImportAcademicDegree.hpl</to>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Start</from>
+      <to>ImportResearcher.hpl</to>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>ImportResearcher.hpl</from>
+      <to>ReadXML.hpl</to>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
       <enabled>Y</enabled>

@@ -9,10 +9,10 @@
   "config" : {
     "variables" : [ {
       "name" : "DATABASE_URL",
-      "value" : "jdbc:postgresql://172.25.0.84:5432/iapos?user=postgres&password=9f63b0d4-2bbc-4d21-97ef-4c0e7a28224c"
+      "value" : "jdbc:postgresql://localhost:5432/observatorio?user=postgres&password=postgres"
     }, {
       "name" : "ADMIN_DATABASE_URL",
-      "value" : "jdbc:postgresql://172.25.0.84:5432/iapos_admin?user=postgres&password=9f63b0d4-2bbc-4d21-97ef-4c0e7a28224c"
+      "value" : "jdbc:postgresql://localhost:5432/observatorio_admin?user=postgres&password=postgres"
     } ]
   }
 }

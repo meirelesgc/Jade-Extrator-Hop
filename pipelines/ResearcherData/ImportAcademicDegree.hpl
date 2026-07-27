@@ -577,6 +577,41 @@
     </partitioning>
     <attributes/>
   </transform>
+  <transform>
+    <type>GetFileNames</type>
+    <name>Leitura dos XML</name>
+    <file>
+      <name>${PROJECT_HOME}/datasets/lattes_xml/</name>
+      <filemask>.*xml</filemask>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <rownum>N</rownum>
+    <filefield>N</filefield>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>160</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
   <order>
     <hop>
       <from>Pegar a maior titulação </from>
@@ -640,6 +675,11 @@
     </hop>
     <hop>
       <from>Get rows from result</from>
+      <to>Read XML graduation</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Leitura dos XML</from>
       <to>Read XML graduation</to>
       <enabled>Y</enabled>
     </hop>
