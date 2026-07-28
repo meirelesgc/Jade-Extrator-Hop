@@ -145,7 +145,7 @@
       <description/>
       <type>WORKFLOW</type>
       <attributes/>
-      <xloc>48</xloc>
+      <xloc>64</xloc>
       <yloc>384</yloc>
       <parallel>N</parallel>
       <attributes_hac/>
@@ -260,7 +260,7 @@ DO UPDATE SET
       <description/>
       <type>SQL</type>
       <attributes/>
-      <xloc>48</xloc>
+      <xloc>64</xloc>
       <yloc>512</yloc>
       <parallel>N</parallel>
       <attributes_hac/>
