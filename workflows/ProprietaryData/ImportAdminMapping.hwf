@@ -95,7 +95,7 @@ DELETE FROM graduate_program;</sql>
       <description/>
       <type>SQL</type>
       <attributes/>
-      <xloc>640</xloc>
+      <xloc>880</xloc>
       <yloc>176</yloc>
       <parallel>N</parallel>
       <attributes_hac/>
@@ -121,7 +121,7 @@ DELETE FROM graduate_program;</sql>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
-      <xloc>880</xloc>
+      <xloc>1120</xloc>
       <yloc>176</yloc>
       <parallel>N</parallel>
       <attributes_hac/>
@@ -147,8 +147,21 @@ DELETE FROM graduate_program;</sql>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
-      <xloc>880</xloc>
+      <xloc>1120</xloc>
       <yloc>288</yloc>
+      <parallel>N</parallel>
+      <attributes_hac/>
+    </action>
+    <action>
+      <useVariableSubstitution>N</useVariableSubstitution>
+      <sqlfromfile>N</sqlfromfile>
+      <sendOneStatement>N</sendOneStatement>
+      <name>SQL</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <xloc>592</xloc>
+      <yloc>176</yloc>
       <parallel>N</parallel>
       <attributes_hac/>
     </action>
@@ -169,13 +182,6 @@ DELETE FROM graduate_program;</sql>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>ImportResearcher.hpl</from>
-      <to>LIMPEZA DOS PROGRAMAS DE PÓS</to>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>LIMPEZA DOS PROGRAMAS DE PÓS</from>
       <to>ImportGraduateProgram.hpl</to>
       <evaluation>Y</evaluation>
@@ -187,6 +193,20 @@ DELETE FROM graduate_program;</sql>
       <to>ImportGraduateProgramResearcher.hpl</to>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>ImportResearcher.hpl</from>
+      <to>SQL</to>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>SQL</from>
+      <to>LIMPEZA DOS PROGRAMAS DE PÓS</to>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
       <enabled>Y</enabled>
     </hop>
   </hops>
