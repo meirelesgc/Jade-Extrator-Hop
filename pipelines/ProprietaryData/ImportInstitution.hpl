@@ -33,7 +33,7 @@
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>544</xloc>
+      <xloc>528</xloc>
       <yloc>160</yloc>
     </GUI>
     <description/>
@@ -115,7 +115,7 @@ FROM public.institution;</sql>
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>688</xloc>
+      <xloc>672</xloc>
       <yloc>160</yloc>
     </GUI>
     <description/>
@@ -132,10 +132,10 @@ FROM public.institution;</sql>
     <transform1>Sort rows</transform1>
     <transform2>Sort rows 2</transform2>
     <keys_1>
-      <key>name</key>
+      <key>acronym</key>
     </keys_1>
     <keys_2>
-      <key>name</key>
+      <key>acronym</key>
     </keys_2>
     <distribute>Y</distribute>
     <copies>1</copies>

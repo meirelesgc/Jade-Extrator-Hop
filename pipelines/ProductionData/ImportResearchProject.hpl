@@ -18,108 +18,6 @@
     <modified_date>2024/08/13 11:32:08.339</modified_date>
   </info>
   <transform>
-    <type>Dummy</type>
-    <name>Dummy (do nothing)</name>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>1008</xloc>
-      <yloc>160</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>Dummy</type>
-    <name>Dummy (do nothing) 2</name>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>1776</xloc>
-      <yloc>176</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>Dummy</type>
-    <name>Dummy (do nothing) 3</name>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>2432</xloc>
-      <yloc>464</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>FilterRows</type>
-    <name>Filter rows</name>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <operator>-</operator>
-        <leftvalue>researcher_id</leftvalue>
-        <function>IS NULL</function>
-        <conditions/>
-      </condition>
-    </compare>
-    <send_true_to>Dummy (do nothing) 3</send_true_to>
-    <send_false_to>Insetindo projetos</send_false_to>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>2432</xloc>
-      <yloc>336</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>FilterRows</type>
-    <name>Filtrando Projetos que já existem</name>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <operator>-</operator>
-        <leftvalue>lattes_id</leftvalue>
-        <function>IS NULL</function>
-        <conditions/>
-      </condition>
-    </compare>
-    <send_true_to>Sort Pesquisadores 2</send_true_to>
-    <send_false_to>Dummy (do nothing) 2</send_false_to>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>1776</xloc>
-      <yloc>336</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
     <type>RowsFromResult</type>
     <name>Get rows files xml</name>
     <fields>
@@ -135,96 +33,6 @@
     <GUI>
       <xloc>464</xloc>
       <yloc>128</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>TableOutput</type>
-    <name>Insetindo projetos</name>
-    <connection>ApplicationDB</connection>
-    <schema>"public"</schema>
-    <table>research_project</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <only_when_have_rows>N</only_when_have_rows>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <specify_fields>Y</specify_fields>
-    <auto_update_table_structure>N</auto_update_table_structure>
-    <always_drop_and_recreate>N</always_drop_and_recreate>
-    <add_columns>N</add_columns>
-    <drop_columns>N</drop_columns>
-    <change_column_types>N</change_column_types>
-    <fields>
-      <field>
-        <stream_name>start_year</stream_name>
-        <column_name>start_year</column_name>
-      </field>
-      <field>
-        <stream_name>end_year</stream_name>
-        <column_name>end_year</column_name>
-      </field>
-      <field>
-        <stream_name>agency_code</stream_name>
-        <column_name>agency_code</column_name>
-      </field>
-      <field>
-        <stream_name>agency_name</stream_name>
-        <column_name>agency_name</column_name>
-      </field>
-      <field>
-        <stream_name>project_name</stream_name>
-        <column_name>project_name</column_name>
-      </field>
-      <field>
-        <stream_name>status</stream_name>
-        <column_name>status</column_name>
-      </field>
-      <field>
-        <stream_name>nature</stream_name>
-        <column_name>nature</column_name>
-      </field>
-      <field>
-        <stream_name>number_undergraduates</stream_name>
-        <column_name>number_undergraduates</column_name>
-      </field>
-      <field>
-        <stream_name>number_specialists</stream_name>
-        <column_name>number_specialists</column_name>
-      </field>
-      <field>
-        <stream_name>number_academic_masters</stream_name>
-        <column_name>number_academic_masters</column_name>
-      </field>
-      <field>
-        <stream_name>number_phd</stream_name>
-        <column_name>number_phd</column_name>
-      </field>
-      <field>
-        <stream_name>description</stream_name>
-        <column_name>description</column_name>
-      </field>
-      <field>
-        <stream_name>researcher_id</stream_name>
-        <column_name>researcher_id</column_name>
-      </field>
-    </fields>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>2608</xloc>
-      <yloc>336</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -261,184 +69,6 @@
     <GUI>
       <xloc>208</xloc>
       <yloc>336</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>SelectValues</type>
-    <name>Limpando a consulta</name>
-    <fields>
-      <field>
-        <name>ANO-INICIO</name>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>
-      <field>
-        <name>ANO-FIM</name>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>
-      <field>
-        <name>CODIGO-ORGAO</name>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>
-      <field>
-        <name>NOME-ORGAO</name>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>
-      <field>
-        <name>NOME-DO-PROJETO</name>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>
-      <field>
-        <name>SITUACAO</name>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>
-      <field>
-        <name>NATUREZA</name>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>
-      <field>
-        <name>NUMERO-GRADUACAO</name>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>
-      <field>
-        <name>NUMERO-ESPECIALIZACAO</name>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>
-      <field>
-        <name>NUMERO-MESTRADO-ACADEMICO</name>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>
-      <field>
-        <name>NUMERO-DOUTORADO</name>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>
-      <field>
-        <name>DESCRICAO-DO-PROJETO</name>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>
-      <field>
-        <name>NUMERO-IDENTIFICADOR</name>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>768</xloc>
-      <yloc>336</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>MergeJoin</type>
-    <name>Merge join</name>
-    <join_type>LEFT OUTER</join_type>
-    <transform1>Sort Nome do projeto</transform1>
-    <transform2>Sort Nome do projeto 2</transform2>
-    <keys_1>
-      <key>NOME-DO-PROJETO</key>
-      <key>NUMERO-IDENTIFICADOR</key>
-    </keys_1>
-    <keys_2>
-      <key>project_name</key>
-      <key>lattes_id</key>
-    </keys_2>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>1584</xloc>
-      <yloc>336</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>MergeJoin</type>
-    <name>Merge join 2</name>
-    <join_type>INNER</join_type>
-    <transform1>Sort Pesquisadores 2</transform1>
-    <transform2>Sort Pesquisadores</transform2>
-    <keys_1>
-      <key>NUMERO-IDENTIFICADOR</key>
-    </keys_1>
-    <keys_2>
-      <key>lattes_id</key>
-    </keys_2>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>2112</xloc>
-      <yloc>336</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>TableInput</type>
-    <name>Pesquisadores</name>
-    <sql>SELECT id, lattes_id FROM researcher</sql>
-    <limit>0</limit>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <connection>ApplicationDB</connection>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>1968</xloc>
-      <yloc>160</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>TableInput</type>
-    <name>Projetos existentes</name>
-    <sql>SELECT project_name, r.lattes_id FROM research_project rp, researcher r WHERE r.id = rp.researcher_id</sql>
-    <limit>0</limit>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <connection>ApplicationDB</connection>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>1584</xloc>
-      <yloc>32</yloc>
     </GUI>
     <description/>
     <partitioning>
@@ -682,36 +312,15 @@
     <attributes/>
   </transform>
   <transform>
-    <type>FilterRows</type>
-    <name>Removendo projetos sem nome</name>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <operator>-</operator>
-        <leftvalue>NOME-DO-PROJETO</leftvalue>
-        <function>IS NOT NULL</function>
-        <conditions/>
-      </condition>
-    </compare>
-    <send_true_to>String operations</send_true_to>
-    <send_false_to>Dummy (do nothing)</send_false_to>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>1008</xloc>
-      <yloc>336</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
     <type>SelectValues</type>
-    <name>Renomeando</name>
+    <name>Limpando consulta</name>
     <fields>
+      <field>
+        <name>NUMERO-IDENTIFICADOR</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>
       <field>
         <name>ANO-INICIO</name>
         <rename>start_year</rename>
@@ -784,161 +393,14 @@
         <length>-2</length>
         <precision>-2</precision>
       </field>
-      <field>
-        <name>id</name>
-        <rename>researcher_id</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>2304</xloc>
+      <xloc>736</xloc>
       <yloc>336</yloc>
     </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>SortRows</type>
-    <name>Sort Nome do projeto</name>
-    <fields>
-      <field>
-        <name>NOME-DO-PROJETO</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>NUMERO-IDENTIFICADOR</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <directory>${java.io.tmpdir}</directory>
-    <sort_prefix>out</sort_prefix>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
-    <compress>N</compress>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>1408</xloc>
-      <yloc>336</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>SortRows</type>
-    <name>Sort Nome do projeto 2</name>
-    <fields>
-      <field>
-        <name>project_name</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>lattes_id</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <directory>${java.io.tmpdir}</directory>
-    <sort_prefix>out</sort_prefix>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
-    <compress>N</compress>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>1584</xloc>
-      <yloc>176</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>SortRows</type>
-    <name>Sort Pesquisadores</name>
-    <fields>
-      <field>
-        <name>lattes_id</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <directory>${java.io.tmpdir}</directory>
-    <sort_prefix>out</sort_prefix>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
-    <compress>N</compress>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>2112</xloc>
-      <yloc>160</yloc>
-    </GUI>
-    <description/>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-  </transform>
-  <transform>
-    <type>SortRows</type>
-    <name>Sort Pesquisadores 2</name>
-    <fields>
-      <field>
-        <name>NUMERO-IDENTIFICADOR</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <directory>${java.io.tmpdir}</directory>
-    <sort_prefix>out</sort_prefix>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
-    <compress>N</compress>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-    <GUI>
-      <xloc>1968</xloc>
-      <yloc>336</yloc>
-    </GUI>
-    <description/>
     <partitioning>
       <method>none</method>
       <schema_name/>
@@ -947,164 +409,8 @@
   </transform>
   <transform>
     <type>StringOperations</type>
-    <name>String operations</name>
+    <name>Normalizando</name>
     <fields>
-      <field>
-        <in_stream_name>ANO-INICIO</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>none</lower_upper>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-        <padding_type>none</padding_type>
-        <pad_len/>
-        <pad_char/>
-      </field>
-      <field>
-        <in_stream_name>ANO-FIM</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>none</lower_upper>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-        <padding_type>none</padding_type>
-        <pad_len/>
-        <pad_char/>
-      </field>
-      <field>
-        <in_stream_name>CODIGO-ORGAO</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>none</lower_upper>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-        <padding_type>none</padding_type>
-        <pad_len/>
-        <pad_char/>
-      </field>
-      <field>
-        <in_stream_name>NOME-ORGAO</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>none</lower_upper>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-        <padding_type>none</padding_type>
-        <pad_len/>
-        <pad_char/>
-      </field>
-      <field>
-        <in_stream_name>NOME-DO-PROJETO</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>lower</lower_upper>
-        <init_cap>yes</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-        <padding_type>none</padding_type>
-        <pad_len/>
-        <pad_char/>
-      </field>
-      <field>
-        <in_stream_name>SITUACAO</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>none</lower_upper>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-        <padding_type>none</padding_type>
-        <pad_len/>
-        <pad_char/>
-      </field>
-      <field>
-        <in_stream_name>NATUREZA</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>none</lower_upper>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-        <padding_type>none</padding_type>
-        <pad_len/>
-        <pad_char/>
-      </field>
-      <field>
-        <in_stream_name>NUMERO-GRADUACAO</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>none</lower_upper>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-        <padding_type>none</padding_type>
-        <pad_len/>
-        <pad_char/>
-      </field>
-      <field>
-        <in_stream_name>NUMERO-ESPECIALIZACAO</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>none</lower_upper>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-        <padding_type>none</padding_type>
-        <pad_len/>
-        <pad_char/>
-      </field>
-      <field>
-        <in_stream_name>NUMERO-MESTRADO-ACADEMICO</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>none</lower_upper>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-        <padding_type>none</padding_type>
-        <pad_len/>
-        <pad_char/>
-      </field>
-      <field>
-        <in_stream_name>NUMERO-DOUTORADO</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>none</lower_upper>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-        <padding_type>none</padding_type>
-        <pad_len/>
-        <pad_char/>
-      </field>
-      <field>
-        <in_stream_name>DESCRICAO-DO-PROJETO</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>none</lower_upper>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-        <padding_type>none</padding_type>
-        <pad_len/>
-        <pad_char/>
-      </field>
       <field>
         <in_stream_name>NUMERO-IDENTIFICADOR</in_stream_name>
         <out_stream_name/>
@@ -1118,14 +424,544 @@
         <pad_len/>
         <pad_char/>
       </field>
+      <field>
+        <in_stream_name>start_year</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+        <padding_type>none</padding_type>
+        <pad_len/>
+        <pad_char/>
+      </field>
+      <field>
+        <in_stream_name>end_year</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+        <padding_type>none</padding_type>
+        <pad_len/>
+        <pad_char/>
+      </field>
+      <field>
+        <in_stream_name>agency_code</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <init_cap>yes</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+        <padding_type>none</padding_type>
+        <pad_len/>
+        <pad_char/>
+      </field>
+      <field>
+        <in_stream_name>agency_name</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+        <padding_type>none</padding_type>
+        <pad_len/>
+        <pad_char/>
+      </field>
+      <field>
+        <in_stream_name>project_name</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <init_cap>yes</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+        <padding_type>none</padding_type>
+        <pad_len/>
+        <pad_char/>
+      </field>
+      <field>
+        <in_stream_name>status</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>upper</lower_upper>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+        <padding_type>none</padding_type>
+        <pad_len/>
+        <pad_char/>
+      </field>
+      <field>
+        <in_stream_name>nature</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>upper</lower_upper>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+        <padding_type>none</padding_type>
+        <pad_len/>
+        <pad_char/>
+      </field>
+      <field>
+        <in_stream_name>number_undergraduates</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <init_cap>yes</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+        <padding_type>none</padding_type>
+        <pad_len/>
+        <pad_char/>
+      </field>
+      <field>
+        <in_stream_name>number_specialists</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <init_cap>yes</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+        <padding_type>none</padding_type>
+        <pad_len/>
+        <pad_char/>
+      </field>
+      <field>
+        <in_stream_name>number_academic_masters</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <init_cap>yes</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+        <padding_type>none</padding_type>
+        <pad_len/>
+        <pad_char/>
+      </field>
+      <field>
+        <in_stream_name>number_phd</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <init_cap>yes</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+        <padding_type>none</padding_type>
+        <pad_len/>
+        <pad_char/>
+      </field>
+      <field>
+        <in_stream_name>description</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <init_cap>yes</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+        <padding_type>none</padding_type>
+        <pad_len/>
+        <pad_char/>
+      </field>
     </fields>
     <distribute>Y</distribute>
     <copies>1</copies>
     <GUI>
-      <xloc>1200</xloc>
+      <xloc>2032</xloc>
       <yloc>336</yloc>
     </GUI>
-    <description/>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>TableOutput</type>
+    <name>Inserindo dados</name>
+    <connection>ApplicationDB</connection>
+    <schema>"public"</schema>
+    <table>research_project</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <only_when_have_rows>N</only_when_have_rows>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <specify_fields>Y</specify_fields>
+    <auto_update_table_structure>N</auto_update_table_structure>
+    <always_drop_and_recreate>N</always_drop_and_recreate>
+    <add_columns>N</add_columns>
+    <drop_columns>N</drop_columns>
+    <change_column_types>N</change_column_types>
+    <fields>
+      <field>
+        <stream_name>start_year</stream_name>
+        <column_name>start_year</column_name>
+      </field>
+      <field>
+        <stream_name>end_year</stream_name>
+        <column_name>end_year</column_name>
+      </field>
+      <field>
+        <stream_name>agency_code</stream_name>
+        <column_name>agency_code</column_name>
+      </field>
+      <field>
+        <stream_name>agency_name</stream_name>
+        <column_name>agency_name</column_name>
+      </field>
+      <field>
+        <stream_name>project_name</stream_name>
+        <column_name>project_name</column_name>
+      </field>
+      <field>
+        <stream_name>status</stream_name>
+        <column_name>status</column_name>
+      </field>
+      <field>
+        <stream_name>nature</stream_name>
+        <column_name>nature</column_name>
+      </field>
+      <field>
+        <stream_name>number_undergraduates</stream_name>
+        <column_name>number_undergraduates</column_name>
+      </field>
+      <field>
+        <stream_name>number_specialists</stream_name>
+        <column_name>number_specialists</column_name>
+      </field>
+      <field>
+        <stream_name>number_academic_masters</stream_name>
+        <column_name>number_academic_masters</column_name>
+      </field>
+      <field>
+        <stream_name>number_phd</stream_name>
+        <column_name>number_phd</column_name>
+      </field>
+      <field>
+        <stream_name>description</stream_name>
+        <column_name>description</column_name>
+      </field>
+      <field>
+        <stream_name>researcher_id</stream_name>
+        <column_name>researcher_id</column_name>
+      </field>
+    </fields>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>2256</xloc>
+      <yloc>336</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>TableInput</type>
+    <name>Buscando pesquisadores</name>
+    <sql>SELECT id AS researcher_id, lattes_id AS lattes_id_db
+FROM researcher</sql>
+    <limit>0</limit>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <connection>ApplicationDB</connection>
+    <lookup/>
+    <sql_from_file/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>208</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>SortRows</type>
+    <name>Ordenando lattes_id_db</name>
+    <fields>
+      <field>
+        <name>lattes_id_db</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <directory>${java.io.tmpdir}</directory>
+    <sort_prefix>out</sort_prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <unique_rows>N</unique_rows>
+    <compress>N</compress>
+    <compress_variables/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>1232</xloc>
+      <yloc>208</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>SortRows</type>
+    <name>Ordenando NUMERO-IDENTIFICADOR</name>
+    <fields>
+      <field>
+        <name>NUMERO-IDENTIFICADOR</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <directory>${java.io.tmpdir}</directory>
+    <sort_prefix>out</sort_prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <unique_rows>N</unique_rows>
+    <compress>N</compress>
+    <compress_variables/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>336</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>MergeJoin</type>
+    <name>Merge join</name>
+    <join_type>INNER</join_type>
+    <transform1>Ordenando NUMERO-IDENTIFICADOR</transform1>
+    <transform2>Ordenando lattes_id_db</transform2>
+    <keys_1>
+      <key>NUMERO-IDENTIFICADOR</key>
+    </keys_1>
+    <keys_2>
+      <key>lattes_id_db</key>
+    </keys_2>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>1232</xloc>
+      <yloc>336</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>TableInput</type>
+    <name>Buscando projetos antigos</name>
+    <sql>SELECT start_year AS start_year_db, project_name AS project_name_db, researcher_id AS researcher_id_db
+FROM research_project</sql>
+    <limit>0</limit>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <connection>ApplicationDB</connection>
+    <lookup/>
+    <sql_from_file/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>1408</xloc>
+      <yloc>496</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>SortRows</type>
+    <name>Ordenando campos do banco</name>
+    <fields>
+      <field>
+        <name>researcher_id_db</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>project_name_db</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>start_year_db</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <directory>${java.io.tmpdir}</directory>
+    <sort_prefix>out</sort_prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <unique_rows>N</unique_rows>
+    <compress>N</compress>
+    <compress_variables/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>1664</xloc>
+      <yloc>496</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>SortRows</type>
+    <name>Ordenando campos XML</name>
+    <fields>
+      <field>
+        <name>researcher_id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>project_name</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>start_year</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <directory>${java.io.tmpdir}</directory>
+    <sort_prefix>out</sort_prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <unique_rows>N</unique_rows>
+    <compress>N</compress>
+    <compress_variables/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>1408</xloc>
+      <yloc>336</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>MergeJoin</type>
+    <name>Merge join 2</name>
+    <join_type>LEFT OUTER</join_type>
+    <transform1>Ordenando campos XML</transform1>
+    <transform2>Ordenando campos do banco</transform2>
+    <keys_1>
+      <key>researcher_id</key>
+      <key>project_name</key>
+      <key>start_year</key>
+    </keys_1>
+    <keys_2>
+      <key>researcher_id_db</key>
+      <key>project_name_db</key>
+      <key>start_year_db</key>
+    </keys_2>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>1664</xloc>
+      <yloc>336</yloc>
+    </GUI>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+  </transform>
+  <transform>
+    <type>FilterRows</type>
+    <name>Removendo já cadastrados</name>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <operator>-</operator>
+        <leftvalue>researcher_id_db</leftvalue>
+        <function>IS NULL</function>
+        <conditions/>
+      </condition>
+    </compare>
+    <send_true_to>Normalizando</send_true_to>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <GUI>
+      <xloc>1840</xloc>
+      <yloc>336</yloc>
+    </GUI>
     <partitioning>
       <method>none</method>
       <schema_name/>
@@ -1139,98 +975,68 @@
       <enabled>N</enabled>
     </hop>
     <hop>
+      <from>Leitura dos XML</from>
+      <to>Read XML Participação em projeto</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>Read XML Participação em projeto</from>
-      <to>Limpando a consulta</to>
+      <to>Limpando consulta</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Limpando a consulta</from>
-      <to>Removendo projetos sem nome</to>
+      <from>Normalizando</from>
+      <to>Inserindo dados</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Removendo projetos sem nome</from>
-      <to>Dummy (do nothing)</to>
+      <from>Buscando pesquisadores</from>
+      <to>Ordenando lattes_id_db</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Projetos existentes</from>
-      <to>Sort Nome do projeto 2</to>
+      <from>Limpando consulta</from>
+      <to>Ordenando NUMERO-IDENTIFICADOR</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort Nome do projeto 2</from>
+      <from>Ordenando NUMERO-IDENTIFICADOR</from>
       <to>Merge join</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort Nome do projeto</from>
+      <from>Ordenando lattes_id_db</from>
       <to>Merge join</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filtrando Projetos que já existem</from>
-      <to>Dummy (do nothing) 2</to>
+      <from>Buscando projetos antigos</from>
+      <to>Ordenando campos do banco</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Merge join</from>
-      <to>Filtrando Projetos que já existem</to>
+      <to>Ordenando campos XML</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Pesquisadores</from>
-      <to>Sort Pesquisadores</to>
+      <from>Ordenando campos XML</from>
+      <to>Merge join 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Ordenando campos do banco</from>
+      <to>Merge join 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Merge join 2</from>
-      <to>Renomeando</to>
+      <to>Removendo já cadastrados</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort Pesquisadores</from>
-      <to>Merge join 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filtrando Projetos que já existem</from>
-      <to>Sort Pesquisadores 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort Pesquisadores 2</from>
-      <to>Merge join 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Removendo projetos sem nome</from>
-      <to>String operations</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>String operations</from>
-      <to>Sort Nome do projeto</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Renomeando</from>
-      <to>Filter rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows</from>
-      <to>Dummy (do nothing) 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows</from>
-      <to>Insetindo projetos</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Leitura dos XML</from>
-      <to>Read XML Participação em projeto</to>
+      <from>Removendo já cadastrados</from>
+      <to>Normalizando</to>
       <enabled>Y</enabled>
     </hop>
   </order>

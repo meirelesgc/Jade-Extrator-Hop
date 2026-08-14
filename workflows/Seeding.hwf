@@ -191,8 +191,17 @@
       <targetfilename>${PROJECT_HOME}/datasets/research_lines.csv</targetfilename>
       <file_appended>N</file_appended>
       <date_time_added>N</date_time_added>
+      <targetfilename_extension/>
+      <uploadfilename/>
+      <url_fieldname/>
+      <upload_fieldname/>
+      <dest_fieldname/>
       <run_every_row>N</run_every_row>
       <ignore_ssl>N</ignore_ssl>
+      <proxy_host/>
+      <proxy_port/>
+      <non_proxy_hosts/>
+      <username/>
       <password>Encrypted </password>
       <addfilenameresult>Y</addfilenameresult>
       <headers/>
